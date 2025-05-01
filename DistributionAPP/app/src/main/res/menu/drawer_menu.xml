@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/action_account"
+        android:title="記帳 / 分帳"
+ />
+    <item
+        android:id="@+id/action_exchange"
+        android:title="匯率查詢"
+/>
+    <item
+        android:id="@+id/action_friends"
+        android:title="好友清單"
+ />
+    <item
+        android:id="@+id/action_chat"
+        android:title="聊天室"
+ />
+    <item
+        android:id="@+id/action_suggestion"
+        android:title="旅遊建議"
+ />
+</menu>

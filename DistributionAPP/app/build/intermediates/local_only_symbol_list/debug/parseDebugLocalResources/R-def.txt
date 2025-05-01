@@ -1,0 +1,30 @@
+R_DEF: Internal format may change without notice
+local
+color black
+color white
+drawable ic_launcher_background
+drawable ic_launcher_foreground
+drawable menu
+drawable settings
+id action_account
+id action_chat
+id action_exchange
+id action_friends
+id action_settings
+id action_suggestion
+id drawerLayout
+id navigation_view
+id toolbar
+layout activity_main
+menu drawer_menu
+menu toolbar_menu
+mipmap ic_launcher
+mipmap ic_launcher_round
+string app_name
+string menu_close
+string menu_open
+string settings
+style Base.Theme.DistributionAPP
+style Theme.DistributionAPP
+xml backup_rules
+xml data_extraction_rules
