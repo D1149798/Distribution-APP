@@ -16,6 +16,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.Fragment;
 
 import com.google.android.material.navigation.NavigationView;
 
@@ -30,11 +31,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
-//        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.drawerLayout), (v, insets) -> {
-//            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-//            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-//            return insets;
-//        });
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.drawerLayout), (v, insets) -> {
+            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
+            return insets;
+        });
 
         layout = findViewById(R.id.drawerLayout);
         navigationView = findViewById(R.id.navigation_view);
@@ -50,6 +51,12 @@ public class MainActivity extends AppCompatActivity {
         toggle.getDrawerArrowDrawable().setColor(getResources().getColor(R.color.white)); // 或用你想要的顏色
         layout.addDrawerListener(toggle); // 設定監聽
         toggle.syncState();               // 同步狀態（讓三條線 icon 正確顯示）
+
+        Fragment accountsFragment = AccountsFragment.newInstance("", "");
+        Fragment exchangeFragment = ExchangeFragment.newInstance("", "");
+
+        setCurrentFragment(accountsFragment);
+
         //側滑選單項目點擊監聽
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -58,10 +65,12 @@ public class MainActivity extends AppCompatActivity {
                 int id = item.getItemId();
                 if (id == R.id.action_account) {
                     Toast.makeText(MainActivity.this, "記帳 / 分帳", Toast.LENGTH_SHORT).show();
+                    setCurrentFragment(accountsFragment);
                     // 切換到記帳Fragment或Activity
                     return true;
                 } else if (id == R.id.action_exchange) {
                     Toast.makeText(MainActivity.this, "匯率查詢", Toast.LENGTH_SHORT).show();
+                    setCurrentFragment(exchangeFragment);
                     return true;
                 } else if (id == R.id.action_friends) {
                     Toast.makeText(MainActivity.this, "好友清單", Toast.LENGTH_SHORT).show();
@@ -85,6 +94,14 @@ public class MainActivity extends AppCompatActivity {
         inflater.inflate(R.menu.toolbar_menu, menu); // 解析 toolbar_menu.xml 並加到 menu 上
         return super.onCreateOptionsMenu(menu);
     }
+    private void setCurrentFragment(Fragment fragment) {
+        getSupportFragmentManager()
+                .beginTransaction()
+                .replace(R.id.fragment_main, fragment)
+                .commit();
+    }
+
+
     //toolbar點擊監聽
 //    @Override
 //    public boolean onOptionsItemSelected(MenuItem item) {

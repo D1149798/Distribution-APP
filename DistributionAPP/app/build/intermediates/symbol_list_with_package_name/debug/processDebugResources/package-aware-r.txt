@@ -3222,6 +3222,7 @@ id cache_measures
 id callMeasure
 id cancel_button
 id carryVelocity
+id categoryContainer
 id center
 id centerCrop
 id centerInside
@@ -3256,6 +3257,7 @@ id currentState
 id custom
 id customPanel
 id cut
+id dateText
 id date_picker_actions
 id decelerate
 id decelerateAndComplete
@@ -3318,6 +3320,7 @@ id flip
 id floating
 id forever
 id fragment_container_view_tag
+id fragment_main
 id frost
 id fullscreen_header
 id ghost_view
@@ -3472,6 +3475,7 @@ id path
 id pathRelative
 id peekHeight
 id percent
+id pieChart
 id pin
 id position
 id postLayout
@@ -3756,6 +3760,8 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
+layout fragment_accounts
+layout fragment_exchange
 layout ime_base_split_test_activity
 layout ime_secondary_split_test_activity
 layout m3_alert_dialog
@@ -3876,6 +3882,7 @@ string error_icon_content_description
 string exposed_dropdown_menu_content_description
 string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
+string hello_blank_fragment
 string hide_bottom_view_on_scroll_behavior
 string icon_content_description
 string item_view_role_description
