@@ -1,102 +1,106 @@
 [
     {
-        "merged": "fcu.app.distributionapp-debug-32:/mipmap-xxxhdpi_ic_launcher.webp.flat",
-        "source": "fcu.app.distributionapp-main-34:/mipmap-xxxhdpi/ic_launcher.webp"
+        "merged": "C:\\Users\\93051\\.gradle\\daemon\\8.10.2\\fcu.app.distributionapp-debug-32:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\93051\\.gradle\\daemon\\8.10.2\\fcu.app.distributionapp-main-34:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
     },
     {
-        "merged": "fcu.app.distributionapp-debug-32:/mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "fcu.app.distributionapp-main-34:/mipmap-anydpi-v26/ic_launcher.xml"
+        "merged": "C:\\Users\\93051\\.gradle\\daemon\\8.10.2\\fcu.app.distributionapp-debug-32:\\layout_activity_register.xml.flat",
+        "source": "C:\\Users\\93051\\.gradle\\daemon\\8.10.2\\fcu.app.distributionapp-main-34:\\layout\\activity_register.xml"
     },
     {
-        "merged": "fcu.app.distributionapp-debug-32:/menu_drawer_menu.xml.flat",
-        "source": "fcu.app.distributionapp-main-34:/menu/drawer_menu.xml"
+        "merged": "C:\\Users\\93051\\.gradle\\daemon\\8.10.2\\fcu.app.distributionapp-debug-32:\\mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\93051\\.gradle\\daemon\\8.10.2\\fcu.app.distributionapp-main-34:\\mipmap-mdpi\\ic_launcher.webp"
     },
     {
-        "merged": "fcu.app.distributionapp-debug-32:/layout_activity_register.xml.flat",
-        "source": "fcu.app.distributionapp-main-34:/layout/activity_register.xml"
+        "merged": "fcu.app.distributionapp-debug-32:/layout_fragment_friends.xml.flat",
+        "source": "fcu.app.distributionapp-main-34:/layout/fragment_friends.xml"
     },
     {
-        "merged": "fcu.app.distributionapp-debug-32:/mipmap-xhdpi_ic_launcher.webp.flat",
-        "source": "fcu.app.distributionapp-main-34:/mipmap-xhdpi/ic_launcher.webp"
+        "merged": "C:\\Users\\93051\\.gradle\\daemon\\8.10.2\\fcu.app.distributionapp-debug-32:\\menu_drawer_menu.xml.flat",
+        "source": "C:\\Users\\93051\\.gradle\\daemon\\8.10.2\\fcu.app.distributionapp-main-34:\\menu\\drawer_menu.xml"
     },
     {
-        "merged": "fcu.app.distributionapp-debug-32:/xml_backup_rules.xml.flat",
-        "source": "fcu.app.distributionapp-main-34:/xml/backup_rules.xml"
+        "merged": "C:\\Users\\93051\\.gradle\\daemon\\8.10.2\\fcu.app.distributionapp-debug-32:\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\93051\\.gradle\\daemon\\8.10.2\\fcu.app.distributionapp-main-34:\\layout\\activity_main.xml"
     },
     {
-        "merged": "fcu.app.distributionapp-debug-32:/mipmap-hdpi_ic_launcher_round.webp.flat",
-        "source": "fcu.app.distributionapp-main-34:/mipmap-hdpi/ic_launcher_round.webp"
+        "merged": "C:\\Users\\93051\\.gradle\\daemon\\8.10.2\\fcu.app.distributionapp-debug-32:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\93051\\.gradle\\daemon\\8.10.2\\fcu.app.distributionapp-main-34:\\mipmap-xxhdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "fcu.app.distributionapp-debug-32:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "fcu.app.distributionapp-main-34:/mipmap-anydpi-v26/ic_launcher_round.xml"
+        "merged": "C:\\Users\\93051\\.gradle\\daemon\\8.10.2\\fcu.app.distributionapp-debug-32:\\layout_fragment_accounts.xml.flat",
+        "source": "C:\\Users\\93051\\.gradle\\daemon\\8.10.2\\fcu.app.distributionapp-main-34:\\layout\\fragment_accounts.xml"
     },
     {
-        "merged": "fcu.app.distributionapp-debug-32:/layout_fragment_accounts.xml.flat",
-        "source": "fcu.app.distributionapp-main-34:/layout/fragment_accounts.xml"
+        "merged": "C:\\Users\\93051\\.gradle\\daemon\\8.10.2\\fcu.app.distributionapp-debug-32:\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\93051\\.gradle\\daemon\\8.10.2\\fcu.app.distributionapp-main-34:\\drawable\\ic_launcher_background.xml"
     },
     {
-        "merged": "fcu.app.distributionapp-debug-32:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
-        "source": "fcu.app.distributionapp-main-34:/mipmap-xxxhdpi/ic_launcher_round.webp"
+        "merged": "C:\\Users\\93051\\.gradle\\daemon\\8.10.2\\fcu.app.distributionapp-debug-32:\\xml_backup_rules.xml.flat",
+        "source": "C:\\Users\\93051\\.gradle\\daemon\\8.10.2\\fcu.app.distributionapp-main-34:\\xml\\backup_rules.xml"
     },
     {
-        "merged": "fcu.app.distributionapp-debug-32:/mipmap-mdpi_ic_launcher.webp.flat",
-        "source": "fcu.app.distributionapp-main-34:/mipmap-mdpi/ic_launcher.webp"
+        "merged": "C:\\Users\\93051\\.gradle\\daemon\\8.10.2\\fcu.app.distributionapp-debug-32:\\mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\93051\\.gradle\\daemon\\8.10.2\\fcu.app.distributionapp-main-34:\\mipmap-hdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "fcu.app.distributionapp-debug-32:/menu_toolbar_menu.xml.flat",
-        "source": "fcu.app.distributionapp-main-34:/menu/toolbar_menu.xml"
+        "merged": "C:\\Users\\93051\\.gradle\\daemon\\8.10.2\\fcu.app.distributionapp-debug-32:\\xml_data_extraction_rules.xml.flat",
+        "source": "C:\\Users\\93051\\.gradle\\daemon\\8.10.2\\fcu.app.distributionapp-main-34:\\xml\\data_extraction_rules.xml"
     },
     {
-        "merged": "fcu.app.distributionapp-debug-32:/mipmap-mdpi_ic_launcher_round.webp.flat",
-        "source": "fcu.app.distributionapp-main-34:/mipmap-mdpi/ic_launcher_round.webp"
+        "merged": "C:\\Users\\93051\\.gradle\\daemon\\8.10.2\\fcu.app.distributionapp-debug-32:\\menu_toolbar_menu.xml.flat",
+        "source": "C:\\Users\\93051\\.gradle\\daemon\\8.10.2\\fcu.app.distributionapp-main-34:\\menu\\toolbar_menu.xml"
     },
     {
-        "merged": "fcu.app.distributionapp-debug-32:/drawable_menu.xml.flat",
-        "source": "fcu.app.distributionapp-main-34:/drawable/menu.xml"
+        "merged": "C:\\Users\\93051\\.gradle\\daemon\\8.10.2\\fcu.app.distributionapp-debug-32:\\mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\93051\\.gradle\\daemon\\8.10.2\\fcu.app.distributionapp-main-34:\\mipmap-mdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "fcu.app.distributionapp-debug-32:/layout_activity_main.xml.flat",
-        "source": "fcu.app.distributionapp-main-34:/layout/activity_main.xml"
+        "merged": "C:\\Users\\93051\\.gradle\\daemon\\8.10.2\\fcu.app.distributionapp-debug-32:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\93051\\.gradle\\daemon\\8.10.2\\fcu.app.distributionapp-main-34:\\mipmap-xhdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "fcu.app.distributionapp-debug-32:/mipmap-xhdpi_ic_launcher_round.webp.flat",
-        "source": "fcu.app.distributionapp-main-34:/mipmap-xhdpi/ic_launcher_round.webp"
+        "merged": "C:\\Users\\93051\\.gradle\\daemon\\8.10.2\\fcu.app.distributionapp-debug-32:\\drawable_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\93051\\.gradle\\daemon\\8.10.2\\fcu.app.distributionapp-main-34:\\drawable\\ic_launcher_foreground.xml"
     },
     {
-        "merged": "fcu.app.distributionapp-debug-32:/drawable_settings.xml.flat",
-        "source": "fcu.app.distributionapp-main-34:/drawable/settings.xml"
+        "merged": "C:\\Users\\93051\\.gradle\\daemon\\8.10.2\\fcu.app.distributionapp-debug-32:\\layout_activity_login.xml.flat",
+        "source": "C:\\Users\\93051\\.gradle\\daemon\\8.10.2\\fcu.app.distributionapp-main-34:\\layout\\activity_login.xml"
     },
     {
-        "merged": "fcu.app.distributionapp-debug-32:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
-        "source": "fcu.app.distributionapp-main-34:/mipmap-xxhdpi/ic_launcher_round.webp"
+        "merged": "C:\\Users\\93051\\.gradle\\daemon\\8.10.2\\fcu.app.distributionapp-debug-32:\\drawable_menu.xml.flat",
+        "source": "C:\\Users\\93051\\.gradle\\daemon\\8.10.2\\fcu.app.distributionapp-main-34:\\drawable\\menu.xml"
     },
     {
-        "merged": "fcu.app.distributionapp-debug-32:/layout_activity_login.xml.flat",
-        "source": "fcu.app.distributionapp-main-34:/layout/activity_login.xml"
+        "merged": "C:\\Users\\93051\\.gradle\\daemon\\8.10.2\\fcu.app.distributionapp-debug-32:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\93051\\.gradle\\daemon\\8.10.2\\fcu.app.distributionapp-main-34:\\mipmap-anydpi-v26\\ic_launcher.xml"
     },
     {
-        "merged": "fcu.app.distributionapp-debug-32:/mipmap-xxhdpi_ic_launcher.webp.flat",
-        "source": "fcu.app.distributionapp-main-34:/mipmap-xxhdpi/ic_launcher.webp"
+        "merged": "C:\\Users\\93051\\.gradle\\daemon\\8.10.2\\fcu.app.distributionapp-debug-32:\\drawable_settings.xml.flat",
+        "source": "C:\\Users\\93051\\.gradle\\daemon\\8.10.2\\fcu.app.distributionapp-main-34:\\drawable\\settings.xml"
     },
     {
-        "merged": "fcu.app.distributionapp-debug-32:/drawable_ic_launcher_background.xml.flat",
-        "source": "fcu.app.distributionapp-main-34:/drawable/ic_launcher_background.xml"
+        "merged": "C:\\Users\\93051\\.gradle\\daemon\\8.10.2\\fcu.app.distributionapp-debug-32:\\mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\93051\\.gradle\\daemon\\8.10.2\\fcu.app.distributionapp-main-34:\\mipmap-xxhdpi\\ic_launcher.webp"
     },
     {
-        "merged": "fcu.app.distributionapp-debug-32:/layout_fragment_exchange.xml.flat",
-        "source": "fcu.app.distributionapp-main-34:/layout/fragment_exchange.xml"
+        "merged": "C:\\Users\\93051\\.gradle\\daemon\\8.10.2\\fcu.app.distributionapp-debug-32:\\mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\93051\\.gradle\\daemon\\8.10.2\\fcu.app.distributionapp-main-34:\\mipmap-xhdpi\\ic_launcher.webp"
     },
     {
-        "merged": "fcu.app.distributionapp-debug-32:/drawable_ic_launcher_foreground.xml.flat",
-        "source": "fcu.app.distributionapp-main-34:/drawable/ic_launcher_foreground.xml"
+        "merged": "C:\\Users\\93051\\.gradle\\daemon\\8.10.2\\fcu.app.distributionapp-debug-32:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\93051\\.gradle\\daemon\\8.10.2\\fcu.app.distributionapp-main-34:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "fcu.app.distributionapp-debug-32:/mipmap-hdpi_ic_launcher.webp.flat",
-        "source": "fcu.app.distributionapp-main-34:/mipmap-hdpi/ic_launcher.webp"
+        "merged": "C:\\Users\\93051\\.gradle\\daemon\\8.10.2\\fcu.app.distributionapp-debug-32:\\layout_fragment_exchange.xml.flat",
+        "source": "C:\\Users\\93051\\.gradle\\daemon\\8.10.2\\fcu.app.distributionapp-main-34:\\layout\\fragment_exchange.xml"
     },
     {
-        "merged": "fcu.app.distributionapp-debug-32:/xml_data_extraction_rules.xml.flat",
-        "source": "fcu.app.distributionapp-main-34:/xml/data_extraction_rules.xml"
+        "merged": "C:\\Users\\93051\\.gradle\\daemon\\8.10.2\\fcu.app.distributionapp-debug-32:\\mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\93051\\.gradle\\daemon\\8.10.2\\fcu.app.distributionapp-main-34:\\mipmap-hdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\93051\\.gradle\\daemon\\8.10.2\\fcu.app.distributionapp-debug-32:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\93051\\.gradle\\daemon\\8.10.2\\fcu.app.distributionapp-main-34:\\mipmap-xxxhdpi\\ic_launcher.webp"
     }
 ]

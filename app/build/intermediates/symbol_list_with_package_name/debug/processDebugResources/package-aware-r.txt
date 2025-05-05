@@ -3590,6 +3590,7 @@ id textSpacerNoTitle
 id textStart
 id textTop
 id textView
+id textView3
 id text_input_end_icon
 id text_input_error_icon
 id text_input_start_icon
@@ -3780,6 +3781,7 @@ layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout fragment_accounts
 layout fragment_exchange
+layout fragment_friends
 layout ime_base_split_test_activity
 layout ime_secondary_split_test_activity
 layout m3_alert_dialog

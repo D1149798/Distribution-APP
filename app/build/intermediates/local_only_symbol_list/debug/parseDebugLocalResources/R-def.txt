@@ -33,6 +33,7 @@ id main
 id navigation_view
 id pieChart
 id textView
+id textView3
 id toolbar
 id tv_login
 layout activity_login
@@ -40,6 +41,7 @@ layout activity_main
 layout activity_register
 layout fragment_accounts
 layout fragment_exchange
+layout fragment_friends
 menu drawer_menu
 menu toolbar_menu
 mipmap ic_launcher

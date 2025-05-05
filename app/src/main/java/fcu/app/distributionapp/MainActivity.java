@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
 
         Fragment accountsFragment = AccountsFragment.newInstance("", "");
         Fragment exchangeFragment = ExchangeFragment.newInstance("", "");
-
+        Fragment friendsFragment = FriendsFragment.newInstance();
         setCurrentFragment(accountsFragment);
 
         //側滑選單項目點擊監聽
@@ -77,6 +77,7 @@ public class MainActivity extends AppCompatActivity {
                     return true;
                 } else if (id == R.id.action_chat) {
                     Toast.makeText(MainActivity.this, "聊天室", Toast.LENGTH_SHORT).show();
+                    setCurrentFragment(friendsFragment);
                     return true;
                 } else if (id == R.id.action_suggestion) {
                     Toast.makeText(MainActivity.this, "旅遊建議", Toast.LENGTH_SHORT).show();
