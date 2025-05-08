@@ -29,22 +29,7 @@
         app:layout_constraintTop_toBottomOf="@+id/img_logo" />
 
     <EditText
-        android:id="@+id/editTextText"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="32dp"
-        android:ems="10"
-        android:hint="帳號："
-        android:inputType="text"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
-
-    <EditText
-        android:id="@+id/editTextTextPassword"
+        android:id="@+id/et_r_password"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -52,12 +37,12 @@
         android:hint="密碼："
         android:inputType="textPassword"
         android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="@+id/editTextText"
-        app:layout_constraintStart_toStartOf="@+id/editTextText"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText" />
+        app:layout_constraintEnd_toEndOf="@+id/et_r_email"
+        app:layout_constraintStart_toStartOf="@+id/et_r_email"
+        app:layout_constraintTop_toBottomOf="@+id/et_r_email" />
 
     <EditText
-        android:id="@+id/editTextTextPassword2"
+        android:id="@+id/et_r_password_check"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -65,37 +50,51 @@
         android:hint="再次輸入密碼："
         android:inputType="textPassword"
         android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="@+id/editTextTextPassword"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextPassword"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword" />
+        app:layout_constraintEnd_toEndOf="@+id/et_r_password"
+        app:layout_constraintStart_toStartOf="@+id/et_r_password"
+        app:layout_constraintTop_toBottomOf="@+id/et_r_password" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btn_register"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:text="註冊"
-        app:layout_constraintEnd_toEndOf="@+id/editTextTextPassword2"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextPassword2"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword2" />
+        app:layout_constraintEnd_toEndOf="@+id/et_r_password_check"
+        app:layout_constraintStart_toStartOf="@+id/et_r_password_check"
+        app:layout_constraintTop_toBottomOf="@+id/et_r_password_check" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btn_to_login"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="已有帳號：登入"
-        app:layout_constraintEnd_toEndOf="@+id/button"
-        app:layout_constraintStart_toStartOf="@+id/button"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        app:layout_constraintEnd_toEndOf="@+id/btn_register"
+        app:layout_constraintStart_toStartOf="@+id/btn_register"
+        app:layout_constraintTop_toBottomOf="@+id/btn_register" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/btn_goback"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="返回"
-        app:layout_constraintEnd_toEndOf="@+id/button2"
-        app:layout_constraintStart_toStartOf="@+id/button2"
-        app:layout_constraintTop_toBottomOf="@+id/button2" />
+        app:layout_constraintEnd_toEndOf="@+id/btn_to_login"
+        app:layout_constraintStart_toStartOf="@+id/btn_to_login"
+        app:layout_constraintTop_toBottomOf="@+id/btn_to_login" />
+
+    <EditText
+        android:id="@+id/et_r_email"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:ems="10"
+        android:hint="Email："
+        android:inputType="textEmailAddress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 </androidx.constraintlayout.widget.ConstraintLayout>

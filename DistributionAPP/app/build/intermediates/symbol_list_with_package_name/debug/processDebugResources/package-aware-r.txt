@@ -3275,12 +3275,12 @@ id browser_actions_menu_view
 id btn_add
 id btn_convert
 id btn_expense
+id btn_goback
 id btn_rate
+id btn_register
 id btn_save
+id btn_to_login
 id btn_transaction
-id button
-id button2
-id button3
 id buttonPanel
 id cache_measures
 id callMeasure
@@ -3359,9 +3359,6 @@ id easeInOut
 id easeOut
 id east
 id edge
-id editTextText
-id editTextTextPassword
-id editTextTextPassword2
 id edit_query
 id edit_text_id
 id elastic
@@ -3375,6 +3372,9 @@ id et_amount
 id et_cost
 id et_currency
 id et_note
+id et_r_email
+id et_r_password
+id et_r_password_check
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu

@@ -1,5 +1,6 @@
 package fcu.app.distributionapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -37,6 +38,14 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        /*
+        測試註冊功能用的
+        Intent intent = new Intent(MainActivity.this, RegisterActivity.class);
+        startActivity(intent);
+
+         */
+
         FirebaseApp.initializeApp(this);
         layout = findViewById(R.id.drawerLayout);
         navigationView = findViewById(R.id.navigation_view);
