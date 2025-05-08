@@ -1,52 +1,78 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\prism\Documents\GitHub\Distribution-APP\DistributionAPP\app\src\main\AndroidManifest.xml:2:1-26:12
-INJECTED from C:\Users\prism\Documents\GitHub\Distribution-APP\DistributionAPP\app\src\main\AndroidManifest.xml:2:1-26:12
-INJECTED from C:\Users\prism\Documents\GitHub\Distribution-APP\DistributionAPP\app\src\main\AndroidManifest.xml:2:1-26:12
-INJECTED from C:\Users\prism\Documents\GitHub\Distribution-APP\DistributionAPP\app\src\main\AndroidManifest.xml:2:1-26:12
-MERGED from [com.google.android.material:material:1.12.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\89d8d326ea87191807391c4792714f8a\transformed\material-1.12.0\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.constraintlayout:constraintlayout:2.2.1] C:\Users\prism\.gradle\caches\8.10.2\transforms\bccea9dd7c30f093b6401f179c0d04bb\transformed\constraintlayout-2.2.1\AndroidManifest.xml:2:1-9:12
-MERGED from [androidx.appcompat:appcompat-resources:1.7.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\37584aa91d64bd065ea955ab19d212bf\transformed\appcompat-resources-1.7.0\AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.appcompat:appcompat:1.7.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\a3789bad456d19543eabf12e524b754f\transformed\appcompat-1.7.0\AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\36ba7ce8bc34609f0cbe9f0b9390da31\transformed\viewpager2-1.0.0\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.fragment:fragment:1.5.4] C:\Users\prism\.gradle\caches\8.10.2\transforms\38de3b4007935fc56ee014293aabd343\transformed\fragment-1.5.4\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.activity:activity:1.10.1] C:\Users\prism\.gradle\caches\8.10.2\transforms\7488f5cd3f080250ce36ea017c897776\transformed\activity-1.10.1\AndroidManifest.xml:17:1-22:12
-MERGED from [com.github.PhilJay:MPAndroidChart:3.1.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\db640cbe7ddfcb6f6c50f76c3570fda1\transformed\MPAndroidChart-3.1.0\AndroidManifest.xml:2:1-20:12
-MERGED from [androidx.savedstate:savedstate:1.2.1] C:\Users\prism\.gradle\caches\8.10.2\transforms\ece1d1cf3c970cf902300d0ab4937641\transformed\savedstate-1.2.1\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.emoji2:emoji2-views-helper:1.3.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\f86964e99c787bc3ada5ba1365232c81\transformed\emoji2-views-helper-1.3.0\AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.emoji2:emoji2:1.3.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\ba719fc42cbbd079e9e20163ced8ada6\transformed\emoji2-1.3.0\AndroidManifest.xml:17:1-35:12
-MERGED from [androidx.transition:transition:1.5.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\f40c20767e3f4ab82027eb6d0d33f500\transformed\transition-1.5.0\AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\d5a7d9be98bbeb29c37f3b5ff52a4cc4\transformed\dynamicanimation-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\42246cc15c014f989aba7f39892bc722\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.loader:loader:1.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\8031ff4f50e21767e2d14b64e462a721\transformed\loader-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.lifecycle:lifecycle-livedata:2.6.2] C:\Users\prism\.gradle\caches\8.10.2\transforms\11e2c275d4dfc774b78ba4beb11263bf\transformed\lifecycle-livedata-2.6.2\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.6.2] C:\Users\prism\.gradle\caches\8.10.2\transforms\d6d3f33e3f1b2293313398d1a69ebf23\transformed\lifecycle-viewmodel-2.6.2\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\prism\.gradle\caches\8.10.2\transforms\7f939e078380bf5b07c12d49b3dcb7fc\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:17:1-35:12
-MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.6.2] C:\Users\prism\.gradle\caches\8.10.2\transforms\a8eba315c2f9348088da021709b9d586\transformed\lifecycle-livedata-core-2.6.2\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.lifecycle:lifecycle-runtime:2.6.2] C:\Users\prism\.gradle\caches\8.10.2\transforms\b7b93b791f1cf594fb02b1769efd2087\transformed\lifecycle-runtime-2.6.2\AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.2] C:\Users\prism\.gradle\caches\8.10.2\transforms\bfe6d5558bfab3294b82918f617217a4\transformed\lifecycle-viewmodel-savedstate-2.6.2\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.core:core-ktx:1.13.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\137991bb5f72fdaadc89f05d97d23f17\transformed\core-ktx-1.13.0\AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] C:\Users\prism\.gradle\caches\8.10.2\transforms\776f77aaa8943bd403b7b6583e653a28\transformed\drawerlayout-1.1.1\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\4e95fba807074436adfb39fd8b20183a\transformed\coordinatorlayout-1.1.0\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\32eaa1eed83a785e81609906d714886e\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\6e28512b606c28633a3e68eacd4c7660\transformed\vectordrawable-1.1.0\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\f5ff3fdcd85b98546c7e077534e9e832\transformed\viewpager-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\d2bd86c61c823ee5cad67ae0ce043d05\transformed\recyclerview-1.1.0\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.customview:customview:1.1.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\31f476fa4d9102513c7570aefec42040\transformed\customview-1.1.0\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.core:core:1.13.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\1b89a4ef0596eddf891071b8ad4b689b\transformed\core-1.13.0\AndroidManifest.xml:17:1-30:12
-MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\a2754947df88ee9d98c689f1e5b49688\transformed\cursoradapter-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\065b7eafb382b8897916a80bd24b17b5\transformed\cardview-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\9d7d7688c656d271fbe253a6ed59a587\transformed\profileinstaller-1.4.0\AndroidManifest.xml:17:1-55:12
-MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\prism\.gradle\caches\8.10.2\transforms\bd6c0956c5ae0077acf5bdf626a1456f\transformed\startup-runtime-1.1.1\AndroidManifest.xml:17:1-33:12
-MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\06576ce994b954946066298548d5a933\transformed\tracing-1.0.0\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\35bc32b783335a8edb7b57a4bba47ebf\transformed\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\prism\.gradle\caches\8.10.2\transforms\690530045e45a55919298a2fac694a47\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:17:1-27:12
-MERGED from [androidx.arch.core:core-runtime:2.2.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\39fa16bb57a0b7d9af6fa8a1b0926492\transformed\core-runtime-2.2.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\ae5eb61e5f0298a4f0e86de33ac11319\transformed\documentfile-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\c1518b2c565f51747395150b05c49793\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.print:print:1.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\991e744e054f645144100b5d06636828\transformed\print-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.core:core-viewtree:1.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\84d7002208ea45cceff630d57dcf7a26\transformed\core-viewtree-1.0.0\AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.annotation:annotation-experimental:1.4.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\0691fd82f20fece063ce5db951cd1cea\transformed\annotation-experimental-1.4.0\AndroidManifest.xml:2:1-7:12
+ADDED from C:\Users\prism\Documents\GitHub\Distribution-APP\DistributionAPP\app\src\main\AndroidManifest.xml:2:1-29:12
+INJECTED from C:\Users\prism\Documents\GitHub\Distribution-APP\DistributionAPP\app\src\main\AndroidManifest.xml:2:1-29:12
+INJECTED from C:\Users\prism\Documents\GitHub\Distribution-APP\DistributionAPP\app\src\main\AndroidManifest.xml:2:1-29:12
+INJECTED from C:\Users\prism\Documents\GitHub\Distribution-APP\DistributionAPP\app\src\main\AndroidManifest.xml:2:1-29:12
+MERGED from [com.google.firebase:firebase-auth:23.2.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\c4ebc29f72ff96fc88224e6e488addd5\transformed\firebase-auth-23.2.0\AndroidManifest.xml:17:1-75:12
+MERGED from [com.google.firebase:firebase-firestore:25.1.4] C:\Users\prism\.gradle\caches\8.10.2\transforms\03e2fb13052ef6912292cbcbbc6dcbbb\transformed\firebase-firestore-25.1.4\AndroidManifest.xml:2:1-26:12
+MERGED from [com.google.firebase:firebase-storage:21.0.1] C:\Users\prism\.gradle\caches\8.10.2\transforms\4e6eed578769770e16db43b75ada3547\transformed\firebase-storage-21.0.1\AndroidManifest.xml:15:1-39:12
+MERGED from [com.google.android.material:material:1.12.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\be611a65fc3855ec7b81dd6cdc5bd546\transformed\material-1.12.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.constraintlayout:constraintlayout:2.2.1] C:\Users\prism\.gradle\caches\8.10.2\transforms\7a1c5af247dd3ec1f26f0c09487811ae\transformed\constraintlayout-2.2.1\AndroidManifest.xml:2:1-9:12
+MERGED from [androidx.appcompat:appcompat-resources:1.7.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\011f735e96e39856dc82ad0c550ade73\transformed\appcompat-resources-1.7.0\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.appcompat:appcompat:1.7.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\046986e14df1771a311d73e34b2b8140\transformed\appcompat-1.7.0\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\e3470e1995b78e145d195d6a9d3eb1a9\transformed\viewpager2-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.credentials:credentials:1.2.0-rc01] C:\Users\prism\.gradle\caches\8.10.2\transforms\5ae963fe0cdc0da774df0cc398fe72fd\transformed\credentials-1.2.0-rc01\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\prism\.gradle\caches\8.10.2\transforms\4db106427b158585b40f5fafdc171d2b\transformed\credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:17:1-44:12
+MERGED from [com.google.android.gms:play-services-auth:20.7.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\8bb022e13a7eabf0d32ec96e55a84484\transformed\play-services-auth-20.7.0\AndroidManifest.xml:17:1-40:12
+MERGED from [com.google.android.gms:play-services-auth-api-phone:18.0.2] C:\Users\prism\.gradle\caches\8.10.2\transforms\b0b33d6465d0e3d6095c74863a817405\transformed\play-services-auth-api-phone-18.0.2\AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.android.recaptcha:recaptcha:18.6.1] C:\Users\prism\.gradle\caches\8.10.2\transforms\540b631cb004dc8f7633b9a842987dbc\transformed\recaptcha-18.6.1\AndroidManifest.xml:2:1-11:12
+MERGED from [com.google.android.play:integrity:1.3.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\c1e693fea0c06c6cbeeffa1ca4509cad\transformed\integrity-1.3.0\AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\dfecc1962aee6510526ebaebc7258a7a\transformed\firebase-auth-interop-20.0.0\AndroidManifest.xml:2:1-10:12
+MERGED from [com.google.firebase:firebase-appcheck:18.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\6dccf3f681c6d0923e4d7b5ac998e097\transformed\firebase-appcheck-18.0.0\AndroidManifest.xml:15:1-34:12
+MERGED from [com.google.firebase:firebase-common-ktx:21.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\70f20338a72cdee19b703a3b4d9121ee\transformed\firebase-common-ktx-21.0.0\AndroidManifest.xml:2:1-18:12
+MERGED from [com.google.firebase:firebase-common:21.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\bfcebc27c83b40f483d7067c3f948706\transformed\firebase-common-21.0.0\AndroidManifest.xml:15:1-41:12
+MERGED from [com.google.firebase:firebase-database-collection:18.0.1] C:\Users\prism\.gradle\caches\8.10.2\transforms\9b480f96fbfddfe743b4682841358564\transformed\firebase-database-collection-18.0.1\AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.firebase:firebase-appcheck-interop:17.1.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\1673117638405f61a6ec92788f5b2359\transformed\firebase-appcheck-interop-17.1.0\AndroidManifest.xml:15:1-23:12
+MERGED from [com.google.android.gms:play-services-fido:20.1.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\92fc8f49806fcc0ee427b26d6a002b45\transformed\play-services-fido-20.1.0\AndroidManifest.xml:2:1-10:12
+MERGED from [com.google.android.gms:play-services-auth-base:18.0.4] C:\Users\prism\.gradle\caches\8.10.2\transforms\404e0300001509b3c01516c45c6aa274\transformed\play-services-auth-base-18.0.4\AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.android.gms:play-services-base:18.1.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\5facb85b3fdd11e7ef3d64e06129d11f\transformed\play-services-base-18.1.0\AndroidManifest.xml:16:1-24:12
+MERGED from [androidx.core:core-ktx:1.13.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\b995e148c295decf68d4d3c4d40a8d5e\transformed\core-ktx-1.13.0\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.emoji2:emoji2-views-helper:1.3.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\8a01b1bd85a40f8db934fc4f02ae42d1\transformed\emoji2-views-helper-1.3.0\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.emoji2:emoji2:1.3.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\f85482af87bf0455acbc824ef1a164ae\transformed\emoji2-1.3.0\AndroidManifest.xml:17:1-35:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] C:\Users\prism\.gradle\caches\8.10.2\transforms\4cd90a57eed8993eb30b9c55ffac91ee\transformed\drawerlayout-1.1.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\25f98e2f4fc74536b683bdef7a69b369\transformed\coordinatorlayout-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.transition:transition:1.5.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\6647624827eae06c5825529b3b1909c7\transformed\transition-1.5.0\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\9e722259246bb6df1c8ebbfd829e617a\transformed\dynamicanimation-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\85e93bfa6b2e7a931f04cacde980e7da\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\b3a20e5e7a40c108317cab5cd47b1215\transformed\vectordrawable-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.browser:browser:1.4.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\bed546d243ba780764843694fdc0d81f\transformed\browser-1.4.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\eaecd7203bd611fef5691c6078b2b4e6\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\a0b3c70539d29089c01b772c0240140a\transformed\loader-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\ca25cbee9fcbc20db8b263f8cb2b82a2\transformed\viewpager-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\9d3850ae0e9a540ff56851bf007fa8e5\transformed\recyclerview-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.customview:customview:1.1.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\b60890538824c012c1c75d9a096e6fad\transformed\customview-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.core:core:1.13.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\44d7f9307f82cbc36229e6b62a90377a\transformed\core-1.13.0\AndroidManifest.xml:17:1-30:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.6.2] C:\Users\prism\.gradle\caches\8.10.2\transforms\9901d93f3af2c8da56b7ea7ad7f215d7\transformed\lifecycle-livedata-2.6.2\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.6.2] C:\Users\prism\.gradle\caches\8.10.2\transforms\4d8373b6deb3c7403d6df58f8deb3e40\transformed\lifecycle-viewmodel-2.6.2\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\prism\.gradle\caches\8.10.2\transforms\8b2d1915a063c90726e03ffb80b9ae2f\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:17:1-35:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.6.2] C:\Users\prism\.gradle\caches\8.10.2\transforms\6a81dc4a37de9d0c9bd9f25722129f76\transformed\lifecycle-livedata-core-2.6.2\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.6.2] C:\Users\prism\.gradle\caches\8.10.2\transforms\ef94f35c7d026b81c28c28baadbfed9d\transformed\lifecycle-runtime-2.6.2\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.2] C:\Users\prism\.gradle\caches\8.10.2\transforms\2690de0bc86213e97efdb02ded7b380f\transformed\lifecycle-viewmodel-savedstate-2.6.2\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.savedstate:savedstate:1.2.1] C:\Users\prism\.gradle\caches\8.10.2\transforms\9e51c08505657fb155e67f2914537746\transformed\savedstate-1.2.1\AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.android.gms:play-services-tasks:18.2.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\0402f003b62c626e96fcd8600958a66c\transformed\play-services-tasks-18.2.0\AndroidManifest.xml:2:1-5:12
+MERGED from [com.google.android.gms:play-services-basement:18.4.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\f2d445680cc100897c6400d9b238d657\transformed\play-services-basement-18.4.0\AndroidManifest.xml:2:1-9:12
+MERGED from [androidx.fragment:fragment:1.5.4] C:\Users\prism\.gradle\caches\8.10.2\transforms\7cc42bcfa64c0b31d7b532441f05f0d3\transformed\fragment-1.5.4\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.activity:activity:1.10.1] C:\Users\prism\.gradle\caches\8.10.2\transforms\5c6bb051b77d9855e7a7502dff8fb040\transformed\activity-1.10.1\AndroidManifest.xml:17:1-22:12
+MERGED from [com.github.PhilJay:MPAndroidChart:3.1.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\433f5068eb2afc492ec2ffeca8e52a2d\transformed\MPAndroidChart-3.1.0\AndroidManifest.xml:2:1-20:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\a887af8315bc5d89f6c93f82344a3c80\transformed\cursoradapter-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\f1aeb941e6f0e036cf69e256cf4f550c\transformed\cardview-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\2e793e93b76b5215bf4e7b9b96a27484\transformed\profileinstaller-1.4.0\AndroidManifest.xml:17:1-55:12
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\prism\.gradle\caches\8.10.2\transforms\7911515e9f74904fd8d579e4685123a3\transformed\startup-runtime-1.1.1\AndroidManifest.xml:17:1-33:12
+MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\2f8f679b267ae01f275c4bb5093778f1\transformed\tracing-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\6b5d6120846e11af03d86d6ad467218f\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.firebase:firebase-components:18.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\a942b86e32e3ac8717568f15bf160107\transformed\firebase-components-18.0.0\AndroidManifest.xml:15:1-20:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\a3efd23a442039f5ce3c2d66d334533c\transformed\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\prism\.gradle\caches\8.10.2\transforms\f0d17a6a2feb737999bc6ae1ead4ed8a\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.arch.core:core-runtime:2.2.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\626b5c379a6b20bd97303e95c05832aa\transformed\core-runtime-2.2.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\49eff376622391c2635b3029a4ba5d64\transformed\documentfile-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.print:print:1.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\3fa08fb20b0e915ad576af1634a9b033\transformed\print-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core-viewtree:1.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\282739b7154b904bd1688217f1c6d586\transformed\core-viewtree-1.0.0\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.annotation:annotation-experimental:1.4.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\6a674a7d7799bd8cdbb8b73b3a530f1a\transformed\annotation-experimental-1.4.0\AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.android.libraries.identity.googleid:googleid:1.1.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\b5c82c6450548e4fefaf46b94f9a55b2\transformed\googleid-1.1.0\AndroidManifest.xml:2:1-7:12
+MERGED from [io.grpc:grpc-android:1.62.2] C:\Users\prism\.gradle\caches\8.10.2\transforms\5c90ca72f4181be4476fbe70122e8d83\transformed\grpc-android-1.62.2\AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.firebase:protolite-well-known-types:18.0.1] C:\Users\prism\.gradle\caches\8.10.2\transforms\400a855893ab3aa0e3673bb9ad613dd0\transformed\protolite-well-known-types-18.0.1\AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.android.play:core-common:2.0.3] C:\Users\prism\.gradle\caches\8.10.2\transforms\f7c3e3f82bdf2251f724ad9f5cdb8f32\transformed\core-common-2.0.3\AndroidManifest.xml:2:1-21:12
 	package
 		INJECTED from C:\Users\prism\Documents\GitHub\Distribution-APP\DistributionAPP\app\src\main\AndroidManifest.xml
 	android:versionName
@@ -58,28 +84,60 @@ MERGED from [androidx.annotation:annotation-experimental:1.4.0] C:\Users\prism\.
 	xmlns:android
 		ADDED from C:\Users\prism\Documents\GitHub\Distribution-APP\DistributionAPP\app\src\main\AndroidManifest.xml:2:11-69
 application
-ADDED from C:\Users\prism\Documents\GitHub\Distribution-APP\DistributionAPP\app\src\main\AndroidManifest.xml:5:5-24:19
-INJECTED from C:\Users\prism\Documents\GitHub\Distribution-APP\DistributionAPP\app\src\main\AndroidManifest.xml:5:5-24:19
-MERGED from [com.google.android.material:material:1.12.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\89d8d326ea87191807391c4792714f8a\transformed\material-1.12.0\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.material:material:1.12.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\89d8d326ea87191807391c4792714f8a\transformed\material-1.12.0\AndroidManifest.xml:22:5-20
-MERGED from [androidx.constraintlayout:constraintlayout:2.2.1] C:\Users\prism\.gradle\caches\8.10.2\transforms\bccea9dd7c30f093b6401f179c0d04bb\transformed\constraintlayout-2.2.1\AndroidManifest.xml:7:5-20
-MERGED from [androidx.constraintlayout:constraintlayout:2.2.1] C:\Users\prism\.gradle\caches\8.10.2\transforms\bccea9dd7c30f093b6401f179c0d04bb\transformed\constraintlayout-2.2.1\AndroidManifest.xml:7:5-20
-MERGED from [androidx.emoji2:emoji2:1.3.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\ba719fc42cbbd079e9e20163ced8ada6\transformed\emoji2-1.3.0\AndroidManifest.xml:23:5-33:19
-MERGED from [androidx.emoji2:emoji2:1.3.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\ba719fc42cbbd079e9e20163ced8ada6\transformed\emoji2-1.3.0\AndroidManifest.xml:23:5-33:19
-MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\prism\.gradle\caches\8.10.2\transforms\7f939e078380bf5b07c12d49b3dcb7fc\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:23:5-33:19
-MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\prism\.gradle\caches\8.10.2\transforms\7f939e078380bf5b07c12d49b3dcb7fc\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:23:5-33:19
-MERGED from [androidx.core:core:1.13.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\1b89a4ef0596eddf891071b8ad4b689b\transformed\core-1.13.0\AndroidManifest.xml:28:5-89
-MERGED from [androidx.core:core:1.13.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\1b89a4ef0596eddf891071b8ad4b689b\transformed\core-1.13.0\AndroidManifest.xml:28:5-89
-MERGED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\9d7d7688c656d271fbe253a6ed59a587\transformed\profileinstaller-1.4.0\AndroidManifest.xml:23:5-53:19
-MERGED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\9d7d7688c656d271fbe253a6ed59a587\transformed\profileinstaller-1.4.0\AndroidManifest.xml:23:5-53:19
-MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\prism\.gradle\caches\8.10.2\transforms\bd6c0956c5ae0077acf5bdf626a1456f\transformed\startup-runtime-1.1.1\AndroidManifest.xml:25:5-31:19
-MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\prism\.gradle\caches\8.10.2\transforms\bd6c0956c5ae0077acf5bdf626a1456f\transformed\startup-runtime-1.1.1\AndroidManifest.xml:25:5-31:19
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\prism\.gradle\caches\8.10.2\transforms\690530045e45a55919298a2fac694a47\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\prism\.gradle\caches\8.10.2\transforms\690530045e45a55919298a2fac694a47\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
+ADDED from C:\Users\prism\Documents\GitHub\Distribution-APP\DistributionAPP\app\src\main\AndroidManifest.xml:5:5-27:19
+INJECTED from C:\Users\prism\Documents\GitHub\Distribution-APP\DistributionAPP\app\src\main\AndroidManifest.xml:5:5-27:19
+MERGED from [com.google.firebase:firebase-auth:23.2.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\c4ebc29f72ff96fc88224e6e488addd5\transformed\firebase-auth-23.2.0\AndroidManifest.xml:28:5-73:19
+MERGED from [com.google.firebase:firebase-auth:23.2.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\c4ebc29f72ff96fc88224e6e488addd5\transformed\firebase-auth-23.2.0\AndroidManifest.xml:28:5-73:19
+MERGED from [com.google.firebase:firebase-firestore:25.1.4] C:\Users\prism\.gradle\caches\8.10.2\transforms\03e2fb13052ef6912292cbcbbc6dcbbb\transformed\firebase-firestore-25.1.4\AndroidManifest.xml:13:5-24:19
+MERGED from [com.google.firebase:firebase-firestore:25.1.4] C:\Users\prism\.gradle\caches\8.10.2\transforms\03e2fb13052ef6912292cbcbbc6dcbbb\transformed\firebase-firestore-25.1.4\AndroidManifest.xml:13:5-24:19
+MERGED from [com.google.firebase:firebase-storage:21.0.1] C:\Users\prism\.gradle\caches\8.10.2\transforms\4e6eed578769770e16db43b75ada3547\transformed\firebase-storage-21.0.1\AndroidManifest.xml:26:5-37:19
+MERGED from [com.google.firebase:firebase-storage:21.0.1] C:\Users\prism\.gradle\caches\8.10.2\transforms\4e6eed578769770e16db43b75ada3547\transformed\firebase-storage-21.0.1\AndroidManifest.xml:26:5-37:19
+MERGED from [com.google.android.material:material:1.12.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\be611a65fc3855ec7b81dd6cdc5bd546\transformed\material-1.12.0\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.material:material:1.12.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\be611a65fc3855ec7b81dd6cdc5bd546\transformed\material-1.12.0\AndroidManifest.xml:22:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:2.2.1] C:\Users\prism\.gradle\caches\8.10.2\transforms\7a1c5af247dd3ec1f26f0c09487811ae\transformed\constraintlayout-2.2.1\AndroidManifest.xml:7:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:2.2.1] C:\Users\prism\.gradle\caches\8.10.2\transforms\7a1c5af247dd3ec1f26f0c09487811ae\transformed\constraintlayout-2.2.1\AndroidManifest.xml:7:5-20
+MERGED from [androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\prism\.gradle\caches\8.10.2\transforms\4db106427b158585b40f5fafdc171d2b\transformed\credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:23:5-42:19
+MERGED from [androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\prism\.gradle\caches\8.10.2\transforms\4db106427b158585b40f5fafdc171d2b\transformed\credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:23:5-42:19
+MERGED from [com.google.android.gms:play-services-auth:20.7.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\8bb022e13a7eabf0d32ec96e55a84484\transformed\play-services-auth-20.7.0\AndroidManifest.xml:22:5-38:19
+MERGED from [com.google.android.gms:play-services-auth:20.7.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\8bb022e13a7eabf0d32ec96e55a84484\transformed\play-services-auth-20.7.0\AndroidManifest.xml:22:5-38:19
+MERGED from [com.google.android.play:integrity:1.3.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\c1e693fea0c06c6cbeeffa1ca4509cad\transformed\integrity-1.3.0\AndroidManifest.xml:5:5-6:19
+MERGED from [com.google.android.play:integrity:1.3.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\c1e693fea0c06c6cbeeffa1ca4509cad\transformed\integrity-1.3.0\AndroidManifest.xml:5:5-6:19
+MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\dfecc1962aee6510526ebaebc7258a7a\transformed\firebase-auth-interop-20.0.0\AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\dfecc1962aee6510526ebaebc7258a7a\transformed\firebase-auth-interop-20.0.0\AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.firebase:firebase-appcheck:18.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\6dccf3f681c6d0923e4d7b5ac998e097\transformed\firebase-appcheck-18.0.0\AndroidManifest.xml:21:5-32:19
+MERGED from [com.google.firebase:firebase-appcheck:18.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\6dccf3f681c6d0923e4d7b5ac998e097\transformed\firebase-appcheck-18.0.0\AndroidManifest.xml:21:5-32:19
+MERGED from [com.google.firebase:firebase-common-ktx:21.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\70f20338a72cdee19b703a3b4d9121ee\transformed\firebase-common-ktx-21.0.0\AndroidManifest.xml:8:5-16:19
+MERGED from [com.google.firebase:firebase-common-ktx:21.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\70f20338a72cdee19b703a3b4d9121ee\transformed\firebase-common-ktx-21.0.0\AndroidManifest.xml:8:5-16:19
+MERGED from [com.google.firebase:firebase-common:21.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\bfcebc27c83b40f483d7067c3f948706\transformed\firebase-common-21.0.0\AndroidManifest.xml:22:5-39:19
+MERGED from [com.google.firebase:firebase-common:21.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\bfcebc27c83b40f483d7067c3f948706\transformed\firebase-common-21.0.0\AndroidManifest.xml:22:5-39:19
+MERGED from [com.google.firebase:firebase-appcheck-interop:17.1.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\1673117638405f61a6ec92788f5b2359\transformed\firebase-appcheck-interop-17.1.0\AndroidManifest.xml:21:5-20
+MERGED from [com.google.firebase:firebase-appcheck-interop:17.1.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\1673117638405f61a6ec92788f5b2359\transformed\firebase-appcheck-interop-17.1.0\AndroidManifest.xml:21:5-20
+MERGED from [com.google.android.gms:play-services-fido:20.1.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\92fc8f49806fcc0ee427b26d6a002b45\transformed\play-services-fido-20.1.0\AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.android.gms:play-services-fido:20.1.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\92fc8f49806fcc0ee427b26d6a002b45\transformed\play-services-fido-20.1.0\AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.android.gms:play-services-base:18.1.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\5facb85b3fdd11e7ef3d64e06129d11f\transformed\play-services-base-18.1.0\AndroidManifest.xml:19:5-23:19
+MERGED from [com.google.android.gms:play-services-base:18.1.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\5facb85b3fdd11e7ef3d64e06129d11f\transformed\play-services-base-18.1.0\AndroidManifest.xml:19:5-23:19
+MERGED from [androidx.emoji2:emoji2:1.3.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\f85482af87bf0455acbc824ef1a164ae\transformed\emoji2-1.3.0\AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.emoji2:emoji2:1.3.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\f85482af87bf0455acbc824ef1a164ae\transformed\emoji2-1.3.0\AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.core:core:1.13.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\44d7f9307f82cbc36229e6b62a90377a\transformed\core-1.13.0\AndroidManifest.xml:28:5-89
+MERGED from [androidx.core:core:1.13.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\44d7f9307f82cbc36229e6b62a90377a\transformed\core-1.13.0\AndroidManifest.xml:28:5-89
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\prism\.gradle\caches\8.10.2\transforms\8b2d1915a063c90726e03ffb80b9ae2f\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\prism\.gradle\caches\8.10.2\transforms\8b2d1915a063c90726e03ffb80b9ae2f\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:23:5-33:19
+MERGED from [com.google.android.gms:play-services-tasks:18.2.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\0402f003b62c626e96fcd8600958a66c\transformed\play-services-tasks-18.2.0\AndroidManifest.xml:4:5-20
+MERGED from [com.google.android.gms:play-services-tasks:18.2.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\0402f003b62c626e96fcd8600958a66c\transformed\play-services-tasks-18.2.0\AndroidManifest.xml:4:5-20
+MERGED from [com.google.android.gms:play-services-basement:18.4.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\f2d445680cc100897c6400d9b238d657\transformed\play-services-basement-18.4.0\AndroidManifest.xml:5:5-7:19
+MERGED from [com.google.android.gms:play-services-basement:18.4.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\f2d445680cc100897c6400d9b238d657\transformed\play-services-basement-18.4.0\AndroidManifest.xml:5:5-7:19
+MERGED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\2e793e93b76b5215bf4e7b9b96a27484\transformed\profileinstaller-1.4.0\AndroidManifest.xml:23:5-53:19
+MERGED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\2e793e93b76b5215bf4e7b9b96a27484\transformed\profileinstaller-1.4.0\AndroidManifest.xml:23:5-53:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\prism\.gradle\caches\8.10.2\transforms\7911515e9f74904fd8d579e4685123a3\transformed\startup-runtime-1.1.1\AndroidManifest.xml:25:5-31:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\prism\.gradle\caches\8.10.2\transforms\7911515e9f74904fd8d579e4685123a3\transformed\startup-runtime-1.1.1\AndroidManifest.xml:25:5-31:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\prism\.gradle\caches\8.10.2\transforms\f0d17a6a2feb737999bc6ae1ead4ed8a\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\prism\.gradle\caches\8.10.2\transforms\f0d17a6a2feb737999bc6ae1ead4ed8a\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
+MERGED from [com.google.android.play:core-common:2.0.3] C:\Users\prism\.gradle\caches\8.10.2\transforms\f7c3e3f82bdf2251f724ad9f5cdb8f32\transformed\core-common-2.0.3\AndroidManifest.xml:11:5-19:19
+MERGED from [com.google.android.play:core-common:2.0.3] C:\Users\prism\.gradle\caches\8.10.2\transforms\f7c3e3f82bdf2251f724ad9f5cdb8f32\transformed\core-common-2.0.3\AndroidManifest.xml:11:5-19:19
 	android:extractNativeLibs
 		INJECTED from C:\Users\prism\Documents\GitHub\Distribution-APP\DistributionAPP\app\src\main\AndroidManifest.xml
 	android:appComponentFactory
-		ADDED from [androidx.core:core:1.13.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\1b89a4ef0596eddf891071b8ad4b689b\transformed\core-1.13.0\AndroidManifest.xml:28:18-86
+		ADDED from [androidx.core:core:1.13.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\44d7f9307f82cbc36229e6b62a90377a\transformed\core-1.13.0\AndroidManifest.xml:28:18-86
 	android:supportsRtl
 		ADDED from C:\Users\prism\Documents\GitHub\Distribution-APP\DistributionAPP\app\src\main\AndroidManifest.xml:12:9-35
 	android:label
@@ -98,203 +156,497 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\pr
 		ADDED from C:\Users\prism\Documents\GitHub\Distribution-APP\DistributionAPP\app\src\main\AndroidManifest.xml:13:9-53
 	android:dataExtractionRules
 		ADDED from C:\Users\prism\Documents\GitHub\Distribution-APP\DistributionAPP\app\src\main\AndroidManifest.xml:7:9-65
-activity#fcu.app.distributionapp.MainActivity
-ADDED from C:\Users\prism\Documents\GitHub\Distribution-APP\DistributionAPP\app\src\main\AndroidManifest.xml:15:9-23:20
+activity#fcu.app.distributionapp.RegisterActivity
+ADDED from C:\Users\prism\Documents\GitHub\Distribution-APP\DistributionAPP\app\src\main\AndroidManifest.xml:15:9-17:40
 	android:exported
-		ADDED from C:\Users\prism\Documents\GitHub\Distribution-APP\DistributionAPP\app\src\main\AndroidManifest.xml:17:13-36
+		ADDED from C:\Users\prism\Documents\GitHub\Distribution-APP\DistributionAPP\app\src\main\AndroidManifest.xml:17:13-37
 	android:name
-		ADDED from C:\Users\prism\Documents\GitHub\Distribution-APP\DistributionAPP\app\src\main\AndroidManifest.xml:16:13-41
+		ADDED from C:\Users\prism\Documents\GitHub\Distribution-APP\DistributionAPP\app\src\main\AndroidManifest.xml:16:13-45
+activity#fcu.app.distributionapp.MainActivity
+ADDED from C:\Users\prism\Documents\GitHub\Distribution-APP\DistributionAPP\app\src\main\AndroidManifest.xml:18:9-26:20
+	android:exported
+		ADDED from C:\Users\prism\Documents\GitHub\Distribution-APP\DistributionAPP\app\src\main\AndroidManifest.xml:20:13-36
+	android:name
+		ADDED from C:\Users\prism\Documents\GitHub\Distribution-APP\DistributionAPP\app\src\main\AndroidManifest.xml:19:13-41
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\prism\Documents\GitHub\Distribution-APP\DistributionAPP\app\src\main\AndroidManifest.xml:18:13-22:29
+ADDED from C:\Users\prism\Documents\GitHub\Distribution-APP\DistributionAPP\app\src\main\AndroidManifest.xml:21:13-25:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\prism\Documents\GitHub\Distribution-APP\DistributionAPP\app\src\main\AndroidManifest.xml:19:17-69
+ADDED from C:\Users\prism\Documents\GitHub\Distribution-APP\DistributionAPP\app\src\main\AndroidManifest.xml:22:17-69
 	android:name
-		ADDED from C:\Users\prism\Documents\GitHub\Distribution-APP\DistributionAPP\app\src\main\AndroidManifest.xml:19:25-66
+		ADDED from C:\Users\prism\Documents\GitHub\Distribution-APP\DistributionAPP\app\src\main\AndroidManifest.xml:22:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\prism\Documents\GitHub\Distribution-APP\DistributionAPP\app\src\main\AndroidManifest.xml:21:17-77
+ADDED from C:\Users\prism\Documents\GitHub\Distribution-APP\DistributionAPP\app\src\main\AndroidManifest.xml:24:17-77
 	android:name
-		ADDED from C:\Users\prism\Documents\GitHub\Distribution-APP\DistributionAPP\app\src\main\AndroidManifest.xml:21:27-74
+		ADDED from C:\Users\prism\Documents\GitHub\Distribution-APP\DistributionAPP\app\src\main\AndroidManifest.xml:24:27-74
 uses-sdk
 INJECTED from C:\Users\prism\Documents\GitHub\Distribution-APP\DistributionAPP\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\prism\Documents\GitHub\Distribution-APP\DistributionAPP\app\src\main\AndroidManifest.xml
 INJECTED from C:\Users\prism\Documents\GitHub\Distribution-APP\DistributionAPP\app\src\main\AndroidManifest.xml
-MERGED from [com.google.android.material:material:1.12.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\89d8d326ea87191807391c4792714f8a\transformed\material-1.12.0\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.material:material:1.12.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\89d8d326ea87191807391c4792714f8a\transformed\material-1.12.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.constraintlayout:constraintlayout:2.2.1] C:\Users\prism\.gradle\caches\8.10.2\transforms\bccea9dd7c30f093b6401f179c0d04bb\transformed\constraintlayout-2.2.1\AndroidManifest.xml:5:5-44
-MERGED from [androidx.constraintlayout:constraintlayout:2.2.1] C:\Users\prism\.gradle\caches\8.10.2\transforms\bccea9dd7c30f093b6401f179c0d04bb\transformed\constraintlayout-2.2.1\AndroidManifest.xml:5:5-44
-MERGED from [androidx.appcompat:appcompat-resources:1.7.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\37584aa91d64bd065ea955ab19d212bf\transformed\appcompat-resources-1.7.0\AndroidManifest.xml:5:5-44
-MERGED from [androidx.appcompat:appcompat-resources:1.7.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\37584aa91d64bd065ea955ab19d212bf\transformed\appcompat-resources-1.7.0\AndroidManifest.xml:5:5-44
-MERGED from [androidx.appcompat:appcompat:1.7.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\a3789bad456d19543eabf12e524b754f\transformed\appcompat-1.7.0\AndroidManifest.xml:5:5-44
-MERGED from [androidx.appcompat:appcompat:1.7.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\a3789bad456d19543eabf12e524b754f\transformed\appcompat-1.7.0\AndroidManifest.xml:5:5-44
-MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\36ba7ce8bc34609f0cbe9f0b9390da31\transformed\viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\36ba7ce8bc34609f0cbe9f0b9390da31\transformed\viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.fragment:fragment:1.5.4] C:\Users\prism\.gradle\caches\8.10.2\transforms\38de3b4007935fc56ee014293aabd343\transformed\fragment-1.5.4\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.fragment:fragment:1.5.4] C:\Users\prism\.gradle\caches\8.10.2\transforms\38de3b4007935fc56ee014293aabd343\transformed\fragment-1.5.4\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.activity:activity:1.10.1] C:\Users\prism\.gradle\caches\8.10.2\transforms\7488f5cd3f080250ce36ea017c897776\transformed\activity-1.10.1\AndroidManifest.xml:20:5-44
-MERGED from [androidx.activity:activity:1.10.1] C:\Users\prism\.gradle\caches\8.10.2\transforms\7488f5cd3f080250ce36ea017c897776\transformed\activity-1.10.1\AndroidManifest.xml:20:5-44
-MERGED from [com.github.PhilJay:MPAndroidChart:3.1.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\db640cbe7ddfcb6f6c50f76c3570fda1\transformed\MPAndroidChart-3.1.0\AndroidManifest.xml:16:5-18:41
-MERGED from [com.github.PhilJay:MPAndroidChart:3.1.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\db640cbe7ddfcb6f6c50f76c3570fda1\transformed\MPAndroidChart-3.1.0\AndroidManifest.xml:16:5-18:41
-MERGED from [androidx.savedstate:savedstate:1.2.1] C:\Users\prism\.gradle\caches\8.10.2\transforms\ece1d1cf3c970cf902300d0ab4937641\transformed\savedstate-1.2.1\AndroidManifest.xml:20:5-44
-MERGED from [androidx.savedstate:savedstate:1.2.1] C:\Users\prism\.gradle\caches\8.10.2\transforms\ece1d1cf3c970cf902300d0ab4937641\transformed\savedstate-1.2.1\AndroidManifest.xml:20:5-44
-MERGED from [androidx.emoji2:emoji2-views-helper:1.3.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\f86964e99c787bc3ada5ba1365232c81\transformed\emoji2-views-helper-1.3.0\AndroidManifest.xml:5:5-44
-MERGED from [androidx.emoji2:emoji2-views-helper:1.3.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\f86964e99c787bc3ada5ba1365232c81\transformed\emoji2-views-helper-1.3.0\AndroidManifest.xml:5:5-44
-MERGED from [androidx.emoji2:emoji2:1.3.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\ba719fc42cbbd079e9e20163ced8ada6\transformed\emoji2-1.3.0\AndroidManifest.xml:21:5-44
-MERGED from [androidx.emoji2:emoji2:1.3.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\ba719fc42cbbd079e9e20163ced8ada6\transformed\emoji2-1.3.0\AndroidManifest.xml:21:5-44
-MERGED from [androidx.transition:transition:1.5.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\f40c20767e3f4ab82027eb6d0d33f500\transformed\transition-1.5.0\AndroidManifest.xml:5:5-44
-MERGED from [androidx.transition:transition:1.5.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\f40c20767e3f4ab82027eb6d0d33f500\transformed\transition-1.5.0\AndroidManifest.xml:5:5-44
-MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\d5a7d9be98bbeb29c37f3b5ff52a4cc4\transformed\dynamicanimation-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\d5a7d9be98bbeb29c37f3b5ff52a4cc4\transformed\dynamicanimation-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\42246cc15c014f989aba7f39892bc722\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\42246cc15c014f989aba7f39892bc722\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.loader:loader:1.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\8031ff4f50e21767e2d14b64e462a721\transformed\loader-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.loader:loader:1.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\8031ff4f50e21767e2d14b64e462a721\transformed\loader-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-livedata:2.6.2] C:\Users\prism\.gradle\caches\8.10.2\transforms\11e2c275d4dfc774b78ba4beb11263bf\transformed\lifecycle-livedata-2.6.2\AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-livedata:2.6.2] C:\Users\prism\.gradle\caches\8.10.2\transforms\11e2c275d4dfc774b78ba4beb11263bf\transformed\lifecycle-livedata-2.6.2\AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.6.2] C:\Users\prism\.gradle\caches\8.10.2\transforms\d6d3f33e3f1b2293313398d1a69ebf23\transformed\lifecycle-viewmodel-2.6.2\AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.6.2] C:\Users\prism\.gradle\caches\8.10.2\transforms\d6d3f33e3f1b2293313398d1a69ebf23\transformed\lifecycle-viewmodel-2.6.2\AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\prism\.gradle\caches\8.10.2\transforms\7f939e078380bf5b07c12d49b3dcb7fc\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:21:5-44
-MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\prism\.gradle\caches\8.10.2\transforms\7f939e078380bf5b07c12d49b3dcb7fc\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:21:5-44
-MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.6.2] C:\Users\prism\.gradle\caches\8.10.2\transforms\a8eba315c2f9348088da021709b9d586\transformed\lifecycle-livedata-core-2.6.2\AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.6.2] C:\Users\prism\.gradle\caches\8.10.2\transforms\a8eba315c2f9348088da021709b9d586\transformed\lifecycle-livedata-core-2.6.2\AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-runtime:2.6.2] C:\Users\prism\.gradle\caches\8.10.2\transforms\b7b93b791f1cf594fb02b1769efd2087\transformed\lifecycle-runtime-2.6.2\AndroidManifest.xml:5:5-44
-MERGED from [androidx.lifecycle:lifecycle-runtime:2.6.2] C:\Users\prism\.gradle\caches\8.10.2\transforms\b7b93b791f1cf594fb02b1769efd2087\transformed\lifecycle-runtime-2.6.2\AndroidManifest.xml:5:5-44
-MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.2] C:\Users\prism\.gradle\caches\8.10.2\transforms\bfe6d5558bfab3294b82918f617217a4\transformed\lifecycle-viewmodel-savedstate-2.6.2\AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.2] C:\Users\prism\.gradle\caches\8.10.2\transforms\bfe6d5558bfab3294b82918f617217a4\transformed\lifecycle-viewmodel-savedstate-2.6.2\AndroidManifest.xml:20:5-44
-MERGED from [androidx.core:core-ktx:1.13.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\137991bb5f72fdaadc89f05d97d23f17\transformed\core-ktx-1.13.0\AndroidManifest.xml:5:5-44
-MERGED from [androidx.core:core-ktx:1.13.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\137991bb5f72fdaadc89f05d97d23f17\transformed\core-ktx-1.13.0\AndroidManifest.xml:5:5-44
-MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] C:\Users\prism\.gradle\caches\8.10.2\transforms\776f77aaa8943bd403b7b6583e653a28\transformed\drawerlayout-1.1.1\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] C:\Users\prism\.gradle\caches\8.10.2\transforms\776f77aaa8943bd403b7b6583e653a28\transformed\drawerlayout-1.1.1\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\4e95fba807074436adfb39fd8b20183a\transformed\coordinatorlayout-1.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\4e95fba807074436adfb39fd8b20183a\transformed\coordinatorlayout-1.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\32eaa1eed83a785e81609906d714886e\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\32eaa1eed83a785e81609906d714886e\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\6e28512b606c28633a3e68eacd4c7660\transformed\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\6e28512b606c28633a3e68eacd4c7660\transformed\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\f5ff3fdcd85b98546c7e077534e9e832\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\f5ff3fdcd85b98546c7e077534e9e832\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\d2bd86c61c823ee5cad67ae0ce043d05\transformed\recyclerview-1.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\d2bd86c61c823ee5cad67ae0ce043d05\transformed\recyclerview-1.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.customview:customview:1.1.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\31f476fa4d9102513c7570aefec42040\transformed\customview-1.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.customview:customview:1.1.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\31f476fa4d9102513c7570aefec42040\transformed\customview-1.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.core:core:1.13.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\1b89a4ef0596eddf891071b8ad4b689b\transformed\core-1.13.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.core:core:1.13.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\1b89a4ef0596eddf891071b8ad4b689b\transformed\core-1.13.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\a2754947df88ee9d98c689f1e5b49688\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\a2754947df88ee9d98c689f1e5b49688\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\065b7eafb382b8897916a80bd24b17b5\transformed\cardview-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\065b7eafb382b8897916a80bd24b17b5\transformed\cardview-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\9d7d7688c656d271fbe253a6ed59a587\transformed\profileinstaller-1.4.0\AndroidManifest.xml:21:5-44
-MERGED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\9d7d7688c656d271fbe253a6ed59a587\transformed\profileinstaller-1.4.0\AndroidManifest.xml:21:5-44
-MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\prism\.gradle\caches\8.10.2\transforms\bd6c0956c5ae0077acf5bdf626a1456f\transformed\startup-runtime-1.1.1\AndroidManifest.xml:21:5-23:41
-MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\prism\.gradle\caches\8.10.2\transforms\bd6c0956c5ae0077acf5bdf626a1456f\transformed\startup-runtime-1.1.1\AndroidManifest.xml:21:5-23:41
-MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\06576ce994b954946066298548d5a933\transformed\tracing-1.0.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\06576ce994b954946066298548d5a933\transformed\tracing-1.0.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\35bc32b783335a8edb7b57a4bba47ebf\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\35bc32b783335a8edb7b57a4bba47ebf\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\prism\.gradle\caches\8.10.2\transforms\690530045e45a55919298a2fac694a47\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\prism\.gradle\caches\8.10.2\transforms\690530045e45a55919298a2fac694a47\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.arch.core:core-runtime:2.2.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\39fa16bb57a0b7d9af6fa8a1b0926492\transformed\core-runtime-2.2.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.arch.core:core-runtime:2.2.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\39fa16bb57a0b7d9af6fa8a1b0926492\transformed\core-runtime-2.2.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\ae5eb61e5f0298a4f0e86de33ac11319\transformed\documentfile-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\ae5eb61e5f0298a4f0e86de33ac11319\transformed\documentfile-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\c1518b2c565f51747395150b05c49793\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\c1518b2c565f51747395150b05c49793\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.print:print:1.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\991e744e054f645144100b5d06636828\transformed\print-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.print:print:1.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\991e744e054f645144100b5d06636828\transformed\print-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.core:core-viewtree:1.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\84d7002208ea45cceff630d57dcf7a26\transformed\core-viewtree-1.0.0\AndroidManifest.xml:5:5-44
-MERGED from [androidx.core:core-viewtree:1.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\84d7002208ea45cceff630d57dcf7a26\transformed\core-viewtree-1.0.0\AndroidManifest.xml:5:5-44
-MERGED from [androidx.annotation:annotation-experimental:1.4.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\0691fd82f20fece063ce5db951cd1cea\transformed\annotation-experimental-1.4.0\AndroidManifest.xml:5:5-44
-MERGED from [androidx.annotation:annotation-experimental:1.4.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\0691fd82f20fece063ce5db951cd1cea\transformed\annotation-experimental-1.4.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-auth:23.2.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\c4ebc29f72ff96fc88224e6e488addd5\transformed\firebase-auth-23.2.0\AndroidManifest.xml:21:5-23:151
+MERGED from [com.google.firebase:firebase-auth:23.2.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\c4ebc29f72ff96fc88224e6e488addd5\transformed\firebase-auth-23.2.0\AndroidManifest.xml:21:5-23:151
+MERGED from [com.google.firebase:firebase-firestore:25.1.4] C:\Users\prism\.gradle\caches\8.10.2\transforms\03e2fb13052ef6912292cbcbbc6dcbbb\transformed\firebase-firestore-25.1.4\AndroidManifest.xml:6:5-44
+MERGED from [com.google.firebase:firebase-firestore:25.1.4] C:\Users\prism\.gradle\caches\8.10.2\transforms\03e2fb13052ef6912292cbcbbc6dcbbb\transformed\firebase-firestore-25.1.4\AndroidManifest.xml:6:5-44
+MERGED from [com.google.firebase:firebase-storage:21.0.1] C:\Users\prism\.gradle\caches\8.10.2\transforms\4e6eed578769770e16db43b75ada3547\transformed\firebase-storage-21.0.1\AndroidManifest.xml:19:5-44
+MERGED from [com.google.firebase:firebase-storage:21.0.1] C:\Users\prism\.gradle\caches\8.10.2\transforms\4e6eed578769770e16db43b75ada3547\transformed\firebase-storage-21.0.1\AndroidManifest.xml:19:5-44
+MERGED from [com.google.android.material:material:1.12.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\be611a65fc3855ec7b81dd6cdc5bd546\transformed\material-1.12.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.material:material:1.12.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\be611a65fc3855ec7b81dd6cdc5bd546\transformed\material-1.12.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.constraintlayout:constraintlayout:2.2.1] C:\Users\prism\.gradle\caches\8.10.2\transforms\7a1c5af247dd3ec1f26f0c09487811ae\transformed\constraintlayout-2.2.1\AndroidManifest.xml:5:5-44
+MERGED from [androidx.constraintlayout:constraintlayout:2.2.1] C:\Users\prism\.gradle\caches\8.10.2\transforms\7a1c5af247dd3ec1f26f0c09487811ae\transformed\constraintlayout-2.2.1\AndroidManifest.xml:5:5-44
+MERGED from [androidx.appcompat:appcompat-resources:1.7.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\011f735e96e39856dc82ad0c550ade73\transformed\appcompat-resources-1.7.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.appcompat:appcompat-resources:1.7.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\011f735e96e39856dc82ad0c550ade73\transformed\appcompat-resources-1.7.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.appcompat:appcompat:1.7.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\046986e14df1771a311d73e34b2b8140\transformed\appcompat-1.7.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.appcompat:appcompat:1.7.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\046986e14df1771a311d73e34b2b8140\transformed\appcompat-1.7.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\e3470e1995b78e145d195d6a9d3eb1a9\transformed\viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\e3470e1995b78e145d195d6a9d3eb1a9\transformed\viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.credentials:credentials:1.2.0-rc01] C:\Users\prism\.gradle\caches\8.10.2\transforms\5ae963fe0cdc0da774df0cc398fe72fd\transformed\credentials-1.2.0-rc01\AndroidManifest.xml:5:5-44
+MERGED from [androidx.credentials:credentials:1.2.0-rc01] C:\Users\prism\.gradle\caches\8.10.2\transforms\5ae963fe0cdc0da774df0cc398fe72fd\transformed\credentials-1.2.0-rc01\AndroidManifest.xml:5:5-44
+MERGED from [androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\prism\.gradle\caches\8.10.2\transforms\4db106427b158585b40f5fafdc171d2b\transformed\credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:21:5-44
+MERGED from [androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\prism\.gradle\caches\8.10.2\transforms\4db106427b158585b40f5fafdc171d2b\transformed\credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:21:5-44
+MERGED from [com.google.android.gms:play-services-auth:20.7.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\8bb022e13a7eabf0d32ec96e55a84484\transformed\play-services-auth-20.7.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-auth:20.7.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\8bb022e13a7eabf0d32ec96e55a84484\transformed\play-services-auth-20.7.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-auth-api-phone:18.0.2] C:\Users\prism\.gradle\caches\8.10.2\transforms\b0b33d6465d0e3d6095c74863a817405\transformed\play-services-auth-api-phone-18.0.2\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-auth-api-phone:18.0.2] C:\Users\prism\.gradle\caches\8.10.2\transforms\b0b33d6465d0e3d6095c74863a817405\transformed\play-services-auth-api-phone-18.0.2\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.recaptcha:recaptcha:18.6.1] C:\Users\prism\.gradle\caches\8.10.2\transforms\540b631cb004dc8f7633b9a842987dbc\transformed\recaptcha-18.6.1\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.recaptcha:recaptcha:18.6.1] C:\Users\prism\.gradle\caches\8.10.2\transforms\540b631cb004dc8f7633b9a842987dbc\transformed\recaptcha-18.6.1\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.play:integrity:1.3.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\c1e693fea0c06c6cbeeffa1ca4509cad\transformed\integrity-1.3.0\AndroidManifest.xml:4:5-44
+MERGED from [com.google.android.play:integrity:1.3.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\c1e693fea0c06c6cbeeffa1ca4509cad\transformed\integrity-1.3.0\AndroidManifest.xml:4:5-44
+MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\dfecc1962aee6510526ebaebc7258a7a\transformed\firebase-auth-interop-20.0.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\dfecc1962aee6510526ebaebc7258a7a\transformed\firebase-auth-interop-20.0.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-appcheck:18.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\6dccf3f681c6d0923e4d7b5ac998e097\transformed\firebase-appcheck-18.0.0\AndroidManifest.xml:18:5-44
+MERGED from [com.google.firebase:firebase-appcheck:18.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\6dccf3f681c6d0923e4d7b5ac998e097\transformed\firebase-appcheck-18.0.0\AndroidManifest.xml:18:5-44
+MERGED from [com.google.firebase:firebase-common-ktx:21.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\70f20338a72cdee19b703a3b4d9121ee\transformed\firebase-common-ktx-21.0.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-common-ktx:21.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\70f20338a72cdee19b703a3b4d9121ee\transformed\firebase-common-ktx-21.0.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-common:21.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\bfcebc27c83b40f483d7067c3f948706\transformed\firebase-common-21.0.0\AndroidManifest.xml:19:5-44
+MERGED from [com.google.firebase:firebase-common:21.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\bfcebc27c83b40f483d7067c3f948706\transformed\firebase-common-21.0.0\AndroidManifest.xml:19:5-44
+MERGED from [com.google.firebase:firebase-database-collection:18.0.1] C:\Users\prism\.gradle\caches\8.10.2\transforms\9b480f96fbfddfe743b4682841358564\transformed\firebase-database-collection-18.0.1\AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.firebase:firebase-database-collection:18.0.1] C:\Users\prism\.gradle\caches\8.10.2\transforms\9b480f96fbfddfe743b4682841358564\transformed\firebase-database-collection-18.0.1\AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.firebase:firebase-appcheck-interop:17.1.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\1673117638405f61a6ec92788f5b2359\transformed\firebase-appcheck-interop-17.1.0\AndroidManifest.xml:18:5-44
+MERGED from [com.google.firebase:firebase-appcheck-interop:17.1.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\1673117638405f61a6ec92788f5b2359\transformed\firebase-appcheck-interop-17.1.0\AndroidManifest.xml:18:5-44
+MERGED from [com.google.android.gms:play-services-fido:20.1.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\92fc8f49806fcc0ee427b26d6a002b45\transformed\play-services-fido-20.1.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-fido:20.1.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\92fc8f49806fcc0ee427b26d6a002b45\transformed\play-services-fido-20.1.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-auth-base:18.0.4] C:\Users\prism\.gradle\caches\8.10.2\transforms\404e0300001509b3c01516c45c6aa274\transformed\play-services-auth-base-18.0.4\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-auth-base:18.0.4] C:\Users\prism\.gradle\caches\8.10.2\transforms\404e0300001509b3c01516c45c6aa274\transformed\play-services-auth-base-18.0.4\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-base:18.1.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\5facb85b3fdd11e7ef3d64e06129d11f\transformed\play-services-base-18.1.0\AndroidManifest.xml:18:5-43
+MERGED from [com.google.android.gms:play-services-base:18.1.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\5facb85b3fdd11e7ef3d64e06129d11f\transformed\play-services-base-18.1.0\AndroidManifest.xml:18:5-43
+MERGED from [androidx.core:core-ktx:1.13.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\b995e148c295decf68d4d3c4d40a8d5e\transformed\core-ktx-1.13.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.core:core-ktx:1.13.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\b995e148c295decf68d4d3c4d40a8d5e\transformed\core-ktx-1.13.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.emoji2:emoji2-views-helper:1.3.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\8a01b1bd85a40f8db934fc4f02ae42d1\transformed\emoji2-views-helper-1.3.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.emoji2:emoji2-views-helper:1.3.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\8a01b1bd85a40f8db934fc4f02ae42d1\transformed\emoji2-views-helper-1.3.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.emoji2:emoji2:1.3.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\f85482af87bf0455acbc824ef1a164ae\transformed\emoji2-1.3.0\AndroidManifest.xml:21:5-44
+MERGED from [androidx.emoji2:emoji2:1.3.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\f85482af87bf0455acbc824ef1a164ae\transformed\emoji2-1.3.0\AndroidManifest.xml:21:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] C:\Users\prism\.gradle\caches\8.10.2\transforms\4cd90a57eed8993eb30b9c55ffac91ee\transformed\drawerlayout-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] C:\Users\prism\.gradle\caches\8.10.2\transforms\4cd90a57eed8993eb30b9c55ffac91ee\transformed\drawerlayout-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\25f98e2f4fc74536b683bdef7a69b369\transformed\coordinatorlayout-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\25f98e2f4fc74536b683bdef7a69b369\transformed\coordinatorlayout-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.transition:transition:1.5.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\6647624827eae06c5825529b3b1909c7\transformed\transition-1.5.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.transition:transition:1.5.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\6647624827eae06c5825529b3b1909c7\transformed\transition-1.5.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\9e722259246bb6df1c8ebbfd829e617a\transformed\dynamicanimation-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\9e722259246bb6df1c8ebbfd829e617a\transformed\dynamicanimation-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\85e93bfa6b2e7a931f04cacde980e7da\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\85e93bfa6b2e7a931f04cacde980e7da\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\b3a20e5e7a40c108317cab5cd47b1215\transformed\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\b3a20e5e7a40c108317cab5cd47b1215\transformed\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.browser:browser:1.4.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\bed546d243ba780764843694fdc0d81f\transformed\browser-1.4.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.browser:browser:1.4.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\bed546d243ba780764843694fdc0d81f\transformed\browser-1.4.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\eaecd7203bd611fef5691c6078b2b4e6\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\eaecd7203bd611fef5691c6078b2b4e6\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\a0b3c70539d29089c01b772c0240140a\transformed\loader-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\a0b3c70539d29089c01b772c0240140a\transformed\loader-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\ca25cbee9fcbc20db8b263f8cb2b82a2\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\ca25cbee9fcbc20db8b263f8cb2b82a2\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\9d3850ae0e9a540ff56851bf007fa8e5\transformed\recyclerview-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\9d3850ae0e9a540ff56851bf007fa8e5\transformed\recyclerview-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.customview:customview:1.1.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\b60890538824c012c1c75d9a096e6fad\transformed\customview-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.customview:customview:1.1.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\b60890538824c012c1c75d9a096e6fad\transformed\customview-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.13.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\44d7f9307f82cbc36229e6b62a90377a\transformed\core-1.13.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.13.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\44d7f9307f82cbc36229e6b62a90377a\transformed\core-1.13.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.6.2] C:\Users\prism\.gradle\caches\8.10.2\transforms\9901d93f3af2c8da56b7ea7ad7f215d7\transformed\lifecycle-livedata-2.6.2\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.6.2] C:\Users\prism\.gradle\caches\8.10.2\transforms\9901d93f3af2c8da56b7ea7ad7f215d7\transformed\lifecycle-livedata-2.6.2\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.6.2] C:\Users\prism\.gradle\caches\8.10.2\transforms\4d8373b6deb3c7403d6df58f8deb3e40\transformed\lifecycle-viewmodel-2.6.2\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.6.2] C:\Users\prism\.gradle\caches\8.10.2\transforms\4d8373b6deb3c7403d6df58f8deb3e40\transformed\lifecycle-viewmodel-2.6.2\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\prism\.gradle\caches\8.10.2\transforms\8b2d1915a063c90726e03ffb80b9ae2f\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:21:5-44
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\prism\.gradle\caches\8.10.2\transforms\8b2d1915a063c90726e03ffb80b9ae2f\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:21:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.6.2] C:\Users\prism\.gradle\caches\8.10.2\transforms\6a81dc4a37de9d0c9bd9f25722129f76\transformed\lifecycle-livedata-core-2.6.2\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.6.2] C:\Users\prism\.gradle\caches\8.10.2\transforms\6a81dc4a37de9d0c9bd9f25722129f76\transformed\lifecycle-livedata-core-2.6.2\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.6.2] C:\Users\prism\.gradle\caches\8.10.2\transforms\ef94f35c7d026b81c28c28baadbfed9d\transformed\lifecycle-runtime-2.6.2\AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.6.2] C:\Users\prism\.gradle\caches\8.10.2\transforms\ef94f35c7d026b81c28c28baadbfed9d\transformed\lifecycle-runtime-2.6.2\AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.2] C:\Users\prism\.gradle\caches\8.10.2\transforms\2690de0bc86213e97efdb02ded7b380f\transformed\lifecycle-viewmodel-savedstate-2.6.2\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.2] C:\Users\prism\.gradle\caches\8.10.2\transforms\2690de0bc86213e97efdb02ded7b380f\transformed\lifecycle-viewmodel-savedstate-2.6.2\AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate:1.2.1] C:\Users\prism\.gradle\caches\8.10.2\transforms\9e51c08505657fb155e67f2914537746\transformed\savedstate-1.2.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate:1.2.1] C:\Users\prism\.gradle\caches\8.10.2\transforms\9e51c08505657fb155e67f2914537746\transformed\savedstate-1.2.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-tasks:18.2.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\0402f003b62c626e96fcd8600958a66c\transformed\play-services-tasks-18.2.0\AndroidManifest.xml:3:5-44
+MERGED from [com.google.android.gms:play-services-tasks:18.2.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\0402f003b62c626e96fcd8600958a66c\transformed\play-services-tasks-18.2.0\AndroidManifest.xml:3:5-44
+MERGED from [com.google.android.gms:play-services-basement:18.4.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\f2d445680cc100897c6400d9b238d657\transformed\play-services-basement-18.4.0\AndroidManifest.xml:3:5-44
+MERGED from [com.google.android.gms:play-services-basement:18.4.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\f2d445680cc100897c6400d9b238d657\transformed\play-services-basement-18.4.0\AndroidManifest.xml:3:5-44
+MERGED from [androidx.fragment:fragment:1.5.4] C:\Users\prism\.gradle\caches\8.10.2\transforms\7cc42bcfa64c0b31d7b532441f05f0d3\transformed\fragment-1.5.4\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.5.4] C:\Users\prism\.gradle\caches\8.10.2\transforms\7cc42bcfa64c0b31d7b532441f05f0d3\transformed\fragment-1.5.4\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.10.1] C:\Users\prism\.gradle\caches\8.10.2\transforms\5c6bb051b77d9855e7a7502dff8fb040\transformed\activity-1.10.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.10.1] C:\Users\prism\.gradle\caches\8.10.2\transforms\5c6bb051b77d9855e7a7502dff8fb040\transformed\activity-1.10.1\AndroidManifest.xml:20:5-44
+MERGED from [com.github.PhilJay:MPAndroidChart:3.1.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\433f5068eb2afc492ec2ffeca8e52a2d\transformed\MPAndroidChart-3.1.0\AndroidManifest.xml:16:5-18:41
+MERGED from [com.github.PhilJay:MPAndroidChart:3.1.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\433f5068eb2afc492ec2ffeca8e52a2d\transformed\MPAndroidChart-3.1.0\AndroidManifest.xml:16:5-18:41
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\a887af8315bc5d89f6c93f82344a3c80\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\a887af8315bc5d89f6c93f82344a3c80\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\f1aeb941e6f0e036cf69e256cf4f550c\transformed\cardview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\f1aeb941e6f0e036cf69e256cf4f550c\transformed\cardview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\2e793e93b76b5215bf4e7b9b96a27484\transformed\profileinstaller-1.4.0\AndroidManifest.xml:21:5-44
+MERGED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\2e793e93b76b5215bf4e7b9b96a27484\transformed\profileinstaller-1.4.0\AndroidManifest.xml:21:5-44
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\prism\.gradle\caches\8.10.2\transforms\7911515e9f74904fd8d579e4685123a3\transformed\startup-runtime-1.1.1\AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\prism\.gradle\caches\8.10.2\transforms\7911515e9f74904fd8d579e4685123a3\transformed\startup-runtime-1.1.1\AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\2f8f679b267ae01f275c4bb5093778f1\transformed\tracing-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\2f8f679b267ae01f275c4bb5093778f1\transformed\tracing-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\6b5d6120846e11af03d86d6ad467218f\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\6b5d6120846e11af03d86d6ad467218f\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-components:18.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\a942b86e32e3ac8717568f15bf160107\transformed\firebase-components-18.0.0\AndroidManifest.xml:18:5-44
+MERGED from [com.google.firebase:firebase-components:18.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\a942b86e32e3ac8717568f15bf160107\transformed\firebase-components-18.0.0\AndroidManifest.xml:18:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\a3efd23a442039f5ce3c2d66d334533c\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\a3efd23a442039f5ce3c2d66d334533c\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\prism\.gradle\caches\8.10.2\transforms\f0d17a6a2feb737999bc6ae1ead4ed8a\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\prism\.gradle\caches\8.10.2\transforms\f0d17a6a2feb737999bc6ae1ead4ed8a\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.2.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\626b5c379a6b20bd97303e95c05832aa\transformed\core-runtime-2.2.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.2.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\626b5c379a6b20bd97303e95c05832aa\transformed\core-runtime-2.2.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\49eff376622391c2635b3029a4ba5d64\transformed\documentfile-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\49eff376622391c2635b3029a4ba5d64\transformed\documentfile-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\3fa08fb20b0e915ad576af1634a9b033\transformed\print-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\3fa08fb20b0e915ad576af1634a9b033\transformed\print-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core-viewtree:1.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\282739b7154b904bd1688217f1c6d586\transformed\core-viewtree-1.0.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.core:core-viewtree:1.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\282739b7154b904bd1688217f1c6d586\transformed\core-viewtree-1.0.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.4.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\6a674a7d7799bd8cdbb8b73b3a530f1a\transformed\annotation-experimental-1.4.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.4.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\6a674a7d7799bd8cdbb8b73b3a530f1a\transformed\annotation-experimental-1.4.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.libraries.identity.googleid:googleid:1.1.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\b5c82c6450548e4fefaf46b94f9a55b2\transformed\googleid-1.1.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.libraries.identity.googleid:googleid:1.1.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\b5c82c6450548e4fefaf46b94f9a55b2\transformed\googleid-1.1.0\AndroidManifest.xml:5:5-44
+MERGED from [io.grpc:grpc-android:1.62.2] C:\Users\prism\.gradle\caches\8.10.2\transforms\5c90ca72f4181be4476fbe70122e8d83\transformed\grpc-android-1.62.2\AndroidManifest.xml:5:5-44
+MERGED from [io.grpc:grpc-android:1.62.2] C:\Users\prism\.gradle\caches\8.10.2\transforms\5c90ca72f4181be4476fbe70122e8d83\transformed\grpc-android-1.62.2\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:protolite-well-known-types:18.0.1] C:\Users\prism\.gradle\caches\8.10.2\transforms\400a855893ab3aa0e3673bb9ad613dd0\transformed\protolite-well-known-types-18.0.1\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:protolite-well-known-types:18.0.1] C:\Users\prism\.gradle\caches\8.10.2\transforms\400a855893ab3aa0e3673bb9ad613dd0\transformed\protolite-well-known-types-18.0.1\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.play:core-common:2.0.3] C:\Users\prism\.gradle\caches\8.10.2\transforms\f7c3e3f82bdf2251f724ad9f5cdb8f32\transformed\core-common-2.0.3\AndroidManifest.xml:7:5-9:41
+MERGED from [com.google.android.play:core-common:2.0.3] C:\Users\prism\.gradle\caches\8.10.2\transforms\f7c3e3f82bdf2251f724ad9f5cdb8f32\transformed\core-common-2.0.3\AndroidManifest.xml:7:5-9:41
+	tools:overrideLibrary
+		ADDED from [com.google.firebase:firebase-auth:23.2.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\c4ebc29f72ff96fc88224e6e488addd5\transformed\firebase-auth-23.2.0\AndroidManifest.xml:23:9-148
 	android:targetSdkVersion
 		INJECTED from C:\Users\prism\Documents\GitHub\Distribution-APP\DistributionAPP\app\src\main\AndroidManifest.xml
 	android:minSdkVersion
 		INJECTED from C:\Users\prism\Documents\GitHub\Distribution-APP\DistributionAPP\app\src\main\AndroidManifest.xml
-provider#androidx.startup.InitializationProvider
-ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\ba719fc42cbbd079e9e20163ced8ada6\transformed\emoji2-1.3.0\AndroidManifest.xml:24:9-32:20
-MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\prism\.gradle\caches\8.10.2\transforms\7f939e078380bf5b07c12d49b3dcb7fc\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:24:9-32:20
-MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\prism\.gradle\caches\8.10.2\transforms\7f939e078380bf5b07c12d49b3dcb7fc\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:24:9-32:20
-MERGED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\9d7d7688c656d271fbe253a6ed59a587\transformed\profileinstaller-1.4.0\AndroidManifest.xml:24:9-32:20
-MERGED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\9d7d7688c656d271fbe253a6ed59a587\transformed\profileinstaller-1.4.0\AndroidManifest.xml:24:9-32:20
-MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\prism\.gradle\caches\8.10.2\transforms\bd6c0956c5ae0077acf5bdf626a1456f\transformed\startup-runtime-1.1.1\AndroidManifest.xml:26:9-30:34
-MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\prism\.gradle\caches\8.10.2\transforms\bd6c0956c5ae0077acf5bdf626a1456f\transformed\startup-runtime-1.1.1\AndroidManifest.xml:26:9-30:34
-	tools:node
-		ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\ba719fc42cbbd079e9e20163ced8ada6\transformed\emoji2-1.3.0\AndroidManifest.xml:28:13-31
-	android:authorities
-		ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\ba719fc42cbbd079e9e20163ced8ada6\transformed\emoji2-1.3.0\AndroidManifest.xml:26:13-68
+uses-permission#android.permission.INTERNET
+ADDED from [com.google.firebase:firebase-auth:23.2.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\c4ebc29f72ff96fc88224e6e488addd5\transformed\firebase-auth-23.2.0\AndroidManifest.xml:25:5-67
+MERGED from [com.google.firebase:firebase-firestore:25.1.4] C:\Users\prism\.gradle\caches\8.10.2\transforms\03e2fb13052ef6912292cbcbbc6dcbbb\transformed\firebase-firestore-25.1.4\AndroidManifest.xml:11:5-67
+MERGED from [com.google.firebase:firebase-firestore:25.1.4] C:\Users\prism\.gradle\caches\8.10.2\transforms\03e2fb13052ef6912292cbcbbc6dcbbb\transformed\firebase-firestore-25.1.4\AndroidManifest.xml:11:5-67
+MERGED from [com.google.firebase:firebase-storage:21.0.1] C:\Users\prism\.gradle\caches\8.10.2\transforms\4e6eed578769770e16db43b75ada3547\transformed\firebase-storage-21.0.1\AndroidManifest.xml:24:5-67
+MERGED from [com.google.firebase:firebase-storage:21.0.1] C:\Users\prism\.gradle\caches\8.10.2\transforms\4e6eed578769770e16db43b75ada3547\transformed\firebase-storage-21.0.1\AndroidManifest.xml:24:5-67
+MERGED from [com.google.android.recaptcha:recaptcha:18.6.1] C:\Users\prism\.gradle\caches\8.10.2\transforms\540b631cb004dc8f7633b9a842987dbc\transformed\recaptcha-18.6.1\AndroidManifest.xml:7:5-67
+MERGED from [com.google.android.recaptcha:recaptcha:18.6.1] C:\Users\prism\.gradle\caches\8.10.2\transforms\540b631cb004dc8f7633b9a842987dbc\transformed\recaptcha-18.6.1\AndroidManifest.xml:7:5-67
+	android:name
+		ADDED from [com.google.firebase:firebase-auth:23.2.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\c4ebc29f72ff96fc88224e6e488addd5\transformed\firebase-auth-23.2.0\AndroidManifest.xml:25:22-64
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from [com.google.firebase:firebase-auth:23.2.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\c4ebc29f72ff96fc88224e6e488addd5\transformed\firebase-auth-23.2.0\AndroidManifest.xml:26:5-79
+MERGED from [com.google.firebase:firebase-firestore:25.1.4] C:\Users\prism\.gradle\caches\8.10.2\transforms\03e2fb13052ef6912292cbcbbc6dcbbb\transformed\firebase-firestore-25.1.4\AndroidManifest.xml:10:5-79
+MERGED from [com.google.firebase:firebase-firestore:25.1.4] C:\Users\prism\.gradle\caches\8.10.2\transforms\03e2fb13052ef6912292cbcbbc6dcbbb\transformed\firebase-firestore-25.1.4\AndroidManifest.xml:10:5-79
+MERGED from [com.google.firebase:firebase-storage:21.0.1] C:\Users\prism\.gradle\caches\8.10.2\transforms\4e6eed578769770e16db43b75ada3547\transformed\firebase-storage-21.0.1\AndroidManifest.xml:23:5-79
+MERGED from [com.google.firebase:firebase-storage:21.0.1] C:\Users\prism\.gradle\caches\8.10.2\transforms\4e6eed578769770e16db43b75ada3547\transformed\firebase-storage-21.0.1\AndroidManifest.xml:23:5-79
+MERGED from [com.google.android.recaptcha:recaptcha:18.6.1] C:\Users\prism\.gradle\caches\8.10.2\transforms\540b631cb004dc8f7633b9a842987dbc\transformed\recaptcha-18.6.1\AndroidManifest.xml:8:5-79
+MERGED from [com.google.android.recaptcha:recaptcha:18.6.1] C:\Users\prism\.gradle\caches\8.10.2\transforms\540b631cb004dc8f7633b9a842987dbc\transformed\recaptcha-18.6.1\AndroidManifest.xml:8:5-79
+MERGED from [io.grpc:grpc-android:1.62.2] C:\Users\prism\.gradle\caches\8.10.2\transforms\5c90ca72f4181be4476fbe70122e8d83\transformed\grpc-android-1.62.2\AndroidManifest.xml:7:5-79
+MERGED from [io.grpc:grpc-android:1.62.2] C:\Users\prism\.gradle\caches\8.10.2\transforms\5c90ca72f4181be4476fbe70122e8d83\transformed\grpc-android-1.62.2\AndroidManifest.xml:7:5-79
+	android:name
+		ADDED from [com.google.firebase:firebase-auth:23.2.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\c4ebc29f72ff96fc88224e6e488addd5\transformed\firebase-auth-23.2.0\AndroidManifest.xml:26:22-76
+activity#com.google.firebase.auth.internal.GenericIdpActivity
+ADDED from [com.google.firebase:firebase-auth:23.2.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\c4ebc29f72ff96fc88224e6e488addd5\transformed\firebase-auth-23.2.0\AndroidManifest.xml:29:9-46:20
+	android:excludeFromRecents
+		ADDED from [com.google.firebase:firebase-auth:23.2.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\c4ebc29f72ff96fc88224e6e488addd5\transformed\firebase-auth-23.2.0\AndroidManifest.xml:31:13-46
+	android:launchMode
+		ADDED from [com.google.firebase:firebase-auth:23.2.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\c4ebc29f72ff96fc88224e6e488addd5\transformed\firebase-auth-23.2.0\AndroidManifest.xml:33:13-44
 	android:exported
-		ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\ba719fc42cbbd079e9e20163ced8ada6\transformed\emoji2-1.3.0\AndroidManifest.xml:27:13-37
+		ADDED from [com.google.firebase:firebase-auth:23.2.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\c4ebc29f72ff96fc88224e6e488addd5\transformed\firebase-auth-23.2.0\AndroidManifest.xml:32:13-36
+	android:theme
+		ADDED from [com.google.firebase:firebase-auth:23.2.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\c4ebc29f72ff96fc88224e6e488addd5\transformed\firebase-auth-23.2.0\AndroidManifest.xml:34:13-72
 	android:name
-		ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\ba719fc42cbbd079e9e20163ced8ada6\transformed\emoji2-1.3.0\AndroidManifest.xml:25:13-67
-meta-data#androidx.emoji2.text.EmojiCompatInitializer
-ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\ba719fc42cbbd079e9e20163ced8ada6\transformed\emoji2-1.3.0\AndroidManifest.xml:29:13-31:52
-	android:value
-		ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\ba719fc42cbbd079e9e20163ced8ada6\transformed\emoji2-1.3.0\AndroidManifest.xml:31:17-49
+		ADDED from [com.google.firebase:firebase-auth:23.2.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\c4ebc29f72ff96fc88224e6e488addd5\transformed\firebase-auth-23.2.0\AndroidManifest.xml:30:13-80
+intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:host:firebase.auth+data:path:/+data:scheme:genericidp
+ADDED from [com.google.firebase:firebase-auth:23.2.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\c4ebc29f72ff96fc88224e6e488addd5\transformed\firebase-auth-23.2.0\AndroidManifest.xml:35:13-45:29
+action#android.intent.action.VIEW
+ADDED from [com.google.firebase:firebase-auth:23.2.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\c4ebc29f72ff96fc88224e6e488addd5\transformed\firebase-auth-23.2.0\AndroidManifest.xml:36:17-69
 	android:name
-		ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\ba719fc42cbbd079e9e20163ced8ada6\transformed\emoji2-1.3.0\AndroidManifest.xml:30:17-75
-meta-data#androidx.lifecycle.ProcessLifecycleInitializer
-ADDED from [androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\prism\.gradle\caches\8.10.2\transforms\7f939e078380bf5b07c12d49b3dcb7fc\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:29:13-31:52
-	android:value
-		ADDED from [androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\prism\.gradle\caches\8.10.2\transforms\7f939e078380bf5b07c12d49b3dcb7fc\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:31:17-49
+		ADDED from [com.google.firebase:firebase-auth:23.2.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\c4ebc29f72ff96fc88224e6e488addd5\transformed\firebase-auth-23.2.0\AndroidManifest.xml:36:25-66
+category#android.intent.category.DEFAULT
+ADDED from [com.google.firebase:firebase-auth:23.2.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\c4ebc29f72ff96fc88224e6e488addd5\transformed\firebase-auth-23.2.0\AndroidManifest.xml:38:17-76
 	android:name
-		ADDED from [androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\prism\.gradle\caches\8.10.2\transforms\7f939e078380bf5b07c12d49b3dcb7fc\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:30:17-78
-permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
-ADDED from [androidx.core:core:1.13.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\1b89a4ef0596eddf891071b8ad4b689b\transformed\core-1.13.0\AndroidManifest.xml:22:5-24:47
-	android:protectionLevel
-		ADDED from [androidx.core:core:1.13.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\1b89a4ef0596eddf891071b8ad4b689b\transformed\core-1.13.0\AndroidManifest.xml:24:9-44
+		ADDED from [com.google.firebase:firebase-auth:23.2.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\c4ebc29f72ff96fc88224e6e488addd5\transformed\firebase-auth-23.2.0\AndroidManifest.xml:38:27-73
+category#android.intent.category.BROWSABLE
+ADDED from [com.google.firebase:firebase-auth:23.2.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\c4ebc29f72ff96fc88224e6e488addd5\transformed\firebase-auth-23.2.0\AndroidManifest.xml:39:17-78
 	android:name
-		ADDED from [androidx.core:core:1.13.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\1b89a4ef0596eddf891071b8ad4b689b\transformed\core-1.13.0\AndroidManifest.xml:23:9-81
-permission#fcu.app.distributionapp.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
-ADDED from [androidx.core:core:1.13.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\1b89a4ef0596eddf891071b8ad4b689b\transformed\core-1.13.0\AndroidManifest.xml:22:5-24:47
-	android:protectionLevel
-		ADDED from [androidx.core:core:1.13.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\1b89a4ef0596eddf891071b8ad4b689b\transformed\core-1.13.0\AndroidManifest.xml:24:9-44
-	android:name
-		ADDED from [androidx.core:core:1.13.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\1b89a4ef0596eddf891071b8ad4b689b\transformed\core-1.13.0\AndroidManifest.xml:23:9-81
-uses-permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
-ADDED from [androidx.core:core:1.13.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\1b89a4ef0596eddf891071b8ad4b689b\transformed\core-1.13.0\AndroidManifest.xml:26:5-97
-	android:name
-		ADDED from [androidx.core:core:1.13.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\1b89a4ef0596eddf891071b8ad4b689b\transformed\core-1.13.0\AndroidManifest.xml:26:22-94
-uses-permission#fcu.app.distributionapp.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
-ADDED from [androidx.core:core:1.13.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\1b89a4ef0596eddf891071b8ad4b689b\transformed\core-1.13.0\AndroidManifest.xml:26:5-97
-	android:name
-		ADDED from [androidx.core:core:1.13.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\1b89a4ef0596eddf891071b8ad4b689b\transformed\core-1.13.0\AndroidManifest.xml:26:22-94
-meta-data#androidx.profileinstaller.ProfileInstallerInitializer
-ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\9d7d7688c656d271fbe253a6ed59a587\transformed\profileinstaller-1.4.0\AndroidManifest.xml:29:13-31:52
-	android:value
-		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\9d7d7688c656d271fbe253a6ed59a587\transformed\profileinstaller-1.4.0\AndroidManifest.xml:31:17-49
-	android:name
-		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\9d7d7688c656d271fbe253a6ed59a587\transformed\profileinstaller-1.4.0\AndroidManifest.xml:30:17-85
-receiver#androidx.profileinstaller.ProfileInstallReceiver
-ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\9d7d7688c656d271fbe253a6ed59a587\transformed\profileinstaller-1.4.0\AndroidManifest.xml:34:9-52:20
-	android:enabled
-		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\9d7d7688c656d271fbe253a6ed59a587\transformed\profileinstaller-1.4.0\AndroidManifest.xml:37:13-35
+		ADDED from [com.google.firebase:firebase-auth:23.2.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\c4ebc29f72ff96fc88224e6e488addd5\transformed\firebase-auth-23.2.0\AndroidManifest.xml:39:27-75
+data
+ADDED from [com.google.firebase:firebase-auth:23.2.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\c4ebc29f72ff96fc88224e6e488addd5\transformed\firebase-auth-23.2.0\AndroidManifest.xml:41:17-44:51
+	android:path
+		ADDED from [com.google.firebase:firebase-auth:23.2.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\c4ebc29f72ff96fc88224e6e488addd5\transformed\firebase-auth-23.2.0\AndroidManifest.xml:43:21-37
+	android:host
+		ADDED from [com.google.firebase:firebase-auth:23.2.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\c4ebc29f72ff96fc88224e6e488addd5\transformed\firebase-auth-23.2.0\AndroidManifest.xml:42:21-49
+	android:scheme
+		ADDED from [com.google.firebase:firebase-auth:23.2.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\c4ebc29f72ff96fc88224e6e488addd5\transformed\firebase-auth-23.2.0\AndroidManifest.xml:44:21-48
+activity#com.google.firebase.auth.internal.RecaptchaActivity
+ADDED from [com.google.firebase:firebase-auth:23.2.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\c4ebc29f72ff96fc88224e6e488addd5\transformed\firebase-auth-23.2.0\AndroidManifest.xml:47:9-64:20
+	android:excludeFromRecents
+		ADDED from [com.google.firebase:firebase-auth:23.2.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\c4ebc29f72ff96fc88224e6e488addd5\transformed\firebase-auth-23.2.0\AndroidManifest.xml:49:13-46
+	android:launchMode
+		ADDED from [com.google.firebase:firebase-auth:23.2.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\c4ebc29f72ff96fc88224e6e488addd5\transformed\firebase-auth-23.2.0\AndroidManifest.xml:51:13-44
 	android:exported
-		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\9d7d7688c656d271fbe253a6ed59a587\transformed\profileinstaller-1.4.0\AndroidManifest.xml:38:13-36
-	android:permission
-		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\9d7d7688c656d271fbe253a6ed59a587\transformed\profileinstaller-1.4.0\AndroidManifest.xml:39:13-57
+		ADDED from [com.google.firebase:firebase-auth:23.2.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\c4ebc29f72ff96fc88224e6e488addd5\transformed\firebase-auth-23.2.0\AndroidManifest.xml:50:13-36
+	android:theme
+		ADDED from [com.google.firebase:firebase-auth:23.2.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\c4ebc29f72ff96fc88224e6e488addd5\transformed\firebase-auth-23.2.0\AndroidManifest.xml:52:13-72
+	android:name
+		ADDED from [com.google.firebase:firebase-auth:23.2.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\c4ebc29f72ff96fc88224e6e488addd5\transformed\firebase-auth-23.2.0\AndroidManifest.xml:48:13-79
+intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:host:firebase.auth+data:path:/+data:scheme:recaptcha
+ADDED from [com.google.firebase:firebase-auth:23.2.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\c4ebc29f72ff96fc88224e6e488addd5\transformed\firebase-auth-23.2.0\AndroidManifest.xml:53:13-63:29
+service#com.google.firebase.components.ComponentDiscoveryService
+ADDED from [com.google.firebase:firebase-auth:23.2.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\c4ebc29f72ff96fc88224e6e488addd5\transformed\firebase-auth-23.2.0\AndroidManifest.xml:66:9-72:19
+MERGED from [com.google.firebase:firebase-firestore:25.1.4] C:\Users\prism\.gradle\caches\8.10.2\transforms\03e2fb13052ef6912292cbcbbc6dcbbb\transformed\firebase-firestore-25.1.4\AndroidManifest.xml:14:9-23:19
+MERGED from [com.google.firebase:firebase-firestore:25.1.4] C:\Users\prism\.gradle\caches\8.10.2\transforms\03e2fb13052ef6912292cbcbbc6dcbbb\transformed\firebase-firestore-25.1.4\AndroidManifest.xml:14:9-23:19
+MERGED from [com.google.firebase:firebase-storage:21.0.1] C:\Users\prism\.gradle\caches\8.10.2\transforms\4e6eed578769770e16db43b75ada3547\transformed\firebase-storage-21.0.1\AndroidManifest.xml:27:9-36:19
+MERGED from [com.google.firebase:firebase-storage:21.0.1] C:\Users\prism\.gradle\caches\8.10.2\transforms\4e6eed578769770e16db43b75ada3547\transformed\firebase-storage-21.0.1\AndroidManifest.xml:27:9-36:19
+MERGED from [com.google.firebase:firebase-appcheck:18.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\6dccf3f681c6d0923e4d7b5ac998e097\transformed\firebase-appcheck-18.0.0\AndroidManifest.xml:22:9-31:19
+MERGED from [com.google.firebase:firebase-appcheck:18.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\6dccf3f681c6d0923e4d7b5ac998e097\transformed\firebase-appcheck-18.0.0\AndroidManifest.xml:22:9-31:19
+MERGED from [com.google.firebase:firebase-common-ktx:21.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\70f20338a72cdee19b703a3b4d9121ee\transformed\firebase-common-ktx-21.0.0\AndroidManifest.xml:9:9-15:19
+MERGED from [com.google.firebase:firebase-common-ktx:21.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\70f20338a72cdee19b703a3b4d9121ee\transformed\firebase-common-ktx-21.0.0\AndroidManifest.xml:9:9-15:19
+MERGED from [com.google.firebase:firebase-common:21.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\bfcebc27c83b40f483d7067c3f948706\transformed\firebase-common-21.0.0\AndroidManifest.xml:30:9-38:19
+MERGED from [com.google.firebase:firebase-common:21.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\bfcebc27c83b40f483d7067c3f948706\transformed\firebase-common-21.0.0\AndroidManifest.xml:30:9-38:19
+	android:exported
+		ADDED from [com.google.firebase:firebase-auth:23.2.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\c4ebc29f72ff96fc88224e6e488addd5\transformed\firebase-auth-23.2.0\AndroidManifest.xml:68:13-37
+	tools:targetApi
+		ADDED from [com.google.firebase:firebase-common:21.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\bfcebc27c83b40f483d7067c3f948706\transformed\firebase-common-21.0.0\AndroidManifest.xml:34:13-32
 	android:directBootAware
-		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\9d7d7688c656d271fbe253a6ed59a587\transformed\profileinstaller-1.4.0\AndroidManifest.xml:36:13-44
+		ADDED from [com.google.firebase:firebase-common:21.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\bfcebc27c83b40f483d7067c3f948706\transformed\firebase-common-21.0.0\AndroidManifest.xml:32:13-43
 	android:name
-		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\9d7d7688c656d271fbe253a6ed59a587\transformed\profileinstaller-1.4.0\AndroidManifest.xml:35:13-76
+		ADDED from [com.google.firebase:firebase-auth:23.2.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\c4ebc29f72ff96fc88224e6e488addd5\transformed\firebase-auth-23.2.0\AndroidManifest.xml:67:13-84
+meta-data#com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar
+ADDED from [com.google.firebase:firebase-auth:23.2.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\c4ebc29f72ff96fc88224e6e488addd5\transformed\firebase-auth-23.2.0\AndroidManifest.xml:69:13-71:85
+	android:value
+		ADDED from [com.google.firebase:firebase-auth:23.2.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\c4ebc29f72ff96fc88224e6e488addd5\transformed\firebase-auth-23.2.0\AndroidManifest.xml:71:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-auth:23.2.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\c4ebc29f72ff96fc88224e6e488addd5\transformed\firebase-auth-23.2.0\AndroidManifest.xml:70:17-109
+meta-data#com.google.firebase.components:com.google.firebase.firestore.FirebaseFirestoreKtxRegistrar
+ADDED from [com.google.firebase:firebase-firestore:25.1.4] C:\Users\prism\.gradle\caches\8.10.2\transforms\03e2fb13052ef6912292cbcbbc6dcbbb\transformed\firebase-firestore-25.1.4\AndroidManifest.xml:17:13-19:85
+	android:value
+		ADDED from [com.google.firebase:firebase-firestore:25.1.4] C:\Users\prism\.gradle\caches\8.10.2\transforms\03e2fb13052ef6912292cbcbbc6dcbbb\transformed\firebase-firestore-25.1.4\AndroidManifest.xml:19:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-firestore:25.1.4] C:\Users\prism\.gradle\caches\8.10.2\transforms\03e2fb13052ef6912292cbcbbc6dcbbb\transformed\firebase-firestore-25.1.4\AndroidManifest.xml:18:17-122
+meta-data#com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar
+ADDED from [com.google.firebase:firebase-firestore:25.1.4] C:\Users\prism\.gradle\caches\8.10.2\transforms\03e2fb13052ef6912292cbcbbc6dcbbb\transformed\firebase-firestore-25.1.4\AndroidManifest.xml:20:13-22:85
+	android:value
+		ADDED from [com.google.firebase:firebase-firestore:25.1.4] C:\Users\prism\.gradle\caches\8.10.2\transforms\03e2fb13052ef6912292cbcbbc6dcbbb\transformed\firebase-firestore-25.1.4\AndroidManifest.xml:22:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-firestore:25.1.4] C:\Users\prism\.gradle\caches\8.10.2\transforms\03e2fb13052ef6912292cbcbbc6dcbbb\transformed\firebase-firestore-25.1.4\AndroidManifest.xml:21:17-111
+meta-data#com.google.firebase.components:com.google.firebase.storage.FirebaseStorageKtxRegistrar
+ADDED from [com.google.firebase:firebase-storage:21.0.1] C:\Users\prism\.gradle\caches\8.10.2\transforms\4e6eed578769770e16db43b75ada3547\transformed\firebase-storage-21.0.1\AndroidManifest.xml:30:13-32:85
+	android:value
+		ADDED from [com.google.firebase:firebase-storage:21.0.1] C:\Users\prism\.gradle\caches\8.10.2\transforms\4e6eed578769770e16db43b75ada3547\transformed\firebase-storage-21.0.1\AndroidManifest.xml:32:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-storage:21.0.1] C:\Users\prism\.gradle\caches\8.10.2\transforms\4e6eed578769770e16db43b75ada3547\transformed\firebase-storage-21.0.1\AndroidManifest.xml:31:17-118
+meta-data#com.google.firebase.components:com.google.firebase.storage.StorageRegistrar
+ADDED from [com.google.firebase:firebase-storage:21.0.1] C:\Users\prism\.gradle\caches\8.10.2\transforms\4e6eed578769770e16db43b75ada3547\transformed\firebase-storage-21.0.1\AndroidManifest.xml:33:13-35:85
+	android:value
+		ADDED from [com.google.firebase:firebase-storage:21.0.1] C:\Users\prism\.gradle\caches\8.10.2\transforms\4e6eed578769770e16db43b75ada3547\transformed\firebase-storage-21.0.1\AndroidManifest.xml:35:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-storage:21.0.1] C:\Users\prism\.gradle\caches\8.10.2\transforms\4e6eed578769770e16db43b75ada3547\transformed\firebase-storage-21.0.1\AndroidManifest.xml:34:17-107
+service#androidx.credentials.playservices.CredentialProviderMetadataHolder
+ADDED from [androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\prism\.gradle\caches\8.10.2\transforms\4db106427b158585b40f5fafdc171d2b\transformed\credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:24:9-32:19
+	android:enabled
+		ADDED from [androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\prism\.gradle\caches\8.10.2\transforms\4db106427b158585b40f5fafdc171d2b\transformed\credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:26:13-35
+	android:exported
+		ADDED from [androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\prism\.gradle\caches\8.10.2\transforms\4db106427b158585b40f5fafdc171d2b\transformed\credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:27:13-37
+	tools:ignore
+		ADDED from [androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\prism\.gradle\caches\8.10.2\transforms\4db106427b158585b40f5fafdc171d2b\transformed\credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:28:13-60
+	android:name
+		ADDED from [androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\prism\.gradle\caches\8.10.2\transforms\4db106427b158585b40f5fafdc171d2b\transformed\credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:25:13-94
+meta-data#androidx.credentials.CREDENTIAL_PROVIDER_KEY
+ADDED from [androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\prism\.gradle\caches\8.10.2\transforms\4db106427b158585b40f5fafdc171d2b\transformed\credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:29:13-31:104
+	android:value
+		ADDED from [androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\prism\.gradle\caches\8.10.2\transforms\4db106427b158585b40f5fafdc171d2b\transformed\credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:31:17-101
+	android:name
+		ADDED from [androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\prism\.gradle\caches\8.10.2\transforms\4db106427b158585b40f5fafdc171d2b\transformed\credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:30:17-76
+activity#androidx.credentials.playservices.HiddenActivity
+ADDED from [androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\prism\.gradle\caches\8.10.2\transforms\4db106427b158585b40f5fafdc171d2b\transformed\credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:34:9-41:20
+	android:fitsSystemWindows
+		ADDED from [androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\prism\.gradle\caches\8.10.2\transforms\4db106427b158585b40f5fafdc171d2b\transformed\credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:39:13-45
+	android:enabled
+		ADDED from [androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\prism\.gradle\caches\8.10.2\transforms\4db106427b158585b40f5fafdc171d2b\transformed\credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:37:13-35
+	android:exported
+		ADDED from [androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\prism\.gradle\caches\8.10.2\transforms\4db106427b158585b40f5fafdc171d2b\transformed\credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:38:13-37
+	android:configChanges
+		ADDED from [androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\prism\.gradle\caches\8.10.2\transforms\4db106427b158585b40f5fafdc171d2b\transformed\credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:36:13-87
+	android:theme
+		ADDED from [androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\prism\.gradle\caches\8.10.2\transforms\4db106427b158585b40f5fafdc171d2b\transformed\credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:40:13-48
+	android:name
+		ADDED from [androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\prism\.gradle\caches\8.10.2\transforms\4db106427b158585b40f5fafdc171d2b\transformed\credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:35:13-76
+activity#com.google.android.gms.auth.api.signin.internal.SignInHubActivity
+ADDED from [com.google.android.gms:play-services-auth:20.7.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\8bb022e13a7eabf0d32ec96e55a84484\transformed\play-services-auth-20.7.0\AndroidManifest.xml:23:9-27:75
+	android:excludeFromRecents
+		ADDED from [com.google.android.gms:play-services-auth:20.7.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\8bb022e13a7eabf0d32ec96e55a84484\transformed\play-services-auth-20.7.0\AndroidManifest.xml:25:13-46
+	android:exported
+		ADDED from [com.google.android.gms:play-services-auth:20.7.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\8bb022e13a7eabf0d32ec96e55a84484\transformed\play-services-auth-20.7.0\AndroidManifest.xml:26:13-37
+	android:theme
+		ADDED from [com.google.android.gms:play-services-auth:20.7.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\8bb022e13a7eabf0d32ec96e55a84484\transformed\play-services-auth-20.7.0\AndroidManifest.xml:27:13-72
+	android:name
+		ADDED from [com.google.android.gms:play-services-auth:20.7.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\8bb022e13a7eabf0d32ec96e55a84484\transformed\play-services-auth-20.7.0\AndroidManifest.xml:24:13-93
+service#com.google.android.gms.auth.api.signin.RevocationBoundService
+ADDED from [com.google.android.gms:play-services-auth:20.7.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\8bb022e13a7eabf0d32ec96e55a84484\transformed\play-services-auth-20.7.0\AndroidManifest.xml:33:9-37:51
+	android:exported
+		ADDED from [com.google.android.gms:play-services-auth:20.7.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\8bb022e13a7eabf0d32ec96e55a84484\transformed\play-services-auth-20.7.0\AndroidManifest.xml:35:13-36
+	android:visibleToInstantApps
+		ADDED from [com.google.android.gms:play-services-auth:20.7.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\8bb022e13a7eabf0d32ec96e55a84484\transformed\play-services-auth-20.7.0\AndroidManifest.xml:37:13-48
+	android:permission
+		ADDED from [com.google.android.gms:play-services-auth:20.7.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\8bb022e13a7eabf0d32ec96e55a84484\transformed\play-services-auth-20.7.0\AndroidManifest.xml:36:13-107
+	android:name
+		ADDED from [com.google.android.gms:play-services-auth:20.7.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\8bb022e13a7eabf0d32ec96e55a84484\transformed\play-services-auth-20.7.0\AndroidManifest.xml:34:13-89
+uses-permission#com.google.android.providers.gsf.permission.READ_GSERVICES
+ADDED from [com.google.android.recaptcha:recaptcha:18.6.1] C:\Users\prism\.gradle\caches\8.10.2\transforms\540b631cb004dc8f7633b9a842987dbc\transformed\recaptcha-18.6.1\AndroidManifest.xml:9:5-98
+	android:name
+		ADDED from [com.google.android.recaptcha:recaptcha:18.6.1] C:\Users\prism\.gradle\caches\8.10.2\transforms\540b631cb004dc8f7633b9a842987dbc\transformed\recaptcha-18.6.1\AndroidManifest.xml:9:22-95
+meta-data#com.google.firebase.components:com.google.firebase.appcheck.FirebaseAppCheckKtxRegistrar
+ADDED from [com.google.firebase:firebase-appcheck:18.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\6dccf3f681c6d0923e4d7b5ac998e097\transformed\firebase-appcheck-18.0.0\AndroidManifest.xml:25:13-27:85
+	android:value
+		ADDED from [com.google.firebase:firebase-appcheck:18.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\6dccf3f681c6d0923e4d7b5ac998e097\transformed\firebase-appcheck-18.0.0\AndroidManifest.xml:27:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-appcheck:18.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\6dccf3f681c6d0923e4d7b5ac998e097\transformed\firebase-appcheck-18.0.0\AndroidManifest.xml:26:17-120
+meta-data#com.google.firebase.components:com.google.firebase.appcheck.FirebaseAppCheckRegistrar
+ADDED from [com.google.firebase:firebase-appcheck:18.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\6dccf3f681c6d0923e4d7b5ac998e097\transformed\firebase-appcheck-18.0.0\AndroidManifest.xml:28:13-30:85
+	android:value
+		ADDED from [com.google.firebase:firebase-appcheck:18.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\6dccf3f681c6d0923e4d7b5ac998e097\transformed\firebase-appcheck-18.0.0\AndroidManifest.xml:30:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-appcheck:18.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\6dccf3f681c6d0923e4d7b5ac998e097\transformed\firebase-appcheck-18.0.0\AndroidManifest.xml:29:17-117
+meta-data#com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonLegacyRegistrar
+ADDED from [com.google.firebase:firebase-common-ktx:21.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\70f20338a72cdee19b703a3b4d9121ee\transformed\firebase-common-ktx-21.0.0\AndroidManifest.xml:12:13-14:85
+	android:value
+		ADDED from [com.google.firebase:firebase-common-ktx:21.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\70f20338a72cdee19b703a3b4d9121ee\transformed\firebase-common-ktx-21.0.0\AndroidManifest.xml:14:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-common-ktx:21.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\70f20338a72cdee19b703a3b4d9121ee\transformed\firebase-common-ktx-21.0.0\AndroidManifest.xml:13:17-116
+provider#com.google.firebase.provider.FirebaseInitProvider
+ADDED from [com.google.firebase:firebase-common:21.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\bfcebc27c83b40f483d7067c3f948706\transformed\firebase-common-21.0.0\AndroidManifest.xml:23:9-28:39
+	android:authorities
+		ADDED from [com.google.firebase:firebase-common:21.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\bfcebc27c83b40f483d7067c3f948706\transformed\firebase-common-21.0.0\AndroidManifest.xml:25:13-72
+	android:exported
+		ADDED from [com.google.firebase:firebase-common:21.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\bfcebc27c83b40f483d7067c3f948706\transformed\firebase-common-21.0.0\AndroidManifest.xml:27:13-37
+	android:directBootAware
+		ADDED from [com.google.firebase:firebase-common:21.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\bfcebc27c83b40f483d7067c3f948706\transformed\firebase-common-21.0.0\AndroidManifest.xml:26:13-43
+	android:initOrder
+		ADDED from [com.google.firebase:firebase-common:21.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\bfcebc27c83b40f483d7067c3f948706\transformed\firebase-common-21.0.0\AndroidManifest.xml:28:13-36
+	android:name
+		ADDED from [com.google.firebase:firebase-common:21.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\bfcebc27c83b40f483d7067c3f948706\transformed\firebase-common-21.0.0\AndroidManifest.xml:24:13-77
+meta-data#com.google.firebase.components:com.google.firebase.FirebaseCommonKtxRegistrar
+ADDED from [com.google.firebase:firebase-common:21.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\bfcebc27c83b40f483d7067c3f948706\transformed\firebase-common-21.0.0\AndroidManifest.xml:35:13-37:85
+	android:value
+		ADDED from [com.google.firebase:firebase-common:21.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\bfcebc27c83b40f483d7067c3f948706\transformed\firebase-common-21.0.0\AndroidManifest.xml:37:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-common:21.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\bfcebc27c83b40f483d7067c3f948706\transformed\firebase-common-21.0.0\AndroidManifest.xml:36:17-109
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:18.1.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\5facb85b3fdd11e7ef3d64e06129d11f\transformed\play-services-base-18.1.0\AndroidManifest.xml:20:9-22:45
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:18.1.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\5facb85b3fdd11e7ef3d64e06129d11f\transformed\play-services-base-18.1.0\AndroidManifest.xml:22:19-43
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:18.1.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\5facb85b3fdd11e7ef3d64e06129d11f\transformed\play-services-base-18.1.0\AndroidManifest.xml:21:19-78
+	android:name
+		ADDED from [com.google.android.gms:play-services-base:18.1.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\5facb85b3fdd11e7ef3d64e06129d11f\transformed\play-services-base-18.1.0\AndroidManifest.xml:20:19-85
+provider#androidx.startup.InitializationProvider
+ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\f85482af87bf0455acbc824ef1a164ae\transformed\emoji2-1.3.0\AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\prism\.gradle\caches\8.10.2\transforms\8b2d1915a063c90726e03ffb80b9ae2f\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\prism\.gradle\caches\8.10.2\transforms\8b2d1915a063c90726e03ffb80b9ae2f\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\2e793e93b76b5215bf4e7b9b96a27484\transformed\profileinstaller-1.4.0\AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\2e793e93b76b5215bf4e7b9b96a27484\transformed\profileinstaller-1.4.0\AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\prism\.gradle\caches\8.10.2\transforms\7911515e9f74904fd8d579e4685123a3\transformed\startup-runtime-1.1.1\AndroidManifest.xml:26:9-30:34
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\prism\.gradle\caches\8.10.2\transforms\7911515e9f74904fd8d579e4685123a3\transformed\startup-runtime-1.1.1\AndroidManifest.xml:26:9-30:34
+	tools:node
+		ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\f85482af87bf0455acbc824ef1a164ae\transformed\emoji2-1.3.0\AndroidManifest.xml:28:13-31
+	android:authorities
+		ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\f85482af87bf0455acbc824ef1a164ae\transformed\emoji2-1.3.0\AndroidManifest.xml:26:13-68
+	android:exported
+		ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\f85482af87bf0455acbc824ef1a164ae\transformed\emoji2-1.3.0\AndroidManifest.xml:27:13-37
+	android:name
+		ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\f85482af87bf0455acbc824ef1a164ae\transformed\emoji2-1.3.0\AndroidManifest.xml:25:13-67
+meta-data#androidx.emoji2.text.EmojiCompatInitializer
+ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\f85482af87bf0455acbc824ef1a164ae\transformed\emoji2-1.3.0\AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\f85482af87bf0455acbc824ef1a164ae\transformed\emoji2-1.3.0\AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\f85482af87bf0455acbc824ef1a164ae\transformed\emoji2-1.3.0\AndroidManifest.xml:30:17-75
+permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.13.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\44d7f9307f82cbc36229e6b62a90377a\transformed\core-1.13.0\AndroidManifest.xml:22:5-24:47
+	android:protectionLevel
+		ADDED from [androidx.core:core:1.13.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\44d7f9307f82cbc36229e6b62a90377a\transformed\core-1.13.0\AndroidManifest.xml:24:9-44
+	android:name
+		ADDED from [androidx.core:core:1.13.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\44d7f9307f82cbc36229e6b62a90377a\transformed\core-1.13.0\AndroidManifest.xml:23:9-81
+permission#fcu.app.distributionapp.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.13.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\44d7f9307f82cbc36229e6b62a90377a\transformed\core-1.13.0\AndroidManifest.xml:22:5-24:47
+	android:protectionLevel
+		ADDED from [androidx.core:core:1.13.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\44d7f9307f82cbc36229e6b62a90377a\transformed\core-1.13.0\AndroidManifest.xml:24:9-44
+	android:name
+		ADDED from [androidx.core:core:1.13.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\44d7f9307f82cbc36229e6b62a90377a\transformed\core-1.13.0\AndroidManifest.xml:23:9-81
+uses-permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.13.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\44d7f9307f82cbc36229e6b62a90377a\transformed\core-1.13.0\AndroidManifest.xml:26:5-97
+	android:name
+		ADDED from [androidx.core:core:1.13.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\44d7f9307f82cbc36229e6b62a90377a\transformed\core-1.13.0\AndroidManifest.xml:26:22-94
+uses-permission#fcu.app.distributionapp.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.13.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\44d7f9307f82cbc36229e6b62a90377a\transformed\core-1.13.0\AndroidManifest.xml:26:5-97
+	android:name
+		ADDED from [androidx.core:core:1.13.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\44d7f9307f82cbc36229e6b62a90377a\transformed\core-1.13.0\AndroidManifest.xml:26:22-94
+meta-data#androidx.lifecycle.ProcessLifecycleInitializer
+ADDED from [androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\prism\.gradle\caches\8.10.2\transforms\8b2d1915a063c90726e03ffb80b9ae2f\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\prism\.gradle\caches\8.10.2\transforms\8b2d1915a063c90726e03ffb80b9ae2f\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\prism\.gradle\caches\8.10.2\transforms\8b2d1915a063c90726e03ffb80b9ae2f\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:30:17-78
+meta-data#com.google.android.gms.version
+ADDED from [com.google.android.gms:play-services-basement:18.4.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\f2d445680cc100897c6400d9b238d657\transformed\play-services-basement-18.4.0\AndroidManifest.xml:6:9-122
+	android:value
+		ADDED from [com.google.android.gms:play-services-basement:18.4.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\f2d445680cc100897c6400d9b238d657\transformed\play-services-basement-18.4.0\AndroidManifest.xml:6:66-119
+	android:name
+		ADDED from [com.google.android.gms:play-services-basement:18.4.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\f2d445680cc100897c6400d9b238d657\transformed\play-services-basement-18.4.0\AndroidManifest.xml:6:20-65
+meta-data#androidx.profileinstaller.ProfileInstallerInitializer
+ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\2e793e93b76b5215bf4e7b9b96a27484\transformed\profileinstaller-1.4.0\AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\2e793e93b76b5215bf4e7b9b96a27484\transformed\profileinstaller-1.4.0\AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\2e793e93b76b5215bf4e7b9b96a27484\transformed\profileinstaller-1.4.0\AndroidManifest.xml:30:17-85
+receiver#androidx.profileinstaller.ProfileInstallReceiver
+ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\2e793e93b76b5215bf4e7b9b96a27484\transformed\profileinstaller-1.4.0\AndroidManifest.xml:34:9-52:20
+	android:enabled
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\2e793e93b76b5215bf4e7b9b96a27484\transformed\profileinstaller-1.4.0\AndroidManifest.xml:37:13-35
+	android:exported
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\2e793e93b76b5215bf4e7b9b96a27484\transformed\profileinstaller-1.4.0\AndroidManifest.xml:38:13-36
+	android:permission
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\2e793e93b76b5215bf4e7b9b96a27484\transformed\profileinstaller-1.4.0\AndroidManifest.xml:39:13-57
+	android:directBootAware
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\2e793e93b76b5215bf4e7b9b96a27484\transformed\profileinstaller-1.4.0\AndroidManifest.xml:36:13-44
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\2e793e93b76b5215bf4e7b9b96a27484\transformed\profileinstaller-1.4.0\AndroidManifest.xml:35:13-76
 intent-filter#action:name:androidx.profileinstaller.action.INSTALL_PROFILE
-ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\9d7d7688c656d271fbe253a6ed59a587\transformed\profileinstaller-1.4.0\AndroidManifest.xml:40:13-42:29
+ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\2e793e93b76b5215bf4e7b9b96a27484\transformed\profileinstaller-1.4.0\AndroidManifest.xml:40:13-42:29
 action#androidx.profileinstaller.action.INSTALL_PROFILE
-ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\9d7d7688c656d271fbe253a6ed59a587\transformed\profileinstaller-1.4.0\AndroidManifest.xml:41:17-91
+ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\2e793e93b76b5215bf4e7b9b96a27484\transformed\profileinstaller-1.4.0\AndroidManifest.xml:41:17-91
 	android:name
-		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\9d7d7688c656d271fbe253a6ed59a587\transformed\profileinstaller-1.4.0\AndroidManifest.xml:41:25-88
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\2e793e93b76b5215bf4e7b9b96a27484\transformed\profileinstaller-1.4.0\AndroidManifest.xml:41:25-88
 intent-filter#action:name:androidx.profileinstaller.action.SKIP_FILE
-ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\9d7d7688c656d271fbe253a6ed59a587\transformed\profileinstaller-1.4.0\AndroidManifest.xml:43:13-45:29
+ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\2e793e93b76b5215bf4e7b9b96a27484\transformed\profileinstaller-1.4.0\AndroidManifest.xml:43:13-45:29
 action#androidx.profileinstaller.action.SKIP_FILE
-ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\9d7d7688c656d271fbe253a6ed59a587\transformed\profileinstaller-1.4.0\AndroidManifest.xml:44:17-85
+ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\2e793e93b76b5215bf4e7b9b96a27484\transformed\profileinstaller-1.4.0\AndroidManifest.xml:44:17-85
 	android:name
-		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\9d7d7688c656d271fbe253a6ed59a587\transformed\profileinstaller-1.4.0\AndroidManifest.xml:44:25-82
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\2e793e93b76b5215bf4e7b9b96a27484\transformed\profileinstaller-1.4.0\AndroidManifest.xml:44:25-82
 intent-filter#action:name:androidx.profileinstaller.action.SAVE_PROFILE
-ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\9d7d7688c656d271fbe253a6ed59a587\transformed\profileinstaller-1.4.0\AndroidManifest.xml:46:13-48:29
+ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\2e793e93b76b5215bf4e7b9b96a27484\transformed\profileinstaller-1.4.0\AndroidManifest.xml:46:13-48:29
 action#androidx.profileinstaller.action.SAVE_PROFILE
-ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\9d7d7688c656d271fbe253a6ed59a587\transformed\profileinstaller-1.4.0\AndroidManifest.xml:47:17-88
+ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\2e793e93b76b5215bf4e7b9b96a27484\transformed\profileinstaller-1.4.0\AndroidManifest.xml:47:17-88
 	android:name
-		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\9d7d7688c656d271fbe253a6ed59a587\transformed\profileinstaller-1.4.0\AndroidManifest.xml:47:25-85
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\2e793e93b76b5215bf4e7b9b96a27484\transformed\profileinstaller-1.4.0\AndroidManifest.xml:47:25-85
 intent-filter#action:name:androidx.profileinstaller.action.BENCHMARK_OPERATION
-ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\9d7d7688c656d271fbe253a6ed59a587\transformed\profileinstaller-1.4.0\AndroidManifest.xml:49:13-51:29
+ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\2e793e93b76b5215bf4e7b9b96a27484\transformed\profileinstaller-1.4.0\AndroidManifest.xml:49:13-51:29
 action#androidx.profileinstaller.action.BENCHMARK_OPERATION
-ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\9d7d7688c656d271fbe253a6ed59a587\transformed\profileinstaller-1.4.0\AndroidManifest.xml:50:17-95
+ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\2e793e93b76b5215bf4e7b9b96a27484\transformed\profileinstaller-1.4.0\AndroidManifest.xml:50:17-95
 	android:name
-		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\9d7d7688c656d271fbe253a6ed59a587\transformed\profileinstaller-1.4.0\AndroidManifest.xml:50:25-92
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\2e793e93b76b5215bf4e7b9b96a27484\transformed\profileinstaller-1.4.0\AndroidManifest.xml:50:25-92
+activity#com.google.android.play.core.common.PlayCoreDialogWrapperActivity
+ADDED from [com.google.android.play:core-common:2.0.3] C:\Users\prism\.gradle\caches\8.10.2\transforms\f7c3e3f82bdf2251f724ad9f5cdb8f32\transformed\core-common-2.0.3\AndroidManifest.xml:14:9-18:65
+	android:stateNotNeeded
+		ADDED from [com.google.android.play:core-common:2.0.3] C:\Users\prism\.gradle\caches\8.10.2\transforms\f7c3e3f82bdf2251f724ad9f5cdb8f32\transformed\core-common-2.0.3\AndroidManifest.xml:17:13-42
+	android:exported
+		ADDED from [com.google.android.play:core-common:2.0.3] C:\Users\prism\.gradle\caches\8.10.2\transforms\f7c3e3f82bdf2251f724ad9f5cdb8f32\transformed\core-common-2.0.3\AndroidManifest.xml:16:13-37
+	android:theme
+		ADDED from [com.google.android.play:core-common:2.0.3] C:\Users\prism\.gradle\caches\8.10.2\transforms\f7c3e3f82bdf2251f724ad9f5cdb8f32\transformed\core-common-2.0.3\AndroidManifest.xml:18:13-62
+	android:name
+		ADDED from [com.google.android.play:core-common:2.0.3] C:\Users\prism\.gradle\caches\8.10.2\transforms\f7c3e3f82bdf2251f724ad9f5cdb8f32\transformed\core-common-2.0.3\AndroidManifest.xml:15:13-93

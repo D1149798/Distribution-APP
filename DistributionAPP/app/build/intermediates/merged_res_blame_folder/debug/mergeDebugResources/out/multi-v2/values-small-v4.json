@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "fcu.app.distributionapp-mergeDebugResources-30:/values-small-v4/values-small-v4.xml",
+            "outputFile": "fcu.app.distributionapp-mergeDebugResources-39:/values-small-v4/values-small-v4.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\prism\\.gradle\\caches\\8.10.2\\transforms\\89d8d326ea87191807391c4792714f8a\\transformed\\material-1.12.0\\res\\values-small-v4\\values-small-v4.xml",
+                    "source": "C:\\Users\\prism\\.gradle\\caches\\8.10.2\\transforms\\be611a65fc3855ec7b81dd6cdc5bd546\\transformed\\material-1.12.0\\res\\values-small-v4\\values-small-v4.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",

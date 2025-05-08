@@ -6,6 +6,7 @@ import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -79,39 +80,32 @@ public class AccountsFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_accounts, container, false);
+        // 預設載入 ExpenseFragment
+        loadChildFragment(new ExpenseFragment());
 
-        pieChart = view.findViewById(R.id.pieChart);
+        // 設定按鈕切換事件
+        view.findViewById(R.id.btn_expense).setOnClickListener(v ->
+                loadChildFragment(new ExpenseFragment()));
 
-        List<PieEntry> entries = new ArrayList<>();
-        entries.add(new PieEntry(5120, "Shopping"));
-        entries.add(new PieEntry(1280, "Subscription"));
-        entries.add(new PieEntry(1280, "Subcription")); // duplicate label
-        entries.add(new PieEntry(532, "Food"));
+        view.findViewById(R.id.btn_transaction).setOnClickListener(v ->
+                loadChildFragment(new TransactionHistoryFragment()));
 
-        PieDataSet dataSet = new PieDataSet(entries, "");
-        dataSet.setColors(Color.YELLOW, Color.LTGRAY, Color.MAGENTA, Color.RED);
-        dataSet.setValueTextSize(0f); // 不顯示區塊上的值
+        view.findViewById(R.id.btn_add).setOnClickListener(v ->
+                loadChildFragment(new AddTransactionFragment()));
 
-        PieData pieData = new PieData(dataSet);
-        pieChart.setData(pieData);
-        pieChart.setDrawCenterText(true);
-        pieChart.setCenterText("台幣 $\n55698");
-        pieChart.setCenterTextSize(20f);
-        pieChart.getDescription().setEnabled(false);
-        pieChart.getLegend().setEnabled(false);
-        pieChart.invalidate();
+        view.findViewById(R.id.btn_rate).setOnClickListener(v ->
+                loadChildFragment(new ExchangeRateFragment()));
 
-        TextView dateText = view.findViewById(R.id.dateText);
-        dateText.setOnClickListener(v -> {
-            DatePickerDialog datePickerDialog = new DatePickerDialog(getContext(),
-                    (view1, year, month, day) -> {
-                        String date = "Date " + (month + 1) + " / " + day;
-                        dateText.setText(date);
-                    }, 2025, 4, 1);
-            datePickerDialog.show();
-        });
+
 
         return view;
+    }
+    private void loadChildFragment(Fragment fragment) {
+        Log.d("AccountsFragment", "Loading fragment: " + fragment.getClass().getSimpleName());
+        getChildFragmentManager()
+                .beginTransaction()
+                .replace(R.id.childFragmentContainer, fragment)
+                .commit();
     }
 
 }

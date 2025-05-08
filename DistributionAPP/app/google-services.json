@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "682409246327",
+    "project_id": "distribution-app-bf605",
+    "storage_bucket": "distribution-app-bf605.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:682409246327:android:7fa8f42a9926c195b11072",
+        "android_client_info": {
+          "package_name": "fcu.app.distributionapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBbOzSljxYuxpGPxcpczdHKcvpzYQGXh-o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

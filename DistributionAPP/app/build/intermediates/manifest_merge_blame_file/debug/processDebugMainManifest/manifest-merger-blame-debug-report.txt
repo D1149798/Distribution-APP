@@ -8,123 +8,367 @@
 8        android:minSdkVersion="24"
 9        android:targetSdkVersion="35" />
 10
-11    <permission
-11-->[androidx.core:core:1.13.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\1b89a4ef0596eddf891071b8ad4b689b\transformed\core-1.13.0\AndroidManifest.xml:22:5-24:47
-12        android:name="fcu.app.distributionapp.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
-12-->[androidx.core:core:1.13.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\1b89a4ef0596eddf891071b8ad4b689b\transformed\core-1.13.0\AndroidManifest.xml:23:9-81
-13        android:protectionLevel="signature" />
-13-->[androidx.core:core:1.13.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\1b89a4ef0596eddf891071b8ad4b689b\transformed\core-1.13.0\AndroidManifest.xml:24:9-44
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->[com.google.firebase:firebase-auth:23.2.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\c4ebc29f72ff96fc88224e6e488addd5\transformed\firebase-auth-23.2.0\AndroidManifest.xml:25:5-67
+11-->[com.google.firebase:firebase-auth:23.2.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\c4ebc29f72ff96fc88224e6e488addd5\transformed\firebase-auth-23.2.0\AndroidManifest.xml:25:22-64
+12    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+12-->[com.google.firebase:firebase-auth:23.2.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\c4ebc29f72ff96fc88224e6e488addd5\transformed\firebase-auth-23.2.0\AndroidManifest.xml:26:5-79
+12-->[com.google.firebase:firebase-auth:23.2.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\c4ebc29f72ff96fc88224e6e488addd5\transformed\firebase-auth-23.2.0\AndroidManifest.xml:26:22-76
+13    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+13-->[com.google.android.recaptcha:recaptcha:18.6.1] C:\Users\prism\.gradle\caches\8.10.2\transforms\540b631cb004dc8f7633b9a842987dbc\transformed\recaptcha-18.6.1\AndroidManifest.xml:9:5-98
+13-->[com.google.android.recaptcha:recaptcha:18.6.1] C:\Users\prism\.gradle\caches\8.10.2\transforms\540b631cb004dc8f7633b9a842987dbc\transformed\recaptcha-18.6.1\AndroidManifest.xml:9:22-95
 14
-15    <uses-permission android:name="fcu.app.distributionapp.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
-15-->[androidx.core:core:1.13.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\1b89a4ef0596eddf891071b8ad4b689b\transformed\core-1.13.0\AndroidManifest.xml:26:5-97
-15-->[androidx.core:core:1.13.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\1b89a4ef0596eddf891071b8ad4b689b\transformed\core-1.13.0\AndroidManifest.xml:26:22-94
-16
-17    <application
-17-->C:\Users\prism\Documents\GitHub\Distribution-APP\DistributionAPP\app\src\main\AndroidManifest.xml:5:5-24:19
-18        android:allowBackup="true"
-18-->C:\Users\prism\Documents\GitHub\Distribution-APP\DistributionAPP\app\src\main\AndroidManifest.xml:6:9-35
-19        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-19-->[androidx.core:core:1.13.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\1b89a4ef0596eddf891071b8ad4b689b\transformed\core-1.13.0\AndroidManifest.xml:28:18-86
-20        android:dataExtractionRules="@xml/data_extraction_rules"
-20-->C:\Users\prism\Documents\GitHub\Distribution-APP\DistributionAPP\app\src\main\AndroidManifest.xml:7:9-65
-21        android:debuggable="true"
-22        android:extractNativeLibs="false"
-23        android:fullBackupContent="@xml/backup_rules"
-23-->C:\Users\prism\Documents\GitHub\Distribution-APP\DistributionAPP\app\src\main\AndroidManifest.xml:8:9-54
-24        android:icon="@mipmap/ic_launcher"
-24-->C:\Users\prism\Documents\GitHub\Distribution-APP\DistributionAPP\app\src\main\AndroidManifest.xml:9:9-43
-25        android:label="@string/app_name"
-25-->C:\Users\prism\Documents\GitHub\Distribution-APP\DistributionAPP\app\src\main\AndroidManifest.xml:10:9-41
-26        android:roundIcon="@mipmap/ic_launcher_round"
-26-->C:\Users\prism\Documents\GitHub\Distribution-APP\DistributionAPP\app\src\main\AndroidManifest.xml:11:9-54
-27        android:supportsRtl="true"
-27-->C:\Users\prism\Documents\GitHub\Distribution-APP\DistributionAPP\app\src\main\AndroidManifest.xml:12:9-35
-28        android:testOnly="true"
-29        android:theme="@style/Theme.DistributionAPP" >
-29-->C:\Users\prism\Documents\GitHub\Distribution-APP\DistributionAPP\app\src\main\AndroidManifest.xml:13:9-53
-30        <activity
-30-->C:\Users\prism\Documents\GitHub\Distribution-APP\DistributionAPP\app\src\main\AndroidManifest.xml:15:9-23:20
-31            android:name="fcu.app.distributionapp.MainActivity"
-31-->C:\Users\prism\Documents\GitHub\Distribution-APP\DistributionAPP\app\src\main\AndroidManifest.xml:16:13-41
-32            android:exported="true" >
-32-->C:\Users\prism\Documents\GitHub\Distribution-APP\DistributionAPP\app\src\main\AndroidManifest.xml:17:13-36
-33            <intent-filter>
-33-->C:\Users\prism\Documents\GitHub\Distribution-APP\DistributionAPP\app\src\main\AndroidManifest.xml:18:13-22:29
-34                <action android:name="android.intent.action.MAIN" />
-34-->C:\Users\prism\Documents\GitHub\Distribution-APP\DistributionAPP\app\src\main\AndroidManifest.xml:19:17-69
-34-->C:\Users\prism\Documents\GitHub\Distribution-APP\DistributionAPP\app\src\main\AndroidManifest.xml:19:25-66
-35
-36                <category android:name="android.intent.category.LAUNCHER" />
-36-->C:\Users\prism\Documents\GitHub\Distribution-APP\DistributionAPP\app\src\main\AndroidManifest.xml:21:17-77
-36-->C:\Users\prism\Documents\GitHub\Distribution-APP\DistributionAPP\app\src\main\AndroidManifest.xml:21:27-74
-37            </intent-filter>
-38        </activity>
-39
-40        <provider
-40-->[androidx.emoji2:emoji2:1.3.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\ba719fc42cbbd079e9e20163ced8ada6\transformed\emoji2-1.3.0\AndroidManifest.xml:24:9-32:20
-41            android:name="androidx.startup.InitializationProvider"
-41-->[androidx.emoji2:emoji2:1.3.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\ba719fc42cbbd079e9e20163ced8ada6\transformed\emoji2-1.3.0\AndroidManifest.xml:25:13-67
-42            android:authorities="fcu.app.distributionapp.androidx-startup"
-42-->[androidx.emoji2:emoji2:1.3.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\ba719fc42cbbd079e9e20163ced8ada6\transformed\emoji2-1.3.0\AndroidManifest.xml:26:13-68
-43            android:exported="false" >
-43-->[androidx.emoji2:emoji2:1.3.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\ba719fc42cbbd079e9e20163ced8ada6\transformed\emoji2-1.3.0\AndroidManifest.xml:27:13-37
-44            <meta-data
-44-->[androidx.emoji2:emoji2:1.3.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\ba719fc42cbbd079e9e20163ced8ada6\transformed\emoji2-1.3.0\AndroidManifest.xml:29:13-31:52
-45                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-45-->[androidx.emoji2:emoji2:1.3.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\ba719fc42cbbd079e9e20163ced8ada6\transformed\emoji2-1.3.0\AndroidManifest.xml:30:17-75
-46                android:value="androidx.startup" />
-46-->[androidx.emoji2:emoji2:1.3.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\ba719fc42cbbd079e9e20163ced8ada6\transformed\emoji2-1.3.0\AndroidManifest.xml:31:17-49
-47            <meta-data
-47-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\prism\.gradle\caches\8.10.2\transforms\7f939e078380bf5b07c12d49b3dcb7fc\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:29:13-31:52
-48                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-48-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\prism\.gradle\caches\8.10.2\transforms\7f939e078380bf5b07c12d49b3dcb7fc\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:30:17-78
-49                android:value="androidx.startup" />
-49-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\prism\.gradle\caches\8.10.2\transforms\7f939e078380bf5b07c12d49b3dcb7fc\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:31:17-49
-50            <meta-data
-50-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\9d7d7688c656d271fbe253a6ed59a587\transformed\profileinstaller-1.4.0\AndroidManifest.xml:29:13-31:52
-51                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
-51-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\9d7d7688c656d271fbe253a6ed59a587\transformed\profileinstaller-1.4.0\AndroidManifest.xml:30:17-85
-52                android:value="androidx.startup" />
-52-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\9d7d7688c656d271fbe253a6ed59a587\transformed\profileinstaller-1.4.0\AndroidManifest.xml:31:17-49
-53        </provider>
+15    <permission
+15-->[androidx.core:core:1.13.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\44d7f9307f82cbc36229e6b62a90377a\transformed\core-1.13.0\AndroidManifest.xml:22:5-24:47
+16        android:name="fcu.app.distributionapp.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+16-->[androidx.core:core:1.13.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\44d7f9307f82cbc36229e6b62a90377a\transformed\core-1.13.0\AndroidManifest.xml:23:9-81
+17        android:protectionLevel="signature" />
+17-->[androidx.core:core:1.13.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\44d7f9307f82cbc36229e6b62a90377a\transformed\core-1.13.0\AndroidManifest.xml:24:9-44
+18
+19    <uses-permission android:name="fcu.app.distributionapp.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+19-->[androidx.core:core:1.13.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\44d7f9307f82cbc36229e6b62a90377a\transformed\core-1.13.0\AndroidManifest.xml:26:5-97
+19-->[androidx.core:core:1.13.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\44d7f9307f82cbc36229e6b62a90377a\transformed\core-1.13.0\AndroidManifest.xml:26:22-94
+20
+21    <application
+21-->C:\Users\prism\Documents\GitHub\Distribution-APP\DistributionAPP\app\src\main\AndroidManifest.xml:5:5-27:19
+22        android:allowBackup="true"
+22-->C:\Users\prism\Documents\GitHub\Distribution-APP\DistributionAPP\app\src\main\AndroidManifest.xml:6:9-35
+23        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+23-->[androidx.core:core:1.13.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\44d7f9307f82cbc36229e6b62a90377a\transformed\core-1.13.0\AndroidManifest.xml:28:18-86
+24        android:dataExtractionRules="@xml/data_extraction_rules"
+24-->C:\Users\prism\Documents\GitHub\Distribution-APP\DistributionAPP\app\src\main\AndroidManifest.xml:7:9-65
+25        android:debuggable="true"
+26        android:extractNativeLibs="false"
+27        android:fullBackupContent="@xml/backup_rules"
+27-->C:\Users\prism\Documents\GitHub\Distribution-APP\DistributionAPP\app\src\main\AndroidManifest.xml:8:9-54
+28        android:icon="@mipmap/ic_launcher"
+28-->C:\Users\prism\Documents\GitHub\Distribution-APP\DistributionAPP\app\src\main\AndroidManifest.xml:9:9-43
+29        android:label="@string/app_name"
+29-->C:\Users\prism\Documents\GitHub\Distribution-APP\DistributionAPP\app\src\main\AndroidManifest.xml:10:9-41
+30        android:roundIcon="@mipmap/ic_launcher_round"
+30-->C:\Users\prism\Documents\GitHub\Distribution-APP\DistributionAPP\app\src\main\AndroidManifest.xml:11:9-54
+31        android:supportsRtl="true"
+31-->C:\Users\prism\Documents\GitHub\Distribution-APP\DistributionAPP\app\src\main\AndroidManifest.xml:12:9-35
+32        android:testOnly="true"
+33        android:theme="@style/Theme.DistributionAPP" >
+33-->C:\Users\prism\Documents\GitHub\Distribution-APP\DistributionAPP\app\src\main\AndroidManifest.xml:13:9-53
+34        <activity
+34-->C:\Users\prism\Documents\GitHub\Distribution-APP\DistributionAPP\app\src\main\AndroidManifest.xml:15:9-17:40
+35            android:name="fcu.app.distributionapp.RegisterActivity"
+35-->C:\Users\prism\Documents\GitHub\Distribution-APP\DistributionAPP\app\src\main\AndroidManifest.xml:16:13-45
+36            android:exported="false" />
+36-->C:\Users\prism\Documents\GitHub\Distribution-APP\DistributionAPP\app\src\main\AndroidManifest.xml:17:13-37
+37        <activity
+37-->C:\Users\prism\Documents\GitHub\Distribution-APP\DistributionAPP\app\src\main\AndroidManifest.xml:18:9-26:20
+38            android:name="fcu.app.distributionapp.MainActivity"
+38-->C:\Users\prism\Documents\GitHub\Distribution-APP\DistributionAPP\app\src\main\AndroidManifest.xml:19:13-41
+39            android:exported="true" >
+39-->C:\Users\prism\Documents\GitHub\Distribution-APP\DistributionAPP\app\src\main\AndroidManifest.xml:20:13-36
+40            <intent-filter>
+40-->C:\Users\prism\Documents\GitHub\Distribution-APP\DistributionAPP\app\src\main\AndroidManifest.xml:21:13-25:29
+41                <action android:name="android.intent.action.MAIN" />
+41-->C:\Users\prism\Documents\GitHub\Distribution-APP\DistributionAPP\app\src\main\AndroidManifest.xml:22:17-69
+41-->C:\Users\prism\Documents\GitHub\Distribution-APP\DistributionAPP\app\src\main\AndroidManifest.xml:22:25-66
+42
+43                <category android:name="android.intent.category.LAUNCHER" />
+43-->C:\Users\prism\Documents\GitHub\Distribution-APP\DistributionAPP\app\src\main\AndroidManifest.xml:24:17-77
+43-->C:\Users\prism\Documents\GitHub\Distribution-APP\DistributionAPP\app\src\main\AndroidManifest.xml:24:27-74
+44            </intent-filter>
+45        </activity>
+46        <activity
+46-->[com.google.firebase:firebase-auth:23.2.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\c4ebc29f72ff96fc88224e6e488addd5\transformed\firebase-auth-23.2.0\AndroidManifest.xml:29:9-46:20
+47            android:name="com.google.firebase.auth.internal.GenericIdpActivity"
+47-->[com.google.firebase:firebase-auth:23.2.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\c4ebc29f72ff96fc88224e6e488addd5\transformed\firebase-auth-23.2.0\AndroidManifest.xml:30:13-80
+48            android:excludeFromRecents="true"
+48-->[com.google.firebase:firebase-auth:23.2.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\c4ebc29f72ff96fc88224e6e488addd5\transformed\firebase-auth-23.2.0\AndroidManifest.xml:31:13-46
+49            android:exported="true"
+49-->[com.google.firebase:firebase-auth:23.2.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\c4ebc29f72ff96fc88224e6e488addd5\transformed\firebase-auth-23.2.0\AndroidManifest.xml:32:13-36
+50            android:launchMode="singleTask"
+50-->[com.google.firebase:firebase-auth:23.2.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\c4ebc29f72ff96fc88224e6e488addd5\transformed\firebase-auth-23.2.0\AndroidManifest.xml:33:13-44
+51            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+51-->[com.google.firebase:firebase-auth:23.2.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\c4ebc29f72ff96fc88224e6e488addd5\transformed\firebase-auth-23.2.0\AndroidManifest.xml:34:13-72
+52            <intent-filter>
+52-->[com.google.firebase:firebase-auth:23.2.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\c4ebc29f72ff96fc88224e6e488addd5\transformed\firebase-auth-23.2.0\AndroidManifest.xml:35:13-45:29
+53                <action android:name="android.intent.action.VIEW" />
+53-->[com.google.firebase:firebase-auth:23.2.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\c4ebc29f72ff96fc88224e6e488addd5\transformed\firebase-auth-23.2.0\AndroidManifest.xml:36:17-69
+53-->[com.google.firebase:firebase-auth:23.2.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\c4ebc29f72ff96fc88224e6e488addd5\transformed\firebase-auth-23.2.0\AndroidManifest.xml:36:25-66
 54
-55        <receiver
-55-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\9d7d7688c656d271fbe253a6ed59a587\transformed\profileinstaller-1.4.0\AndroidManifest.xml:34:9-52:20
-56            android:name="androidx.profileinstaller.ProfileInstallReceiver"
-56-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\9d7d7688c656d271fbe253a6ed59a587\transformed\profileinstaller-1.4.0\AndroidManifest.xml:35:13-76
-57            android:directBootAware="false"
-57-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\9d7d7688c656d271fbe253a6ed59a587\transformed\profileinstaller-1.4.0\AndroidManifest.xml:36:13-44
-58            android:enabled="true"
-58-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\9d7d7688c656d271fbe253a6ed59a587\transformed\profileinstaller-1.4.0\AndroidManifest.xml:37:13-35
-59            android:exported="true"
-59-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\9d7d7688c656d271fbe253a6ed59a587\transformed\profileinstaller-1.4.0\AndroidManifest.xml:38:13-36
-60            android:permission="android.permission.DUMP" >
-60-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\9d7d7688c656d271fbe253a6ed59a587\transformed\profileinstaller-1.4.0\AndroidManifest.xml:39:13-57
-61            <intent-filter>
-61-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\9d7d7688c656d271fbe253a6ed59a587\transformed\profileinstaller-1.4.0\AndroidManifest.xml:40:13-42:29
-62                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
-62-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\9d7d7688c656d271fbe253a6ed59a587\transformed\profileinstaller-1.4.0\AndroidManifest.xml:41:17-91
-62-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\9d7d7688c656d271fbe253a6ed59a587\transformed\profileinstaller-1.4.0\AndroidManifest.xml:41:25-88
-63            </intent-filter>
-64            <intent-filter>
-64-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\9d7d7688c656d271fbe253a6ed59a587\transformed\profileinstaller-1.4.0\AndroidManifest.xml:43:13-45:29
-65                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
-65-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\9d7d7688c656d271fbe253a6ed59a587\transformed\profileinstaller-1.4.0\AndroidManifest.xml:44:17-85
-65-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\9d7d7688c656d271fbe253a6ed59a587\transformed\profileinstaller-1.4.0\AndroidManifest.xml:44:25-82
-66            </intent-filter>
-67            <intent-filter>
-67-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\9d7d7688c656d271fbe253a6ed59a587\transformed\profileinstaller-1.4.0\AndroidManifest.xml:46:13-48:29
-68                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
-68-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\9d7d7688c656d271fbe253a6ed59a587\transformed\profileinstaller-1.4.0\AndroidManifest.xml:47:17-88
-68-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\9d7d7688c656d271fbe253a6ed59a587\transformed\profileinstaller-1.4.0\AndroidManifest.xml:47:25-85
-69            </intent-filter>
+55                <category android:name="android.intent.category.DEFAULT" />
+55-->[com.google.firebase:firebase-auth:23.2.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\c4ebc29f72ff96fc88224e6e488addd5\transformed\firebase-auth-23.2.0\AndroidManifest.xml:38:17-76
+55-->[com.google.firebase:firebase-auth:23.2.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\c4ebc29f72ff96fc88224e6e488addd5\transformed\firebase-auth-23.2.0\AndroidManifest.xml:38:27-73
+56                <category android:name="android.intent.category.BROWSABLE" />
+56-->[com.google.firebase:firebase-auth:23.2.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\c4ebc29f72ff96fc88224e6e488addd5\transformed\firebase-auth-23.2.0\AndroidManifest.xml:39:17-78
+56-->[com.google.firebase:firebase-auth:23.2.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\c4ebc29f72ff96fc88224e6e488addd5\transformed\firebase-auth-23.2.0\AndroidManifest.xml:39:27-75
+57
+58                <data
+58-->[com.google.firebase:firebase-auth:23.2.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\c4ebc29f72ff96fc88224e6e488addd5\transformed\firebase-auth-23.2.0\AndroidManifest.xml:41:17-44:51
+59                    android:host="firebase.auth"
+59-->[com.google.firebase:firebase-auth:23.2.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\c4ebc29f72ff96fc88224e6e488addd5\transformed\firebase-auth-23.2.0\AndroidManifest.xml:42:21-49
+60                    android:path="/"
+60-->[com.google.firebase:firebase-auth:23.2.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\c4ebc29f72ff96fc88224e6e488addd5\transformed\firebase-auth-23.2.0\AndroidManifest.xml:43:21-37
+61                    android:scheme="genericidp" />
+61-->[com.google.firebase:firebase-auth:23.2.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\c4ebc29f72ff96fc88224e6e488addd5\transformed\firebase-auth-23.2.0\AndroidManifest.xml:44:21-48
+62            </intent-filter>
+63        </activity>
+64        <activity
+64-->[com.google.firebase:firebase-auth:23.2.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\c4ebc29f72ff96fc88224e6e488addd5\transformed\firebase-auth-23.2.0\AndroidManifest.xml:47:9-64:20
+65            android:name="com.google.firebase.auth.internal.RecaptchaActivity"
+65-->[com.google.firebase:firebase-auth:23.2.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\c4ebc29f72ff96fc88224e6e488addd5\transformed\firebase-auth-23.2.0\AndroidManifest.xml:48:13-79
+66            android:excludeFromRecents="true"
+66-->[com.google.firebase:firebase-auth:23.2.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\c4ebc29f72ff96fc88224e6e488addd5\transformed\firebase-auth-23.2.0\AndroidManifest.xml:49:13-46
+67            android:exported="true"
+67-->[com.google.firebase:firebase-auth:23.2.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\c4ebc29f72ff96fc88224e6e488addd5\transformed\firebase-auth-23.2.0\AndroidManifest.xml:50:13-36
+68            android:launchMode="singleTask"
+68-->[com.google.firebase:firebase-auth:23.2.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\c4ebc29f72ff96fc88224e6e488addd5\transformed\firebase-auth-23.2.0\AndroidManifest.xml:51:13-44
+69            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+69-->[com.google.firebase:firebase-auth:23.2.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\c4ebc29f72ff96fc88224e6e488addd5\transformed\firebase-auth-23.2.0\AndroidManifest.xml:52:13-72
 70            <intent-filter>
-70-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\9d7d7688c656d271fbe253a6ed59a587\transformed\profileinstaller-1.4.0\AndroidManifest.xml:49:13-51:29
-71                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
-71-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\9d7d7688c656d271fbe253a6ed59a587\transformed\profileinstaller-1.4.0\AndroidManifest.xml:50:17-95
-71-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\9d7d7688c656d271fbe253a6ed59a587\transformed\profileinstaller-1.4.0\AndroidManifest.xml:50:25-92
-72            </intent-filter>
-73        </receiver>
-74    </application>
+70-->[com.google.firebase:firebase-auth:23.2.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\c4ebc29f72ff96fc88224e6e488addd5\transformed\firebase-auth-23.2.0\AndroidManifest.xml:53:13-63:29
+71                <action android:name="android.intent.action.VIEW" />
+71-->[com.google.firebase:firebase-auth:23.2.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\c4ebc29f72ff96fc88224e6e488addd5\transformed\firebase-auth-23.2.0\AndroidManifest.xml:36:17-69
+71-->[com.google.firebase:firebase-auth:23.2.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\c4ebc29f72ff96fc88224e6e488addd5\transformed\firebase-auth-23.2.0\AndroidManifest.xml:36:25-66
+72
+73                <category android:name="android.intent.category.DEFAULT" />
+73-->[com.google.firebase:firebase-auth:23.2.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\c4ebc29f72ff96fc88224e6e488addd5\transformed\firebase-auth-23.2.0\AndroidManifest.xml:38:17-76
+73-->[com.google.firebase:firebase-auth:23.2.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\c4ebc29f72ff96fc88224e6e488addd5\transformed\firebase-auth-23.2.0\AndroidManifest.xml:38:27-73
+74                <category android:name="android.intent.category.BROWSABLE" />
+74-->[com.google.firebase:firebase-auth:23.2.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\c4ebc29f72ff96fc88224e6e488addd5\transformed\firebase-auth-23.2.0\AndroidManifest.xml:39:17-78
+74-->[com.google.firebase:firebase-auth:23.2.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\c4ebc29f72ff96fc88224e6e488addd5\transformed\firebase-auth-23.2.0\AndroidManifest.xml:39:27-75
 75
-76</manifest>
+76                <data
+76-->[com.google.firebase:firebase-auth:23.2.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\c4ebc29f72ff96fc88224e6e488addd5\transformed\firebase-auth-23.2.0\AndroidManifest.xml:41:17-44:51
+77                    android:host="firebase.auth"
+77-->[com.google.firebase:firebase-auth:23.2.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\c4ebc29f72ff96fc88224e6e488addd5\transformed\firebase-auth-23.2.0\AndroidManifest.xml:42:21-49
+78                    android:path="/"
+78-->[com.google.firebase:firebase-auth:23.2.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\c4ebc29f72ff96fc88224e6e488addd5\transformed\firebase-auth-23.2.0\AndroidManifest.xml:43:21-37
+79                    android:scheme="recaptcha" />
+79-->[com.google.firebase:firebase-auth:23.2.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\c4ebc29f72ff96fc88224e6e488addd5\transformed\firebase-auth-23.2.0\AndroidManifest.xml:44:21-48
+80            </intent-filter>
+81        </activity>
+82
+83        <service
+83-->[com.google.firebase:firebase-auth:23.2.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\c4ebc29f72ff96fc88224e6e488addd5\transformed\firebase-auth-23.2.0\AndroidManifest.xml:66:9-72:19
+84            android:name="com.google.firebase.components.ComponentDiscoveryService"
+84-->[com.google.firebase:firebase-auth:23.2.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\c4ebc29f72ff96fc88224e6e488addd5\transformed\firebase-auth-23.2.0\AndroidManifest.xml:67:13-84
+85            android:directBootAware="true"
+85-->[com.google.firebase:firebase-common:21.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\bfcebc27c83b40f483d7067c3f948706\transformed\firebase-common-21.0.0\AndroidManifest.xml:32:13-43
+86            android:exported="false" >
+86-->[com.google.firebase:firebase-auth:23.2.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\c4ebc29f72ff96fc88224e6e488addd5\transformed\firebase-auth-23.2.0\AndroidManifest.xml:68:13-37
+87            <meta-data
+87-->[com.google.firebase:firebase-auth:23.2.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\c4ebc29f72ff96fc88224e6e488addd5\transformed\firebase-auth-23.2.0\AndroidManifest.xml:69:13-71:85
+88                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
+88-->[com.google.firebase:firebase-auth:23.2.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\c4ebc29f72ff96fc88224e6e488addd5\transformed\firebase-auth-23.2.0\AndroidManifest.xml:70:17-109
+89                android:value="com.google.firebase.components.ComponentRegistrar" />
+89-->[com.google.firebase:firebase-auth:23.2.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\c4ebc29f72ff96fc88224e6e488addd5\transformed\firebase-auth-23.2.0\AndroidManifest.xml:71:17-82
+90            <meta-data
+90-->[com.google.firebase:firebase-firestore:25.1.4] C:\Users\prism\.gradle\caches\8.10.2\transforms\03e2fb13052ef6912292cbcbbc6dcbbb\transformed\firebase-firestore-25.1.4\AndroidManifest.xml:17:13-19:85
+91                android:name="com.google.firebase.components:com.google.firebase.firestore.FirebaseFirestoreKtxRegistrar"
+91-->[com.google.firebase:firebase-firestore:25.1.4] C:\Users\prism\.gradle\caches\8.10.2\transforms\03e2fb13052ef6912292cbcbbc6dcbbb\transformed\firebase-firestore-25.1.4\AndroidManifest.xml:18:17-122
+92                android:value="com.google.firebase.components.ComponentRegistrar" />
+92-->[com.google.firebase:firebase-firestore:25.1.4] C:\Users\prism\.gradle\caches\8.10.2\transforms\03e2fb13052ef6912292cbcbbc6dcbbb\transformed\firebase-firestore-25.1.4\AndroidManifest.xml:19:17-82
+93            <meta-data
+93-->[com.google.firebase:firebase-firestore:25.1.4] C:\Users\prism\.gradle\caches\8.10.2\transforms\03e2fb13052ef6912292cbcbbc6dcbbb\transformed\firebase-firestore-25.1.4\AndroidManifest.xml:20:13-22:85
+94                android:name="com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar"
+94-->[com.google.firebase:firebase-firestore:25.1.4] C:\Users\prism\.gradle\caches\8.10.2\transforms\03e2fb13052ef6912292cbcbbc6dcbbb\transformed\firebase-firestore-25.1.4\AndroidManifest.xml:21:17-111
+95                android:value="com.google.firebase.components.ComponentRegistrar" />
+95-->[com.google.firebase:firebase-firestore:25.1.4] C:\Users\prism\.gradle\caches\8.10.2\transforms\03e2fb13052ef6912292cbcbbc6dcbbb\transformed\firebase-firestore-25.1.4\AndroidManifest.xml:22:17-82
+96            <meta-data
+96-->[com.google.firebase:firebase-storage:21.0.1] C:\Users\prism\.gradle\caches\8.10.2\transforms\4e6eed578769770e16db43b75ada3547\transformed\firebase-storage-21.0.1\AndroidManifest.xml:30:13-32:85
+97                android:name="com.google.firebase.components:com.google.firebase.storage.FirebaseStorageKtxRegistrar"
+97-->[com.google.firebase:firebase-storage:21.0.1] C:\Users\prism\.gradle\caches\8.10.2\transforms\4e6eed578769770e16db43b75ada3547\transformed\firebase-storage-21.0.1\AndroidManifest.xml:31:17-118
+98                android:value="com.google.firebase.components.ComponentRegistrar" />
+98-->[com.google.firebase:firebase-storage:21.0.1] C:\Users\prism\.gradle\caches\8.10.2\transforms\4e6eed578769770e16db43b75ada3547\transformed\firebase-storage-21.0.1\AndroidManifest.xml:32:17-82
+99            <meta-data
+99-->[com.google.firebase:firebase-storage:21.0.1] C:\Users\prism\.gradle\caches\8.10.2\transforms\4e6eed578769770e16db43b75ada3547\transformed\firebase-storage-21.0.1\AndroidManifest.xml:33:13-35:85
+100                android:name="com.google.firebase.components:com.google.firebase.storage.StorageRegistrar"
+100-->[com.google.firebase:firebase-storage:21.0.1] C:\Users\prism\.gradle\caches\8.10.2\transforms\4e6eed578769770e16db43b75ada3547\transformed\firebase-storage-21.0.1\AndroidManifest.xml:34:17-107
+101                android:value="com.google.firebase.components.ComponentRegistrar" />
+101-->[com.google.firebase:firebase-storage:21.0.1] C:\Users\prism\.gradle\caches\8.10.2\transforms\4e6eed578769770e16db43b75ada3547\transformed\firebase-storage-21.0.1\AndroidManifest.xml:35:17-82
+102            <meta-data
+102-->[com.google.firebase:firebase-appcheck:18.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\6dccf3f681c6d0923e4d7b5ac998e097\transformed\firebase-appcheck-18.0.0\AndroidManifest.xml:25:13-27:85
+103                android:name="com.google.firebase.components:com.google.firebase.appcheck.FirebaseAppCheckKtxRegistrar"
+103-->[com.google.firebase:firebase-appcheck:18.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\6dccf3f681c6d0923e4d7b5ac998e097\transformed\firebase-appcheck-18.0.0\AndroidManifest.xml:26:17-120
+104                android:value="com.google.firebase.components.ComponentRegistrar" />
+104-->[com.google.firebase:firebase-appcheck:18.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\6dccf3f681c6d0923e4d7b5ac998e097\transformed\firebase-appcheck-18.0.0\AndroidManifest.xml:27:17-82
+105            <meta-data
+105-->[com.google.firebase:firebase-appcheck:18.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\6dccf3f681c6d0923e4d7b5ac998e097\transformed\firebase-appcheck-18.0.0\AndroidManifest.xml:28:13-30:85
+106                android:name="com.google.firebase.components:com.google.firebase.appcheck.FirebaseAppCheckRegistrar"
+106-->[com.google.firebase:firebase-appcheck:18.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\6dccf3f681c6d0923e4d7b5ac998e097\transformed\firebase-appcheck-18.0.0\AndroidManifest.xml:29:17-117
+107                android:value="com.google.firebase.components.ComponentRegistrar" />
+107-->[com.google.firebase:firebase-appcheck:18.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\6dccf3f681c6d0923e4d7b5ac998e097\transformed\firebase-appcheck-18.0.0\AndroidManifest.xml:30:17-82
+108            <meta-data
+108-->[com.google.firebase:firebase-common-ktx:21.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\70f20338a72cdee19b703a3b4d9121ee\transformed\firebase-common-ktx-21.0.0\AndroidManifest.xml:12:13-14:85
+109                android:name="com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonLegacyRegistrar"
+109-->[com.google.firebase:firebase-common-ktx:21.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\70f20338a72cdee19b703a3b4d9121ee\transformed\firebase-common-ktx-21.0.0\AndroidManifest.xml:13:17-116
+110                android:value="com.google.firebase.components.ComponentRegistrar" />
+110-->[com.google.firebase:firebase-common-ktx:21.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\70f20338a72cdee19b703a3b4d9121ee\transformed\firebase-common-ktx-21.0.0\AndroidManifest.xml:14:17-82
+111            <meta-data
+111-->[com.google.firebase:firebase-common:21.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\bfcebc27c83b40f483d7067c3f948706\transformed\firebase-common-21.0.0\AndroidManifest.xml:35:13-37:85
+112                android:name="com.google.firebase.components:com.google.firebase.FirebaseCommonKtxRegistrar"
+112-->[com.google.firebase:firebase-common:21.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\bfcebc27c83b40f483d7067c3f948706\transformed\firebase-common-21.0.0\AndroidManifest.xml:36:17-109
+113                android:value="com.google.firebase.components.ComponentRegistrar" />
+113-->[com.google.firebase:firebase-common:21.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\bfcebc27c83b40f483d7067c3f948706\transformed\firebase-common-21.0.0\AndroidManifest.xml:37:17-82
+114        </service>
+115        <service
+115-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\prism\.gradle\caches\8.10.2\transforms\4db106427b158585b40f5fafdc171d2b\transformed\credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:24:9-32:19
+116            android:name="androidx.credentials.playservices.CredentialProviderMetadataHolder"
+116-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\prism\.gradle\caches\8.10.2\transforms\4db106427b158585b40f5fafdc171d2b\transformed\credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:25:13-94
+117            android:enabled="true"
+117-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\prism\.gradle\caches\8.10.2\transforms\4db106427b158585b40f5fafdc171d2b\transformed\credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:26:13-35
+118            android:exported="false" >
+118-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\prism\.gradle\caches\8.10.2\transforms\4db106427b158585b40f5fafdc171d2b\transformed\credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:27:13-37
+119            <meta-data
+119-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\prism\.gradle\caches\8.10.2\transforms\4db106427b158585b40f5fafdc171d2b\transformed\credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:29:13-31:104
+120                android:name="androidx.credentials.CREDENTIAL_PROVIDER_KEY"
+120-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\prism\.gradle\caches\8.10.2\transforms\4db106427b158585b40f5fafdc171d2b\transformed\credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:30:17-76
+121                android:value="androidx.credentials.playservices.CredentialProviderPlayServicesImpl" />
+121-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\prism\.gradle\caches\8.10.2\transforms\4db106427b158585b40f5fafdc171d2b\transformed\credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:31:17-101
+122        </service>
+123
+124        <activity
+124-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\prism\.gradle\caches\8.10.2\transforms\4db106427b158585b40f5fafdc171d2b\transformed\credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:34:9-41:20
+125            android:name="androidx.credentials.playservices.HiddenActivity"
+125-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\prism\.gradle\caches\8.10.2\transforms\4db106427b158585b40f5fafdc171d2b\transformed\credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:35:13-76
+126            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden"
+126-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\prism\.gradle\caches\8.10.2\transforms\4db106427b158585b40f5fafdc171d2b\transformed\credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:36:13-87
+127            android:enabled="true"
+127-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\prism\.gradle\caches\8.10.2\transforms\4db106427b158585b40f5fafdc171d2b\transformed\credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:37:13-35
+128            android:exported="false"
+128-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\prism\.gradle\caches\8.10.2\transforms\4db106427b158585b40f5fafdc171d2b\transformed\credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:38:13-37
+129            android:fitsSystemWindows="true"
+129-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\prism\.gradle\caches\8.10.2\transforms\4db106427b158585b40f5fafdc171d2b\transformed\credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:39:13-45
+130            android:theme="@style/Theme.Hidden" >
+130-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\prism\.gradle\caches\8.10.2\transforms\4db106427b158585b40f5fafdc171d2b\transformed\credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:40:13-48
+131        </activity>
+132        <activity
+132-->[com.google.android.gms:play-services-auth:20.7.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\8bb022e13a7eabf0d32ec96e55a84484\transformed\play-services-auth-20.7.0\AndroidManifest.xml:23:9-27:75
+133            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
+133-->[com.google.android.gms:play-services-auth:20.7.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\8bb022e13a7eabf0d32ec96e55a84484\transformed\play-services-auth-20.7.0\AndroidManifest.xml:24:13-93
+134            android:excludeFromRecents="true"
+134-->[com.google.android.gms:play-services-auth:20.7.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\8bb022e13a7eabf0d32ec96e55a84484\transformed\play-services-auth-20.7.0\AndroidManifest.xml:25:13-46
+135            android:exported="false"
+135-->[com.google.android.gms:play-services-auth:20.7.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\8bb022e13a7eabf0d32ec96e55a84484\transformed\play-services-auth-20.7.0\AndroidManifest.xml:26:13-37
+136            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+136-->[com.google.android.gms:play-services-auth:20.7.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\8bb022e13a7eabf0d32ec96e55a84484\transformed\play-services-auth-20.7.0\AndroidManifest.xml:27:13-72
+137        <!--
+138            Service handling Google Sign-In user revocation. For apps that do not integrate with
+139            Google Sign-In, this service will never be started.
+140        -->
+141        <service
+141-->[com.google.android.gms:play-services-auth:20.7.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\8bb022e13a7eabf0d32ec96e55a84484\transformed\play-services-auth-20.7.0\AndroidManifest.xml:33:9-37:51
+142            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
+142-->[com.google.android.gms:play-services-auth:20.7.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\8bb022e13a7eabf0d32ec96e55a84484\transformed\play-services-auth-20.7.0\AndroidManifest.xml:34:13-89
+143            android:exported="true"
+143-->[com.google.android.gms:play-services-auth:20.7.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\8bb022e13a7eabf0d32ec96e55a84484\transformed\play-services-auth-20.7.0\AndroidManifest.xml:35:13-36
+144            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION"
+144-->[com.google.android.gms:play-services-auth:20.7.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\8bb022e13a7eabf0d32ec96e55a84484\transformed\play-services-auth-20.7.0\AndroidManifest.xml:36:13-107
+145            android:visibleToInstantApps="true" />
+145-->[com.google.android.gms:play-services-auth:20.7.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\8bb022e13a7eabf0d32ec96e55a84484\transformed\play-services-auth-20.7.0\AndroidManifest.xml:37:13-48
+146
+147        <provider
+147-->[com.google.firebase:firebase-common:21.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\bfcebc27c83b40f483d7067c3f948706\transformed\firebase-common-21.0.0\AndroidManifest.xml:23:9-28:39
+148            android:name="com.google.firebase.provider.FirebaseInitProvider"
+148-->[com.google.firebase:firebase-common:21.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\bfcebc27c83b40f483d7067c3f948706\transformed\firebase-common-21.0.0\AndroidManifest.xml:24:13-77
+149            android:authorities="fcu.app.distributionapp.firebaseinitprovider"
+149-->[com.google.firebase:firebase-common:21.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\bfcebc27c83b40f483d7067c3f948706\transformed\firebase-common-21.0.0\AndroidManifest.xml:25:13-72
+150            android:directBootAware="true"
+150-->[com.google.firebase:firebase-common:21.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\bfcebc27c83b40f483d7067c3f948706\transformed\firebase-common-21.0.0\AndroidManifest.xml:26:13-43
+151            android:exported="false"
+151-->[com.google.firebase:firebase-common:21.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\bfcebc27c83b40f483d7067c3f948706\transformed\firebase-common-21.0.0\AndroidManifest.xml:27:13-37
+152            android:initOrder="100" />
+152-->[com.google.firebase:firebase-common:21.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\bfcebc27c83b40f483d7067c3f948706\transformed\firebase-common-21.0.0\AndroidManifest.xml:28:13-36
+153
+154        <activity
+154-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\5facb85b3fdd11e7ef3d64e06129d11f\transformed\play-services-base-18.1.0\AndroidManifest.xml:20:9-22:45
+155            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+155-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\5facb85b3fdd11e7ef3d64e06129d11f\transformed\play-services-base-18.1.0\AndroidManifest.xml:20:19-85
+156            android:exported="false"
+156-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\5facb85b3fdd11e7ef3d64e06129d11f\transformed\play-services-base-18.1.0\AndroidManifest.xml:22:19-43
+157            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+157-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\5facb85b3fdd11e7ef3d64e06129d11f\transformed\play-services-base-18.1.0\AndroidManifest.xml:21:19-78
+158
+159        <provider
+159-->[androidx.emoji2:emoji2:1.3.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\f85482af87bf0455acbc824ef1a164ae\transformed\emoji2-1.3.0\AndroidManifest.xml:24:9-32:20
+160            android:name="androidx.startup.InitializationProvider"
+160-->[androidx.emoji2:emoji2:1.3.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\f85482af87bf0455acbc824ef1a164ae\transformed\emoji2-1.3.0\AndroidManifest.xml:25:13-67
+161            android:authorities="fcu.app.distributionapp.androidx-startup"
+161-->[androidx.emoji2:emoji2:1.3.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\f85482af87bf0455acbc824ef1a164ae\transformed\emoji2-1.3.0\AndroidManifest.xml:26:13-68
+162            android:exported="false" >
+162-->[androidx.emoji2:emoji2:1.3.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\f85482af87bf0455acbc824ef1a164ae\transformed\emoji2-1.3.0\AndroidManifest.xml:27:13-37
+163            <meta-data
+163-->[androidx.emoji2:emoji2:1.3.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\f85482af87bf0455acbc824ef1a164ae\transformed\emoji2-1.3.0\AndroidManifest.xml:29:13-31:52
+164                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+164-->[androidx.emoji2:emoji2:1.3.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\f85482af87bf0455acbc824ef1a164ae\transformed\emoji2-1.3.0\AndroidManifest.xml:30:17-75
+165                android:value="androidx.startup" />
+165-->[androidx.emoji2:emoji2:1.3.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\f85482af87bf0455acbc824ef1a164ae\transformed\emoji2-1.3.0\AndroidManifest.xml:31:17-49
+166            <meta-data
+166-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\prism\.gradle\caches\8.10.2\transforms\8b2d1915a063c90726e03ffb80b9ae2f\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:29:13-31:52
+167                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+167-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\prism\.gradle\caches\8.10.2\transforms\8b2d1915a063c90726e03ffb80b9ae2f\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:30:17-78
+168                android:value="androidx.startup" />
+168-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\prism\.gradle\caches\8.10.2\transforms\8b2d1915a063c90726e03ffb80b9ae2f\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:31:17-49
+169            <meta-data
+169-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\2e793e93b76b5215bf4e7b9b96a27484\transformed\profileinstaller-1.4.0\AndroidManifest.xml:29:13-31:52
+170                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+170-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\2e793e93b76b5215bf4e7b9b96a27484\transformed\profileinstaller-1.4.0\AndroidManifest.xml:30:17-85
+171                android:value="androidx.startup" />
+171-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\2e793e93b76b5215bf4e7b9b96a27484\transformed\profileinstaller-1.4.0\AndroidManifest.xml:31:17-49
+172        </provider>
+173
+174        <meta-data
+174-->[com.google.android.gms:play-services-basement:18.4.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\f2d445680cc100897c6400d9b238d657\transformed\play-services-basement-18.4.0\AndroidManifest.xml:6:9-122
+175            android:name="com.google.android.gms.version"
+175-->[com.google.android.gms:play-services-basement:18.4.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\f2d445680cc100897c6400d9b238d657\transformed\play-services-basement-18.4.0\AndroidManifest.xml:6:20-65
+176            android:value="@integer/google_play_services_version" />
+176-->[com.google.android.gms:play-services-basement:18.4.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\f2d445680cc100897c6400d9b238d657\transformed\play-services-basement-18.4.0\AndroidManifest.xml:6:66-119
+177
+178        <receiver
+178-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\2e793e93b76b5215bf4e7b9b96a27484\transformed\profileinstaller-1.4.0\AndroidManifest.xml:34:9-52:20
+179            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+179-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\2e793e93b76b5215bf4e7b9b96a27484\transformed\profileinstaller-1.4.0\AndroidManifest.xml:35:13-76
+180            android:directBootAware="false"
+180-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\2e793e93b76b5215bf4e7b9b96a27484\transformed\profileinstaller-1.4.0\AndroidManifest.xml:36:13-44
+181            android:enabled="true"
+181-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\2e793e93b76b5215bf4e7b9b96a27484\transformed\profileinstaller-1.4.0\AndroidManifest.xml:37:13-35
+182            android:exported="true"
+182-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\2e793e93b76b5215bf4e7b9b96a27484\transformed\profileinstaller-1.4.0\AndroidManifest.xml:38:13-36
+183            android:permission="android.permission.DUMP" >
+183-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\2e793e93b76b5215bf4e7b9b96a27484\transformed\profileinstaller-1.4.0\AndroidManifest.xml:39:13-57
+184            <intent-filter>
+184-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\2e793e93b76b5215bf4e7b9b96a27484\transformed\profileinstaller-1.4.0\AndroidManifest.xml:40:13-42:29
+185                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+185-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\2e793e93b76b5215bf4e7b9b96a27484\transformed\profileinstaller-1.4.0\AndroidManifest.xml:41:17-91
+185-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\2e793e93b76b5215bf4e7b9b96a27484\transformed\profileinstaller-1.4.0\AndroidManifest.xml:41:25-88
+186            </intent-filter>
+187            <intent-filter>
+187-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\2e793e93b76b5215bf4e7b9b96a27484\transformed\profileinstaller-1.4.0\AndroidManifest.xml:43:13-45:29
+188                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+188-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\2e793e93b76b5215bf4e7b9b96a27484\transformed\profileinstaller-1.4.0\AndroidManifest.xml:44:17-85
+188-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\2e793e93b76b5215bf4e7b9b96a27484\transformed\profileinstaller-1.4.0\AndroidManifest.xml:44:25-82
+189            </intent-filter>
+190            <intent-filter>
+190-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\2e793e93b76b5215bf4e7b9b96a27484\transformed\profileinstaller-1.4.0\AndroidManifest.xml:46:13-48:29
+191                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+191-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\2e793e93b76b5215bf4e7b9b96a27484\transformed\profileinstaller-1.4.0\AndroidManifest.xml:47:17-88
+191-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\2e793e93b76b5215bf4e7b9b96a27484\transformed\profileinstaller-1.4.0\AndroidManifest.xml:47:25-85
+192            </intent-filter>
+193            <intent-filter>
+193-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\2e793e93b76b5215bf4e7b9b96a27484\transformed\profileinstaller-1.4.0\AndroidManifest.xml:49:13-51:29
+194                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+194-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\2e793e93b76b5215bf4e7b9b96a27484\transformed\profileinstaller-1.4.0\AndroidManifest.xml:50:17-95
+194-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\2e793e93b76b5215bf4e7b9b96a27484\transformed\profileinstaller-1.4.0\AndroidManifest.xml:50:25-92
+195            </intent-filter>
+196        </receiver> <!-- The activities will be merged into the manifest of the hosting app. -->
+197        <activity
+197-->[com.google.android.play:core-common:2.0.3] C:\Users\prism\.gradle\caches\8.10.2\transforms\f7c3e3f82bdf2251f724ad9f5cdb8f32\transformed\core-common-2.0.3\AndroidManifest.xml:14:9-18:65
+198            android:name="com.google.android.play.core.common.PlayCoreDialogWrapperActivity"
+198-->[com.google.android.play:core-common:2.0.3] C:\Users\prism\.gradle\caches\8.10.2\transforms\f7c3e3f82bdf2251f724ad9f5cdb8f32\transformed\core-common-2.0.3\AndroidManifest.xml:15:13-93
+199            android:exported="false"
+199-->[com.google.android.play:core-common:2.0.3] C:\Users\prism\.gradle\caches\8.10.2\transforms\f7c3e3f82bdf2251f724ad9f5cdb8f32\transformed\core-common-2.0.3\AndroidManifest.xml:16:13-37
+200            android:stateNotNeeded="true"
+200-->[com.google.android.play:core-common:2.0.3] C:\Users\prism\.gradle\caches\8.10.2\transforms\f7c3e3f82bdf2251f724ad9f5cdb8f32\transformed\core-common-2.0.3\AndroidManifest.xml:17:13-42
+201            android:theme="@style/Theme.PlayCore.Transparent" />
+201-->[com.google.android.play:core-common:2.0.3] C:\Users\prism\.gradle\caches\8.10.2\transforms\f7c3e3f82bdf2251f724ad9f5cdb8f32\transformed\core-common-2.0.3\AndroidManifest.xml:18:13-62
+202    </application>
+203
+204</manifest>
