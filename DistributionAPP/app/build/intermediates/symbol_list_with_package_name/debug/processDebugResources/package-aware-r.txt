@@ -3031,6 +3031,7 @@ drawable btn_radio_off_mtrl
 drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
+drawable circle_mask
 drawable common_full_open_on_phone
 drawable common_google_signin_btn_icon_dark
 drawable common_google_signin_btn_icon_dark_focused
@@ -3103,6 +3104,7 @@ drawable material_ic_keyboard_arrow_right_black_24dp
 drawable material_ic_menu_arrow_down_black_24dp
 drawable material_ic_menu_arrow_up_black_24dp
 drawable menu
+drawable message_bg_other
 drawable mtrl_bottomsheet_drag_handle
 drawable mtrl_checkbox_button
 drawable mtrl_checkbox_button_checked_unchecked
@@ -3282,6 +3284,7 @@ id btn_save
 id btn_to_login
 id btn_transaction
 id buttonPanel
+id button_send
 id cache_measures
 id callMeasure
 id cancel_button
@@ -3296,6 +3299,7 @@ id center_vertical
 id chain
 id chain2
 id chains
+id chat_layout
 id checkbox
 id checked
 id childFragmentContainer
@@ -3359,6 +3363,7 @@ id easeInOut
 id easeOut
 id east
 id edge
+id editText_message
 id edit_query
 id edit_text_id
 id elastic
@@ -3420,6 +3425,8 @@ id ifRoom
 id ignore
 id ignoreRequest
 id image
+id imageView_avatar
+id img_avatar
 id img_logo
 id immediateStop
 id included
@@ -3564,6 +3571,8 @@ id progress_horizontal
 id radio
 id ratio
 id rectangles
+id recyclerView_messages
+id recycler_friends
 id report_drawn
 id reverseSawtooth
 id right
@@ -3655,6 +3664,9 @@ id textSpacerNoTitle
 id textStart
 id textTop
 id textView
+id textView3
+id textView_message
+id textView_sender
 id text_input_end_icon
 id text_input_error_icon
 id text_input_start_icon
@@ -3686,7 +3698,10 @@ id transition_scene_layoutid_cache
 id transition_transform
 id triangle
 id tv_date
+id tv_group_name
+id tv_message
 id tv_result
+id tv_time
 id unchecked
 id uniform
 id unlabeled
@@ -3828,6 +3843,7 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_chat
 layout activity_main
 layout activity_register
 layout browser_actions_context_menu_page
@@ -3853,9 +3869,12 @@ layout fragment_add_transaction
 layout fragment_exchange
 layout fragment_exchange_rate
 layout fragment_expense
+layout fragment_friends
 layout fragment_transaction_history
 layout ime_base_split_test_activity
 layout ime_secondary_split_test_activity
+layout item_friend
+layout item_message
 layout m3_alert_dialog
 layout m3_alert_dialog_actions
 layout m3_alert_dialog_title

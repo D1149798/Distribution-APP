@@ -1,16 +1,22 @@
-#Thu May 08 23:11:18 CST 2025
-base.0=D\:\\GitHub\\Distribution-APP\\DistributionAPP\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
-base.1=D\:\\GitHub\\Distribution-APP\\DistributionAPP\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
-base.2=D\:\\GitHub\\Distribution-APP\\DistributionAPP\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\12\\classes.dex
-base.3=D\:\\GitHub\\Distribution-APP\\DistributionAPP\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes2.dex
-base.4=D\:\\GitHub\\Distribution-APP\\DistributionAPP\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes3.dex
+#Sun May 11 02:21:30 CST 2025
+base.0=C\:\\Users\\93051\\Documents\\GitHub\\Distribution-APP\\DistributionAPP\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
+base.1=C\:\\Users\\93051\\Documents\\GitHub\\Distribution-APP\\DistributionAPP\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
+base.2=C\:\\Users\\93051\\Documents\\GitHub\\Distribution-APP\\DistributionAPP\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\12\\classes.dex
+base.3=C\:\\Users\\93051\\Documents\\GitHub\\Distribution-APP\\DistributionAPP\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes2.dex
+base.4=C\:\\Users\\93051\\Documents\\GitHub\\Distribution-APP\\DistributionAPP\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes3.dex
+base.5=C\:\\Users\\93051\\Documents\\GitHub\\Distribution-APP\\DistributionAPP\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\14\\classes.dex
+base.6=C\:\\Users\\93051\\Documents\\GitHub\\Distribution-APP\\DistributionAPP\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\4\\classes.dex
 path.0=classes.dex
 path.1=0/classes.dex
 path.2=12/classes.dex
 path.3=classes2.dex
 path.4=classes3.dex
+path.5=14/classes.dex
+path.6=4/classes.dex
 renamed.0=classes.dex
 renamed.1=classes2.dex
 renamed.2=classes3.dex
 renamed.3=classes4.dex
 renamed.4=classes5.dex
+renamed.5=classes6.dex
+renamed.6=classes7.dex

@@ -1,0 +1,50 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="8dp">
+
+    <!-- 頭貼 --><!-- 預設頭貼 -->
+    <ImageView
+        android:id="@+id/imageView_avatar"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="8dp"
+        android:src="@color/design_default_color_secondary"
+        android:scaleType="centerCrop"
+        android:background="@drawable/circle_mask"
+        android:clipToOutline="true"
+        android:outlineProvider="background"
+        android:contentDescription="使用者頭貼" />
+
+    <!-- 內容部分：名字 + 訊息 -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <!-- 發送者名稱 -->
+        <TextView
+            android:id="@+id/textView_sender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="對方"
+            android:textStyle="bold"
+            android:textColor="#888888"
+            android:textSize="12sp"
+            android:visibility="visible" />
+
+        <!-- 訊息本體 -->
+        <TextView
+            android:id="@+id/textView_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="這是一則訊息"
+            android:background="@drawable/message_bg_other"
+            android:textColor="#000000"
+            android:padding="8dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="8dp" />
+    </LinearLayout>
+</LinearLayout>

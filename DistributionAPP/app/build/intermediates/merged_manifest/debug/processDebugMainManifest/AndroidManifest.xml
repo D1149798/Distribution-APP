@@ -32,6 +32,9 @@
         android:testOnly="true"
         android:theme="@style/Theme.DistributionAPP" >
         <activity
+            android:name="fcu.app.distributionapp.ChatActivity"
+            android:exported="false" />
+        <activity
             android:name="fcu.app.distributionapp.RegisterActivity"
             android:exported="false" />
         <activity

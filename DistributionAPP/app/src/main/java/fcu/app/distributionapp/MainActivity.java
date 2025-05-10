@@ -64,6 +64,7 @@ public class MainActivity extends AppCompatActivity {
 
         Fragment accountsFragment = AccountsFragment.newInstance("", "");
         Fragment exchangeFragment = ExchangeFragment.newInstance("", "");
+        Fragment friendsFragment = FriendsFragment.newInstance();
 
         setCurrentFragment(accountsFragment);
 
@@ -84,6 +85,7 @@ public class MainActivity extends AppCompatActivity {
                     return true;
                 } else if (id == R.id.action_friends) {
                     Toast.makeText(MainActivity.this, "好友清單", Toast.LENGTH_SHORT).show();
+                    setCurrentFragment(friendsFragment);
                     return true;
                 } else if (id == R.id.action_chat) {
                     Toast.makeText(MainActivity.this, "聊天室", Toast.LENGTH_SHORT).show();
