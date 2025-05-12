@@ -1,5 +1,6 @@
 package fcu.app.distributionapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -61,6 +62,8 @@ public class RegisterActivity extends AppCompatActivity {
                                     if(task.isSuccessful()){
                                         FirebaseUser user = mAuth.getCurrentUser();
                                         Toast.makeText(RegisterActivity.this, "註冊成功：" + user.getEmail(), Toast.LENGTH_SHORT).show();
+                                        startActivity(new Intent(RegisterActivity.this, LoginActivity.class));
+                                        finish();
                                     }
                                     else{
                                         Toast.makeText(RegisterActivity.this, "註冊失敗：" + task.getException().getMessage(), Toast.LENGTH_LONG).show();

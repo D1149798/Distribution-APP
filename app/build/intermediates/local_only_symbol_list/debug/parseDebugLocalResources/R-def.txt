@@ -19,10 +19,12 @@ id btn_add
 id btn_convert
 id btn_expense
 id btn_goback
+id btn_login
 id btn_rate
 id btn_register
 id btn_save
 id btn_to_login
+id btn_to_register
 id btn_transaction
 id button_send
 id categoryContainer
@@ -34,6 +36,8 @@ id editText_message
 id et_amount
 id et_cost
 id et_currency
+id et_l_email
+id et_l_password
 id et_note
 id et_r_email
 id et_r_password
@@ -43,6 +47,7 @@ id groupSpinner
 id imageView_avatar
 id img_avatar
 id img_logo
+id img_logo2
 id main
 id navigation_view
 id payerSpinner
@@ -50,6 +55,7 @@ id pieChart
 id recyclerView_messages
 id recycler_friends
 id textView
+id textView2
 id textView3
 id textView_message
 id textView_sender
@@ -61,6 +67,7 @@ id tv_message
 id tv_result
 id tv_time
 layout activity_chat
+layout activity_login
 layout activity_main
 layout activity_register
 layout fragment_accounts

@@ -32,13 +32,7 @@
         android:testOnly="true"
         android:theme="@style/Theme.DistributionAPP" >
         <activity
-            android:name="fcu.app.distributionapp.ChatActivity"
-            android:exported="false" />
-        <activity
-            android:name="fcu.app.distributionapp.RegisterActivity"
-            android:exported="false" />
-        <activity
-            android:name="fcu.app.distributionapp.MainActivity"
+            android:name="fcu.app.distributionapp.LoginActivity"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -46,6 +40,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="fcu.app.distributionapp.ChatActivity"
+            android:exported="false" />
+        <activity
+            android:name="fcu.app.distributionapp.RegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name="fcu.app.distributionapp.MainActivity"
+            android:exported="false" />
         <activity
             android:name="com.google.firebase.auth.internal.GenericIdpActivity"
             android:excludeFromRecents="true"
