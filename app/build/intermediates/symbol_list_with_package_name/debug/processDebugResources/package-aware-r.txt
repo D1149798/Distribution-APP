@@ -3220,12 +3220,12 @@ id action_bar_root
 id action_bar_spinner
 id action_bar_subtitle
 id action_bar_title
-id action_chat
 id action_container
 id action_context_bar
 id action_divider
 id action_exchange
 id action_friends
+id action_groups
 id action_image
 id action_menu_divider
 id action_menu_presenter
@@ -3578,6 +3578,7 @@ id ratio
 id rectangles
 id recyclerView_messages
 id recycler_friends
+id recycler_groups
 id report_drawn
 id reverseSawtooth
 id right
@@ -3877,10 +3878,12 @@ layout fragment_exchange
 layout fragment_exchange_rate
 layout fragment_expense
 layout fragment_friends
+layout fragment_groups
 layout fragment_transaction_history
 layout ime_base_split_test_activity
 layout ime_secondary_split_test_activity
 layout item_friend
+layout item_group
 layout item_message
 layout m3_alert_dialog
 layout m3_alert_dialog_actions

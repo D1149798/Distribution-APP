@@ -83,12 +83,12 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(MainActivity.this, "匯率查詢", Toast.LENGTH_SHORT).show();
                     setCurrentFragment(exchangeFragment);
                     return true;
-                } else if (id == R.id.action_friends) {
-                    Toast.makeText(MainActivity.this, "好友清單", Toast.LENGTH_SHORT).show();
+                } else if (id == R.id.action_groups) {
+                    Toast.makeText(MainActivity.this, "群組", Toast.LENGTH_SHORT).show();
                     setCurrentFragment(friendsFragment);
                     return true;
-                } else if (id == R.id.action_chat) {
-                    Toast.makeText(MainActivity.this, "聊天室", Toast.LENGTH_SHORT).show();
+                } else if (id == R.id.action_friends) {
+                    Toast.makeText(MainActivity.this, "好友", Toast.LENGTH_SHORT).show();
                     return true;
                 } else if (id == R.id.action_suggestion) {
                     Toast.makeText(MainActivity.this, "旅遊建議", Toast.LENGTH_SHORT).show();
