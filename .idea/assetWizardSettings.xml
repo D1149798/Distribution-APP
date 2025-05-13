@@ -19,8 +19,8 @@
                         <option name="values">
                           <map>
                             <entry key="assetSourceType" value="FILE" />
-                            <entry key="outputName" value="menu" />
-                            <entry key="sourceFile" value="C:\Users\prism\Documents\GitHub\Distribution-APP\DistributionAPP\app\src\main\res\drawable\icon\menu.svg" />
+                            <entry key="outputName" value="currency_exchange" />
+                            <entry key="sourceFile" value="C:\Users\prism\Desktop\icon\currency_exchange.svg" />
                           </map>
                         </option>
                       </PersistentState>

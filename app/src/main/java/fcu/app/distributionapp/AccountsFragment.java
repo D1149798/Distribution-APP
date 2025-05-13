@@ -1,7 +1,5 @@
 package fcu.app.distributionapp;
 
-import android.app.DatePickerDialog;
-import android.graphics.Color;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -12,56 +10,21 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.github.mikephil.charting.animation.Easing;
-import com.github.mikephil.charting.charts.LineChart;
-import com.github.mikephil.charting.charts.PieChart;
-import com.github.mikephil.charting.data.Entry;
-import com.github.mikephil.charting.data.LineData;
-import com.github.mikephil.charting.data.LineDataSet;
-import com.github.mikephil.charting.data.PieData;
-import com.github.mikephil.charting.data.PieDataSet;
-import com.github.mikephil.charting.data.PieEntry;
-import com.github.mikephil.charting.utils.ColorTemplate;
-
 import java.util.ArrayList;
 import java.util.List;
 
-
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link AccountsFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
+//lily@gmail.com
+//123456
 public class AccountsFragment extends Fragment {
-
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-    private PieChart pieChart;
-
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
+    private View selectedMenu = null;
 
     public AccountsFragment() {
         // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment AccountsFragment.
-     */
-    // TODO: Rename and change types and number of parameters
     public static AccountsFragment newInstance(String param1, String param2) {
         AccountsFragment fragment = new AccountsFragment();
         Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
         fragment.setArguments(args);
         return fragment;
     }
@@ -69,11 +32,8 @@ public class AccountsFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
     }
+    private List<TextView> allLabels = new ArrayList<>();
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -83,22 +43,61 @@ public class AccountsFragment extends Fragment {
         // 預設載入 ExpenseFragment
         loadChildFragment(new ExpenseFragment());
 
+        TextView labelChat = view.findViewById(R.id.label_chat);
+        TextView labelTransaction = view.findViewById(R.id.label_transaction);
+        TextView labelAdd = view.findViewById(R.id.label_add);
+        TextView labelRate = view.findViewById(R.id.label_rate);
+
+        // 加入所有文字到 list
+        allLabels.add(labelChat);
+        allLabels.add(labelTransaction);
+        allLabels.add(labelAdd);
+        allLabels.add(labelRate);
+
         // 設定按鈕切換事件
-        view.findViewById(R.id.btn_expense).setOnClickListener(v ->
-                loadChildFragment(new ExpenseFragment()));
+        view.findViewById(R.id.btn_chat).setOnClickListener(v ->{
+            loadChildFragment(new ExpenseFragment());
+            highlightSelected(view.findViewById(R.id.btn_chat), view.findViewById(R.id.label_chat));
+        });
 
-        view.findViewById(R.id.btn_transaction).setOnClickListener(v ->
-                loadChildFragment(new TransactionHistoryFragment()));
+        view.findViewById(R.id.btn_transaction).setOnClickListener(v ->{
+            loadChildFragment(new TransactionHistoryFragment());
+            highlightSelected(view.findViewById(R.id.btn_transaction), view.findViewById(R.id.label_transaction));
+        });
 
-        view.findViewById(R.id.btn_add).setOnClickListener(v ->
-                loadChildFragment(new AddTransactionFragment()));
+        view.findViewById(R.id.btn_add).setOnClickListener(v ->{
+            loadChildFragment(new AddTransactionFragment());
+            highlightSelected(view.findViewById(R.id.btn_add), view.findViewById(R.id.label_add));
+        });
 
-        view.findViewById(R.id.btn_rate).setOnClickListener(v ->
-                loadChildFragment(new ExchangeRateFragment()));
+
+        view.findViewById(R.id.btn_rate).setOnClickListener(v ->{
+            loadChildFragment(new ExchangeRateFragment());
+            highlightSelected(view.findViewById(R.id.btn_rate), view.findViewById(R.id.label_rate));
+        });
+
+        // 預設選中聊天室
+        loadChildFragment(new ExpenseFragment());
+        highlightSelected(view.findViewById(R.id.btn_chat), view.findViewById(R.id.label_chat));
+
 
 
 
         return view;
+    }
+    private void highlightSelected(View menuView, TextView labelToShow) {
+        if (selectedMenu != null) {
+            selectedMenu.setSelected(false);
+        }
+        menuView.setSelected(true);
+        selectedMenu = menuView;
+
+        // 隱藏所有文字
+        for (TextView label : allLabels) {
+            label.setVisibility(View.GONE);
+        }
+        // 顯示目前選中的
+        labelToShow.setVisibility(View.VISIBLE);
     }
     private void loadChildFragment(Fragment fragment) {
         Log.d("AccountsFragment", "Loading fragment: " + fragment.getClass().getSimpleName());

@@ -3021,8 +3021,11 @@ drawable abc_textfield_search_activated_mtrl_alpha
 drawable abc_textfield_search_default_mtrl_alpha
 drawable abc_textfield_search_material
 drawable abc_vector_test
+drawable add
 drawable avd_hide_password
 drawable avd_show_password
+drawable back
+drawable bg_menu_selector
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
 drawable btn_checkbox_unchecked_mtrl
@@ -3031,6 +3034,7 @@ drawable btn_radio_off_mtrl
 drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
+drawable chat
 drawable circle_mask
 drawable common_full_open_on_phone
 drawable common_google_signin_btn_icon_dark
@@ -3051,6 +3055,7 @@ drawable common_google_signin_btn_text_light
 drawable common_google_signin_btn_text_light_focused
 drawable common_google_signin_btn_text_light_normal
 drawable common_google_signin_btn_text_light_normal_background
+drawable currency_exchange
 drawable design_fab_background
 drawable design_ic_visibility
 drawable design_ic_visibility_off
@@ -3156,6 +3161,7 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
+drawable payments
 drawable settings
 drawable test_level_drawable
 drawable tooltip_frame_dark
@@ -3275,8 +3281,8 @@ id browser_actions_menu_item_text
 id browser_actions_menu_items
 id browser_actions_menu_view
 id btn_add
+id btn_chat
 id btn_convert
-id btn_expense
 id btn_goback
 id btn_login
 id btn_rate
@@ -3384,6 +3390,7 @@ id et_note
 id et_r_email
 id et_r_password
 id et_r_password_check
+id et_search
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
@@ -3440,9 +3447,17 @@ id info
 id invisible
 id inward
 id italic
+id item_add
+id item_chat
+id item_rate
 id item_touch_helper_previous_elevation
+id item_transaction
 id jumpToEnd
 id jumpToStart
+id label_add
+id label_chat
+id label_rate
+id label_transaction
 id labeled
 id layout
 id left
@@ -3671,7 +3686,6 @@ id textStart
 id textTop
 id textView
 id textView2
-id textView3
 id textView_message
 id textView_sender
 id text_input_end_icon
@@ -3854,6 +3868,7 @@ layout activity_chat
 layout activity_login
 layout activity_main
 layout activity_register
+layout activity_suggestion
 layout browser_actions_context_menu_page
 layout browser_actions_context_menu_row
 layout custom_dialog

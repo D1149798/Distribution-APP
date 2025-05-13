@@ -1,22 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".AccountsFragment"
-    android:gravity="center_horizontal"> <!-- 水平置中 -->
-
+    android:background="#FFFFFF"
+    android:gravity="center_horizontal">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
-        <!-- 1. 功能切換 -->
+
+        <!-- 🔷 上方分析選單 -->
         <HorizontalScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="63dp"
+            android:background="#F06292"
             android:fillViewport="true"
+            android:padding="8dp"
             android:scrollbars="none">
 
             <LinearLayout
@@ -25,40 +28,134 @@
                 android:gravity="center_vertical"
                 android:orientation="horizontal">
 
-                <Button
-                    android:id="@+id/btn_expense"
+                <!-- 🔘 聊天室 -->
+                <LinearLayout
+                    android:id="@+id/item_chat"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="支出" />
+                    android:layout_marginEnd="12dp"
+                    android:background="@drawable/bg_menu_selector"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="4dp"
+                    android:tag="chat">
 
-                <Button
-                    android:id="@+id/btn_transaction"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="交易紀錄" />
+                    <ImageButton
+                        android:id="@+id/btn_chat"
+                        android:layout_width="48dp"
+                        android:layout_height="49dp"
+                        android:background="@android:color/transparent"
+                        android:contentDescription="聊天室"
+                        android:src="@drawable/chat" />
 
-                <Button
-                    android:id="@+id/btn_add"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="新增一筆交易" />
+                    <TextView
+                        android:id="@+id/label_chat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="聊天室"
+                        android:textColor="#FFFFFF"
+                        android:textSize="16sp" />
+                </LinearLayout>
 
-                <Button
-                    android:id="@+id/btn_rate"
+                <!-- 🔘 交易紀錄 -->
+                <LinearLayout
+                    android:id="@+id/item_transaction"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="匯率轉換" />
+                    android:layout_marginEnd="12dp"
+                    android:background="@drawable/bg_menu_selector"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="4dp"
+                    android:tag="transaction">
+
+                    <ImageButton
+                        android:id="@+id/btn_transaction"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:background="@android:color/transparent"
+                        android:contentDescription="交易紀錄"
+                        android:src="@drawable/payments" />
+
+                    <TextView
+                        android:id="@+id/label_transaction"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="交易紀錄"
+                        android:textColor="#FFFFFF"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <!-- 🔘 新增一筆交易 -->
+                <LinearLayout
+                    android:id="@+id/item_add"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="12dp"
+                    android:background="@drawable/bg_menu_selector"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="4dp"
+                    android:tag="add">
+
+                    <ImageButton
+                        android:id="@+id/btn_add"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:background="@android:color/transparent"
+                        android:contentDescription="新增交易"
+                        android:src="@drawable/add" />
+
+                    <TextView
+                        android:id="@+id/label_add"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="新增一筆交易"
+                        android:textColor="#FFFFFF"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <!-- 🔘 匯率轉換 -->
+                <LinearLayout
+                    android:id="@+id/item_rate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="12dp"
+                    android:background="@drawable/bg_menu_selector"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="4dp"
+                    android:tag="rate">
+
+                    <ImageButton
+                        android:id="@+id/btn_rate"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:background="@android:color/transparent"
+                        android:contentDescription="匯率轉換"
+                        android:src="@drawable/currency_exchange" />
+
+                    <TextView
+                        android:id="@+id/label_rate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="匯率轉換"
+                        android:textColor="#FFFFFF"
+                        android:textSize="16sp" />
+                </LinearLayout>
 
             </LinearLayout>
         </HorizontalScrollView>
-        <!-- 子 Fragment 的顯示容器 -->
+
+        <!-- 🔷 子 Fragment 容器 -->
         <FrameLayout
             android:id="@+id/childFragmentContainer"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1" />
-
     </LinearLayout>
-
-
 </FrameLayout>
