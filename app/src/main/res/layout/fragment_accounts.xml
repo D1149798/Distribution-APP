@@ -16,7 +16,8 @@
         <!-- 🔷 上方分析選單 -->
         <HorizontalScrollView
             android:layout_width="match_parent"
-            android:layout_height="63dp"
+            android:layout_height="75dp"
+            android:layout_marginTop="16dp"
             android:background="#F06292"
             android:fillViewport="true"
             android:padding="8dp"
@@ -25,8 +26,31 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
                 android:gravity="center_vertical"
                 android:orientation="horizontal">
+
+                <!-- 🔘 返回所有群組 -->
+                <LinearLayout
+                    android:id="@+id/item_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="12dp"
+                    android:background="@drawable/bg_menu_selector"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="4dp"
+                    android:tag="back">
+
+                    <ImageButton
+                        android:id="@+id/btn_back"
+                        android:layout_width="wrap_content"
+                        android:layout_height="49dp"
+                        android:background="@android:color/transparent"
+                        android:contentDescription="返回"
+                        android:src="@drawable/back" />
+
+                </LinearLayout>
 
                 <!-- 🔘 聊天室 -->
                 <LinearLayout

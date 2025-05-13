@@ -3285,6 +3285,7 @@ id browser_actions_menu_view
 id btnConvert
 id btnSwitch
 id btn_add
+id btn_back
 id btn_chat
 id btn_goback
 id btn_login
@@ -3449,6 +3450,7 @@ id invisible
 id inward
 id italic
 id item_add
+id item_back
 id item_chat
 id item_rate
 id item_touch_helper_previous_elevation
@@ -3891,7 +3893,6 @@ layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout fragment_accounts
 layout fragment_add_transaction
-layout fragment_exchange
 layout fragment_exchange_rate
 layout fragment_friends
 layout fragment_groups

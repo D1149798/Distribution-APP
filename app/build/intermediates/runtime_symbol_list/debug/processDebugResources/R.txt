@@ -3284,6 +3284,7 @@ int id browser_actions_menu_view 0x7f090071
 int id btnConvert 0x7f090072
 int id btnSwitch 0x7f090073
 int id btn_add 0x7f090074
+int id btn_back 0x7f090247
 int id btn_chat 0x7f090075
 int id btn_goback 0x7f090076
 int id btn_login 0x7f090077
@@ -3448,6 +3449,7 @@ int id invisible 0x7f090115
 int id inward 0x7f090116
 int id italic 0x7f090117
 int id item_add 0x7f090118
+int id item_back 0x7f090248
 int id item_chat 0x7f090119
 int id item_rate 0x7f09011a
 int id item_touch_helper_previous_elevation 0x7f09011b
@@ -3890,7 +3892,6 @@ int layout design_text_input_end_icon 0x7f0c0031
 int layout design_text_input_start_icon 0x7f0c0032
 int layout fragment_accounts 0x7f0c0033
 int layout fragment_add_transaction 0x7f0c0034
-int layout fragment_exchange 0x7f0c0035
 int layout fragment_exchange_rate 0x7f0c0036
 int layout fragment_friends 0x7f0c0037
 int layout fragment_groups 0x7f0c0038

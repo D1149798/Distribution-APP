@@ -27,9 +27,9 @@
 
         <Button
             android:id="@+id/btnSwitch"
-            android:layout_width="60dp"
+            android:layout_width="65dp"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
+            android:layout_gravity="center|center_horizontal|center_vertical"
             android:layout_marginHorizontal="10dp"
             android:backgroundTint="#F06296"
             app:icon="@drawable/swap_horiz" />

@@ -3,6 +3,7 @@ package fcu.app.distributionapp;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.appcompat.app.AppCompatActivity;
 
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -15,6 +16,7 @@ import java.util.List;
 
 //lily@gmail.com
 //123456
+
 public class AccountsFragment extends Fragment {
     private View selectedMenu = null;
 
@@ -55,6 +57,12 @@ public class AccountsFragment extends Fragment {
         allLabels.add(labelRate);
 
         // 設定按鈕切換事件
+        view.findViewById(R.id.btn_back).setOnClickListener(v ->{
+            if (getActivity() instanceof MainActivity) {
+                ((MainActivity) getActivity()).switchToFriendsFragment();
+            }
+        });
+
         view.findViewById(R.id.btn_chat).setOnClickListener(v ->{
             loadChildFragment(new TransactionHistoryFragment());
             highlightSelected(view.findViewById(R.id.btn_chat), view.findViewById(R.id.label_chat));
@@ -106,5 +114,25 @@ public class AccountsFragment extends Fragment {
                 .replace(R.id.childFragmentContainer, fragment)
                 .commit();
     }
+
+//下面兩段程式碼可以把Toolbar隱藏起來
+    @Override
+    public void onResume() {
+        super.onResume();
+        AppCompatActivity activity = (AppCompatActivity) getActivity();
+        if (activity != null && activity.getSupportActionBar() != null) {
+            activity.getSupportActionBar().hide();
+        }
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        AppCompatActivity activity = (AppCompatActivity) getActivity();
+        if (activity != null && activity.getSupportActionBar() != null) {
+            activity.getSupportActionBar().show();
+        }
+    }
+
 
 }

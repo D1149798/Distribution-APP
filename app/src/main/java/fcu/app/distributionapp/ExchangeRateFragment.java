@@ -41,7 +41,10 @@ public class ExchangeRateFragment extends Fragment {
     public ExchangeRateFragment() {
         // Required empty public constructor
     }
-
+    public static ExchangeRateFragment newInstance() {
+        ExchangeRateFragment fragment = new ExchangeRateFragment();
+        return fragment;
+    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {

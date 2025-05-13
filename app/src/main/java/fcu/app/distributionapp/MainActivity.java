@@ -64,10 +64,10 @@ public class MainActivity extends AppCompatActivity {
         toggle.syncState();               // 同步狀態（讓三條線 icon 正確顯示）
 
         Fragment accountsFragment = AccountsFragment.newInstance("", "");
-        Fragment exchangeFragment = ExchangeFragment.newInstance("", "");
+        Fragment exchangeFragment = ExchangeRateFragment.newInstance();
         Fragment friendsFragment = FriendsFragment.newInstance();
 
-        setCurrentFragment(accountsFragment);
+        setCurrentFragment(friendsFragment);
 
         //側滑選單項目點擊監聽
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
@@ -118,13 +118,10 @@ public class MainActivity extends AppCompatActivity {
                 .replace(R.id.fragment_main, fragment)
                 .commit();
     }
+    public void switchToFriendsFragment() {
+        Fragment friendsFragment = FriendsFragment.newInstance();
+        setCurrentFragment(friendsFragment);
+    }
 
 
-    //toolbar點擊監聽
-//    @Override
-//    public boolean onOptionsItemSelected(MenuItem item) {
-//        int id = item.getItemId(); // 取得點擊的 menu item 的 id
-//
-//        return super.onOptionsItemSelected(item);
-//    }
 }
