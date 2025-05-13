@@ -13,6 +13,7 @@ drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable menu
 drawable message_bg_other
+drawable message_bg_self
 drawable payments
 drawable settings
 drawable swap_horiz
@@ -97,6 +98,7 @@ layout fragment_transaction_history
 layout item_friend
 layout item_group
 layout item_message
+layout item_message_self
 menu drawer_menu
 menu toolbar_menu
 mipmap ic_launcher

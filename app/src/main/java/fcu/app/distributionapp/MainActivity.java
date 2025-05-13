@@ -14,6 +14,7 @@ import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
+import androidx.core.view.GravityCompat;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
@@ -77,21 +78,26 @@ public class MainActivity extends AppCompatActivity {
                 if (id == R.id.action_account) {
                     Toast.makeText(MainActivity.this, "記帳 / 分帳", Toast.LENGTH_SHORT).show();
                     setCurrentFragment(accountsFragment);
+                    layout.closeDrawer(GravityCompat.START); // <-- 加這行關閉抽屜
                     // 切換到記帳Fragment或Activity
                     return true;
                 } else if (id == R.id.action_exchange) {
                     Toast.makeText(MainActivity.this, "匯率查詢", Toast.LENGTH_SHORT).show();
                     setCurrentFragment(exchangeFragment);
+                    layout.closeDrawer(GravityCompat.START); // <-- 加這行關閉抽屜
                     return true;
                 } else if (id == R.id.action_groups) {
                     Toast.makeText(MainActivity.this, "群組", Toast.LENGTH_SHORT).show();
                     setCurrentFragment(friendsFragment);
+                    layout.closeDrawer(GravityCompat.START); // <-- 加這行關閉抽屜
                     return true;
                 } else if (id == R.id.action_friends) {
                     Toast.makeText(MainActivity.this, "好友", Toast.LENGTH_SHORT).show();
+                    layout.closeDrawer(GravityCompat.START); // <-- 加這行關閉抽屜
                     return true;
                 } else if (id == R.id.action_suggestion) {
                     Toast.makeText(MainActivity.this, "旅遊建議", Toast.LENGTH_SHORT).show();
+                    layout.closeDrawer(GravityCompat.START); // <-- 加這行關閉抽屜
                     return true;
                 }
                 return false;

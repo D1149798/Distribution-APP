@@ -3110,6 +3110,7 @@ drawable material_ic_menu_arrow_down_black_24dp
 drawable material_ic_menu_arrow_up_black_24dp
 drawable menu
 drawable message_bg_other
+drawable message_bg_self
 drawable mtrl_bottomsheet_drag_handle
 drawable mtrl_checkbox_button
 drawable mtrl_checkbox_button_checked_unchecked
@@ -3900,6 +3901,7 @@ layout ime_secondary_split_test_activity
 layout item_friend
 layout item_group
 layout item_message
+layout item_message_self
 layout m3_alert_dialog
 layout m3_alert_dialog_actions
 layout m3_alert_dialog_title

@@ -1,5 +1,9 @@
 [
     {
+        "merged": "fcu.app.distributionapp-debug-41:/drawable_message_bg_self.xml.flat",
+        "source": "fcu.app.distributionapp-main-43:/drawable/message_bg_self.xml"
+    },
+    {
         "merged": "fcu.app.distributionapp-debug-41:/layout_fragment_friends.xml.flat",
         "source": "fcu.app.distributionapp-main-43:/layout/fragment_friends.xml"
     },
@@ -50,6 +54,10 @@
     {
         "merged": "fcu.app.distributionapp-debug-41:/layout_fragment_groups.xml.flat",
         "source": "fcu.app.distributionapp-main-43:/layout/fragment_groups.xml"
+    },
+    {
+        "merged": "fcu.app.distributionapp-debug-41:/layout_item_message_self.xml.flat",
+        "source": "fcu.app.distributionapp-main-43:/layout/item_message_self.xml"
     },
     {
         "merged": "fcu.app.distributionapp-debug-41:/drawable_back.xml.flat",
