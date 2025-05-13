@@ -1,9 +1,10 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\prism\Documents\GitHub\Distribution-APP\app\src\main\AndroidManifest.xml:2:1-38:12
-INJECTED from C:\Users\prism\Documents\GitHub\Distribution-APP\app\src\main\AndroidManifest.xml:2:1-38:12
-INJECTED from C:\Users\prism\Documents\GitHub\Distribution-APP\app\src\main\AndroidManifest.xml:2:1-38:12
-INJECTED from C:\Users\prism\Documents\GitHub\Distribution-APP\app\src\main\AndroidManifest.xml:2:1-38:12
+ADDED from C:\Users\prism\Documents\GitHub\Distribution-APP\app\src\main\AndroidManifest.xml:2:1-40:12
+INJECTED from C:\Users\prism\Documents\GitHub\Distribution-APP\app\src\main\AndroidManifest.xml:2:1-40:12
+INJECTED from C:\Users\prism\Documents\GitHub\Distribution-APP\app\src\main\AndroidManifest.xml:2:1-40:12
+INJECTED from C:\Users\prism\Documents\GitHub\Distribution-APP\app\src\main\AndroidManifest.xml:2:1-40:12
+MERGED from [com.github.PhilJay:MPAndroidChart:3.1.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\433f5068eb2afc492ec2ffeca8e52a2d\transformed\MPAndroidChart-3.1.0\AndroidManifest.xml:2:1-20:12
 MERGED from [com.google.firebase:firebase-auth:23.2.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\c4ebc29f72ff96fc88224e6e488addd5\transformed\firebase-auth-23.2.0\AndroidManifest.xml:17:1-75:12
 MERGED from [com.google.firebase:firebase-firestore:25.1.4] C:\Users\prism\.gradle\caches\8.10.2\transforms\03e2fb13052ef6912292cbcbbc6dcbbb\transformed\firebase-firestore-25.1.4\AndroidManifest.xml:2:1-26:12
 MERGED from [com.google.firebase:firebase-storage:21.0.1] C:\Users\prism\.gradle\caches\8.10.2\transforms\4e6eed578769770e16db43b75ada3547\transformed\firebase-storage-21.0.1\AndroidManifest.xml:15:1-39:12
@@ -54,7 +55,7 @@ MERGED from [com.google.android.gms:play-services-tasks:18.2.0] C:\Users\prism\.
 MERGED from [com.google.android.gms:play-services-basement:18.4.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\f2d445680cc100897c6400d9b238d657\transformed\play-services-basement-18.4.0\AndroidManifest.xml:2:1-9:12
 MERGED from [androidx.fragment:fragment:1.5.4] C:\Users\prism\.gradle\caches\8.10.2\transforms\7cc42bcfa64c0b31d7b532441f05f0d3\transformed\fragment-1.5.4\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.activity:activity:1.10.1] C:\Users\prism\.gradle\caches\8.10.2\transforms\5c6bb051b77d9855e7a7502dff8fb040\transformed\activity-1.10.1\AndroidManifest.xml:17:1-22:12
-MERGED from [com.github.PhilJay:MPAndroidChart:3.1.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\433f5068eb2afc492ec2ffeca8e52a2d\transformed\MPAndroidChart-3.1.0\AndroidManifest.xml:2:1-20:12
+MERGED from [com.google.android.libraries.identity.googleid:googleid:1.1.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\b5c82c6450548e4fefaf46b94f9a55b2\transformed\googleid-1.1.0\AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\a887af8315bc5d89f6c93f82344a3c80\transformed\cursoradapter-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\f1aeb941e6f0e036cf69e256cf4f550c\transformed\cardview-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\2e793e93b76b5215bf4e7b9b96a27484\transformed\profileinstaller-1.4.0\AndroidManifest.xml:17:1-55:12
@@ -69,7 +70,6 @@ MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\prism\.gradle\ca
 MERGED from [androidx.print:print:1.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\3fa08fb20b0e915ad576af1634a9b033\transformed\print-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.core:core-viewtree:1.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\282739b7154b904bd1688217f1c6d586\transformed\core-viewtree-1.0.0\AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.annotation:annotation-experimental:1.4.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\6a674a7d7799bd8cdbb8b73b3a530f1a\transformed\annotation-experimental-1.4.0\AndroidManifest.xml:2:1-7:12
-MERGED from [com.google.android.libraries.identity.googleid:googleid:1.1.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\b5c82c6450548e4fefaf46b94f9a55b2\transformed\googleid-1.1.0\AndroidManifest.xml:2:1-7:12
 MERGED from [io.grpc:grpc-android:1.62.2] C:\Users\prism\.gradle\caches\8.10.2\transforms\5c90ca72f4181be4476fbe70122e8d83\transformed\grpc-android-1.62.2\AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.firebase:protolite-well-known-types:18.0.1] C:\Users\prism\.gradle\caches\8.10.2\transforms\400a855893ab3aa0e3673bb9ad613dd0\transformed\protolite-well-known-types-18.0.1\AndroidManifest.xml:2:1-7:12
 MERGED from [com.google.android.play:core-common:2.0.3] C:\Users\prism\.gradle\caches\8.10.2\transforms\f7c3e3f82bdf2251f724ad9f5cdb8f32\transformed\core-common-2.0.3\AndroidManifest.xml:2:1-21:12
@@ -83,9 +83,21 @@ MERGED from [com.google.android.play:core-common:2.0.3] C:\Users\prism\.gradle\c
 		INJECTED from C:\Users\prism\Documents\GitHub\Distribution-APP\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\prism\Documents\GitHub\Distribution-APP\app\src\main\AndroidManifest.xml:2:11-69
+uses-permission#android.permission.INTERNET
+ADDED from C:\Users\prism\Documents\GitHub\Distribution-APP\app\src\main\AndroidManifest.xml:4:5-67
+MERGED from [com.google.firebase:firebase-auth:23.2.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\c4ebc29f72ff96fc88224e6e488addd5\transformed\firebase-auth-23.2.0\AndroidManifest.xml:25:5-67
+MERGED from [com.google.firebase:firebase-auth:23.2.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\c4ebc29f72ff96fc88224e6e488addd5\transformed\firebase-auth-23.2.0\AndroidManifest.xml:25:5-67
+MERGED from [com.google.firebase:firebase-firestore:25.1.4] C:\Users\prism\.gradle\caches\8.10.2\transforms\03e2fb13052ef6912292cbcbbc6dcbbb\transformed\firebase-firestore-25.1.4\AndroidManifest.xml:11:5-67
+MERGED from [com.google.firebase:firebase-firestore:25.1.4] C:\Users\prism\.gradle\caches\8.10.2\transforms\03e2fb13052ef6912292cbcbbc6dcbbb\transformed\firebase-firestore-25.1.4\AndroidManifest.xml:11:5-67
+MERGED from [com.google.firebase:firebase-storage:21.0.1] C:\Users\prism\.gradle\caches\8.10.2\transforms\4e6eed578769770e16db43b75ada3547\transformed\firebase-storage-21.0.1\AndroidManifest.xml:24:5-67
+MERGED from [com.google.firebase:firebase-storage:21.0.1] C:\Users\prism\.gradle\caches\8.10.2\transforms\4e6eed578769770e16db43b75ada3547\transformed\firebase-storage-21.0.1\AndroidManifest.xml:24:5-67
+MERGED from [com.google.android.recaptcha:recaptcha:18.6.1] C:\Users\prism\.gradle\caches\8.10.2\transforms\540b631cb004dc8f7633b9a842987dbc\transformed\recaptcha-18.6.1\AndroidManifest.xml:7:5-67
+MERGED from [com.google.android.recaptcha:recaptcha:18.6.1] C:\Users\prism\.gradle\caches\8.10.2\transforms\540b631cb004dc8f7633b9a842987dbc\transformed\recaptcha-18.6.1\AndroidManifest.xml:7:5-67
+	android:name
+		ADDED from C:\Users\prism\Documents\GitHub\Distribution-APP\app\src\main\AndroidManifest.xml:4:22-64
 application
-ADDED from C:\Users\prism\Documents\GitHub\Distribution-APP\app\src\main\AndroidManifest.xml:5:5-36:19
-INJECTED from C:\Users\prism\Documents\GitHub\Distribution-APP\app\src\main\AndroidManifest.xml:5:5-36:19
+ADDED from C:\Users\prism\Documents\GitHub\Distribution-APP\app\src\main\AndroidManifest.xml:6:5-38:19
+INJECTED from C:\Users\prism\Documents\GitHub\Distribution-APP\app\src\main\AndroidManifest.xml:6:5-38:19
 MERGED from [com.google.firebase:firebase-auth:23.2.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\c4ebc29f72ff96fc88224e6e488addd5\transformed\firebase-auth-23.2.0\AndroidManifest.xml:28:5-73:19
 MERGED from [com.google.firebase:firebase-auth:23.2.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\c4ebc29f72ff96fc88224e6e488addd5\transformed\firebase-auth-23.2.0\AndroidManifest.xml:28:5-73:19
 MERGED from [com.google.firebase:firebase-firestore:25.1.4] C:\Users\prism\.gradle\caches\8.10.2\transforms\03e2fb13052ef6912292cbcbbc6dcbbb\transformed\firebase-firestore-25.1.4\AndroidManifest.xml:13:5-24:19
@@ -139,67 +151,71 @@ MERGED from [com.google.android.play:core-common:2.0.3] C:\Users\prism\.gradle\c
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.13.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\44d7f9307f82cbc36229e6b62a90377a\transformed\core-1.13.0\AndroidManifest.xml:28:18-86
 	android:supportsRtl
-		ADDED from C:\Users\prism\Documents\GitHub\Distribution-APP\app\src\main\AndroidManifest.xml:12:9-35
+		ADDED from C:\Users\prism\Documents\GitHub\Distribution-APP\app\src\main\AndroidManifest.xml:14:9-35
 	android:label
-		ADDED from C:\Users\prism\Documents\GitHub\Distribution-APP\app\src\main\AndroidManifest.xml:10:9-41
+		ADDED from C:\Users\prism\Documents\GitHub\Distribution-APP\app\src\main\AndroidManifest.xml:12:9-41
 	android:fullBackupContent
-		ADDED from C:\Users\prism\Documents\GitHub\Distribution-APP\app\src\main\AndroidManifest.xml:8:9-54
+		ADDED from C:\Users\prism\Documents\GitHub\Distribution-APP\app\src\main\AndroidManifest.xml:10:9-54
 	android:roundIcon
-		ADDED from C:\Users\prism\Documents\GitHub\Distribution-APP\app\src\main\AndroidManifest.xml:11:9-54
+		ADDED from C:\Users\prism\Documents\GitHub\Distribution-APP\app\src\main\AndroidManifest.xml:13:9-54
 	tools:targetApi
-		ADDED from C:\Users\prism\Documents\GitHub\Distribution-APP\app\src\main\AndroidManifest.xml:14:9-29
+		ADDED from C:\Users\prism\Documents\GitHub\Distribution-APP\app\src\main\AndroidManifest.xml:16:9-29
 	android:icon
-		ADDED from C:\Users\prism\Documents\GitHub\Distribution-APP\app\src\main\AndroidManifest.xml:9:9-43
+		ADDED from C:\Users\prism\Documents\GitHub\Distribution-APP\app\src\main\AndroidManifest.xml:11:9-43
 	android:allowBackup
-		ADDED from C:\Users\prism\Documents\GitHub\Distribution-APP\app\src\main\AndroidManifest.xml:6:9-35
+		ADDED from C:\Users\prism\Documents\GitHub\Distribution-APP\app\src\main\AndroidManifest.xml:8:9-35
 	android:theme
-		ADDED from C:\Users\prism\Documents\GitHub\Distribution-APP\app\src\main\AndroidManifest.xml:13:9-53
+		ADDED from C:\Users\prism\Documents\GitHub\Distribution-APP\app\src\main\AndroidManifest.xml:15:9-53
 	android:dataExtractionRules
-		ADDED from C:\Users\prism\Documents\GitHub\Distribution-APP\app\src\main\AndroidManifest.xml:7:9-65
+		ADDED from C:\Users\prism\Documents\GitHub\Distribution-APP\app\src\main\AndroidManifest.xml:9:9-65
+	android:usesCleartextTraffic
+		ADDED from C:\Users\prism\Documents\GitHub\Distribution-APP\app\src\main\AndroidManifest.xml:7:9-44
 activity#fcu.app.distributionapp.SuggestionActivity
-ADDED from C:\Users\prism\Documents\GitHub\Distribution-APP\app\src\main\AndroidManifest.xml:15:9-17:40
+ADDED from C:\Users\prism\Documents\GitHub\Distribution-APP\app\src\main\AndroidManifest.xml:17:9-19:40
 	android:exported
-		ADDED from C:\Users\prism\Documents\GitHub\Distribution-APP\app\src\main\AndroidManifest.xml:17:13-37
+		ADDED from C:\Users\prism\Documents\GitHub\Distribution-APP\app\src\main\AndroidManifest.xml:19:13-37
 	android:name
-		ADDED from C:\Users\prism\Documents\GitHub\Distribution-APP\app\src\main\AndroidManifest.xml:16:13-47
+		ADDED from C:\Users\prism\Documents\GitHub\Distribution-APP\app\src\main\AndroidManifest.xml:18:13-47
 activity#fcu.app.distributionapp.LoginActivity
-ADDED from C:\Users\prism\Documents\GitHub\Distribution-APP\app\src\main\AndroidManifest.xml:18:9-26:20
+ADDED from C:\Users\prism\Documents\GitHub\Distribution-APP\app\src\main\AndroidManifest.xml:20:9-28:20
 	android:exported
-		ADDED from C:\Users\prism\Documents\GitHub\Distribution-APP\app\src\main\AndroidManifest.xml:20:13-36
+		ADDED from C:\Users\prism\Documents\GitHub\Distribution-APP\app\src\main\AndroidManifest.xml:22:13-36
 	android:name
-		ADDED from C:\Users\prism\Documents\GitHub\Distribution-APP\app\src\main\AndroidManifest.xml:19:13-42
+		ADDED from C:\Users\prism\Documents\GitHub\Distribution-APP\app\src\main\AndroidManifest.xml:21:13-42
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\prism\Documents\GitHub\Distribution-APP\app\src\main\AndroidManifest.xml:21:13-25:29
+ADDED from C:\Users\prism\Documents\GitHub\Distribution-APP\app\src\main\AndroidManifest.xml:23:13-27:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\prism\Documents\GitHub\Distribution-APP\app\src\main\AndroidManifest.xml:22:17-69
+ADDED from C:\Users\prism\Documents\GitHub\Distribution-APP\app\src\main\AndroidManifest.xml:24:17-69
 	android:name
-		ADDED from C:\Users\prism\Documents\GitHub\Distribution-APP\app\src\main\AndroidManifest.xml:22:25-66
+		ADDED from C:\Users\prism\Documents\GitHub\Distribution-APP\app\src\main\AndroidManifest.xml:24:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\prism\Documents\GitHub\Distribution-APP\app\src\main\AndroidManifest.xml:24:17-77
+ADDED from C:\Users\prism\Documents\GitHub\Distribution-APP\app\src\main\AndroidManifest.xml:26:17-77
 	android:name
-		ADDED from C:\Users\prism\Documents\GitHub\Distribution-APP\app\src\main\AndroidManifest.xml:24:27-74
+		ADDED from C:\Users\prism\Documents\GitHub\Distribution-APP\app\src\main\AndroidManifest.xml:26:27-74
 activity#fcu.app.distributionapp.ChatActivity
-ADDED from C:\Users\prism\Documents\GitHub\Distribution-APP\app\src\main\AndroidManifest.xml:27:9-29:40
+ADDED from C:\Users\prism\Documents\GitHub\Distribution-APP\app\src\main\AndroidManifest.xml:29:9-31:40
 	android:exported
-		ADDED from C:\Users\prism\Documents\GitHub\Distribution-APP\app\src\main\AndroidManifest.xml:29:13-37
+		ADDED from C:\Users\prism\Documents\GitHub\Distribution-APP\app\src\main\AndroidManifest.xml:31:13-37
 	android:name
-		ADDED from C:\Users\prism\Documents\GitHub\Distribution-APP\app\src\main\AndroidManifest.xml:28:13-41
+		ADDED from C:\Users\prism\Documents\GitHub\Distribution-APP\app\src\main\AndroidManifest.xml:30:13-41
 activity#fcu.app.distributionapp.RegisterActivity
-ADDED from C:\Users\prism\Documents\GitHub\Distribution-APP\app\src\main\AndroidManifest.xml:30:9-32:40
+ADDED from C:\Users\prism\Documents\GitHub\Distribution-APP\app\src\main\AndroidManifest.xml:32:9-34:40
 	android:exported
-		ADDED from C:\Users\prism\Documents\GitHub\Distribution-APP\app\src\main\AndroidManifest.xml:32:13-37
+		ADDED from C:\Users\prism\Documents\GitHub\Distribution-APP\app\src\main\AndroidManifest.xml:34:13-37
 	android:name
-		ADDED from C:\Users\prism\Documents\GitHub\Distribution-APP\app\src\main\AndroidManifest.xml:31:13-45
+		ADDED from C:\Users\prism\Documents\GitHub\Distribution-APP\app\src\main\AndroidManifest.xml:33:13-45
 activity#fcu.app.distributionapp.MainActivity
-ADDED from C:\Users\prism\Documents\GitHub\Distribution-APP\app\src\main\AndroidManifest.xml:33:9-35:40
+ADDED from C:\Users\prism\Documents\GitHub\Distribution-APP\app\src\main\AndroidManifest.xml:35:9-37:40
 	android:exported
-		ADDED from C:\Users\prism\Documents\GitHub\Distribution-APP\app\src\main\AndroidManifest.xml:35:13-37
+		ADDED from C:\Users\prism\Documents\GitHub\Distribution-APP\app\src\main\AndroidManifest.xml:37:13-37
 	android:name
-		ADDED from C:\Users\prism\Documents\GitHub\Distribution-APP\app\src\main\AndroidManifest.xml:34:13-41
+		ADDED from C:\Users\prism\Documents\GitHub\Distribution-APP\app\src\main\AndroidManifest.xml:36:13-41
 uses-sdk
 INJECTED from C:\Users\prism\Documents\GitHub\Distribution-APP\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\prism\Documents\GitHub\Distribution-APP\app\src\main\AndroidManifest.xml
 INJECTED from C:\Users\prism\Documents\GitHub\Distribution-APP\app\src\main\AndroidManifest.xml
+MERGED from [com.github.PhilJay:MPAndroidChart:3.1.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\433f5068eb2afc492ec2ffeca8e52a2d\transformed\MPAndroidChart-3.1.0\AndroidManifest.xml:16:5-18:41
+MERGED from [com.github.PhilJay:MPAndroidChart:3.1.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\433f5068eb2afc492ec2ffeca8e52a2d\transformed\MPAndroidChart-3.1.0\AndroidManifest.xml:16:5-18:41
 MERGED from [com.google.firebase:firebase-auth:23.2.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\c4ebc29f72ff96fc88224e6e488addd5\transformed\firebase-auth-23.2.0\AndroidManifest.xml:21:5-23:151
 MERGED from [com.google.firebase:firebase-auth:23.2.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\c4ebc29f72ff96fc88224e6e488addd5\transformed\firebase-auth-23.2.0\AndroidManifest.xml:21:5-23:151
 MERGED from [com.google.firebase:firebase-firestore:25.1.4] C:\Users\prism\.gradle\caches\8.10.2\transforms\03e2fb13052ef6912292cbcbbc6dcbbb\transformed\firebase-firestore-25.1.4\AndroidManifest.xml:6:5-44
@@ -300,8 +316,8 @@ MERGED from [androidx.fragment:fragment:1.5.4] C:\Users\prism\.gradle\caches\8.1
 MERGED from [androidx.fragment:fragment:1.5.4] C:\Users\prism\.gradle\caches\8.10.2\transforms\7cc42bcfa64c0b31d7b532441f05f0d3\transformed\fragment-1.5.4\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.activity:activity:1.10.1] C:\Users\prism\.gradle\caches\8.10.2\transforms\5c6bb051b77d9855e7a7502dff8fb040\transformed\activity-1.10.1\AndroidManifest.xml:20:5-44
 MERGED from [androidx.activity:activity:1.10.1] C:\Users\prism\.gradle\caches\8.10.2\transforms\5c6bb051b77d9855e7a7502dff8fb040\transformed\activity-1.10.1\AndroidManifest.xml:20:5-44
-MERGED from [com.github.PhilJay:MPAndroidChart:3.1.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\433f5068eb2afc492ec2ffeca8e52a2d\transformed\MPAndroidChart-3.1.0\AndroidManifest.xml:16:5-18:41
-MERGED from [com.github.PhilJay:MPAndroidChart:3.1.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\433f5068eb2afc492ec2ffeca8e52a2d\transformed\MPAndroidChart-3.1.0\AndroidManifest.xml:16:5-18:41
+MERGED from [com.google.android.libraries.identity.googleid:googleid:1.1.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\b5c82c6450548e4fefaf46b94f9a55b2\transformed\googleid-1.1.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.libraries.identity.googleid:googleid:1.1.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\b5c82c6450548e4fefaf46b94f9a55b2\transformed\googleid-1.1.0\AndroidManifest.xml:5:5-44
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\a887af8315bc5d89f6c93f82344a3c80\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\a887af8315bc5d89f6c93f82344a3c80\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\f1aeb941e6f0e036cf69e256cf4f550c\transformed\cardview-1.0.0\AndroidManifest.xml:20:5-44
@@ -330,8 +346,6 @@ MERGED from [androidx.core:core-viewtree:1.0.0] C:\Users\prism\.gradle\caches\8.
 MERGED from [androidx.core:core-viewtree:1.0.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\282739b7154b904bd1688217f1c6d586\transformed\core-viewtree-1.0.0\AndroidManifest.xml:5:5-44
 MERGED from [androidx.annotation:annotation-experimental:1.4.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\6a674a7d7799bd8cdbb8b73b3a530f1a\transformed\annotation-experimental-1.4.0\AndroidManifest.xml:5:5-44
 MERGED from [androidx.annotation:annotation-experimental:1.4.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\6a674a7d7799bd8cdbb8b73b3a530f1a\transformed\annotation-experimental-1.4.0\AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.libraries.identity.googleid:googleid:1.1.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\b5c82c6450548e4fefaf46b94f9a55b2\transformed\googleid-1.1.0\AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.libraries.identity.googleid:googleid:1.1.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\b5c82c6450548e4fefaf46b94f9a55b2\transformed\googleid-1.1.0\AndroidManifest.xml:5:5-44
 MERGED from [io.grpc:grpc-android:1.62.2] C:\Users\prism\.gradle\caches\8.10.2\transforms\5c90ca72f4181be4476fbe70122e8d83\transformed\grpc-android-1.62.2\AndroidManifest.xml:5:5-44
 MERGED from [io.grpc:grpc-android:1.62.2] C:\Users\prism\.gradle\caches\8.10.2\transforms\5c90ca72f4181be4476fbe70122e8d83\transformed\grpc-android-1.62.2\AndroidManifest.xml:5:5-44
 MERGED from [com.google.firebase:protolite-well-known-types:18.0.1] C:\Users\prism\.gradle\caches\8.10.2\transforms\400a855893ab3aa0e3673bb9ad613dd0\transformed\protolite-well-known-types-18.0.1\AndroidManifest.xml:5:5-44
@@ -344,16 +358,6 @@ MERGED from [com.google.android.play:core-common:2.0.3] C:\Users\prism\.gradle\c
 		INJECTED from C:\Users\prism\Documents\GitHub\Distribution-APP\app\src\main\AndroidManifest.xml
 	android:minSdkVersion
 		INJECTED from C:\Users\prism\Documents\GitHub\Distribution-APP\app\src\main\AndroidManifest.xml
-uses-permission#android.permission.INTERNET
-ADDED from [com.google.firebase:firebase-auth:23.2.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\c4ebc29f72ff96fc88224e6e488addd5\transformed\firebase-auth-23.2.0\AndroidManifest.xml:25:5-67
-MERGED from [com.google.firebase:firebase-firestore:25.1.4] C:\Users\prism\.gradle\caches\8.10.2\transforms\03e2fb13052ef6912292cbcbbc6dcbbb\transformed\firebase-firestore-25.1.4\AndroidManifest.xml:11:5-67
-MERGED from [com.google.firebase:firebase-firestore:25.1.4] C:\Users\prism\.gradle\caches\8.10.2\transforms\03e2fb13052ef6912292cbcbbc6dcbbb\transformed\firebase-firestore-25.1.4\AndroidManifest.xml:11:5-67
-MERGED from [com.google.firebase:firebase-storage:21.0.1] C:\Users\prism\.gradle\caches\8.10.2\transforms\4e6eed578769770e16db43b75ada3547\transformed\firebase-storage-21.0.1\AndroidManifest.xml:24:5-67
-MERGED from [com.google.firebase:firebase-storage:21.0.1] C:\Users\prism\.gradle\caches\8.10.2\transforms\4e6eed578769770e16db43b75ada3547\transformed\firebase-storage-21.0.1\AndroidManifest.xml:24:5-67
-MERGED from [com.google.android.recaptcha:recaptcha:18.6.1] C:\Users\prism\.gradle\caches\8.10.2\transforms\540b631cb004dc8f7633b9a842987dbc\transformed\recaptcha-18.6.1\AndroidManifest.xml:7:5-67
-MERGED from [com.google.android.recaptcha:recaptcha:18.6.1] C:\Users\prism\.gradle\caches\8.10.2\transforms\540b631cb004dc8f7633b9a842987dbc\transformed\recaptcha-18.6.1\AndroidManifest.xml:7:5-67
-	android:name
-		ADDED from [com.google.firebase:firebase-auth:23.2.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\c4ebc29f72ff96fc88224e6e488addd5\transformed\firebase-auth-23.2.0\AndroidManifest.xml:25:22-64
 uses-permission#android.permission.ACCESS_NETWORK_STATE
 ADDED from [com.google.firebase:firebase-auth:23.2.0] C:\Users\prism\.gradle\caches\8.10.2\transforms\c4ebc29f72ff96fc88224e6e488addd5\transformed\firebase-auth-23.2.0\AndroidManifest.xml:26:5-79
 MERGED from [com.google.firebase:firebase-firestore:25.1.4] C:\Users\prism\.gradle\caches\8.10.2\transforms\03e2fb13052ef6912292cbcbbc6dcbbb\transformed\firebase-firestore-25.1.4\AndroidManifest.xml:10:5-79

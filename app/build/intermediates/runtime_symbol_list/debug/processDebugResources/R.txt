@@ -3162,6 +3162,7 @@ int drawable notification_tile_bg 0x7f0800fd
 int drawable notify_panel_notification_icon_bg 0x7f0800fe
 int drawable payments 0x7f080107
 int drawable settings 0x7f0800ff
+int drawable swap_horiz 0x7f080109
 int drawable test_level_drawable 0x7f080100
 int drawable tooltip_frame_dark 0x7f080101
 int drawable tooltip_frame_light 0x7f080102
@@ -3279,9 +3280,10 @@ int id browser_actions_menu_item_icon 0x7f09006e
 int id browser_actions_menu_item_text 0x7f09006f
 int id browser_actions_menu_items 0x7f090070
 int id browser_actions_menu_view 0x7f090071
+int id btnConvert 0x7f09024d
+int id btnSwitch 0x7f090253
 int id btn_add 0x7f090072
 int id btn_chat 0x7f090240
-int id btn_convert 0x7f090073
 int id btn_goback 0x7f090075
 int id btn_login 0x7f090076
 int id btn_rate 0x7f090077
@@ -3296,7 +3298,6 @@ int id cache_measures 0x7f09007f
 int id callMeasure 0x7f090080
 int id cancel_button 0x7f090081
 int id carryVelocity 0x7f090082
-int id categoryContainer 0x7f090083
 int id categorySpinner 0x7f090084
 int id center 0x7f090085
 int id centerCrop 0x7f090086
@@ -3380,9 +3381,8 @@ int id endToStart 0x7f0900d3
 int id enterAlways 0x7f0900d4
 int id enterAlwaysCollapsed 0x7f0900d5
 int id escape 0x7f0900d6
-int id et_amount 0x7f0900d7
+int id etAmount 0x7f09024e
 int id et_cost 0x7f0900d8
-int id et_currency 0x7f0900d9
 int id et_l_email 0x7f0900da
 int id et_l_password 0x7f0900db
 int id et_note 0x7f0900dc
@@ -3465,6 +3465,7 @@ int id legacy 0x7f090120
 int id light 0x7f090121
 int id line1 0x7f090122
 int id line3 0x7f090123
+int id lineChart 0x7f090254
 int id linear 0x7f090124
 int id listMode 0x7f090125
 int id list_item 0x7f090126
@@ -3580,7 +3581,6 @@ int id pathRelative 0x7f090193
 int id payerSpinner 0x7f090194
 int id peekHeight 0x7f090195
 int id percent 0x7f090196
-int id pieChart 0x7f090197
 int id pin 0x7f090198
 int id position 0x7f090199
 int id postLayout 0x7f09019a
@@ -3641,6 +3641,8 @@ int id snapMargins 0x7f0901d0
 int id south 0x7f0901d1
 int id spacer 0x7f0901d2
 int id special_effects_controller_view_tag 0x7f0901d3
+int id spinnerFrom 0x7f090251
+int id spinnerTo 0x7f090252
 int id spline 0x7f0901d4
 int id split_action_bar 0x7f0901d5
 int id spread 0x7f0901d6
@@ -3717,10 +3719,9 @@ int id transition_position 0x7f09021c
 int id transition_scene_layoutid_cache 0x7f09021d
 int id transition_transform 0x7f09021e
 int id triangle 0x7f09021f
-int id tv_date 0x7f090220
+int id tvResult 0x7f090250
 int id tv_group_name 0x7f090221
 int id tv_message 0x7f090222
-int id tv_result 0x7f090223
 int id tv_time 0x7f090224
 int id unchecked 0x7f090225
 int id uniform 0x7f090226
@@ -3890,7 +3891,6 @@ int layout fragment_accounts 0x7f0c0033
 int layout fragment_add_transaction 0x7f0c0034
 int layout fragment_exchange 0x7f0c0035
 int layout fragment_exchange_rate 0x7f0c0036
-int layout fragment_expense 0x7f0c0037
 int layout fragment_friends 0x7f0c0038
 int layout fragment_groups 0x7f0c0039
 int layout fragment_transaction_history 0x7f0c003a

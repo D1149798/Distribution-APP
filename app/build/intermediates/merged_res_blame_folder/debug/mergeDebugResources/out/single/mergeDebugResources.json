@@ -100,16 +100,12 @@
         "source": "C:\\Users\\prism\\.gradle\\daemon\\8.10.2\\fcu.app.distributionapp-main-43:\\layout\\activity_register.xml"
     },
     {
-        "merged": "C:\\Users\\prism\\.gradle\\daemon\\8.10.2\\fcu.app.distributionapp-debug-41:\\layout_fragment_expense.xml.flat",
-        "source": "C:\\Users\\prism\\.gradle\\daemon\\8.10.2\\fcu.app.distributionapp-main-43:\\layout\\fragment_expense.xml"
+        "merged": "fcu.app.distributionapp-debug-41:/layout_fragment_exchange_rate.xml.flat",
+        "source": "fcu.app.distributionapp-main-43:/layout/fragment_exchange_rate.xml"
     },
     {
         "merged": "C:\\Users\\prism\\.gradle\\daemon\\8.10.2\\fcu.app.distributionapp-debug-41:\\layout_activity_main.xml.flat",
         "source": "C:\\Users\\prism\\.gradle\\daemon\\8.10.2\\fcu.app.distributionapp-main-43:\\layout\\activity_main.xml"
-    },
-    {
-        "merged": "fcu.app.distributionapp-debug-41:/layout_fragment_accounts.xml.flat",
-        "source": "fcu.app.distributionapp-main-43:/layout/fragment_accounts.xml"
     },
     {
         "merged": "C:\\Users\\prism\\.gradle\\daemon\\8.10.2\\fcu.app.distributionapp-debug-41:\\mipmap-hdpi_ic_launcher.webp.flat",
@@ -160,12 +156,12 @@
         "source": "C:\\Users\\prism\\.gradle\\daemon\\8.10.2\\fcu.app.distributionapp-main-43:\\mipmap-mdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\prism\\.gradle\\daemon\\8.10.2\\fcu.app.distributionapp-debug-41:\\layout_fragment_accounts.xml.flat",
-        "source": "C:\\Users\\prism\\.gradle\\daemon\\8.10.2\\fcu.app.distributionapp-main-43:\\layout\\fragment_accounts.xml"
-    },
-    {
         "merged": "C:\\Users\\prism\\.gradle\\daemon\\8.10.2\\fcu.app.distributionapp-debug-41:\\layout_fragment_exchange_rate.xml.flat",
         "source": "C:\\Users\\prism\\.gradle\\daemon\\8.10.2\\fcu.app.distributionapp-main-43:\\layout\\fragment_exchange_rate.xml"
+    },
+    {
+        "merged": "C:\\Users\\prism\\.gradle\\daemon\\8.10.2\\fcu.app.distributionapp-debug-41:\\layout_fragment_accounts.xml.flat",
+        "source": "C:\\Users\\prism\\.gradle\\daemon\\8.10.2\\fcu.app.distributionapp-main-43:\\layout\\fragment_accounts.xml"
     },
     {
         "merged": "C:\\Users\\prism\\.gradle\\daemon\\8.10.2\\fcu.app.distributionapp-debug-41:\\xml_backup_rules.xml.flat",
@@ -174,6 +170,10 @@
     {
         "merged": "C:\\Users\\prism\\.gradle\\daemon\\8.10.2\\fcu.app.distributionapp-debug-41:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
         "source": "C:\\Users\\prism\\.gradle\\daemon\\8.10.2\\fcu.app.distributionapp-main-43:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\prism\\.gradle\\daemon\\8.10.2\\fcu.app.distributionapp-debug-41:\\drawable_swap_horiz.xml.flat",
+        "source": "C:\\Users\\prism\\.gradle\\daemon\\8.10.2\\fcu.app.distributionapp-main-43:\\drawable\\swap_horiz.xml"
     },
     {
         "merged": "C:\\Users\\prism\\.gradle\\daemon\\8.10.2\\fcu.app.distributionapp-debug-41:\\layout_item_message.xml.flat",

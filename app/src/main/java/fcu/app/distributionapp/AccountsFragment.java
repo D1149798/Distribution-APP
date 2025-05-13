@@ -40,8 +40,8 @@ public class AccountsFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_accounts, container, false);
-        // 預設載入 ExpenseFragment
-        loadChildFragment(new ExpenseFragment());
+        // 預設載入 TransactionHistoryFragment
+        loadChildFragment(new TransactionHistoryFragment());
 
         TextView labelChat = view.findViewById(R.id.label_chat);
         TextView labelTransaction = view.findViewById(R.id.label_transaction);
@@ -56,7 +56,7 @@ public class AccountsFragment extends Fragment {
 
         // 設定按鈕切換事件
         view.findViewById(R.id.btn_chat).setOnClickListener(v ->{
-            loadChildFragment(new ExpenseFragment());
+            loadChildFragment(new TransactionHistoryFragment());
             highlightSelected(view.findViewById(R.id.btn_chat), view.findViewById(R.id.label_chat));
         });
 
@@ -77,7 +77,7 @@ public class AccountsFragment extends Fragment {
         });
 
         // 預設選中聊天室
-        loadChildFragment(new ExpenseFragment());
+        loadChildFragment(new TransactionHistoryFragment());
         highlightSelected(view.findViewById(R.id.btn_chat), view.findViewById(R.id.label_chat));
 
 

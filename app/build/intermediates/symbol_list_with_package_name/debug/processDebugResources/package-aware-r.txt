@@ -3163,6 +3163,7 @@ drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
 drawable payments
 drawable settings
+drawable swap_horiz
 drawable test_level_drawable
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
@@ -3280,9 +3281,10 @@ id browser_actions_menu_item_icon
 id browser_actions_menu_item_text
 id browser_actions_menu_items
 id browser_actions_menu_view
+id btnConvert
+id btnSwitch
 id btn_add
 id btn_chat
-id btn_convert
 id btn_goback
 id btn_login
 id btn_rate
@@ -3297,7 +3299,6 @@ id cache_measures
 id callMeasure
 id cancel_button
 id carryVelocity
-id categoryContainer
 id categorySpinner
 id center
 id centerCrop
@@ -3381,9 +3382,8 @@ id endToStart
 id enterAlways
 id enterAlwaysCollapsed
 id escape
-id et_amount
+id etAmount
 id et_cost
-id et_currency
 id et_l_email
 id et_l_password
 id et_note
@@ -3466,6 +3466,7 @@ id legacy
 id light
 id line1
 id line3
+id lineChart
 id linear
 id listMode
 id list_item
@@ -3581,7 +3582,6 @@ id pathRelative
 id payerSpinner
 id peekHeight
 id percent
-id pieChart
 id pin
 id position
 id postLayout
@@ -3642,6 +3642,8 @@ id snapMargins
 id south
 id spacer
 id special_effects_controller_view_tag
+id spinnerFrom
+id spinnerTo
 id spline
 id split_action_bar
 id spread
@@ -3718,10 +3720,9 @@ id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
 id triangle
-id tv_date
+id tvResult
 id tv_group_name
 id tv_message
-id tv_result
 id tv_time
 id unchecked
 id uniform
@@ -3891,7 +3892,6 @@ layout fragment_accounts
 layout fragment_add_transaction
 layout fragment_exchange
 layout fragment_exchange_rate
-layout fragment_expense
 layout fragment_friends
 layout fragment_groups
 layout fragment_transaction_history

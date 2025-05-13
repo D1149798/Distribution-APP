@@ -30,7 +30,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:testOnly="true"
-        android:theme="@style/Theme.DistributionAPP" >
+        android:theme="@style/Theme.DistributionAPP"
+        android:usesCleartextTraffic="true" >
         <activity
             android:name="fcu.app.distributionapp.SuggestionActivity"
             android:exported="false" />
