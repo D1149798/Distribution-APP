@@ -66,8 +66,9 @@ public class MainActivity extends AppCompatActivity {
         Fragment accountsFragment = AccountsFragment.newInstance("", "");
         Fragment exchangeFragment = ExchangeRateFragment.newInstance();
         Fragment friendsFragment = FriendsFragment.newInstance();
+        Fragment groupsFragment = GroupsFragment.newInstance("", "");
 
-        setCurrentFragment(friendsFragment);
+        setCurrentFragment(groupsFragment);
 
         //側滑選單項目點擊監聽
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
@@ -88,11 +89,12 @@ public class MainActivity extends AppCompatActivity {
                     return true;
                 } else if (id == R.id.action_groups) {
                     Toast.makeText(MainActivity.this, "群組", Toast.LENGTH_SHORT).show();
-                    setCurrentFragment(friendsFragment);
+                    setCurrentFragment(groupsFragment);
                     layout.closeDrawer(GravityCompat.START); // <-- 加這行關閉抽屜
                     return true;
                 } else if (id == R.id.action_friends) {
                     Toast.makeText(MainActivity.this, "好友", Toast.LENGTH_SHORT).show();
+                    setCurrentFragment(friendsFragment);
                     layout.closeDrawer(GravityCompat.START); // <-- 加這行關閉抽屜
                     return true;
                 } else if (id == R.id.action_suggestion) {
