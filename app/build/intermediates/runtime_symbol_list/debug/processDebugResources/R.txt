@@ -3468,7 +3468,6 @@ int id legacy 0x7f090127
 int id light 0x7f090128
 int id line1 0x7f090129
 int id line3 0x7f09012a
-int id lineChart 0x7f09012b
 int id linear 0x7f09012c
 int id listMode 0x7f09012d
 int id list_item 0x7f09012e
@@ -3690,7 +3689,6 @@ int id textStart 0x7f090205
 int id textTop 0x7f090206
 int id textView 0x7f090207
 int id textView2 0x7f090208
-int id textView_message 0x7f090209
 int id textView_sender 0x7f09020a
 int id text_input_end_icon 0x7f09020b
 int id text_input_error_icon 0x7f09020c
@@ -3892,6 +3890,7 @@ int layout design_text_input_end_icon 0x7f0c0031
 int layout design_text_input_start_icon 0x7f0c0032
 int layout fragment_accounts 0x7f0c0033
 int layout fragment_add_transaction 0x7f0c0034
+int layout fragment_chat 0x7f0c007d
 int layout fragment_exchange_rate 0x7f0c0036
 int layout fragment_friends 0x7f0c0037
 int layout fragment_groups 0x7f0c0038

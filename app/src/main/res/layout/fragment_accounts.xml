@@ -159,7 +159,7 @@
                         android:layout_width="48dp"
                         android:layout_height="48dp"
                         android:background="@android:color/transparent"
-                        android:contentDescription="匯率轉換"
+                        android:contentDescription="匯率查詢"
                         android:src="@drawable/currency_exchange" />
 
                     <TextView
@@ -167,7 +167,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:text="匯率轉換"
+                        android:text="匯率查詢"
                         android:textColor="#FFFFFF"
                         android:textSize="16sp" />
                 </LinearLayout>

@@ -3469,7 +3469,6 @@ id legacy
 id light
 id line1
 id line3
-id lineChart
 id linear
 id listMode
 id list_item
@@ -3691,7 +3690,6 @@ id textStart
 id textTop
 id textView
 id textView2
-id textView_message
 id textView_sender
 id text_input_end_icon
 id text_input_error_icon
@@ -3893,6 +3891,7 @@ layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout fragment_accounts
 layout fragment_add_transaction
+layout fragment_chat
 layout fragment_exchange_rate
 layout fragment_friends
 layout fragment_groups
