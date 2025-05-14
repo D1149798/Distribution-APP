@@ -1,17 +1,21 @@
 package fcu.app.distributionapp.model;
 
+import com.google.firebase.Timestamp;
+
 public class Message {
     private String senderId;
-    private String text;
-    private long timestamp;
+    private String senderName;
+    private String content;
+    private Timestamp timestamp;
 
     public Message(){
 
     }
 
-    public Message(String senderId, String text, long timestamp) {
+    public Message(String senderId, String senderName, String content, Timestamp timestamp) {
         this.senderId = senderId;
-        this.text = text;
+        this.senderName = senderName;
+        this.content = content;
         this.timestamp = timestamp;
     }
 
@@ -19,11 +23,15 @@ public class Message {
         return senderId;
     }
 
-    public String getText() {
-        return text;
+    public String getSenderName() {
+        return senderName;
     }
 
-    public long getTimestamp() {
+    public String getContent() {
+        return content;
+    }
+
+    public Timestamp getTimestamp() {
         return timestamp;
     }
 }

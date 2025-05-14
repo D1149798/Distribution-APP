@@ -70,7 +70,7 @@ public class ChatAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
         }
 
         public void bind(Message msg) {
-            messageText.setText(msg.getText());
+            messageText.setText(msg.getContent());
         }
     }
 
@@ -83,7 +83,7 @@ public class ChatAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
         }
 
         public void bind(Message msg) {
-            messageText.setText(msg.getText());
+            messageText.setText(msg.getContent());
         }
     }
 }

@@ -11,7 +11,11 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
 
+import com.google.firebase.Timestamp;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -44,6 +48,8 @@ public class ChatFragment extends Fragment {
 
     private RecyclerView recyclerView;
     private ChatAdapter chatAdapter;
+    private Button sendButton;
+    private EditText inputBox;
 
     public ChatFragment() {
         // Required empty public constructor
@@ -86,6 +92,16 @@ public class ChatFragment extends Fragment {
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext())); // 改 this → getContext()
         chatAdapter = new ChatAdapter(); // 確保 ChatAdapter 有無參建構子
         recyclerView.setAdapter(chatAdapter);
+        sendButton = view.findViewById(R.id.button_send);
+        inputBox = view.findViewById(R.id.editText_message);
+
+        sendButton.setOnClickListener(v -> {
+            String text = inputBox.getText().toString().trim();
+            if (!text.isEmpty()) {
+                sendMessage(text);
+                inputBox.setText("");  // 清空輸入框
+            }
+        });
 
         FirebaseFirestore db = FirebaseFirestore.getInstance();
         CollectionReference messagesRef = db.collection("chats")
@@ -114,4 +130,33 @@ public class ChatFragment extends Fragment {
 
         return view;
     }
+
+    private void sendMessage(String text) {
+        FirebaseFirestore db = FirebaseFirestore.getInstance();
+
+        // 假設這些是目前登入的使用者資訊
+        String senderId = FirebaseAuth.getInstance().getCurrentUser().getUid();
+        String senderName = FirebaseAuth.getInstance().getCurrentUser().getDisplayName();  // 如果你有設定 displayName
+
+        // 建立訊息物件
+        Message message = new Message(
+                senderId,
+                senderName != null ? senderName : "匿名",
+                text,
+                Timestamp.now()
+        );
+
+        // 寫入 Firestore：你這裡應該是 chats/test_chat/messages 子集合
+        db.collection("chats")
+                .document("test_chat")
+                .collection("messages")
+                .add(message)
+                .addOnSuccessListener(documentReference -> {
+                    Log.d("Chat", "訊息已送出");
+                })
+                .addOnFailureListener(e -> {
+                    Log.w("Chat", "送出訊息失敗", e);
+                });
+    }
+
 }
