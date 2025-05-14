@@ -77,6 +77,12 @@ id spinnerTo
 id textView
 id textView2
 id textView_sender
+id text_amount
+id text_arrow
+id text_date
+id text_note
+id text_payer
+id text_receiver
 id toolbar
 id transactionList
 id tvResult
@@ -91,10 +97,12 @@ layout activity_suggestion
 layout fragment_accounts
 layout fragment_add_transaction
 layout fragment_chat
+layout fragment_details
 layout fragment_exchange_rate
 layout fragment_friends
 layout fragment_groups
 layout fragment_transaction_history
+layout item_detail
 layout item_friend
 layout item_group
 layout item_message

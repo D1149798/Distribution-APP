@@ -36,9 +36,9 @@ public class FriendsFragment extends Fragment {
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 
         groupList = new ArrayList<>();
-        groupList.add(new FriendGroup("台南一日遊(3)", "你欠錢一週年!!! 🎉🎉", "2d", R.drawable.ic_launcher_foreground));
-        groupList.add(new FriendGroup("畢旅分帳(4)", "晚餐還沒收", "3d", R.drawable.ic_launcher_foreground));
-        groupList.add(new FriendGroup("大一室友(5)", "明天要不要吃火鍋", "1d", R.drawable.ic_launcher_foreground));
+        groupList.add(new FriendGroup("小名", "你欠錢一週年!", "2d", R.drawable.ic_launcher_foreground));
+        groupList.add(new FriendGroup("阿華", "晚餐還沒收", "3d", R.drawable.ic_launcher_foreground));
+        groupList.add(new FriendGroup("小黑", "明天要不要吃火鍋", "1d", R.drawable.ic_launcher_foreground));
 
         adapter = new FriendAdapter(groupList);
         recyclerView.setAdapter(adapter);
