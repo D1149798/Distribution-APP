@@ -1,5 +1,8 @@
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
+=======
+>>>>>>> Stashed changes
 <<<<<<< HEAD
 #Fri May 16 17:38:57 CST 2025
 base.0=C\:\\Users\\prism\\Documents\\GitHub\\Distribution-APP\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
@@ -9,6 +12,9 @@ base.3=C\:\\Users\\prism\\Documents\\GitHub\\Distribution-APP\\app\\build\\inter
 base.4=C\:\\Users\\prism\\Documents\\GitHub\\Distribution-APP\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\4\\classes.dex
 base.5=C\:\\Users\\prism\\Documents\\GitHub\\Distribution-APP\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes2.dex
 base.6=C\:\\Users\\prism\\Documents\\GitHub\\Distribution-APP\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes3.dex
+=======
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 #Fri May 16 17:33:43 CST 2025
@@ -20,6 +26,10 @@ base.4=C\:\\Users\\amber\\Documents\\GitHub\\Distribution-APP\\app\\build\\inter
 base.5=C\:\\Users\\amber\\Documents\\GitHub\\Distribution-APP\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes2.dex
 base.6=C\:\\Users\\amber\\Documents\\GitHub\\Distribution-APP\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes3.dex
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+>>>>>>> 4681e9414d2d8287f5a90a39113545bb7d54ff1b
+>>>>>>> Stashed changes
 =======
 >>>>>>> 4681e9414d2d8287f5a90a39113545bb7d54ff1b
 >>>>>>> Stashed changes
