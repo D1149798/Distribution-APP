@@ -22,6 +22,7 @@ import androidx.fragment.app.Fragment;
 
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.FirebaseApp;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class MainActivity extends AppCompatActivity {
     private DrawerLayout layout;
@@ -100,6 +101,13 @@ public class MainActivity extends AppCompatActivity {
                 } else if (id == R.id.action_suggestion) {
                     Toast.makeText(MainActivity.this, "旅遊建議", Toast.LENGTH_SHORT).show();
                     layout.closeDrawer(GravityCompat.START); // <-- 加這行關閉抽屜
+                    return true;
+                } else if (id == R.id.logout) {
+                    FirebaseAuth.getInstance().signOut();  // <-- 真正執行登出1
+                    Toast.makeText(MainActivity.this, "登出成功", Toast.LENGTH_SHORT).show();
+                    layout.closeDrawer(GravityCompat.START); // <-- 加這行關閉抽屜
+                    startActivity(new Intent(MainActivity.this, LoginActivity.class));
+                    finish();
                     return true;
                 }
                 return false;

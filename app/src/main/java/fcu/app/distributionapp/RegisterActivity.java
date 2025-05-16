@@ -54,6 +54,11 @@ public class RegisterActivity extends AppCompatActivity {
                 String password = etRPassword.getText().toString().trim();
                 String passwordCheck = etRPasswordCheck.getText().toString().trim();
 
+                if (email.isEmpty() || password.isEmpty() || passwordCheck.isEmpty()) {
+                    Toast.makeText(RegisterActivity.this, "請輸入Email與密碼", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
                 if(password.equals(passwordCheck)){
                     mAuth.createUserWithEmailAndPassword(email, password)
                             .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
@@ -74,6 +79,13 @@ public class RegisterActivity extends AppCompatActivity {
                     Toast.makeText(RegisterActivity.this, "兩組密碼不相同，請再次確認", Toast.LENGTH_LONG).show();
                 }
 
+            }
+        });
+
+        btnToLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(RegisterActivity.this, LoginActivity.class));
             }
         });
     }

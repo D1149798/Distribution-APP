@@ -69,6 +69,7 @@ id label_add
 id label_chat
 id label_rate
 id label_transaction
+id logout
 id main
 id navigation_view
 id payerSpinner
