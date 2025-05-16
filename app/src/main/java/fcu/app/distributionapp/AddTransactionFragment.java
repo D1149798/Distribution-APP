@@ -20,6 +20,20 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.FirebaseApp;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FirebaseFirestore;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.util.HashMap;
+import java.util.Map;
+
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
@@ -28,11 +42,14 @@ import fcu.app.distributionapp.adapter.GroupMemberAdapter;
 import fcu.app.distributionapp.model.GroupMember;
 
 public class AddTransactionFragment extends Fragment {
-
-    private Spinner groupSpinner, payerSpinner, categorySpinner, currencySpinner;
+    private FirebaseFirestore db;
+    private Spinner groupSpinner, payerSpinner, currencySpinner;
     private RecyclerView beneficiaryRecyclerView;
     private GroupMemberAdapter adapter;
     private List<GroupMember> memberList = new ArrayList<>();
+    private final List<String> displayCurrencyList = new ArrayList<>();
+    private final List<String> currencyCodeList = new ArrayList<>();
+
 
     private EditText etCost, etNote;
     private TextView tvDate;
@@ -58,6 +75,9 @@ public class AddTransactionFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
+        FirebaseApp.initializeApp(requireContext());
+        db = FirebaseFirestore.getInstance();
+
         groupSpinner = view.findViewById(R.id.groupSpinner);
         payerSpinner = view.findViewById(R.id.payerSpinner);
         currencySpinner = view.findViewById(R.id.currencySpinner);
@@ -80,7 +100,9 @@ public class AddTransactionFragment extends Fragment {
         payerAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         payerSpinner.setAdapter(payerAdapter);
 
-        ArrayAdapter<String> currencyAdapter = new ArrayAdapter<>(getContext(), android.R.layout.simple_spinner_item, currencyList);
+        loadCurrencyFromCSV();
+
+        ArrayAdapter<String> currencyAdapter = new ArrayAdapter<>(requireContext(), android.R.layout.simple_dropdown_item_1line, displayCurrencyList);
         currencyAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         currencySpinner.setAdapter(currencyAdapter);
 
@@ -114,22 +136,87 @@ public class AddTransactionFragment extends Fragment {
             String cost = etCost.getText().toString().trim();
             String note = etNote.getText().toString().trim();
             String date = tvDate.getText().toString().trim();
+            String group = groupSpinner.getSelectedItem().toString();
+            String payer = payerSpinner.getSelectedItem().toString();
+            int currencyIndex = currencySpinner.getSelectedItemPosition();
+            String currency = currencyCodeList.get(currencyIndex);
+
 
             if (cost.isEmpty() || date.equals("請選擇日期")) {
                 Toast.makeText(getContext(), "請填寫金額與日期", Toast.LENGTH_SHORT).show();
                 return;
             }
-
             List<GroupMember> selected = adapter.getSelectedMembers();
-            Toast.makeText(getContext(),
-                    "已儲存交易，受益人數量：" + selected.size(),
-                    Toast.LENGTH_SHORT).show();
+            List<String> beneficiaries = new ArrayList<>();
+            for (GroupMember member : selected) {
+                beneficiaries.add(member.getName());
+            }
 
-            // 可加入儲存邏輯到資料庫
+            // 建立資料 Map
+            Map<String, Object> transaction = new HashMap<>();
+            transaction.put("group", group);
+            transaction.put("payer", payer);
+            transaction.put("currency", currency);
+            transaction.put("cost", Double.parseDouble(cost));
+            transaction.put("note", note);
+            transaction.put("date", date);
+            transaction.put("beneficiaries", beneficiaries);
+
+            // 儲存到 Firestore 的 "transactions" 集合中
+            db.collection("transactions")
+                    .add(transaction)
+                    .addOnSuccessListener(documentReference -> {
+                        Toast.makeText(getContext(), "交易已儲存", Toast.LENGTH_SHORT).show();
+                        // 清除輸入框內容
+                        etCost.setText("");
+                        etNote.setText("");
+                        tvDate.setText("請選擇日期");
+                        adapter.clearSelection();
+                    }).addOnFailureListener(new OnFailureListener() {
+                        @Override
+                        public void onFailure(@NonNull Exception e) {
+                            Toast.makeText(getContext(), "儲存失敗：" + e.getMessage(), Toast.LENGTH_SHORT).show();
+                        }
+                    });
         });
     }
 
     public List<GroupMember> getSelectedBeneficiaries() {
         return adapter.getSelectedMembers();
     }
+    private void loadCurrencyFromCSV() {
+        try {
+            InputStream is = getResources().openRawResource(R.raw.currencies);
+            BufferedReader reader = new BufferedReader(new InputStreamReader(is));
+            String line;
+            while ((line = reader.readLine()) != null) {
+                String[] parts = line.split(",");
+                if (parts.length == 2) {
+                    String code = parts[0].trim();
+                    String name = parts[1].trim();
+                    currencyCodeList.add(code);
+                    displayCurrencyList.add(code + " - " + name);
+                }
+            }
+            reader.close();
+        } catch (IOException e) {
+            Toast.makeText(getContext(), "讀取 currencies.csv 失敗", Toast.LENGTH_LONG).show();
+        }
+    }
+    private String getDisplayCurrency(String code) {
+        for (String item : displayCurrencyList) {
+            if (item.startsWith(code + " ")) {
+                return item;
+            }
+        }
+        return "";
+    }
+
+    private String getCurrencyCodeFromDisplay(String display) {
+        if (display.contains(" - ")) {
+            return display.split(" - ")[0].trim();
+        }
+        return null;
+    }
+
 }

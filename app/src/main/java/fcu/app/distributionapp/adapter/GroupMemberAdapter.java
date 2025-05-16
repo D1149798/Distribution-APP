@@ -66,4 +66,11 @@ public class GroupMemberAdapter extends RecyclerView.Adapter<GroupMemberAdapter.
         this.memberList.addAll(newMembers);
         notifyDataSetChanged();
     }
+    public void clearSelection() {
+        for (GroupMember member : memberList) {
+            member.setSelected(false);
+        }
+        notifyDataSetChanged();
+    }
+
 }
