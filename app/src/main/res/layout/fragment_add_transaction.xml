@@ -10,11 +10,11 @@
         android:layout_height="wrap_content">
 
         <TextView
-            android:text="新增交易"
-            android:textSize="20sp"
-            android:textStyle="bold"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:text="新增付款紀錄"
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
         <EditText
             android:id="@+id/et_cost"
@@ -25,26 +25,27 @@
             android:layout_marginTop="16dp" />
 
         <TextView
-            android:text="分類"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="幣別" />
+
+        <Spinner
+            android:id="@+id/currencySpinner"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
-        <Spinner
-            android:id="@+id/categorySpinner"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp" />
-
         <TextView
-            android:text="群組"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp" />
+            android:layout_marginTop="16dp"
+            android:text="群組" />
 
         <Spinner
             android:id="@+id/groupSpinner"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp" />
 
         <TextView
             android:text="付款者"
@@ -56,6 +57,35 @@
             android:id="@+id/payerSpinner"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="幫誰付款（可多選）"
+            android:layout_marginTop="16dp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_beneficiaries"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:nestedScrollingEnabled="false"/>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="日期"
+            android:layout_marginTop="16dp" />
+
+        <TextView
+            android:id="@+id/tv_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="請選擇日期"
+            android:padding="12dp"
+            android:background="#EEEEEE"
+            android:textColor="#000000" />
+
 
         <EditText
             android:id="@+id/et_note"

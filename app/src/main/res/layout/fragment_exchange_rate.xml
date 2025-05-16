@@ -1,62 +1,94 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
-    android:padding="20dp"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-    <EditText
-        android:id="@+id/etAmount"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="請輸入金額"
-        android:inputType="numberDecimal" />
+    android:layout_height="match_parent"
+    android:padding="20dp">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="10dp">
+        android:orientation="vertical">
 
-        <Spinner
-            android:id="@+id/spinnerFrom"
-            android:layout_width="0dp"
+        <!-- 金額輸入 -->
+        <EditText
+            android:id="@+id/etAmount"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1" />
+            android:hint="請輸入金額"
+            android:inputType="numberDecimal" />
 
+        <!-- 幣別選擇與切換 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+
+            <AutoCompleteTextView
+                android:id="@+id/autoCompleteFrom"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="從幣別" />
+
+            <Button
+                android:id="@+id/btnSwitch"
+                android:layout_width="65dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:backgroundTint="#F06292"
+                android:text="↔"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                app:icon="@drawable/swap_horiz" />
+
+            <AutoCompleteTextView
+                android:id="@+id/autoCompleteTo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="目標幣別" />
+        </LinearLayout>
+
+        <!-- 轉換按鈕 -->
         <Button
-            android:id="@+id/btnSwitch"
-            android:layout_width="65dp"
+            android:id="@+id/btnConvert"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center|center_horizontal|center_vertical"
-            android:layout_marginHorizontal="10dp"
-            android:backgroundTint="#F06296"
-            app:icon="@drawable/swap_horiz" />
+            android:layout_marginTop="10dp"
+            android:text="轉換"
+            android:backgroundTint="#F06292"
+            android:textColor="@android:color/white" />
 
-        <Spinner
-            android:id="@+id/spinnerTo"
-            android:layout_width="0dp"
+        <!-- 顯示結果 -->
+        <TextView
+            android:id="@+id/tvResult"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1" />
+            android:layout_marginTop="20dp"
+            android:text="轉換結果"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <!-- 即時匯率 -->
+        <TextView
+            android:id="@+id/tvRealTimeRate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="即時匯率"
+            android:textSize="20sp" />
+
+        <!-- 最後更新時間 -->
+        <TextView
+            android:id="@+id/tvLastUpdate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="最後更新時間：--"
+            android:textColor="#474444"
+            android:textSize="14sp" />
+
     </LinearLayout>
-
-    <Button
-        android:id="@+id/btnConvert"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:backgroundTint="#F06296"
-        android:text="轉換" /> <!-- 修改顏色 -->
-
-
-    <TextView
-        android:id="@+id/tvResult"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="結果將顯示在這裡"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        android:layout_marginTop="20dp" />
-
-</LinearLayout>
+</ScrollView>

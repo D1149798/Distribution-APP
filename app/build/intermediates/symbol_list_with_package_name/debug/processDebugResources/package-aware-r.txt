@@ -3262,6 +3262,8 @@ id asConfigured
 id async
 id auto
 id autoComplete
+id autoCompleteFrom
+id autoCompleteTo
 id autoCompleteToEnd
 id autoCompleteToStart
 id axisRelative
@@ -3301,7 +3303,6 @@ id cache_measures
 id callMeasure
 id cancel_button
 id carryVelocity
-id categorySpinner
 id center
 id centerCrop
 id centerInside
@@ -3312,6 +3313,7 @@ id chain2
 id chains
 id chat_layout
 id checkbox
+id checkbox_member
 id checked
 id childFragmentContainer
 id chronometer
@@ -3334,6 +3336,7 @@ id coordinator
 id cos
 id counterclockwise
 id cradle
+id currencySpinner
 id currentState
 id custom
 id customPanel
@@ -3604,6 +3607,7 @@ id right_icon
 id right_side
 id rounded
 id row_index_key
+id rv_beneficiaries
 id save_non_transition_alpha
 id save_overlay_view
 id sawtooth
@@ -3644,8 +3648,6 @@ id snapMargins
 id south
 id spacer
 id special_effects_controller_view_tag
-id spinnerFrom
-id spinnerTo
 id spline
 id split_action_bar
 id spread
@@ -3727,7 +3729,10 @@ id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
 id triangle
+id tvLastUpdate
+id tvRealTimeRate
 id tvResult
+id tv_date
 id tv_group_name
 id tv_message
 id tv_time
@@ -3908,6 +3913,7 @@ layout ime_secondary_split_test_activity
 layout item_detail
 layout item_friend
 layout item_group
+layout item_group_member
 layout item_message
 layout item_message_self
 layout m3_alert_dialog
@@ -3976,6 +3982,7 @@ menu toolbar_menu
 mipmap ic_launcher
 mipmap ic_launcher_round
 plurals mtrl_badge_content_description
+raw currencies
 raw firebase_common_keep
 string abc_action_bar_home_description
 string abc_action_bar_up_description

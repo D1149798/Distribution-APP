@@ -23,6 +23,8 @@ id action_friends
 id action_groups
 id action_settings
 id action_suggestion
+id autoCompleteFrom
+id autoCompleteTo
 id btnConvert
 id btnSwitch
 id btn_add
@@ -37,9 +39,10 @@ id btn_to_login
 id btn_to_register
 id btn_transaction
 id button_send
-id categorySpinner
 id chat_layout
+id checkbox_member
 id childFragmentContainer
+id currencySpinner
 id drawerLayout
 id editText_message
 id etAmount
@@ -72,8 +75,7 @@ id payerSpinner
 id recyclerView_messages
 id recycler_friends
 id recycler_groups
-id spinnerFrom
-id spinnerTo
+id rv_beneficiaries
 id textView
 id textView2
 id textView_sender
@@ -85,7 +87,10 @@ id text_payer
 id text_receiver
 id toolbar
 id transactionList
+id tvLastUpdate
+id tvRealTimeRate
 id tvResult
+id tv_date
 id tv_group_name
 id tv_message
 id tv_time
@@ -105,12 +110,14 @@ layout fragment_transaction_history
 layout item_detail
 layout item_friend
 layout item_group
+layout item_group_member
 layout item_message
 layout item_message_self
 menu drawer_menu
 menu toolbar_menu
 mipmap ic_launcher
 mipmap ic_launcher_round
+raw currencies
 string app_name
 string gcm_defaultSenderId
 string google_api_key
