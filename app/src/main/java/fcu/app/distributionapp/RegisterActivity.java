@@ -73,7 +73,7 @@ public class RegisterActivity extends AppCompatActivity {
                                     if(task.isSuccessful()){
                                         FirebaseUser user = mAuth.getCurrentUser();
 
-                                        //許 新增以下
+                                        //新增以下
                                         String emailValue = user.getEmail();
                                         String userId = emailValue.split("@")[0]; // 使用 @ 前當作帳號 ID
                                         Map<String, Object> userData = new HashMap<>();

@@ -12,9 +12,16 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+
+import android.widget.Toast;
 
 import fcu.app.distributionapp.adapter.FriendAdapter;
 import fcu.app.distributionapp.model.FriendGroup;
+
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 public class FriendsFragment extends Fragment {
 
@@ -22,6 +29,7 @@ public class FriendsFragment extends Fragment {
     private RecyclerView recyclerView;
     private FriendAdapter adapter;
     private List<FriendGroup> groupList;
+    private FirebaseFirestore db;
 
     public static FriendsFragment newInstance() {
         FriendsFragment fragment = new FriendsFragment();
@@ -31,12 +39,16 @@ public class FriendsFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_friends, container, false);
+
+        db = FirebaseFirestore.getInstance();
         btnAddFriend = view.findViewById(R.id.btn_add_friend);
         recyclerView = view.findViewById(R.id.recycler_friends);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 
+        groupList = new ArrayList<>();
+        adapter = new FriendAdapter(groupList);
+        recyclerView.setAdapter(adapter);
 
         btnAddFriend.setOnClickListener(v -> {
             requireActivity().getSupportFragmentManager()
@@ -46,15 +58,37 @@ public class FriendsFragment extends Fragment {
                     .commit();
 
         });
-        groupList = new ArrayList<>();
-        groupList.add(new FriendGroup("小名", "你欠錢一週年!", "2d", R.drawable.ic_launcher_foreground));
-        groupList.add(new FriendGroup("阿華", "晚餐還沒收", "3d", R.drawable.ic_launcher_foreground));
-        groupList.add(new FriendGroup("小黑", "明天要不要吃火鍋", "1d", R.drawable.ic_launcher_foreground));
 
-        adapter = new FriendAdapter(groupList);
-        recyclerView.setAdapter(adapter);
+        loadFriendsFromFirestore();
 
         return view;
-        //return inflater.inflate(R.layout.fragment_friends, container, false);
+    }
+
+    private void loadFriendsFromFirestore() {
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+
+        String currentUserId = user.getEmail().split("@")[0];
+
+        db.collection("friends").document(currentUserId).get()
+                .addOnSuccessListener(snapshot -> {
+                    if (snapshot.exists()) {
+                        Map<String, Object> friendsMap = snapshot.getData();
+                        for (String friendId : friendsMap.keySet()) {
+                            db.collection("users").document(friendId).get()
+                                    .addOnSuccessListener(friendSnapshot -> {
+                                        if (friendSnapshot.exists()) {
+                                            String email = friendSnapshot.getString("Email");
+                                            groupList.add(new FriendGroup(friendId, email));
+                                            adapter.notifyDataSetChanged();
+                                        }
+                                    });
+                        }
+                    } else {
+                        Toast.makeText(getContext(), "目前尚未有好友", Toast.LENGTH_SHORT).show();
+                    }
+                })
+                .addOnFailureListener(e -> {
+                    Toast.makeText(getContext(), "讀取好友失敗：" + e.getMessage(), Toast.LENGTH_SHORT).show();
+                });
     }
 }

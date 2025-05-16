@@ -24,13 +24,13 @@ public class FriendAdapter extends RecyclerView.Adapter<FriendAdapter.ViewHolder
         TextView tvFriendName;
         TextView tvFriendMail;
         //TextView tvTime;
-        ImageView imgAvatar;
+        //ImageView imgAvatar;
 
         public ViewHolder(View view) {
             super(view);
             tvFriendName = view.findViewById(R.id.tv_friend_name);
             tvFriendMail = view.findViewById(R.id.tv_friend_mail);
-            imgAvatar = view.findViewById(R.id.img_avatar);
+            //imgAvatar = view.findViewById(R.id.img_avatar);
         }
     }
 
@@ -45,8 +45,8 @@ public class FriendAdapter extends RecyclerView.Adapter<FriendAdapter.ViewHolder
     public void onBindViewHolder(ViewHolder holder, int position) {
         FriendGroup group = groupList.get(position);
         holder.tvFriendName.setText(group.friendName);
-        //holder.tvTime.setText(group.time);
-        holder.imgAvatar.setImageResource(group.avatarResId);
+        holder.tvFriendMail.setText(group.friendEmail);
+        //holder.imgAvatar.setImageResource(group.avatarResId);
     }
 
     @Override
@@ -54,47 +54,3 @@ public class FriendAdapter extends RecyclerView.Adapter<FriendAdapter.ViewHolder
         return groupList.size();
     }
 }
-
-
-/*
-private List<FriendGroup> groupList;
-
-    public FriendAdapter(List<FriendGroup> list) {
-        this.groupList = list;
-    }
-
-    @NonNull
-    @Override
-    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.item_restaurant, parent, false);
-        return new ViewHolder(view);
-    }
-
-    @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        Restaurant restaurant = restaurantList.get(position);
-        holder.txtName.setText(restaurant.getName());
-        holder.txtOpeningHours.setText("Open: " + restaurant.getOpeningHours());
-        holder.txtType.setText("Type: " + restaurant.getType());
-        holder.imgRestaurant.setImageResource(restaurant.getImageResId());
-    }
-
-    @Override
-    public int getItemCount() {
-        return restaurantList.size();
-    }
-
-    public static class ViewHolder extends RecyclerView.ViewHolder {
-        TextView txtName, txtOpeningHours, txtType;
-        ImageView imgRestaurant;
-
-        public ViewHolder(@NonNull View itemView) {
-            super(itemView);
-            txtName = itemView.findViewById(R.id.tv_name);
-            txtOpeningHours = itemView.findViewById(R.id.tv_opening_hours);
-            txtType = itemView.findViewById(R.id.tv_type);
-            imgRestaurant = itemView.findViewById(R.id.iv_logo);
-        }
-    }
- */
