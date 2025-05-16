@@ -11,8 +11,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.google.firebase.FirebaseApp;
+import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.ArrayList;
@@ -29,6 +31,7 @@ public class GroupsFragment extends Fragment {
     private RecyclerView recyclerView;
     private GroupAdapter adapter;
     private List<Group> groupList;
+
     public GroupsFragment() {
         // Required empty public constructor
     }
@@ -69,22 +72,57 @@ public class GroupsFragment extends Fragment {
         btnAddGroup = view.findViewById(R.id.btn_add_group);
         recyclerView = view.findViewById(R.id.recycler_groups);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+
+        groupList = new ArrayList<>();
+        adapter = new GroupAdapter(groupList, group -> {
+            // 點擊某個群組後的動作，例如跳轉到聊天頁面
+            //Fragment groupChatFragment = new GroupChatFragment();
+/*
+            Bundle args = new Bundle();
+            args.putString("groupId", group.getId());      // 你需要在 Group 類別中有 getId()
+            args.putString("groupName", group.getName());  // 也需要有 getName()
+            groupChatFragment.setArguments(args);
+
+            requireActivity().getSupportFragmentManager()
+                    .beginTransaction()
+                    .replace(R.id.fragment_main, groupChatFragment)
+                    .addToBackStack(null)
+                    .commit();
+                    */
+            Toast.makeText(getContext(), "你點選了群組：" + group.getName(), Toast.LENGTH_SHORT).show();
+
+
+        });
+
+        recyclerView.setAdapter(adapter);
+
         btnAddGroup.setOnClickListener(v -> {
             requireActivity().getSupportFragmentManager()
                     .beginTransaction()
                     .replace(R.id.fragment_main, new AddGroupFragment())
                     .addToBackStack(null)
                     .commit();
-
         });
-        groupList = new ArrayList<>();
-        groupList.add(new Group("123","台南一日遊"));
-        groupList.add(new Group("456","畢旅分帳"));
-        groupList.add(new Group("789","大一室友"));
-//        R.drawable.ic_launcher_foreground
-        adapter = new GroupAdapter(groupList);
-        recyclerView.setAdapter(adapter);
+
+        loadGroupsFromFirestore();
 
         return view;
+    }
+
+    private void loadGroupsFromFirestore() {
+        db.collection("newGroups")
+                .get()
+                .addOnSuccessListener(querySnapshot -> {
+                    groupList.clear();
+                    for (DocumentSnapshot doc : querySnapshot.getDocuments()) {
+                        String groupId = doc.getId();
+                        String groupName = doc.getString("name");
+                        groupList.add(new Group(groupId, groupName));  // 目前只加 id + name
+                    }
+                    adapter.notifyDataSetChanged();
+                })
+                .addOnFailureListener(e -> {
+                    Toast.makeText(getContext(), "讀取群組失敗：" + e.getMessage(), Toast.LENGTH_SHORT).show();
+                });
     }
 }

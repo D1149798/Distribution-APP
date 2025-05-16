@@ -29,16 +29,16 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="群組成員（用逗號分隔）"
+            android:text="選擇群組成員"
             android:textSize="16sp"
             android:layout_marginBottom="4dp" />
 
-        <EditText
-            android:id="@+id/et_add_group_members"
+        <!-- 這裡會由程式動態加入 CheckBox -->
+        <LinearLayout
+            android:id="@+id/layout_member_checkboxes"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="例如：alice,bob,carol"
-            android:inputType="text"
+            android:orientation="vertical"
             android:layout_marginBottom="24dp" />
 
         <!-- 建立按鈕 -->
@@ -47,6 +47,5 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="建立群組" />
-
     </LinearLayout>
 </ScrollView>

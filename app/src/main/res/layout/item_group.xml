@@ -30,23 +30,7 @@
                 android:text="群組名稱"
                 android:textStyle="bold"
                 android:textSize="18sp" />
-
-            <TextView
-                android:id="@+id/tv_message"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="最新訊息"
-                android:textSize="14sp"
-                android:textColor="#888888" />
         </LinearLayout>
 
-        <TextView
-            android:id="@+id/tv_time"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="2d"
-            android:textSize="12sp"
-            android:textColor="#888888"
-            android:gravity="top" />
     </LinearLayout>
 </androidx.cardview.widget.CardView>

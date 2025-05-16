@@ -3390,7 +3390,6 @@ id enterAlways
 id enterAlwaysCollapsed
 id escape
 id etAmount
-id et_add_group_members
 id et_add_group_name
 id et_cost
 id et_friend_mail
@@ -3471,6 +3470,7 @@ id label_rate
 id label_transaction
 id labeled
 id layout
+id layout_member_checkboxes
 id left
 id leftToRight
 id legacy
@@ -3743,7 +3743,6 @@ id tv_friend_mail
 id tv_friend_name
 id tv_group_name
 id tv_message
-id tv_time
 id unchecked
 id uniform
 id unlabeled

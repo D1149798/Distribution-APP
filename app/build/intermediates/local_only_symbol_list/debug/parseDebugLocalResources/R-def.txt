@@ -48,7 +48,6 @@ id currencySpinner
 id drawerLayout
 id editText_message
 id etAmount
-id et_add_group_members
 id et_add_group_name
 id et_cost
 id et_friend_mail
@@ -74,6 +73,7 @@ id label_add
 id label_chat
 id label_rate
 id label_transaction
+id layout_member_checkboxes
 id logout
 id main
 id navigation_view
@@ -101,7 +101,6 @@ id tv_friend_mail
 id tv_friend_name
 id tv_group_name
 id tv_message
-id tv_time
 layout activity_login
 layout activity_main
 layout activity_register
