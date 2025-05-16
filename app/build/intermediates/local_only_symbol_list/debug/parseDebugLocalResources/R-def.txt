@@ -105,7 +105,6 @@ id tv_time
 layout activity_login
 layout activity_main
 layout activity_register
-layout activity_suggestion
 layout fragment_accounts
 layout fragment_add_friend
 layout fragment_add_group
@@ -115,6 +114,7 @@ layout fragment_details
 layout fragment_exchange_rate
 layout fragment_friends
 layout fragment_groups
+layout fragment_suggestion
 layout fragment_transaction_history
 layout item_detail
 layout item_friend

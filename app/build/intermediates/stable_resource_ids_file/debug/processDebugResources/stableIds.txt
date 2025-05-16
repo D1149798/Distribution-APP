@@ -1,3 +1,4 @@
+fcu.app.distributionapp:layout/fragment_suggestion = 0x7f0c0081
 fcu.app.distributionapp:style/Widget.Material3.FloatingActionButton.Large.Surface = 0x7f13038e
 fcu.app.distributionapp:styleable/include = 0x7f14009b
 fcu.app.distributionapp:style/Widget.AppCompat.Light.ActionMode.Inverse = 0x7f130310

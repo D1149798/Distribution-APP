@@ -3888,7 +3888,6 @@ layout abc_tooltip
 layout activity_login
 layout activity_main
 layout activity_register
-layout activity_suggestion
 layout browser_actions_context_menu_page
 layout browser_actions_context_menu_row
 layout custom_dialog
@@ -3916,6 +3915,7 @@ layout fragment_details
 layout fragment_exchange_rate
 layout fragment_friends
 layout fragment_groups
+layout fragment_suggestion
 layout fragment_transaction_history
 layout ime_base_split_test_activity
 layout ime_secondary_split_test_activity

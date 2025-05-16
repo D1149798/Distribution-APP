@@ -68,6 +68,7 @@ public class MainActivity extends AppCompatActivity {
         Fragment exchangeFragment = ExchangeRateFragment.newInstance();
         Fragment friendsFragment = FriendsFragment.newInstance();
         Fragment groupsFragment = GroupsFragment.newInstance("", "");
+        Fragment suggestionFragment = SuggestionFragment.newInstance("", "");
 
         setCurrentFragment(groupsFragment);
 
@@ -100,6 +101,7 @@ public class MainActivity extends AppCompatActivity {
                     return true;
                 } else if (id == R.id.action_suggestion) {
                     Toast.makeText(MainActivity.this, "旅遊建議", Toast.LENGTH_SHORT).show();
+                    setCurrentFragment(suggestionFragment);
                     layout.closeDrawer(GravityCompat.START); // <-- 加這行關閉抽屜
                     return true;
                 } else if (id == R.id.logout) {
