@@ -11,11 +11,11 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.List;
 
 import fcu.app.distributionapp.R;
-import fcu.app.distributionapp.model.GroupGroup;
+import fcu.app.distributionapp.model.Group;
 public class GroupAdapter extends RecyclerView.Adapter<GroupAdapter.ViewHolder>{
-    private List<GroupGroup> groupList;
+    private List<Group> groupList;
 
-    public GroupAdapter(List<GroupGroup> groupList) {
+    public GroupAdapter(List<Group> groupList) {
         this.groupList = groupList;
     }
 
@@ -41,11 +41,11 @@ public class GroupAdapter extends RecyclerView.Adapter<GroupAdapter.ViewHolder>{
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        GroupGroup group = groupList.get(position);
-        holder.tvGroupName.setText(group.groupName);
-        holder.tvMessage.setText(group.message);
-        holder.tvTime.setText(group.time);
-        holder.imgAvatar.setImageResource(group.avatarResId);
+        Group group = groupList.get(position);
+        holder.tvGroupName.setText(group.getName());
+//        holder.tvMessage.setText(group.message);
+//        holder.tvTime.setText(group.time);
+//        holder.imgAvatar.setImageResource(group.avatarResId);
     }
 
     @Override

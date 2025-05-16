@@ -6,23 +6,28 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import java.util.ArrayList;
-import java.util.List;
+import com.google.firebase.FirebaseApp;
+import com.google.firebase.firestore.FirebaseFirestore;
 
-import fcu.app.distributionapp.adapter.FriendAdapter;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 import fcu.app.distributionapp.adapter.GroupAdapter;
-import fcu.app.distributionapp.model.FriendGroup;
-import fcu.app.distributionapp.model.GroupGroup;
+import fcu.app.distributionapp.model.Group;
 
 public class GroupsFragment extends Fragment {
+    private FirebaseFirestore db;
 
     private RecyclerView recyclerView;
     private GroupAdapter adapter;
-    private List<GroupGroup> groupList;
+    private List<Group> groupList;
     public GroupsFragment() {
         // Required empty public constructor
     }
@@ -44,14 +49,31 @@ public class GroupsFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_groups, container, false);
 
+        FirebaseApp.initializeApp(requireContext());
+        db = FirebaseFirestore.getInstance();
+
+        // 建立一個新的群組物件
+        Map<String, Object> group = new HashMap<>();
+        group.put("name", "台北三日遊");
+
+        // 自動產生 document ID
+        db.collection("groups")
+                .add(group)
+                .addOnSuccessListener(documentReference -> {
+                    Log.d("Firestore", "群組新增成功，ID: " + documentReference.getId());
+                })
+                .addOnFailureListener(e -> {
+                    Log.w("Firestore", "新增群組失敗", e);
+                });
+
         recyclerView = view.findViewById(R.id.recycler_groups);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 
         groupList = new ArrayList<>();
-        groupList.add(new GroupGroup("台南一日遊(3)", "你欠錢一週年!!! 🎉🎉", "2d", R.drawable.ic_launcher_foreground));
-        groupList.add(new GroupGroup("畢旅分帳(4)", "晚餐還沒收", "3d", R.drawable.ic_launcher_foreground));
-        groupList.add(new GroupGroup("大一室友(5)", "明天要不要吃火鍋", "1d", R.drawable.ic_launcher_foreground));
-
+        groupList.add(new Group("123","台南一日遊"));
+        groupList.add(new Group("456","畢旅分帳"));
+        groupList.add(new Group("789","大一室友"));
+//        R.drawable.ic_launcher_foreground
         adapter = new GroupAdapter(groupList);
         recyclerView.setAdapter(adapter);
 

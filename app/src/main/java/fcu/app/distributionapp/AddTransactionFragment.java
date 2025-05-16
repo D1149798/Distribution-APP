@@ -5,10 +5,12 @@ import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -27,12 +29,14 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
 
 import java.util.ArrayList;
@@ -41,6 +45,7 @@ import java.util.List;
 
 import fcu.app.distributionapp.adapter.GroupMemberAdapter;
 import fcu.app.distributionapp.model.GroupMember;
+import fcu.app.distributionapp.model.Group;
 
 public class AddTransactionFragment extends Fragment {
     private FirebaseFirestore db;
@@ -51,6 +56,7 @@ public class AddTransactionFragment extends Fragment {
     private final List<String> displayCurrencyList = new ArrayList<>();
     private final List<String> currencyCodeList = new ArrayList<>();
 
+    private List<Group> groupList = new ArrayList<>();
 
     private EditText etCost, etNote;
     private TextView tvDate;
@@ -90,45 +96,32 @@ public class AddTransactionFragment extends Fragment {
 
         loadCurrencyFromCSV();
 
-        ArrayAdapter<String> currencyAdapter = new ArrayAdapter<>(requireContext(), android.R.layout.simple_dropdown_item_1line, displayCurrencyList);
+        ArrayAdapter<String> currencyAdapter = new ArrayAdapter<>(requireContext(),
+                android.R.layout.simple_dropdown_item_1line, displayCurrencyList);
         currencyAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         currencySpinner.setAdapter(currencyAdapter);
 
-// /////準備要刪除的部分
-        // 範例選單資料
-        String[] groupList = {"旅遊小組", "家庭", "同事", "朋友"};
-        String[] payerList = {"小明", "小華", "小美"};
-
-        ArrayAdapter<String> groupAdapter = new ArrayAdapter<>(getContext(), android.R.layout.simple_spinner_item, groupList);
-        groupAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        groupSpinner.setAdapter(groupAdapter);
-
-        ArrayAdapter<String> payerAdapter = new ArrayAdapter<>(getContext(), android.R.layout.simple_spinner_item, payerList);
-        payerAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        payerSpinner.setAdapter(payerAdapter);
-
-        // 假資料
-        memberList.clear();
-        memberList.add(new GroupMember("小明"));
-        memberList.add(new GroupMember("小華"));
-        memberList.add(new GroupMember("小美"));
-        memberList.add(new GroupMember("小綠"));
-// /////
-
+        // 初始 RecyclerView
         adapter = new GroupMemberAdapter(memberList);
         beneficiaryRecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         beneficiaryRecyclerView.setAdapter(adapter);
-//處理中先註解
-//        loadGroupsFromFirestore();
-//        groupSpinner.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-//            @Override
-//            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-//                String selectedGroup = parent.getItemAtPosition(position).toString();
-//                loadGroupMembers(selectedGroup);
-//            }
-//        });
 
-        // 日期選擇
+        // 載入群組資料
+        loadGroupsFromFirestore();
+
+        groupSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                Group selectedGroup = (Group) parent.getItemAtPosition(position);
+                loadGroupMembers(selectedGroup.getId()); // 用 groupId 查詢
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {}
+        });
+
+
+        // 日期選擇器
         tvDate.setOnClickListener(v -> {
             int year = selectedDate.get(Calendar.YEAR);
             int month = selectedDate.get(Calendar.MONTH);
@@ -147,16 +140,24 @@ public class AddTransactionFragment extends Fragment {
             String cost = etCost.getText().toString().trim();
             String note = etNote.getText().toString().trim();
             String date = tvDate.getText().toString().trim();
-            String group = groupSpinner.getSelectedItem().toString();
+
+            if (groupSpinner.getSelectedItem() == null) {
+                Toast.makeText(getContext(), "請選擇群組", Toast.LENGTH_SHORT).show();
+                return;
+            }
+
+            Group selectedGroup = groupList.get(groupSpinner.getSelectedItemPosition());
+            String groupId = selectedGroup.getId();
+            String groupName = selectedGroup.getName();
             String payer = payerSpinner.getSelectedItem().toString();
             int currencyIndex = currencySpinner.getSelectedItemPosition();
             String currency = currencyCodeList.get(currencyIndex);
-
 
             if (cost.isEmpty() || date.equals("請選擇日期")) {
                 Toast.makeText(getContext(), "請填寫金額與日期", Toast.LENGTH_SHORT).show();
                 return;
             }
+
             List<GroupMember> selected = adapter.getSelectedMembers();
             List<String> beneficiaries = new ArrayList<>();
             for (GroupMember member : selected) {
@@ -165,7 +166,7 @@ public class AddTransactionFragment extends Fragment {
 
             // 建立資料 Map
             Map<String, Object> transaction = new HashMap<>();
-            transaction.put("group", group);
+            transaction.put("group", groupName);
             transaction.put("payer", payer);
             transaction.put("currency", currency);
             transaction.put("cost", Double.parseDouble(cost));
@@ -173,28 +174,26 @@ public class AddTransactionFragment extends Fragment {
             transaction.put("date", date);
             transaction.put("beneficiaries", beneficiaries);
 
-            // 儲存到 Firestore 的 "transactions" 集合中
-            db.collection("transactions")
+            // 儲存到 groupId/transactions 子集合
+            db.collection("groups")
+                    .document(groupId)
+                    .collection("transactions")
                     .add(transaction)
                     .addOnSuccessListener(documentReference -> {
                         Toast.makeText(getContext(), "交易已儲存", Toast.LENGTH_SHORT).show();
-                        // 清除輸入框內容
                         etCost.setText("");
                         etNote.setText("");
                         tvDate.setText("請選擇日期");
                         adapter.clearSelection();
-                    }).addOnFailureListener(new OnFailureListener() {
-                        @Override
-                        public void onFailure(@NonNull Exception e) {
-                            Toast.makeText(getContext(), "儲存失敗：" + e.getMessage(), Toast.LENGTH_SHORT).show();
-                        }
-                    });
+                    }).addOnFailureListener(e ->
+                            Toast.makeText(getContext(), "儲存失敗：" + e.getMessage(), Toast.LENGTH_SHORT).show());
         });
     }
 
     public List<GroupMember> getSelectedBeneficiaries() {
         return adapter.getSelectedMembers();
     }
+
     private void loadCurrencyFromCSV() {
         try {
             InputStream is = getResources().openRawResource(R.raw.currencies);
@@ -212,6 +211,7 @@ public class AddTransactionFragment extends Fragment {
             reader.close();
         } catch (IOException e) {
             Toast.makeText(getContext(), "讀取 currencies.csv 失敗", Toast.LENGTH_LONG).show();
+            Log.e("CurrencyCSV", "讀取 currencies.csv 發生錯誤", e);
         }
     }
 
@@ -219,50 +219,56 @@ public class AddTransactionFragment extends Fragment {
         db.collection("groups")
                 .get()
                 .addOnSuccessListener(queryDocumentSnapshots -> {
-                    List<String> groupNames = new ArrayList<>();
+                    groupList.clear();
                     for (var doc : queryDocumentSnapshots) {
                         String groupName = doc.getString("name");
-                        groupNames.add(groupName);
+                        String groupId = doc.getId();
+                        groupList.add(new Group(groupId, groupName));
                     }
 
-                    ArrayAdapter<String> groupAdapter = new ArrayAdapter<>(requireContext(), android.R.layout.simple_spinner_item, groupNames);
+                    ArrayAdapter<Group> groupAdapter = new ArrayAdapter<>(requireContext(),
+                            android.R.layout.simple_spinner_item, groupList);
                     groupAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                     groupSpinner.setAdapter(groupAdapter);
                 })
-                .addOnFailureListener(e -> Toast.makeText(getContext(), "載入群組失敗：" + e.getMessage(), Toast.LENGTH_SHORT).show());
+                .addOnFailureListener(e -> {
+                    Toast.makeText(getContext(), "載入群組失敗：" + e.getMessage(), Toast.LENGTH_SHORT).show();
+                    Log.e("Firestore", "載入群組失敗", e);
+                });
     }
-    private void loadGroupMembers(String groupName) {
+
+    private void loadGroupMembers(String groupId) {
         db.collection("groups")
-                .whereEqualTo("name", groupName)
+                .document(groupId)
+                .collection("members")
                 .get()
-                .addOnSuccessListener(queryDocumentSnapshots -> {
-                    if (!queryDocumentSnapshots.isEmpty()) {
-                        var doc = queryDocumentSnapshots.getDocuments().get(0);
-                        List<String> members = (List<String>) doc.get("members");
+                .addOnSuccessListener(querySnapshot -> {
+                    List<String> members = new ArrayList<>();
+                    memberList.clear();
 
-                        // 更新 payerSpinner
-                        ArrayAdapter<String> payerAdapter = new ArrayAdapter<>(requireContext(), android.R.layout.simple_spinner_item, members);
-                        payerAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-                        payerSpinner.setAdapter(payerAdapter);
-
-                        // 更新 RecyclerView for 受益人選擇
-                        memberList.clear();
-                        for (String name : members) {
+                    for (QueryDocumentSnapshot doc : querySnapshot) {
+                        String name = doc.getString("name");
+                        if (name != null) {
+                            members.add(name);
                             memberList.add(new GroupMember(name));
                         }
-                        adapter.notifyDataSetChanged();
                     }
+
+                    // 更新 payerSpinner
+                    ArrayAdapter<String> payerAdapter = new ArrayAdapter<>(requireContext(),
+                            android.R.layout.simple_spinner_item, members);
+                    payerAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    payerSpinner.setAdapter(payerAdapter);
+
+                    // 清除先前已選的受益人
+                    adapter.clearSelection();
+                    adapter.notifyDataSetChanged();
                 })
-                .addOnFailureListener(e -> Toast.makeText(getContext(), "載入成員失敗：" + e.getMessage(), Toast.LENGTH_SHORT).show());
+                .addOnFailureListener(e -> {
+                    Toast.makeText(getContext(), "載入成員失敗：" + e.getMessage(), Toast.LENGTH_SHORT).show();
+                    Log.e("Firestore", "載入成員失敗", e);
+                });
     }
 
-
-
-    private String getCurrencyCodeFromDisplay(String display) {
-        if (display.contains(" - ")) {
-            return display.split(" - ")[0].trim();
-        }
-        return null;
-    }
 
 }
