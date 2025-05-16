@@ -28,6 +28,7 @@ id autoCompleteTo
 id btnConvert
 id btnSwitch
 id btn_add
+id btn_add_friend
 id btn_back
 id btn_chat
 id btn_login
@@ -46,6 +47,7 @@ id drawerLayout
 id editText_message
 id etAmount
 id et_cost
+id et_friend_mail
 id et_l_email
 id et_l_password
 id et_note
@@ -91,6 +93,8 @@ id tvLastUpdate
 id tvRealTimeRate
 id tvResult
 id tv_date
+id tv_friend_mail
+id tv_friend_name
 id tv_group_name
 id tv_message
 id tv_time
@@ -99,6 +103,7 @@ layout activity_main
 layout activity_register
 layout activity_suggestion
 layout fragment_accounts
+layout fragment_add_friend
 layout fragment_add_transaction
 layout fragment_chat
 layout fragment_details

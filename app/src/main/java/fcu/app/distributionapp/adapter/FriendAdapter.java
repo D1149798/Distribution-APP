@@ -21,14 +21,15 @@ public class FriendAdapter extends RecyclerView.Adapter<FriendAdapter.ViewHolder
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
-        TextView tvGroupName, tvMessage, tvTime;
+        TextView tvFriendName;
+        TextView tvFriendMail;
+        //TextView tvTime;
         ImageView imgAvatar;
 
         public ViewHolder(View view) {
             super(view);
-            tvGroupName = view.findViewById(R.id.tv_group_name);
-            tvMessage = view.findViewById(R.id.tv_message);
-            tvTime = view.findViewById(R.id.tv_time);
+            tvFriendName = view.findViewById(R.id.tv_friend_name);
+            tvFriendMail = view.findViewById(R.id.tv_friend_mail);
             imgAvatar = view.findViewById(R.id.img_avatar);
         }
     }
@@ -36,16 +37,15 @@ public class FriendAdapter extends RecyclerView.Adapter<FriendAdapter.ViewHolder
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.item_group, parent, false);
+                .inflate(R.layout.item_friend, parent, false);
         return new ViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
         FriendGroup group = groupList.get(position);
-        holder.tvGroupName.setText(group.groupName);
-        holder.tvMessage.setText(group.message);
-        holder.tvTime.setText(group.time);
+        holder.tvFriendName.setText(group.friendName);
+        //holder.tvTime.setText(group.time);
         holder.imgAvatar.setImageResource(group.avatarResId);
     }
 

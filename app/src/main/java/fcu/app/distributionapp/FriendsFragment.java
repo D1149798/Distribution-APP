@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -17,6 +18,7 @@ import fcu.app.distributionapp.model.FriendGroup;
 
 public class FriendsFragment extends Fragment {
 
+    private Button btnAddFriend;
     private RecyclerView recyclerView;
     private FriendAdapter adapter;
     private List<FriendGroup> groupList;
@@ -31,10 +33,19 @@ public class FriendsFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_friends, container, false);
-
+        btnAddFriend = view.findViewById(R.id.btn_add_friend);
         recyclerView = view.findViewById(R.id.recycler_friends);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 
+
+        btnAddFriend.setOnClickListener(v -> {
+            requireActivity().getSupportFragmentManager()
+                    .beginTransaction()
+                    .replace(R.id.fragment_main, new AddFriendFragment())
+                    .addToBackStack(null)
+                    .commit();
+
+        });
         groupList = new ArrayList<>();
         groupList.add(new FriendGroup("小名", "你欠錢一週年!", "2d", R.drawable.ic_launcher_foreground));
         groupList.add(new FriendGroup("阿華", "晚餐還沒收", "3d", R.drawable.ic_launcher_foreground));

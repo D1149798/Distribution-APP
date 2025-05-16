@@ -23,30 +23,24 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+            <!-- 好友名稱（保留） -->
             <TextView
-                android:id="@+id/tv_group_name"
+                android:id="@+id/tv_friend_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="好友名稱"
+                android:text="好友帳號名(@前面那串)"
                 android:textStyle="bold"
                 android:textSize="18sp" />
 
+            <!-- 好友暱稱（替代原本的最新訊息） -->
             <TextView
-                android:id="@+id/tv_message"
+                android:id="@+id/tv_friend_mail"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="最新訊息"
+                android:text="mail"
                 android:textSize="14sp"
                 android:textColor="#888888" />
         </LinearLayout>
 
-        <TextView
-            android:id="@+id/tv_time"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="2d"
-            android:textSize="12sp"
-            android:textColor="#888888"
-            android:gravity="top" />
     </LinearLayout>
 </androidx.cardview.widget.CardView>
