@@ -25,7 +25,7 @@ import com.google.firebase.auth.FirebaseUser;
 public class RegisterActivity extends AppCompatActivity {
 
     private EditText etREmail, etRPassword, etRPasswordCheck;
-    private Button btnRegister, btnToLogin, btnGoBack;
+    private Button btnRegister, btnToLogin;
     private FirebaseAuth mAuth;
 
     @Override
@@ -45,7 +45,7 @@ public class RegisterActivity extends AppCompatActivity {
         etRPassword = findViewById(R.id.et_r_password);
         etRPasswordCheck = findViewById(R.id.et_r_password_check);
         btnRegister = findViewById(R.id.btn_register);
-        btnToLogin = findViewById(R.id.btn_goback);
+        btnToLogin = findViewById(R.id.btn_to_login);
 
         btnRegister.setOnClickListener(new View.OnClickListener() {
             @Override

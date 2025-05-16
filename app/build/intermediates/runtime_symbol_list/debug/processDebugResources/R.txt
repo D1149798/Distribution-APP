@@ -3288,7 +3288,6 @@ int id btnSwitch 0x7f090075
 int id btn_add 0x7f090076
 int id btn_back 0x7f090077
 int id btn_chat 0x7f090078
-int id btn_goback 0x7f090079
 int id btn_login 0x7f09007a
 int id btn_rate 0x7f09007b
 int id btn_register 0x7f09007c

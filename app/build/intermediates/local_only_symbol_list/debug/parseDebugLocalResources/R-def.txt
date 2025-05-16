@@ -30,7 +30,6 @@ id btnSwitch
 id btn_add
 id btn_back
 id btn_chat
-id btn_goback
 id btn_login
 id btn_rate
 id btn_register
