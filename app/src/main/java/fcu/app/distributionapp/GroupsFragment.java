@@ -51,20 +51,20 @@ public class GroupsFragment extends Fragment {
 
         FirebaseApp.initializeApp(requireContext());
         db = FirebaseFirestore.getInstance();
-
-        // 建立一個新的群組物件
-        Map<String, Object> group = new HashMap<>();
-        group.put("name", "台北三日遊");
-
-        // 自動產生 document ID
-        db.collection("groups")
-                .add(group)
-                .addOnSuccessListener(documentReference -> {
-                    Log.d("Firestore", "群組新增成功，ID: " + documentReference.getId());
-                })
-                .addOnFailureListener(e -> {
-                    Log.w("Firestore", "新增群組失敗", e);
-                });
+//
+//        // 建立一個新的群組物件
+//        Map<String, Object> group = new HashMap<>();
+//        group.put("name", "台北三日遊");
+//
+//        // 自動產生 document ID
+//        db.collection("groups")
+//                .add(group)
+//                .addOnSuccessListener(documentReference -> {
+//                    Log.d("Firestore", "群組新增成功，ID: " + documentReference.getId());
+//                })
+//                .addOnFailureListener(e -> {
+//                    Log.w("Firestore", "新增群組失敗", e);
+//                });
 
         recyclerView = view.findViewById(R.id.recycler_groups);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
