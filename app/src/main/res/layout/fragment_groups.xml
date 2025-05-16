@@ -1,17 +1,23 @@
-<?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <FrameLayout
+    <!-- 上方新增群組按鈕 -->
+    <Button
+        android:id="@+id/btn_add_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="新增群組"
+        android:drawableLeft="@drawable/add"
+        android:drawablePadding="4dp"
+        android:layout_gravity="end"
+        android:layout_margin="16dp"/>
+
+    <!-- 下方群組列表 RecyclerView -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_groups"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recycler_groups"
-            android:layout_width="match_parent"
-            android:layout_height="693dp" />
-
-    </FrameLayout>
-
-</FrameLayout>
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+</LinearLayout>

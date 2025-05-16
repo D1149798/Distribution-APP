@@ -10,6 +10,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -24,7 +25,7 @@ import fcu.app.distributionapp.model.Group;
 
 public class GroupsFragment extends Fragment {
     private FirebaseFirestore db;
-
+    private Button btnAddGroup;
     private RecyclerView recyclerView;
     private GroupAdapter adapter;
     private List<Group> groupList;
@@ -65,10 +66,17 @@ public class GroupsFragment extends Fragment {
 //                .addOnFailureListener(e -> {
 //                    Log.w("Firestore", "新增群組失敗", e);
 //                });
-
+        btnAddGroup = view.findViewById(R.id.btn_add_group);
         recyclerView = view.findViewById(R.id.recycler_groups);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+        btnAddGroup.setOnClickListener(v -> {
+            requireActivity().getSupportFragmentManager()
+                    .beginTransaction()
+                    .replace(R.id.fragment_main, new AddGroupFragment())
+                    .addToBackStack(null)
+                    .commit();
 
+        });
         groupList = new ArrayList<>();
         groupList.add(new Group("123","台南一日遊"));
         groupList.add(new Group("456","畢旅分帳"));

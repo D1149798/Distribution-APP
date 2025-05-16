@@ -24,16 +24,16 @@
         "source": "C:\\Users\\93051\\.gradle\\daemon\\8.10.2\\fcu.app.distributionapp-main-43:\\layout\\fragment_groups.xml"
     },
     {
-        "merged": "C:\\Users\\93051\\.gradle\\daemon\\8.10.2\\fcu.app.distributionapp-debug-41:\\layout_fragment_chat.xml.flat",
-        "source": "C:\\Users\\93051\\.gradle\\daemon\\8.10.2\\fcu.app.distributionapp-main-43:\\layout\\fragment_chat.xml"
+        "merged": "fcu.app.distributionapp-debug-41:/layout_fragment_groups.xml.flat",
+        "source": "fcu.app.distributionapp-main-43:/layout/fragment_groups.xml"
     },
     {
         "merged": "C:\\Users\\93051\\.gradle\\daemon\\8.10.2\\fcu.app.distributionapp-debug-41:\\drawable_back.xml.flat",
         "source": "C:\\Users\\93051\\.gradle\\daemon\\8.10.2\\fcu.app.distributionapp-main-43:\\drawable\\back.xml"
     },
     {
-        "merged": "fcu.app.distributionapp-debug-41:/layout_item_friend.xml.flat",
-        "source": "fcu.app.distributionapp-main-43:/layout/item_friend.xml"
+        "merged": "C:\\Users\\93051\\.gradle\\daemon\\8.10.2\\fcu.app.distributionapp-debug-41:\\layout_fragment_chat.xml.flat",
+        "source": "C:\\Users\\93051\\.gradle\\daemon\\8.10.2\\fcu.app.distributionapp-main-43:\\layout\\fragment_chat.xml"
     },
     {
         "merged": "C:\\Users\\93051\\.gradle\\daemon\\8.10.2\\fcu.app.distributionapp-debug-41:\\layout_fragment_add_transaction.xml.flat",
@@ -62,6 +62,10 @@
     {
         "merged": "C:\\Users\\93051\\.gradle\\daemon\\8.10.2\\fcu.app.distributionapp-debug-41:\\drawable_ic_launcher_background.xml.flat",
         "source": "C:\\Users\\93051\\.gradle\\daemon\\8.10.2\\fcu.app.distributionapp-main-43:\\drawable\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\93051\\.gradle\\daemon\\8.10.2\\fcu.app.distributionapp-debug-41:\\layout_fragment_add_friend.xml.flat",
+        "source": "C:\\Users\\93051\\.gradle\\daemon\\8.10.2\\fcu.app.distributionapp-main-43:\\layout\\fragment_add_friend.xml"
     },
     {
         "merged": "C:\\Users\\93051\\.gradle\\daemon\\8.10.2\\fcu.app.distributionapp-debug-41:\\layout_item_detail.xml.flat",
@@ -116,10 +120,6 @@
         "source": "C:\\Users\\93051\\.gradle\\daemon\\8.10.2\\fcu.app.distributionapp-main-43:\\layout\\fragment_exchange_rate.xml"
     },
     {
-        "merged": "fcu.app.distributionapp-debug-41:/layout_fragment_friends.xml.flat",
-        "source": "fcu.app.distributionapp-main-43:/layout/fragment_friends.xml"
-    },
-    {
         "merged": "C:\\Users\\93051\\.gradle\\daemon\\8.10.2\\fcu.app.distributionapp-debug-41:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
         "source": "C:\\Users\\93051\\.gradle\\daemon\\8.10.2\\fcu.app.distributionapp-main-43:\\mipmap-xxxhdpi\\ic_launcher.webp"
     },
@@ -152,6 +152,10 @@
         "source": "C:\\Users\\93051\\.gradle\\daemon\\8.10.2\\fcu.app.distributionapp-main-43:\\layout\\item_message.xml"
     },
     {
+        "merged": "fcu.app.distributionapp-debug-41:/layout_fragment_add_group.xml.flat",
+        "source": "fcu.app.distributionapp-main-43:/layout/fragment_add_group.xml"
+    },
+    {
         "merged": "C:\\Users\\93051\\.gradle\\daemon\\8.10.2\\fcu.app.distributionapp-debug-41:\\drawable_swap_horiz.xml.flat",
         "source": "C:\\Users\\93051\\.gradle\\daemon\\8.10.2\\fcu.app.distributionapp-main-43:\\drawable\\swap_horiz.xml"
     },
@@ -174,10 +178,6 @@
     {
         "merged": "C:\\Users\\93051\\.gradle\\daemon\\8.10.2\\fcu.app.distributionapp-debug-41:\\drawable_bg_menu_selector.xml.flat",
         "source": "C:\\Users\\93051\\.gradle\\daemon\\8.10.2\\fcu.app.distributionapp-main-43:\\drawable\\bg_menu_selector.xml"
-    },
-    {
-        "merged": "fcu.app.distributionapp-debug-41:/layout_fragment_add_friend.xml.flat",
-        "source": "fcu.app.distributionapp-main-43:/layout/fragment_add_friend.xml"
     },
     {
         "merged": "C:\\Users\\93051\\.gradle\\daemon\\8.10.2\\fcu.app.distributionapp-debug-41:\\mipmap-xhdpi_ic_launcher.webp.flat",

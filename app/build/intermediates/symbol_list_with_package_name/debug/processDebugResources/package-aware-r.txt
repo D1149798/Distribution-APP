@@ -3288,8 +3288,10 @@ id btnConvert
 id btnSwitch
 id btn_add
 id btn_add_friend
+id btn_add_group
 id btn_back
 id btn_chat
+id btn_create_group
 id btn_login
 id btn_rate
 id btn_register
@@ -3388,6 +3390,8 @@ id enterAlways
 id enterAlwaysCollapsed
 id escape
 id etAmount
+id et_add_group_members
+id et_add_group_name
 id et_cost
 id et_friend_mail
 id et_l_email
@@ -3905,6 +3909,7 @@ layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout fragment_accounts
 layout fragment_add_friend
+layout fragment_add_group
 layout fragment_add_transaction
 layout fragment_chat
 layout fragment_details

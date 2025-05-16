@@ -3287,8 +3287,10 @@ int id btnConvert 0x7f090074
 int id btnSwitch 0x7f090075
 int id btn_add 0x7f090076
 int id btn_add_friend 0x7f090252
+int id btn_add_group 0x7f090256
 int id btn_back 0x7f090077
 int id btn_chat 0x7f090078
+int id btn_create_group 0x7f090257
 int id btn_login 0x7f090079
 int id btn_rate 0x7f09007a
 int id btn_register 0x7f09007b
@@ -3387,6 +3389,8 @@ int id enterAlways 0x7f0900d7
 int id enterAlwaysCollapsed 0x7f0900d8
 int id escape 0x7f0900d9
 int id etAmount 0x7f0900da
+int id et_add_group_members 0x7f090258
+int id et_add_group_name 0x7f090259
 int id et_cost 0x7f0900db
 int id et_friend_mail 0x7f090253
 int id et_l_email 0x7f0900dc
@@ -3904,6 +3908,7 @@ int layout design_text_input_end_icon 0x7f0c0030
 int layout design_text_input_start_icon 0x7f0c0031
 int layout fragment_accounts 0x7f0c0032
 int layout fragment_add_friend 0x7f0c007f
+int layout fragment_add_group 0x7f0c0080
 int layout fragment_add_transaction 0x7f0c0033
 int layout fragment_chat 0x7f0c0034
 int layout fragment_details 0x7f0c0035
