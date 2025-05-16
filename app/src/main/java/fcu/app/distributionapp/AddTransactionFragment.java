@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
@@ -87,10 +88,16 @@ public class AddTransactionFragment extends Fragment {
         tvDate = view.findViewById(R.id.tv_date);
         btnSave = view.findViewById(R.id.btn_save);
 
+        loadCurrencyFromCSV();
+
+        ArrayAdapter<String> currencyAdapter = new ArrayAdapter<>(requireContext(), android.R.layout.simple_dropdown_item_1line, displayCurrencyList);
+        currencyAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        currencySpinner.setAdapter(currencyAdapter);
+
+// /////準備要刪除的部分
         // 範例選單資料
         String[] groupList = {"旅遊小組", "家庭", "同事", "朋友"};
         String[] payerList = {"小明", "小華", "小美"};
-        String[] currencyList = {"TWD", "USD", "JPY", "EUR"};
 
         ArrayAdapter<String> groupAdapter = new ArrayAdapter<>(getContext(), android.R.layout.simple_spinner_item, groupList);
         groupAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -100,22 +107,26 @@ public class AddTransactionFragment extends Fragment {
         payerAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         payerSpinner.setAdapter(payerAdapter);
 
-        loadCurrencyFromCSV();
-
-        ArrayAdapter<String> currencyAdapter = new ArrayAdapter<>(requireContext(), android.R.layout.simple_dropdown_item_1line, displayCurrencyList);
-        currencyAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        currencySpinner.setAdapter(currencyAdapter);
-
         // 假資料
         memberList.clear();
         memberList.add(new GroupMember("小明"));
         memberList.add(new GroupMember("小華"));
         memberList.add(new GroupMember("小美"));
         memberList.add(new GroupMember("小綠"));
+// /////
 
         adapter = new GroupMemberAdapter(memberList);
         beneficiaryRecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         beneficiaryRecyclerView.setAdapter(adapter);
+//處理中先註解
+//        loadGroupsFromFirestore();
+//        groupSpinner.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+//            @Override
+//            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+//                String selectedGroup = parent.getItemAtPosition(position).toString();
+//                loadGroupMembers(selectedGroup);
+//            }
+//        });
 
         // 日期選擇
         tvDate.setOnClickListener(v -> {
@@ -203,14 +214,49 @@ public class AddTransactionFragment extends Fragment {
             Toast.makeText(getContext(), "讀取 currencies.csv 失敗", Toast.LENGTH_LONG).show();
         }
     }
-    private String getDisplayCurrency(String code) {
-        for (String item : displayCurrencyList) {
-            if (item.startsWith(code + " ")) {
-                return item;
-            }
-        }
-        return "";
+
+    private void loadGroupsFromFirestore() {
+        db.collection("groups")
+                .get()
+                .addOnSuccessListener(queryDocumentSnapshots -> {
+                    List<String> groupNames = new ArrayList<>();
+                    for (var doc : queryDocumentSnapshots) {
+                        String groupName = doc.getString("name");
+                        groupNames.add(groupName);
+                    }
+
+                    ArrayAdapter<String> groupAdapter = new ArrayAdapter<>(requireContext(), android.R.layout.simple_spinner_item, groupNames);
+                    groupAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    groupSpinner.setAdapter(groupAdapter);
+                })
+                .addOnFailureListener(e -> Toast.makeText(getContext(), "載入群組失敗：" + e.getMessage(), Toast.LENGTH_SHORT).show());
     }
+    private void loadGroupMembers(String groupName) {
+        db.collection("groups")
+                .whereEqualTo("name", groupName)
+                .get()
+                .addOnSuccessListener(queryDocumentSnapshots -> {
+                    if (!queryDocumentSnapshots.isEmpty()) {
+                        var doc = queryDocumentSnapshots.getDocuments().get(0);
+                        List<String> members = (List<String>) doc.get("members");
+
+                        // 更新 payerSpinner
+                        ArrayAdapter<String> payerAdapter = new ArrayAdapter<>(requireContext(), android.R.layout.simple_spinner_item, members);
+                        payerAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                        payerSpinner.setAdapter(payerAdapter);
+
+                        // 更新 RecyclerView for 受益人選擇
+                        memberList.clear();
+                        for (String name : members) {
+                            memberList.add(new GroupMember(name));
+                        }
+                        adapter.notifyDataSetChanged();
+                    }
+                })
+                .addOnFailureListener(e -> Toast.makeText(getContext(), "載入成員失敗：" + e.getMessage(), Toast.LENGTH_SHORT).show());
+    }
+
+
 
     private String getCurrencyCodeFromDisplay(String display) {
         if (display.contains(" - ")) {
