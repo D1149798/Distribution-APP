@@ -21,13 +21,17 @@ import com.google.firebase.FirebaseApp;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.FirebaseFirestore;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class RegisterActivity extends AppCompatActivity {
 
     private EditText etREmail, etRPassword, etRPasswordCheck;
     private Button btnRegister, btnToLogin;
     private FirebaseAuth mAuth;
-
+    private FirebaseFirestore db;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,6 +45,8 @@ public class RegisterActivity extends AppCompatActivity {
 
         FirebaseApp.initializeApp(this);
         mAuth = FirebaseAuth.getInstance();
+        db = FirebaseFirestore.getInstance();
+
         etREmail = findViewById(R.id.et_r_email);
         etRPassword = findViewById(R.id.et_r_password);
         etRPasswordCheck = findViewById(R.id.et_r_password_check);
@@ -66,6 +72,26 @@ public class RegisterActivity extends AppCompatActivity {
                                 public void onComplete(@NonNull Task<AuthResult> task) {
                                     if(task.isSuccessful()){
                                         FirebaseUser user = mAuth.getCurrentUser();
+
+                                        //許 新增以下
+                                        String emailValue = user.getEmail();
+                                        String userId = emailValue.split("@")[0]; // 使用 @ 前當作帳號 ID
+                                        Map<String, Object> userData = new HashMap<>();
+                                        userData.put("Email", emailValue);
+                                        db.collection("users")
+                                                .document(userId)
+                                                .set(userData)
+                                                .addOnSuccessListener(aVoid -> {
+                                                    Toast.makeText(RegisterActivity.this, "註冊成功：" + emailValue, Toast.LENGTH_SHORT).show();
+                                                    startActivity(new Intent(RegisterActivity.this, LoginActivity.class));
+                                                    finish();
+                                                })
+                                                .addOnFailureListener(e -> {
+                                                    Toast.makeText(RegisterActivity.this, "註冊成功但Firestore寫入失敗：" + e.getMessage(), Toast.LENGTH_LONG).show();
+                                                    startActivity(new Intent(RegisterActivity.this, LoginActivity.class));
+                                                    finish();
+                                                });
+
                                         Toast.makeText(RegisterActivity.this, "註冊成功：" + user.getEmail(), Toast.LENGTH_SHORT).show();
                                         startActivity(new Intent(RegisterActivity.this, LoginActivity.class));
                                         finish();
