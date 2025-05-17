@@ -1,5 +1,6 @@
 package fcu.app.distributionapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,42 +8,41 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
+import android.widget.Button;
+import android.widget.EditText;
 
 public class SuggestionFragment extends Fragment {
-
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
-
-    public SuggestionFragment() {
-        // Required empty public constructor
-    }
-
-    public static SuggestionFragment newInstance(String param1, String param2) {
-        SuggestionFragment fragment = new SuggestionFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
-    }
+    private EditText etSearch;
+    private Button btnSearch;
+    private WebView webView;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_suggestion, container, false);
+        View view = inflater.inflate(R.layout.fragment_suggestion, container, false);
+
+        EditText etSearch = view.findViewById(R.id.et_search);
+        Button btnSearch = view.findViewById(R.id.btn_search);
+        webView = view.findViewById(R.id.web_view);
+
+        // 啟用 JavaScript（Google 搜尋需要）
+        webView.getSettings().setJavaScriptEnabled(true);
+        webView.setWebViewClient(new WebViewClient()); // 讓點擊連結不跳出瀏覽器
+
+        btnSearch.setOnClickListener(v -> {
+            String query = etSearch.getText().toString().trim();
+            if (!query.isEmpty()) {
+                String url = "https://www.google.com/search?q=" + query;
+                webView.loadUrl(url);
+
+                //清空搜尋框內容並隱藏搜尋框和按鈕
+                etSearch.setText("");
+                etSearch.setVisibility(View.GONE);
+                btnSearch.setVisibility(View.GONE);
+            }
+        });
+        return view;
     }
 }

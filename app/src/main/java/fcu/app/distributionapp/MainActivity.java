@@ -68,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
         Fragment exchangeFragment = ExchangeRateFragment.newInstance();
         Fragment friendsFragment = FriendsFragment.newInstance();
         Fragment groupsFragment = GroupsFragment.newInstance("", "");
-        Fragment suggestionFragment = SuggestionFragment.newInstance("", "");
+        Fragment suggestionFragment = new SuggestionFragment();
 
         setCurrentFragment(groupsFragment);
 

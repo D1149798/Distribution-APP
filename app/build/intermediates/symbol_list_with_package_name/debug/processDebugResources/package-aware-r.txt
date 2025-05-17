@@ -3296,6 +3296,7 @@ id btn_login
 id btn_rate
 id btn_register
 id btn_save
+id btn_search
 id btn_to_login
 id btn_to_register
 id btn_transaction
@@ -3760,6 +3761,7 @@ id view_tree_saved_state_registry_owner
 id view_tree_view_model_store_owner
 id visible
 id visible_removing_fragment_view_tag
+id web_view
 id west
 id wide
 id withText

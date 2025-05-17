@@ -37,6 +37,7 @@ id btn_login
 id btn_rate
 id btn_register
 id btn_save
+id btn_search
 id btn_to_login
 id btn_to_register
 id btn_transaction
@@ -102,6 +103,7 @@ id tv_friend_mail
 id tv_friend_name
 id tv_group_name
 id tv_message
+id web_view
 layout activity_login
 layout activity_main
 layout activity_register
