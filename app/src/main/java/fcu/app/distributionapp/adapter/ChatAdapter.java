@@ -8,6 +8,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 import java.util.List;
 
 import fcu.app.distributionapp.R;
@@ -16,7 +18,7 @@ import fcu.app.distributionapp.model.Message;
 public class ChatAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
     private List<Message> messages;
-    private String currentUserId = "user_123"; // 假設目前使用者的 ID（之後可以改成從 Firebase auth 取得）
+    private String currentUserId = FirebaseAuth.getInstance().getCurrentUser().getEmail(); // 假設目前使用者的 ID（之後可以改成從 Firebase auth 取得）
 
     private static final int VIEW_TYPE_ME = 1;
     private static final int VIEW_TYPE_OTHER = 2;
@@ -76,14 +78,17 @@ public class ChatAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
     static class OtherMessageViewHolder extends RecyclerView.ViewHolder {
         TextView messageText;
+        TextView senderNameText;
 
         public OtherMessageViewHolder(@NonNull View itemView) {
             super(itemView);
             messageText = itemView.findViewById(R.id.tv_message);
+            senderNameText = itemView.findViewById(R.id.textView_sender);
         }
 
         public void bind(Message msg) {
             messageText.setText(msg.getContent());
+            senderNameText.setText(msg.getSenderName());
         }
     }
 }

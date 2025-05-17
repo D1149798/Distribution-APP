@@ -135,7 +135,7 @@ public class ChatFragment extends Fragment {
         FirebaseFirestore db = FirebaseFirestore.getInstance();
 
         // 假設這些是目前登入的使用者資訊
-        String senderId = FirebaseAuth.getInstance().getCurrentUser().getUid();
+        String senderId = FirebaseAuth.getInstance().getCurrentUser().getEmail();
         String senderName = FirebaseAuth.getInstance().getCurrentUser().getDisplayName();  // 如果你有設定 displayName
 
         // 建立訊息物件
