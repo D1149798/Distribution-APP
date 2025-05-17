@@ -16,7 +16,9 @@ import android.widget.EditText;
 
 import com.google.firebase.Timestamp;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.CollectionReference;
+import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreException;
@@ -133,30 +135,77 @@ public class ChatFragment extends Fragment {
 
     private void sendMessage(String text) {
         FirebaseFirestore db = FirebaseFirestore.getInstance();
+        FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
 
-        // 假設這些是目前登入的使用者資訊
-        String senderId = FirebaseAuth.getInstance().getCurrentUser().getEmail();
-        String senderName = FirebaseAuth.getInstance().getCurrentUser().getDisplayName();  // 如果你有設定 displayName
+        if (currentUser == null) return;
 
-        // 建立訊息物件
-        Message message = new Message(
-                senderId,
-                senderName != null ? senderName : "匿名",
-                text,
-                Timestamp.now()
-        );
+        String senderEmail = currentUser.getEmail();
 
-        // 寫入 Firestore：你這裡應該是 chats/test_chat/messages 子集合
-        db.collection("chats")
-                .document("test_chat")
-                .collection("messages")
-                .add(message)
-                .addOnSuccessListener(documentReference -> {
-                    Log.d("Chat", "訊息已送出");
+        // 查找 users 裡符合該 email 的文件
+        db.collection("users")
+                .whereEqualTo("Email", senderEmail)
+                .get()
+                .addOnSuccessListener(queryDocumentSnapshots -> {
+                    String senderName = "匿名"; // 預設值
+
+                    if (!queryDocumentSnapshots.isEmpty()) {
+                        // 假設 email 是唯一的，只會找到一個文件
+                        DocumentSnapshot doc = queryDocumentSnapshots.getDocuments().get(0);
+                        senderName = doc.getId(); // 這就是你要的文件 ID（如 "123456"）
+                    }
+
+                    // 建立訊息物件
+                    Message message = new Message(
+                            senderEmail,
+                            senderName,
+                            text,
+                            Timestamp.now()
+                    );
+
+                    // 寫入 Firestore：chats/test_chat/messages 子集合
+                    db.collection("chats")
+                            .document("test_chat")
+                            .collection("messages")
+                            .add(message)
+                            .addOnSuccessListener(documentReference -> {
+                                Log.d("Chat", "訊息已送出");
+                            })
+                            .addOnFailureListener(e -> {
+                                Log.w("Chat", "送出訊息失敗", e);
+                            });
                 })
                 .addOnFailureListener(e -> {
-                    Log.w("Chat", "送出訊息失敗", e);
+                    Log.w("Chat", "查詢使用者失敗", e);
                 });
     }
+
+
+//    private void sendMessage(String text) {
+//        FirebaseFirestore db = FirebaseFirestore.getInstance();
+//
+//        // 假設這些是目前登入的使用者資訊
+//        String senderId = FirebaseAuth.getInstance().getCurrentUser().getEmail();
+//        String senderName = FirebaseAuth.getInstance().getCurrentUser().getDisplayName();  // 如果你有設定 displayName
+//
+//        // 建立訊息物件
+//        Message message = new Message(
+//                senderId,
+//                senderName != null ? senderName : "匿名",
+//                text,
+//                Timestamp.now()
+//        );
+//
+//        // 寫入 Firestore：你這裡應該是 chats/test_chat/messages 子集合
+//        db.collection("chats")
+//                .document("test_chat")
+//                .collection("messages")
+//                .add(message)
+//                .addOnSuccessListener(documentReference -> {
+//                    Log.d("Chat", "訊息已送出");
+//                })
+//                .addOnFailureListener(e -> {
+//                    Log.w("Chat", "送出訊息失敗", e);
+//                });
+//    }
 
 }
