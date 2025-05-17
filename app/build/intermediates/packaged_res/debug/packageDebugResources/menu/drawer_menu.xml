@@ -31,8 +31,6 @@
     <item />
     <item />
     <item />
-    <item />
-    <item />
     <item
         android:id="@+id/logout"
         android:title="📤Logout" />
