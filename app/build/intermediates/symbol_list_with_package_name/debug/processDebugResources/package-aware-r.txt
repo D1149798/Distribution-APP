@@ -3699,6 +3699,7 @@ id textTop
 id textView
 id textView2
 id textView_sender
+id textView_time
 id text_amount
 id text_arrow
 id text_date

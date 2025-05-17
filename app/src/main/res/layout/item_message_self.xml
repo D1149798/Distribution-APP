@@ -5,13 +5,36 @@
     android:orientation="horizontal"
     android:padding="8dp">
 
-    <TextView
-        android:id="@+id/tv_message"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="我發送的訊息"
-        android:background="@drawable/message_bg_self"
-        android:textColor="#FFFFFF"
-        android:padding="8dp"
-        android:layout_margin="4dp" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="right"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginBottom="2dp"
+            android:gravity="end"
+            android:text="14:35"
+            android:textColor="#AAAAAA"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/tv_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:background="@drawable/message_bg_self"
+            android:padding="8dp"
+            android:text="我發送的訊息"
+            android:textColor="#FFFFFF" />
+
+    </LinearLayout>
+
+    <!-- 顯示時間 -->
 </LinearLayout>
