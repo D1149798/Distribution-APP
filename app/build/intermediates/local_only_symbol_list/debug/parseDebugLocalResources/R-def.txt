@@ -38,11 +38,8 @@ id btn_login
 id btn_rate
 id btn_register
 id btn_save
-<<<<<<< Updated upstream
 id btn_search
-=======
 id btn_settle
->>>>>>> Stashed changes
 id btn_to_login
 id btn_to_register
 id btn_transaction
@@ -109,13 +106,9 @@ id tv_friend_mail
 id tv_friend_name
 id tv_group_name
 id tv_message
-<<<<<<< Updated upstream
-id web_view
-=======
 id tv_note
 id tv_payer
-id tv_time
->>>>>>> Stashed changes
+id web_view
 layout activity_login
 layout activity_main
 layout activity_register
@@ -128,11 +121,8 @@ layout fragment_details
 layout fragment_exchange_rate
 layout fragment_friends
 layout fragment_groups
-<<<<<<< Updated upstream
 layout fragment_suggestion
-=======
 layout fragment_transaction_detail
->>>>>>> Stashed changes
 layout fragment_transaction_history
 layout item_detail
 layout item_friend

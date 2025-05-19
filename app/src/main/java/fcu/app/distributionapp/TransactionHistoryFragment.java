@@ -49,14 +49,14 @@ public class TransactionHistoryFragment extends Fragment {
         recyclerView = view.findViewById(R.id.rv_transaction_list);
         settleButton = view.findViewById(R.id.btn_settle);
 
-        adapter = new TransactionAdapter(transactions, transaction -> {
-            // 點擊某筆紀錄 → 跳到詳細頁
-            Fragment detailFragment = TransactionDetailFragment.newInstance(transaction);
-            requireActivity().getSupportFragmentManager().beginTransaction()
-                    .replace(R.id.childFragmentContainer, detailFragment)
-                    .addToBackStack(null)
-                    .commit();
-        });
+//        adapter = new TransactionAdapter(transactions, transaction -> {
+//            // 點擊某筆紀錄 → 跳到詳細頁
+//            Fragment detailFragment = TransactionDetailFragment.newInstance(transaction);
+//            requireActivity().getSupportFragmentManager().beginTransaction()
+//                    .replace(R.id.childFragmentContainer, detailFragment)
+//                    .addToBackStack(null)
+//                    .commit();
+//        });
 
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         recyclerView.setAdapter(adapter);

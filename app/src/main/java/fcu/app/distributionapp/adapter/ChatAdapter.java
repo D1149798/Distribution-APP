@@ -24,6 +24,7 @@ public class ChatAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     private List<Message> messages;
     private String currentUserId = FirebaseAuth.getInstance().getCurrentUser().getEmail(); // 假設目前使用者的 ID（之後可以改成從 Firebase auth 取得）
 
+    private static final int VIEW_TYPE_DATE = 0;
     private static final int VIEW_TYPE_ME = 1;
     private static final int VIEW_TYPE_OTHER = 2;
 
@@ -118,4 +119,6 @@ public class ChatAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
             }
         }
     }
+
+
 }
