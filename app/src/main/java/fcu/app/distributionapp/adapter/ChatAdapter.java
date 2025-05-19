@@ -8,9 +8,13 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.firebase.Timestamp;
 import com.google.firebase.auth.FirebaseAuth;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 
 import fcu.app.distributionapp.R;
 import fcu.app.distributionapp.model.Message;
@@ -65,30 +69,53 @@ public class ChatAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
     static class MyMessageViewHolder extends RecyclerView.ViewHolder {
         TextView messageText;
+        TextView timeTextView;
 
         public MyMessageViewHolder(@NonNull View itemView) {
             super(itemView);
             messageText = itemView.findViewById(R.id.tv_message);
+            timeTextView = itemView.findViewById(R.id.textView_time);
         }
 
         public void bind(Message msg) {
             messageText.setText(msg.getContent());
+
+            Timestamp ts = msg.getTimestamp();
+            if (ts != null) {
+                Date date = ts.toDate();
+                SimpleDateFormat sdf = new SimpleDateFormat("HH:mm", Locale.getDefault());
+                String timeText = sdf.format(date);
+                timeTextView.setText(timeText); // <-- 指定時間顯示位置
+            } else {
+                timeTextView.setText(""); // 還沒同步好
+            }
         }
     }
 
     static class OtherMessageViewHolder extends RecyclerView.ViewHolder {
         TextView messageText;
         TextView senderNameText;
+        TextView timeTextView;
 
         public OtherMessageViewHolder(@NonNull View itemView) {
             super(itemView);
             messageText = itemView.findViewById(R.id.tv_message);
             senderNameText = itemView.findViewById(R.id.textView_sender);
+            timeTextView = itemView.findViewById(R.id.textView_time);
         }
 
         public void bind(Message msg) {
             messageText.setText(msg.getContent());
             senderNameText.setText(msg.getSenderName());
+            Timestamp ts = msg.getTimestamp();
+            if (ts != null) {
+                Date date = ts.toDate();
+                SimpleDateFormat sdf = new SimpleDateFormat("HH:mm", Locale.getDefault());
+                String timeText = sdf.format(date);
+                timeTextView.setText(timeText); // <-- 指定時間顯示位置
+            } else {
+                timeTextView.setText(""); // 還沒同步好
+            }
         }
     }
 }
