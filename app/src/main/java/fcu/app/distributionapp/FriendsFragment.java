@@ -67,21 +67,25 @@ public class FriendsFragment extends Fragment {
     private void loadFriendsFromFirestore() {
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
 
-        String currentUserId = user.getEmail().split("@")[0];
+        String currentUid = user.getUid();
 
-        db.collection("friends").document(currentUserId).get()
+        db.collection("friends").document(currentUid).get()
                 .addOnSuccessListener(snapshot -> {
                     if (snapshot.exists()) {
                         Map<String, Object> friendsMap = snapshot.getData();
-                        for (String friendId : friendsMap.keySet()) {
-                            db.collection("users").document(friendId).get()
-                                    .addOnSuccessListener(friendSnapshot -> {
-                                        if (friendSnapshot.exists()) {
-                                            String email = friendSnapshot.getString("Email");
-                                            groupList.add(new FriendGroup(friendId, email));
-                                            adapter.notifyDataSetChanged();
-                                        }
-                                    });
+                        if (friendsMap != null) {
+                            groupList.clear();
+                            for (String friendUid : friendsMap.keySet()) {
+                                db.collection("users").document(friendUid).get()
+                                        .addOnSuccessListener(friendSnapshot -> {
+                                            if (friendSnapshot.exists()) {
+                                                String email = friendSnapshot.getString("Email");
+                                                String name = friendSnapshot.getString("Name");
+                                                groupList.add(new FriendGroup(name, email));
+                                                adapter.notifyDataSetChanged();
+                                            }
+                                        });
+                            }
                         }
                     } else {
                         Toast.makeText(getContext(), "目前尚未有好友", Toast.LENGTH_SHORT).show();
