@@ -32,6 +32,7 @@
             android:background="@drawable/message_bg_self"
             android:padding="8dp"
             android:text="我發送的訊息"
+            android:textIsSelectable="true"
             android:textColor="#FFFFFF" />
 
     </LinearLayout>

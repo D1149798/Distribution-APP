@@ -102,6 +102,7 @@ id tvRealTimeRate
 id tvResult
 id tv_amount
 id tv_date
+id tv_date_header
 id tv_friend_mail
 id tv_friend_name
 id tv_group_name
@@ -124,6 +125,7 @@ layout fragment_groups
 layout fragment_suggestion
 layout fragment_transaction_detail
 layout fragment_transaction_history
+layout item_date_header
 layout item_detail
 layout item_friend
 layout item_group
