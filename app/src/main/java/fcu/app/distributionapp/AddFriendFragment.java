@@ -5,6 +5,7 @@ import android.os.Bundle;
 import androidx.fragment.app.Fragment;
 
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,7 +16,9 @@ import android.widget.Toast;
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.SetOptions;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -60,25 +63,43 @@ public class AddFriendFragment extends Fragment {
         btnAddFriend = view.findViewById(R.id.btn_add_friend);
 
         btnAddFriend.setOnClickListener(v ->{
-            String friendEmail = editFriendMail.getText().toString().trim();
-            String friendId = friendEmail.split("@")[0]; //只取前段當欄位名
 
-            if (TextUtils.isEmpty(friendId)) {
+            String inputEmail = editFriendMail.getText().toString().trim();
+
+            if (TextUtils.isEmpty(inputEmail)) {
                 Toast.makeText(getContext(), "請輸入好友帳號", Toast.LENGTH_SHORT).show();
                 return;
             }
-            FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-            String currentUserId = user.getEmail().split("@")[0];
+
+            FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
+            String currentUid = currentUser.getUid();
+            String currentName = currentUser.getEmail().split("@")[0];
 
             // 先檢查 /users/{friendId} 是否存在
-            db.collection("users").document(friendId).get()
-                    .addOnSuccessListener(snapshot -> {
-                        if (snapshot.exists()) {
-                            // 存在，新增雙向好友
-                            addFriend(currentUserId, friendId);
-                            addFriend(friendId, currentUserId); // 反向加入
+            db.collection("users")
+                    .whereEqualTo("Email", inputEmail)
+                    .get()
+                    .addOnSuccessListener(querySnapshot -> {
+                        if (!querySnapshot.isEmpty()) {
+                            DocumentSnapshot doc = querySnapshot.getDocuments().get(0);
+                            String friendUid = doc.getId(); //UID
+                            String friendEmail = doc.getString("Email");
+                            String friendName = doc.getString("Name");
+
+                            if (friendUid.equals(currentUid)) {
+                                Toast.makeText(getContext(), "不能加自己為好友", Toast.LENGTH_SHORT).show();
+                                return;
+                            }
+
+                            Log.d("AddFriendDebug", "目前登入者 UID: " + currentUid);
+                            Log.d("AddFriendDebug", "輸入 email: " + inputEmail);
+                            Log.d("AddFriendDebug", "查到的好友 UID: " + friendUid);
+
+                            // ✅ 加入雙向好友（key: UID, value: name）
+                            addFriend(currentUid, friendUid, friendName);
+                            addFriend(friendUid, currentUid, currentName);
+
                         } else {
-                            //沒有這個帳號
                             Toast.makeText(getContext(), "此帳號尚未註冊", Toast.LENGTH_SHORT).show();
                         }
                     })
@@ -89,20 +110,18 @@ public class AddFriendFragment extends Fragment {
         // Inflate the layout for this fragment
         return view;
     }
-    private void addFriend(String userId, String friendId) {
+    private void addFriend(String userUid, String friendUid, String friendName) {
+        Map<String, Object> data = new HashMap<>();
+        data.put(friendUid, friendName); // 🔑 UID → 名稱
+
         db.collection("friends")
-                .document(userId)
-                .update(friendId, true)
-                .addOnSuccessListener(unused -> {
-                    Toast.makeText(getContext(), "已加入好友：" + friendId, Toast.LENGTH_SHORT).show();
+                .document(userUid)
+                .set(data, SetOptions.merge()) // ✅ merge 避免覆蓋整份資料
+                .addOnSuccessListener(aVoid -> {
+                    Toast.makeText(getContext(), "已加入好友：" + friendName, Toast.LENGTH_SHORT).show();
                 })
                 .addOnFailureListener(e -> {
-                    // 若 document 不存在，先建立
-                    Map<String, Object> data = new HashMap<>();
-                    data.put(friendId, true);
-                    db.collection("friends")
-                            .document(userId)
-                            .set(data);
+                    Toast.makeText(getContext(), "加入好友失敗：" + e.getMessage(), Toast.LENGTH_SHORT).show();
                 });
     }
 }

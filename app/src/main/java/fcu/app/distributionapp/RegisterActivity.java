@@ -74,12 +74,16 @@ public class RegisterActivity extends AppCompatActivity {
                                         FirebaseUser user = mAuth.getCurrentUser();
 
                                         //新增以下
+                                        String uid = user.getUid(); // ✅ 唯一 ID
                                         String emailValue = user.getEmail();
-                                        String userId = emailValue.split("@")[0]; // 使用 @ 前當作帳號 ID
+                                        String name = emailValue.split("@")[0];
+
                                         Map<String, Object> userData = new HashMap<>();
                                         userData.put("Email", emailValue);
-                                        db.collection("users")
-                                                .document(userId)
+                                        userData.put("Name", name);
+
+                                        db.collection("users") // 建議使用新集合避免混淆
+                                                .document(uid)
                                                 .set(userData)
                                                 .addOnSuccessListener(aVoid -> {
                                                     Toast.makeText(RegisterActivity.this, "註冊成功：" + emailValue, Toast.LENGTH_SHORT).show();
@@ -87,7 +91,7 @@ public class RegisterActivity extends AppCompatActivity {
                                                     finish();
                                                 })
                                                 .addOnFailureListener(e -> {
-                                                    Toast.makeText(RegisterActivity.this, "註冊成功但Firestore寫入失敗：" + e.getMessage(), Toast.LENGTH_LONG).show();
+                                                    Toast.makeText(RegisterActivity.this, "Firestore 寫入失敗：" + e.getMessage(), Toast.LENGTH_LONG).show();
                                                     startActivity(new Intent(RegisterActivity.this, LoginActivity.class));
                                                     finish();
                                                 });
