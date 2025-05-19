@@ -9,17 +9,25 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 import fcu.app.distributionapp.R;
 import fcu.app.distributionapp.model.GroupMember;
 
 public class GroupMemberAdapter extends RecyclerView.Adapter<GroupMemberAdapter.ViewHolder> {
 
-    private List<GroupMember> memberList;
+    private final List<GroupMember> memberList;
+    private boolean checkBoxVisible = true;
 
     public GroupMemberAdapter(List<GroupMember> memberList) {
         this.memberList = memberList;
+    }
+
+    public void setCheckBoxVisible(boolean visible) {
+        this.checkBoxVisible = visible;
+        notifyDataSetChanged();
     }
 
     public List<GroupMember> getSelectedMembers() {
@@ -30,6 +38,27 @@ public class GroupMemberAdapter extends RecyclerView.Adapter<GroupMemberAdapter.
             }
         }
         return selected;
+    }
+
+    public void setSelectedMembers(List<String> names) {
+        Set<String> selectedNames = new HashSet<>(names);
+        for (GroupMember member : memberList) {
+            member.setSelected(selectedNames.contains(member.getName()));
+        }
+        notifyDataSetChanged();
+    }
+
+    public void clearSelection() {
+        for (GroupMember member : memberList) {
+            member.setSelected(false);
+        }
+        notifyDataSetChanged();
+    }
+
+    public void updateData(List<GroupMember> newMembers) {
+        memberList.clear();
+        memberList.addAll(newMembers);
+        notifyDataSetChanged();
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
@@ -53,24 +82,18 @@ public class GroupMemberAdapter extends RecyclerView.Adapter<GroupMemberAdapter.
     public void onBindViewHolder(@NonNull GroupMemberAdapter.ViewHolder holder, int position) {
         GroupMember member = memberList.get(position);
         holder.checkBox.setText(member.getName());
+
+        holder.checkBox.setOnCheckedChangeListener(null); // 避免觸發多次
         holder.checkBox.setChecked(member.isSelected());
-        holder.checkBox.setOnCheckedChangeListener((buttonView, isChecked) -> member.setSelected(isChecked));
+        holder.checkBox.setVisibility(checkBoxVisible ? View.VISIBLE : View.GONE);
+
+        holder.checkBox.setOnCheckedChangeListener((buttonView, isChecked) -> {
+            member.setSelected(isChecked);
+        });
     }
 
     @Override
     public int getItemCount() {
         return memberList.size();
     }
-    public void updateData(List<GroupMember> newMembers) {
-        this.memberList.clear();
-        this.memberList.addAll(newMembers);
-        notifyDataSetChanged();
-    }
-    public void clearSelection() {
-        for (GroupMember member : memberList) {
-            member.setSelected(false);
-        }
-        notifyDataSetChanged();
-    }
-
 }

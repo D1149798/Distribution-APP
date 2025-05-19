@@ -3292,11 +3292,16 @@ id btn_add_group
 id btn_back
 id btn_chat
 id btn_create_group
+id btn_delete
 id btn_login
 id btn_rate
 id btn_register
 id btn_save
+<<<<<<< Updated upstream
 id btn_search
+=======
+id btn_settle
+>>>>>>> Stashed changes
 id btn_to_login
 id btn_to_register
 id btn_transaction
@@ -3615,6 +3620,7 @@ id right_side
 id rounded
 id row_index_key
 id rv_beneficiaries
+id rv_transaction_list
 id save_non_transition_alpha
 id save_overlay_view
 id sawtooth
@@ -3725,7 +3731,6 @@ id toolbar
 id top
 id topPanel
 id touch_outside
-id transactionList
 id transitionToEnd
 id transitionToStart
 id transition_clip
@@ -3740,11 +3745,18 @@ id triangle
 id tvLastUpdate
 id tvRealTimeRate
 id tvResult
+id tv_amount
 id tv_date
 id tv_friend_mail
 id tv_friend_name
 id tv_group_name
 id tv_message
+<<<<<<< Updated upstream
+=======
+id tv_note
+id tv_payer
+id tv_time
+>>>>>>> Stashed changes
 id unchecked
 id uniform
 id unlabeled
@@ -3917,7 +3929,11 @@ layout fragment_details
 layout fragment_exchange_rate
 layout fragment_friends
 layout fragment_groups
+<<<<<<< Updated upstream
 layout fragment_suggestion
+=======
+layout fragment_transaction_detail
+>>>>>>> Stashed changes
 layout fragment_transaction_history
 layout ime_base_split_test_activity
 layout ime_secondary_split_test_activity
@@ -3927,6 +3943,7 @@ layout item_group
 layout item_group_member
 layout item_message
 layout item_message_self
+layout item_transaction
 layout m3_alert_dialog
 layout m3_alert_dialog_actions
 layout m3_alert_dialog_title

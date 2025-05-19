@@ -3291,11 +3291,16 @@ int id btn_add_group 0x7f090078
 int id btn_back 0x7f090079
 int id btn_chat 0x7f09007a
 int id btn_create_group 0x7f09007b
+int id btn_delete 0x7f090264
 int id btn_login 0x7f09007c
 int id btn_rate 0x7f09007d
 int id btn_register 0x7f09007e
 int id btn_save 0x7f09007f
+<<<<<<< Updated upstream
 int id btn_search 0x7f09025a
+=======
+int id btn_settle 0x7f09025a
+>>>>>>> Stashed changes
 int id btn_to_login 0x7f090080
 int id btn_to_register 0x7f090081
 int id btn_transaction 0x7f090082
@@ -3614,6 +3619,7 @@ int id right_side 0x7f0901ba
 int id rounded 0x7f0901bb
 int id row_index_key 0x7f0901bc
 int id rv_beneficiaries 0x7f0901bd
+int id rv_transaction_list 0x7f09025f
 int id save_non_transition_alpha 0x7f0901be
 int id save_overlay_view 0x7f0901bf
 int id sawtooth 0x7f0901c0
@@ -3699,6 +3705,7 @@ int id textTop 0x7f09020f
 int id textView 0x7f090210
 int id textView2 0x7f090211
 int id textView_sender 0x7f090212
+<<<<<<< Updated upstream
 int id textView_time 0x7f090213
 int id text_amount 0x7f090214
 int id text_arrow 0x7f090215
@@ -3744,6 +3751,55 @@ int id tv_friend_mail 0x7f09023c
 int id tv_friend_name 0x7f09023d
 int id tv_group_name 0x7f09023e
 int id tv_message 0x7f09023f
+=======
+int id text_amount 0x7f090213
+int id text_arrow 0x7f090214
+int id text_date 0x7f090215
+int id text_input_end_icon 0x7f090216
+int id text_input_error_icon 0x7f090217
+int id text_input_start_icon 0x7f090218
+int id text_note 0x7f090219
+int id text_payer 0x7f09021a
+int id text_receiver 0x7f09021b
+int id textinput_counter 0x7f09021c
+int id textinput_error 0x7f09021d
+int id textinput_helper_text 0x7f09021e
+int id textinput_placeholder 0x7f09021f
+int id textinput_prefix_text 0x7f090220
+int id textinput_suffix_text 0x7f090221
+int id time 0x7f090222
+int id title 0x7f090223
+int id titleDividerNoCustom 0x7f090224
+int id title_template 0x7f090225
+int id toggle 0x7f090226
+int id toolbar 0x7f090227
+int id top 0x7f090228
+int id topPanel 0x7f090229
+int id touch_outside 0x7f09022a
+int id transitionToEnd 0x7f09022c
+int id transitionToStart 0x7f09022d
+int id transition_clip 0x7f09022e
+int id transition_current_scene 0x7f09022f
+int id transition_image_transform 0x7f090230
+int id transition_layout_save 0x7f090231
+int id transition_pause_alpha 0x7f090232
+int id transition_position 0x7f090233
+int id transition_scene_layoutid_cache 0x7f090234
+int id transition_transform 0x7f090235
+int id triangle 0x7f090236
+int id tvLastUpdate 0x7f090237
+int id tvRealTimeRate 0x7f090238
+int id tvResult 0x7f090239
+int id tv_amount 0x7f090260
+int id tv_date 0x7f09023a
+int id tv_friend_mail 0x7f09023b
+int id tv_friend_name 0x7f09023c
+int id tv_group_name 0x7f09023d
+int id tv_message 0x7f09023e
+int id tv_note 0x7f090262
+int id tv_payer 0x7f090263
+int id tv_time 0x7f09023f
+>>>>>>> Stashed changes
 int id unchecked 0x7f090240
 int id uniform 0x7f090241
 int id unlabeled 0x7f090242
@@ -3889,6 +3945,7 @@ int layout abc_tooltip 0x7f0c001b
 int layout activity_login 0x7f0c001c
 int layout activity_main 0x7f0c001d
 int layout activity_register 0x7f0c001e
+<<<<<<< Updated upstream
 int layout browser_actions_context_menu_page 0x7f0c001f
 int layout browser_actions_context_menu_row 0x7f0c0020
 int layout custom_dialog 0x7f0c0021
@@ -3917,6 +3974,37 @@ int layout fragment_exchange_rate 0x7f0c0037
 int layout fragment_friends 0x7f0c0038
 int layout fragment_groups 0x7f0c0039
 int layout fragment_suggestion 0x7f0c003a
+=======
+int layout activity_suggestion 0x7f0c001f
+int layout browser_actions_context_menu_page 0x7f0c0020
+int layout browser_actions_context_menu_row 0x7f0c0021
+int layout custom_dialog 0x7f0c0022
+int layout design_bottom_navigation_item 0x7f0c0023
+int layout design_bottom_sheet_dialog 0x7f0c0024
+int layout design_layout_snackbar 0x7f0c0025
+int layout design_layout_snackbar_include 0x7f0c0026
+int layout design_layout_tab_icon 0x7f0c0027
+int layout design_layout_tab_text 0x7f0c0028
+int layout design_menu_item_action_area 0x7f0c0029
+int layout design_navigation_item 0x7f0c002a
+int layout design_navigation_item_header 0x7f0c002b
+int layout design_navigation_item_separator 0x7f0c002c
+int layout design_navigation_item_subheader 0x7f0c002d
+int layout design_navigation_menu 0x7f0c002e
+int layout design_navigation_menu_item 0x7f0c002f
+int layout design_text_input_end_icon 0x7f0c0030
+int layout design_text_input_start_icon 0x7f0c0031
+int layout fragment_accounts 0x7f0c0032
+int layout fragment_add_friend 0x7f0c0033
+int layout fragment_add_group 0x7f0c0034
+int layout fragment_add_transaction 0x7f0c0035
+int layout fragment_chat 0x7f0c0036
+int layout fragment_details 0x7f0c0037
+int layout fragment_exchange_rate 0x7f0c0038
+int layout fragment_friends 0x7f0c0039
+int layout fragment_groups 0x7f0c003a
+int layout fragment_transaction_detail 0x7f0c0081
+>>>>>>> Stashed changes
 int layout fragment_transaction_history 0x7f0c003b
 int layout ime_base_split_test_activity 0x7f0c003c
 int layout ime_secondary_split_test_activity 0x7f0c003d
@@ -3926,6 +4014,7 @@ int layout item_group 0x7f0c0040
 int layout item_group_member 0x7f0c0041
 int layout item_message 0x7f0c0042
 int layout item_message_self 0x7f0c0043
+int layout item_transaction 0x7f0c0082
 int layout m3_alert_dialog 0x7f0c0044
 int layout m3_alert_dialog_actions 0x7f0c0045
 int layout m3_alert_dialog_title 0x7f0c0046

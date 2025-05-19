@@ -2,63 +2,97 @@ package fcu.app.distributionapp;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.Toast;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link TransactionHistoryFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.Query;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import fcu.app.distributionapp.adapter.TransactionAdapter;
+import fcu.app.distributionapp.model.Transaction;
+
 public class TransactionHistoryFragment extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
+    private RecyclerView recyclerView;
+    private Button settleButton;
+    private List<Transaction> transactions = new ArrayList<>();
+    private TransactionAdapter adapter;
 
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
+    private String groupId;
 
     public TransactionHistoryFragment() {
         // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment TransactionHistoryFragment.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static TransactionHistoryFragment newInstance(String param1, String param2) {
-        TransactionHistoryFragment fragment = new TransactionHistoryFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
+    // 提供設定群組ID的方法，外部呼叫以設定
+    public void setGroupId(String groupId) {
+        this.groupId = groupId;
     }
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
-    }
-
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_transaction_history, container, false);
+        View view = inflater.inflate(R.layout.fragment_transaction_history, container, false);
+
+        recyclerView = view.findViewById(R.id.rv_transaction_list);
+        settleButton = view.findViewById(R.id.btn_settle);
+
+        adapter = new TransactionAdapter(transactions, transaction -> {
+            // 點擊某筆紀錄 → 跳到詳細頁
+            Fragment detailFragment = TransactionDetailFragment.newInstance(transaction);
+            requireActivity().getSupportFragmentManager().beginTransaction()
+                    .replace(R.id.childFragmentContainer, detailFragment)
+                    .addToBackStack(null)
+                    .commit();
+        });
+
+        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+        recyclerView.setAdapter(adapter);
+
+        if (groupId != null) {
+            loadTransactions();
+        } else {
+            Toast.makeText(getContext(), "未提供群組 ID", Toast.LENGTH_SHORT).show();
+        }
+
+        settleButton.setOnClickListener(v ->
+                Toast.makeText(getContext(), "尚未實作結算功能", Toast.LENGTH_SHORT).show());
+
+        return view;
+    }
+
+    private void loadTransactions() {
+        FirebaseFirestore db = FirebaseFirestore.getInstance();
+
+        db.collection("groups")
+                .document(groupId)
+                .collection("transactions")
+                .orderBy("date", Query.Direction.DESCENDING)
+                .get()
+                .addOnSuccessListener(queryDocumentSnapshots -> {
+                    transactions.clear();
+                    for (DocumentSnapshot doc : queryDocumentSnapshots) {
+                        Transaction t = doc.toObject(Transaction.class);
+                        if (t != null) {
+                            t.setId(doc.getId()); // 設定 ID (若 Transaction 有此欄位)
+                            transactions.add(t);
+                        }
+                    }
+                    adapter.notifyDataSetChanged();
+                })
+                .addOnFailureListener(e ->
+                        Toast.makeText(getContext(), "載入交易失敗：" + e.getMessage(), Toast.LENGTH_SHORT).show());
     }
 }
