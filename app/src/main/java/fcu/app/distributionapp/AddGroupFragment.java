@@ -50,23 +50,24 @@ public class AddGroupFragment extends Fragment {
         layoutMemberCheckboxes = view.findViewById(R.id.layout_member_checkboxes);
 
         db = FirebaseFirestore.getInstance();
-        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
 
-        currentUserId = user.getEmail().split("@")[0];
-
-        // 讀取好友資料並動態建立勾選框
-        db.collection("friends").document(currentUserId).get()
+        // 動態建立好友 checkbox：顯示名稱但 tag 綁 UID
+        db.collection("friends").document(currentUser.getUid()).get()
                 .addOnSuccessListener(snapshot -> {
                     if (snapshot.exists()) {
                         Map<String, Object> friendsMap = snapshot.getData();
-                        for (String friendId : friendsMap.keySet()) {
+                        for (Map.Entry<String, Object> entry : friendsMap.entrySet()) {
+                            String friendUid = entry.getKey();
+                            String friendName = String.valueOf(entry.getValue());
+
                             CheckBox checkBox = new CheckBox(getContext());
-                            checkBox.setText(friendId);
+                            checkBox.setText(friendName); // 顯示名稱
+                            checkBox.setTag(friendUid);   // 實際值是 UID
                             layoutMemberCheckboxes.addView(checkBox);
                         }
                     }
                 });
-
         btnCreateGroup.setOnClickListener(v -> {
             String groupName = etGroupName.getText().toString().trim();
 
@@ -75,28 +76,30 @@ public class AddGroupFragment extends Fragment {
                 return;
             }
 
-            List<String> members = new ArrayList<>();
-            members.add(currentUserId); // 一定包含自己
+            List<String> memberUids = new ArrayList<>();
+            memberUids.add(currentUser.getUid()); // 加入自己 UID
 
             for (int i = 0; i < layoutMemberCheckboxes.getChildCount(); i++) {
                 View child = layoutMemberCheckboxes.getChildAt(i);
                 if (child instanceof CheckBox) {
                     CheckBox cb = (CheckBox) child;
                     if (cb.isChecked()) {
-                        members.add(cb.getText().toString());
+                        String uid = (String) cb.getTag(); // tag 綁的是 UID
+                        memberUids.add(uid);
                     }
                 }
             }
-            if (members.size() <= 1) {
+
+            if (memberUids.size() <= 1) {
                 Toast.makeText(getContext(), "請至少選一位好友加入群組", Toast.LENGTH_SHORT).show();
                 return;
             }
 
-            // 寫入 Firestore
+            // 建立群組資料
             Map<String, Object> group = new HashMap<>();
             group.put("name", groupName);
-            group.put("members", members);
-            group.put("createdBy", currentUserId);
+            group.put("members", memberUids);
+            group.put("createdBy", currentUser.getUid());
             group.put("createdAt", FieldValue.serverTimestamp());
 
             db.collection("newGroups").add(group)
@@ -104,9 +107,9 @@ public class AddGroupFragment extends Fragment {
                         Toast.makeText(getContext(), "群組建立成功！", Toast.LENGTH_SHORT).show();
                         requireActivity().getSupportFragmentManager().popBackStack();
                     })
-                    .addOnFailureListener(e -> {
-                        Toast.makeText(getContext(), "群組建立失敗：" + e.getMessage(), Toast.LENGTH_SHORT).show();
-                    });
+                    .addOnFailureListener(e ->
+                            Toast.makeText(getContext(), "群組建立失敗：" + e.getMessage(), Toast.LENGTH_SHORT).show()
+                    );
         });
         return view;
     }
