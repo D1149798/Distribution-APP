@@ -102,7 +102,7 @@ public class AddTransactionFragment extends Fragment {
         currencySpinner.setAdapter(currencyAdapter);
 
         // 初始 RecyclerView
-        adapter = new GroupMemberAdapter(memberList);
+        adapter = new GroupMemberAdapter(memberList,false);
         beneficiaryRecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         beneficiaryRecyclerView.setAdapter(adapter);
 
@@ -137,7 +137,7 @@ public class AddTransactionFragment extends Fragment {
 
         // 儲存按鈕
         btnSave.setOnClickListener(v -> {
-            String cost = etCost.getText().toString().trim();
+            String amount = etCost.getText().toString().trim();
             String note = etNote.getText().toString().trim();
             String date = tvDate.getText().toString().trim();
 
@@ -153,7 +153,7 @@ public class AddTransactionFragment extends Fragment {
             int currencyIndex = currencySpinner.getSelectedItemPosition();
             String currency = currencyCodeList.get(currencyIndex);
 
-            if (cost.isEmpty() || date.equals("請選擇日期")) {
+            if (amount.isEmpty() || date.equals("請選擇日期")) {
                 Toast.makeText(getContext(), "請填寫金額與日期", Toast.LENGTH_SHORT).show();
                 return;
             }
@@ -169,7 +169,7 @@ public class AddTransactionFragment extends Fragment {
             transaction.put("group", groupName);
             transaction.put("payer", payer);
             transaction.put("currency", currency);
-            transaction.put("cost", Double.parseDouble(cost));
+            transaction.put("amount", Double.parseDouble(amount));
             transaction.put("note", note);
             transaction.put("date", date);
             transaction.put("beneficiaries", beneficiaries);

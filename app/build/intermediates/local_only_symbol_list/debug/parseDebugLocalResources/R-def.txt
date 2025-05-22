@@ -34,6 +34,7 @@ id btn_back
 id btn_chat
 id btn_create_group
 id btn_delete
+id btn_edit
 id btn_login
 id btn_rate
 id btn_register
@@ -101,12 +102,17 @@ id tvLastUpdate
 id tvRealTimeRate
 id tvResult
 id tv_amount
+id tv_currency
 id tv_date
 id tv_date_header
 id tv_friend_mail
 id tv_friend_name
 id tv_group_name
 id tv_message
+<<<<<<< Updated upstream
+=======
+id tv_name
+>>>>>>> Stashed changes
 id tv_note
 id tv_payer
 id web_view
@@ -119,6 +125,7 @@ layout fragment_add_group
 layout fragment_add_transaction
 layout fragment_chat
 layout fragment_details
+layout fragment_edit_transaction
 layout fragment_exchange_rate
 layout fragment_friends
 layout fragment_groups

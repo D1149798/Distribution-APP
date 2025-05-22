@@ -12,90 +12,105 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="編輯付款紀錄"
+            android:text="付款紀錄詳情"
             android:textSize="20sp"
             android:textStyle="bold" />
 
-        <EditText
-            android:id="@+id/et_cost"
-            android:hint="金額"
-            android:inputType="numberDecimal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp" />
-
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:text="金額"
             android:layout_marginTop="16dp"
-            android:text="幣別" />
-
-        <Spinner
-            android:id="@+id/currencySpinner"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:textStyle="bold" />
 
         <TextView
+            android:id="@+id/tv_amount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            android:background="#EEEEEE"
+            android:textColor="#000000" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="幣別"
+            android:layout_marginTop="16dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_currency"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            android:background="#EEEEEE"
+            android:textColor="#000000" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:text="付款者"
+            android:layout_marginTop="16dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_payer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp" />
-
-        <Spinner
-            android:id="@+id/payerSpinner"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:padding="12dp"
+            android:background="#EEEEEE"
+            android:textColor="#000000" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="幫誰付款（可多選）"
-            android:layout_marginTop="16dp" />
+            android:text="受益人"
+            android:layout_marginTop="16dp"
+            android:textStyle="bold" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_beneficiaries"
             android:layout_width="match_parent"
-            android:layout_height="150dp"
+            android:layout_height="wrap_content"
             android:nestedScrollingEnabled="true" />
-
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="日期"
-            android:layout_marginTop="16dp" />
+            android:layout_marginTop="16dp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/tv_date"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="請選擇日期"
             android:padding="12dp"
             android:background="#EEEEEE"
             android:textColor="#000000" />
 
-        <EditText
-            android:id="@+id/et_note"
-            android:hint="備註"
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp" />
+            android:text="備註"
+            android:layout_marginTop="16dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_note"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            android:background="#EEEEEE"
+            android:textColor="#000000" />
 
         <Button
-            android:id="@+id/btn_save"
+            android:id="@+id/btn_edit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="right"
-            android:layout_marginTop="16dp"
-            android:text="儲存編輯" />
-
-        <Button
-            android:id="@+id/btn_delete"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="right"
-            android:layout_marginTop="16dp"
-            android:text="刪除" />
+            android:layout_gravity="end"
+            android:layout_marginTop="24dp"
+            android:text="編輯" />
 
     </LinearLayout>
 </ScrollView>

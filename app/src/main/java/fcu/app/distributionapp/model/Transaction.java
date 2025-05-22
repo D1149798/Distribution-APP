@@ -1,11 +1,14 @@
 package fcu.app.distributionapp.model;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 import com.google.firebase.firestore.DocumentId;
 
-import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 
-public class Transaction  implements Serializable {
+public class Transaction implements Parcelable {
     @DocumentId
     private String id;
     private String payer;
@@ -26,6 +29,46 @@ public class Transaction  implements Serializable {
         this.beneficiaries = beneficiaries;
     }
 
+    // ===== Parcelable 實作區 =====
+    protected Transaction(Parcel in) {
+        id = in.readString();
+        payer = in.readString();
+        amount = in.readDouble();
+        currency = in.readString();
+        note = in.readString();
+        date = in.readString();
+        beneficiaries = in.createStringArrayList();
+    }
+
+    public static final Creator<Transaction> CREATOR = new Creator<Transaction>() {
+        @Override
+        public Transaction createFromParcel(Parcel in) {
+            return new Transaction(in);
+        }
+
+        @Override
+        public Transaction[] newArray(int size) {
+            return new Transaction[size];
+        }
+    };
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(id);
+        dest.writeString(payer);
+        dest.writeDouble(amount);
+        dest.writeString(currency);
+        dest.writeString(note);
+        dest.writeString(date);
+        dest.writeStringList(beneficiaries);
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    // ===== Getter / Setter =====
     public String getPayer() {
         return payer;
     }
@@ -81,5 +124,4 @@ public class Transaction  implements Serializable {
     public void setBeneficiaries(List<String> beneficiaries) {
         this.beneficiaries = beneficiaries;
     }
-
 }

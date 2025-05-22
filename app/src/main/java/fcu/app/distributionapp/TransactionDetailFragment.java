@@ -1,204 +1,139 @@
 package fcu.app.distributionapp;
 
-import android.app.DatePickerDialog;
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.RecyclerView;
-import androidx.recyclerview.widget.LinearLayoutManager;
-
-import android.text.TextUtils;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.EditText;
-import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.firebase.FirebaseApp;
-import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.firestore.QueryDocumentSnapshot;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.DocumentSnapshot;
+
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.List;
-import java.util.Locale;
 
 import fcu.app.distributionapp.adapter.GroupMemberAdapter;
-import fcu.app.distributionapp.model.Group;
 import fcu.app.distributionapp.model.GroupMember;
 import fcu.app.distributionapp.model.Transaction;
 
-
 public class TransactionDetailFragment extends Fragment {
+    private static final String ARG_TRANSACTION_ID = "arg_transaction_id";
 
-    private Spinner payerSpinner, currencySpinner;
-    private EditText etCost, etNote;
-    private TextView tvDate;
-    private Button btnSave, btnDelete;
-    private RecyclerView rvBeneficiaries;
-
-    private FirebaseFirestore db;
-    private GroupMemberAdapter adapter;
-    private final List<GroupMember> memberList = new ArrayList<>();
-    private final List<String> currencyCodeList = new ArrayList<>();
-    private boolean isEditMode = false;
-
+    private String transactionId;
+    private String groupId;
     private Transaction transaction;
-    private String groupId = "your_group_id"; // ← 替換成實際 group id
 
-    private Calendar selectedDate = Calendar.getInstance();
+    private TextView tvNote, tvAmount, tvDate, tvPayer, tvCurrency;
 
-    public TransactionDetailFragment() {}
+    private RecyclerView rvBeneficiaries;
+    private Button btnEdit;
+
+    private FirebaseFirestore firestore;
+
+    public static TransactionDetailFragment newInstance(String transactionId, String groupId) {
+        TransactionDetailFragment fragment = new TransactionDetailFragment();
+        Bundle args = new Bundle();
+        args.putString("transaction_id", transactionId);
+        args.putString("group_id", groupId);
+        fragment.setArguments(args);
+        return fragment;
+    }
+
+
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        if (getArguments() != null) {
+            transactionId = getArguments().getString("transaction_id");
+            groupId = getArguments().getString("group_id");
+        }
+    }
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_transaction_detail, container, false);
 
-        FirebaseApp.initializeApp(requireContext());
-        db = FirebaseFirestore.getInstance();
-
-        payerSpinner = view.findViewById(R.id.payerSpinner);
-        currencySpinner = view.findViewById(R.id.currencySpinner);
-        rvBeneficiaries = view.findViewById(R.id.rv_beneficiaries);
-        etCost = view.findViewById(R.id.et_cost);
-        etNote = view.findViewById(R.id.et_note);
+        // Initialize views
+        tvNote = view.findViewById(R.id.tv_note);
+        tvAmount = view.findViewById(R.id.tv_amount);
         tvDate = view.findViewById(R.id.tv_date);
-        btnSave = view.findViewById(R.id.btn_save);
-        btnDelete = view.findViewById(R.id.btn_delete);
+        tvPayer = view.findViewById(R.id.tv_payer);
+        tvCurrency = view.findViewById(R.id.tv_currency);
+        rvBeneficiaries = view.findViewById(R.id.rv_beneficiaries);
+        btnEdit = view.findViewById(R.id.btn_edit);
 
-        adapter = new GroupMemberAdapter(memberList);
+        // Set up RecyclerView layout
         rvBeneficiaries.setLayoutManager(new LinearLayoutManager(getContext()));
-        rvBeneficiaries.setAdapter(adapter);
 
-        loadCurrencyFromCSV();
-        loadGroupMembers(groupId);
-
-        // 預設為新增模式
-        isEditMode = transaction == null;
-        setEditMode(isEditMode);
-
-        tvDate.setOnClickListener(v -> {
-            if (!isEditMode) return;
-            showDatePickerDialog();
+        btnEdit.setOnClickListener(v -> {
+            if (transaction != null) {
+                Fragment editFragment = EditTransactionFragment.newInstance(transaction,groupId);
+                requireParentFragment().getChildFragmentManager().beginTransaction()
+                        .replace(R.id.childFragmentContainer, editFragment)
+                        .addToBackStack(null)
+                        .commit();
+            } else {
+                Toast.makeText(getContext(), "Transaction data not loaded yet", Toast.LENGTH_SHORT).show();
+            }
         });
 
-        btnSave.setOnClickListener(v -> {
-            Toast.makeText(getContext(), "儲存功能尚未實作", Toast.LENGTH_SHORT).show();
-            // TODO: 儲存到 Firebase
-        });
-
-        btnDelete.setOnClickListener(v -> {
-            Toast.makeText(getContext(), "刪除功能尚未實作", Toast.LENGTH_SHORT).show();
-            // TODO: 從 Firebase 刪除
-        });
+        if (transactionId != null) {
+            loadTransactionFromFirestore(transactionId);
+        } else {
+            Toast.makeText(getContext(), "No transaction ID provided", Toast.LENGTH_SHORT).show();
+        }
 
         return view;
     }
 
-    private void showDatePickerDialog() {
-        new DatePickerDialog(
-                requireContext(),
-                (view, year, month, dayOfMonth) -> {
-                    selectedDate.set(year, month, dayOfMonth);
-                    tvDate.setText(String.format(Locale.getDefault(), "%04d-%02d-%02d", year, month + 1, dayOfMonth));
-                },
-                selectedDate.get(Calendar.YEAR),
-                selectedDate.get(Calendar.MONTH),
-                selectedDate.get(Calendar.DAY_OF_MONTH)
-        ).show();
-    }
-
-    private void setEditMode(boolean enabled) {
-        etCost.setEnabled(enabled);
-        etNote.setEnabled(enabled);
-        payerSpinner.setEnabled(enabled);
-        currencySpinner.setEnabled(enabled);
-        tvDate.setEnabled(enabled);
-        btnSave.setVisibility(enabled ? View.VISIBLE : View.GONE);
-        btnDelete.setVisibility(enabled ? View.VISIBLE : View.GONE);
-        adapter.setCheckBoxVisible(enabled);
-        adapter.notifyDataSetChanged();
-    }
-
-    private void loadCurrencyFromCSV() {
-        try (BufferedReader reader = new BufferedReader(
-                new InputStreamReader(getResources().openRawResource(R.raw.currencies)))) {
-            String line;
-            while ((line = reader.readLine()) != null) {
-                currencyCodeList.add(line.trim());
-            }
-            ArrayAdapter<String> currencyAdapter = new ArrayAdapter<>(requireContext(),
-                    android.R.layout.simple_spinner_item, currencyCodeList);
-            currencyAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-            currencySpinner.setAdapter(currencyAdapter);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-    private void loadGroupMembers(String groupId) {
+    private void loadTransactionFromFirestore(String transactionId) {
+        FirebaseFirestore db = FirebaseFirestore.getInstance();
         db.collection("groups")
                 .document(groupId)
-                .collection("members")
+                .collection("transactions")
+                .document(transactionId)
                 .get()
-                .addOnSuccessListener(querySnapshot -> {
-                    List<String> members = new ArrayList<>();
-                    memberList.clear();
-
-                    for (QueryDocumentSnapshot doc : querySnapshot) {
-                        String name = doc.getString("name");
-                        if (name != null) {
-                            members.add(name);
-                            memberList.add(new GroupMember(name));
+                .addOnSuccessListener(documentSnapshot -> {
+                    if (documentSnapshot.exists()) {
+                        transaction = documentSnapshot.toObject(Transaction.class);
+                        if (transaction != null) {
+                            transaction.setId(documentSnapshot.getId());
+                            displayTransactionData(transaction);
                         }
-                    }
-
-                    ArrayAdapter<String> payerAdapter = new ArrayAdapter<>(requireContext(),
-                            android.R.layout.simple_spinner_item, members);
-                    payerAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-                    payerSpinner.setAdapter(payerAdapter);
-                    adapter.notifyDataSetChanged();
-
-                    if (transaction != null) {
-                        fillTransactionData(transaction);
+                    } else {
+                        Toast.makeText(getContext(), "找不到交易資料", Toast.LENGTH_SHORT).show();
                     }
                 })
-                .addOnFailureListener(e -> Toast.makeText(getContext(), "讀取成員失敗", Toast.LENGTH_SHORT).show());
+                .addOnFailureListener(e ->
+                        Toast.makeText(getContext(), "讀取交易失敗：" + e.getMessage(), Toast.LENGTH_SHORT).show());
+
     }
 
-    private void fillTransactionData(Transaction t) {
-        etNote.setText(t.getNote());
-        etCost.setText(String.valueOf(t.getAmount()));
-        tvDate.setText(t.getDate());
 
-        int payerIndex = getMemberIndex(t.getPayer());
-        if (payerIndex != -1) payerSpinner.setSelection(payerIndex);
+    private void displayTransactionData(Transaction transaction) {
+        tvAmount.setText(String.valueOf(transaction.getAmount()));
+        tvDate.setText(transaction.getDate());
+        tvPayer.setText(transaction.getPayer());
+        tvCurrency.setText(transaction.getCurrency());
+        tvNote.setText(transaction.getNote());
 
-        int currencyIndex = currencyCodeList.indexOf(t.getCurrency());
-        if (currencyIndex != -1) currencySpinner.setSelection(currencyIndex);
-
-        adapter.setSelectedMembers(t.getBeneficiaries());
-    }
-
-    private int getMemberIndex(String name) {
-        for (int i = 0; i < memberList.size(); i++) {
-            if (memberList.get(i).getName().equals(name)) {
-                return i;
+        List<String> beneficiaryNames = transaction.getBeneficiaries();
+        if (beneficiaryNames != null && !beneficiaryNames.isEmpty()) {
+            List<GroupMember> beneficiaryMembers = new ArrayList<>();
+            for (String name : beneficiaryNames) {
+                beneficiaryMembers.add(new GroupMember(name));
             }
-        }
-        return -1;
-    }
+            GroupMemberAdapter adapter = new GroupMemberAdapter(beneficiaryMembers, true);
+            rvBeneficiaries.setAdapter(adapter);
 
-    public void setTransaction(Transaction transaction) {
-        this.transaction = transaction;
+        }
     }
 }

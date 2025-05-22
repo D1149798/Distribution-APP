@@ -1,7 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<CheckBox xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/checkbox_member"
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:orientation="horizontal"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:padding="8dp">
+
+    <CheckBox
+        android:id="@+id/checkbox_member"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:padding="8dp"
+        android:text="成員名稱" />
+
+<TextView
+    android:id="@+id/tv_name"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="16dp"
-    android:text="成員名稱" />
+    android:layout_marginStart="16dp"
+    android:textSize="16sp"
+    android:textColor="@android:color/black"
+    android:visibility="gone" />
+
+</LinearLayout>

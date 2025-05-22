@@ -1,17 +1,16 @@
 package fcu.app.distributionapp;
 
 import android.os.Bundle;
-
-import androidx.annotation.NonNull;
-import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -29,14 +28,13 @@ public class TransactionHistoryFragment extends Fragment {
     private Button settleButton;
     private List<Transaction> transactions = new ArrayList<>();
     private TransactionAdapter adapter;
-
-    private String groupId;
-
+//    private String groupId;
+    private String groupId = "jY6sXapfNGoRJttUaBjD";
     public TransactionHistoryFragment() {
         // Required empty public constructor
     }
 
-    // 提供設定群組ID的方法，外部呼叫以設定
+    // 外部呼叫設定 groupId（在加入此 fragment 前調用）
     public void setGroupId(String groupId) {
         this.groupId = groupId;
     }
@@ -49,6 +47,7 @@ public class TransactionHistoryFragment extends Fragment {
         recyclerView = view.findViewById(R.id.rv_transaction_list);
         settleButton = view.findViewById(R.id.btn_settle);
 
+<<<<<<< Updated upstream
 //        adapter = new TransactionAdapter(transactions, transaction -> {
 //            // 點擊某筆紀錄 → 跳到詳細頁
 //            Fragment detailFragment = TransactionDetailFragment.newInstance(transaction);
@@ -57,6 +56,17 @@ public class TransactionHistoryFragment extends Fragment {
 //                    .addToBackStack(null)
 //                    .commit();
 //        });
+=======
+        adapter = new TransactionAdapter(transactions, transaction -> {
+            // 點擊某筆紀錄 → 跳到詳細頁
+            TransactionDetailFragment detailFragment = TransactionDetailFragment.newInstance(transaction.getId(), groupId);
+            requireParentFragment().getChildFragmentManager().beginTransaction()
+                    .replace(R.id.childFragmentContainer, detailFragment)
+                    .addToBackStack(null)
+                    .commit();
+
+        });
+>>>>>>> Stashed changes
 
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         recyclerView.setAdapter(adapter);
@@ -75,18 +85,17 @@ public class TransactionHistoryFragment extends Fragment {
 
     private void loadTransactions() {
         FirebaseFirestore db = FirebaseFirestore.getInstance();
-
         db.collection("groups")
                 .document(groupId)
                 .collection("transactions")
                 .orderBy("date", Query.Direction.DESCENDING)
                 .get()
-                .addOnSuccessListener(queryDocumentSnapshots -> {
+                .addOnSuccessListener(querySnapshots -> {
                     transactions.clear();
-                    for (DocumentSnapshot doc : queryDocumentSnapshots) {
+                    for (DocumentSnapshot doc : querySnapshots) {
                         Transaction t = doc.toObject(Transaction.class);
                         if (t != null) {
-                            t.setId(doc.getId()); // 設定 ID (若 Transaction 有此欄位)
+                            t.setId(doc.getId());
                             transactions.add(t);
                         }
                     }
