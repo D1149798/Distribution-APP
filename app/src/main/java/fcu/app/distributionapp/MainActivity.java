@@ -135,5 +135,17 @@ public class MainActivity extends AppCompatActivity {
         setCurrentFragment(friendsFragment);
     }
 
+    @Override
+    public void onBackPressed() {
+        Fragment currentFragment = getSupportFragmentManager().findFragmentById(R.id.fragment_main); // 這裡要對 fragment 的 id
 
+        if (currentFragment instanceof SuggestionFragment) {
+            SuggestionFragment suggestionFragment = (SuggestionFragment) currentFragment;
+            if (suggestionFragment.canGoBack()) {
+                suggestionFragment.goBack();
+                return; // 中斷，不再執行 super
+            }
+        }
+        super.onBackPressed(); // 沒有特殊處理時才讓系統處理返回
+    }
 }

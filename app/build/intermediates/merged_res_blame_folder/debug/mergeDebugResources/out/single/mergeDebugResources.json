@@ -1,9 +1,5 @@
 [
     {
-<<<<<<< Updated upstream
-        "merged": "fcu.app.distributionapp-debug-41:/mipmap-xhdpi_ic_launcher_round.webp.flat",
-        "source": "fcu.app.distributionapp-main-43:/mipmap-xhdpi/ic_launcher_round.webp"
-=======
         "merged": "fcu.app.distributionapp-debug-47:/layout_fragment_exchange_rate.xml.flat",
         "source": "fcu.app.distributionapp-main-49:/layout/fragment_exchange_rate.xml"
     },
@@ -78,7 +74,6 @@
     {
         "merged": "fcu.app.distributionapp-debug-47:/drawable_menu.xml.flat",
         "source": "fcu.app.distributionapp-main-49:/drawable/menu.xml"
->>>>>>> Stashed changes
     },
     {
         "merged": "fcu.app.distributionapp-debug-47:/layout_item_friend.xml.flat",
@@ -107,6 +102,10 @@
     {
         "merged": "fcu.app.distributionapp-debug-47:/layout_fragment_transaction_history.xml.flat",
         "source": "fcu.app.distributionapp-main-49:/layout/fragment_transaction_history.xml"
+    },
+    {
+        "merged": "fcu.app.distributionapp-debug-47:/layout_item_date_header.xml.flat",
+        "source": "fcu.app.distributionapp-main-49:/layout/item_date_header.xml"
     },
     {
         "merged": "fcu.app.distributionapp-debug-47:/mipmap-xxhdpi_ic_launcher.webp.flat",
@@ -161,138 +160,6 @@
         "source": "fcu.app.distributionapp-main-49:/layout/fragment_details.xml"
     },
     {
-<<<<<<< Updated upstream
-        "merged": "fcu.app.distributionapp-debug-41:/drawable_circle_mask.xml.flat",
-        "source": "fcu.app.distributionapp-main-43:/drawable/circle_mask.xml"
-    },
-    {
-        "merged": "fcu.app.distributionapp-debug-41:/layout_fragment_add_transaction.xml.flat",
-        "source": "fcu.app.distributionapp-main-43:/layout/fragment_add_transaction.xml"
-    },
-    {
-        "merged": "fcu.app.distributionapp-debug-41:/layout_fragment_transaction_history.xml.flat",
-        "source": "fcu.app.distributionapp-main-43:/layout/fragment_transaction_history.xml"
-    },
-    {
-        "merged": "fcu.app.distributionapp-debug-41:/mipmap-xxhdpi_ic_launcher.webp.flat",
-        "source": "fcu.app.distributionapp-main-43:/mipmap-xxhdpi/ic_launcher.webp"
-    },
-    {
-        "merged": "fcu.app.distributionapp-debug-41:/layout_fragment_chat.xml.flat",
-        "source": "fcu.app.distributionapp-main-43:/layout/fragment_chat.xml"
-    },
-    {
-        "merged": "fcu.app.distributionapp-debug-41:/drawable_bg_menu_selector.xml.flat",
-        "source": "fcu.app.distributionapp-main-43:/drawable/bg_menu_selector.xml"
-    },
-    {
-        "merged": "fcu.app.distributionapp-debug-41:/mipmap-xhdpi_ic_launcher.webp.flat",
-        "source": "fcu.app.distributionapp-main-43:/mipmap-xhdpi/ic_launcher.webp"
-    },
-    {
-        "merged": "fcu.app.distributionapp-debug-41:/drawable_message_bg_self.xml.flat",
-        "source": "fcu.app.distributionapp-main-43:/drawable/message_bg_self.xml"
-    },
-    {
-        "merged": "fcu.app.distributionapp-debug-41:/layout_fragment_friends.xml.flat",
-        "source": "fcu.app.distributionapp-main-43:/layout/fragment_friends.xml"
-    },
-    {
-        "merged": "fcu.app.distributionapp-debug-41:/menu_toolbar_menu.xml.flat",
-        "source": "fcu.app.distributionapp-main-43:/menu/toolbar_menu.xml"
-    },
-    {
-        "merged": "fcu.app.distributionapp-debug-41:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
-        "source": "fcu.app.distributionapp-main-43:/mipmap-xxhdpi/ic_launcher_round.webp"
-    },
-    {
-        "merged": "fcu.app.distributionapp-debug-41:/drawable_chat.xml.flat",
-        "source": "fcu.app.distributionapp-main-43:/drawable/chat.xml"
-    },
-    {
-        "merged": "fcu.app.distributionapp-debug-41:/layout_activity_main.xml.flat",
-        "source": "fcu.app.distributionapp-main-43:/layout/activity_main.xml"
-    },
-    {
-        "merged": "fcu.app.distributionapp-debug-41:/drawable_ic_launcher_background.xml.flat",
-        "source": "fcu.app.distributionapp-main-43:/drawable/ic_launcher_background.xml"
-    },
-    {
-        "merged": "fcu.app.distributionapp-debug-41:/drawable_ic_launcher_foreground.xml.flat",
-        "source": "fcu.app.distributionapp-main-43:/drawable/ic_launcher_foreground.xml"
-    },
-    {
-        "merged": "fcu.app.distributionapp-debug-41:/drawable_payments.xml.flat",
-        "source": "fcu.app.distributionapp-main-43:/drawable/payments.xml"
-    },
-    {
-        "merged": "fcu.app.distributionapp-debug-41:/layout_fragment_transaction_detail.xml.flat",
-        "source": "fcu.app.distributionapp-main-43:/layout/fragment_transaction_detail.xml"
-    },
-    {
-        "merged": "fcu.app.distributionapp-debug-41:/layout_item_message_self.xml.flat",
-        "source": "fcu.app.distributionapp-main-43:/layout/item_message_self.xml"
-    },
-    {
-        "merged": "fcu.app.distributionapp-debug-41:/layout_fragment_add_group.xml.flat",
-        "source": "fcu.app.distributionapp-main-43:/layout/fragment_add_group.xml"
-    },
-    {
-        "merged": "fcu.app.distributionapp-debug-41:/xml_data_extraction_rules.xml.flat",
-        "source": "fcu.app.distributionapp-main-43:/xml/data_extraction_rules.xml"
-    },
-    {
-        "merged": "fcu.app.distributionapp-debug-41:/drawable_back.xml.flat",
-        "source": "fcu.app.distributionapp-main-43:/drawable/back.xml"
-    },
-    {
-        "merged": "fcu.app.distributionapp-debug-41:/xml_backup_rules.xml.flat",
-        "source": "fcu.app.distributionapp-main-43:/xml/backup_rules.xml"
-    },
-    {
-        "merged": "fcu.app.distributionapp-debug-41:/mipmap-mdpi_ic_launcher.webp.flat",
-        "source": "fcu.app.distributionapp-main-43:/mipmap-mdpi/ic_launcher.webp"
-    },
-    {
-        "merged": "fcu.app.distributionapp-debug-41:/layout_fragment_suggestion.xml.flat",
-        "source": "fcu.app.distributionapp-main-43:/layout/fragment_suggestion.xml"
-    },
-    {
-        "merged": "fcu.app.distributionapp-debug-41:/mipmap-mdpi_ic_launcher_round.webp.flat",
-        "source": "fcu.app.distributionapp-main-43:/mipmap-mdpi/ic_launcher_round.webp"
-    },
-    {
-        "merged": "fcu.app.distributionapp-debug-41:/drawable_settings.xml.flat",
-        "source": "fcu.app.distributionapp-main-43:/drawable/settings.xml"
-    },
-    {
-        "merged": "fcu.app.distributionapp-debug-41:/menu_drawer_menu.xml.flat",
-        "source": "fcu.app.distributionapp-main-43:/menu/drawer_menu.xml"
-    },
-    {
-        "merged": "fcu.app.distributionapp-debug-41:/layout_fragment_add_friend.xml.flat",
-        "source": "fcu.app.distributionapp-main-43:/layout/fragment_add_friend.xml"
-    },
-    {
-        "merged": "fcu.app.distributionapp-debug-41:/layout_item_transaction.xml.flat",
-        "source": "fcu.app.distributionapp-main-43:/layout/item_transaction.xml"
-    },
-    {
-        "merged": "fcu.app.distributionapp-debug-41:/drawable_add.xml.flat",
-        "source": "fcu.app.distributionapp-main-43:/drawable/add.xml"
-    },
-    {
-        "merged": "fcu.app.distributionapp-debug-41:/drawable_currency_exchange.xml.flat",
-        "source": "fcu.app.distributionapp-main-43:/drawable/currency_exchange.xml"
-    },
-    {
-        "merged": "fcu.app.distributionapp-debug-41:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "fcu.app.distributionapp-main-43:/mipmap-anydpi-v26/ic_launcher_round.xml"
-    },
-    {
-        "merged": "fcu.app.distributionapp-debug-41:/layout_item_date_header.xml.flat",
-        "source": "fcu.app.distributionapp-main-43:/layout/item_date_header.xml"
-=======
         "merged": "fcu.app.distributionapp-debug-47:/layout_fragment_suggestion.xml.flat",
         "source": "fcu.app.distributionapp-main-49:/layout/fragment_suggestion.xml"
     },
@@ -351,6 +218,9 @@
     {
         "merged": "fcu.app.distributionapp-debug-47:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
         "source": "fcu.app.distributionapp-main-49:/mipmap-xxhdpi/ic_launcher_round.webp"
->>>>>>> Stashed changes
+    },
+    {
+        "merged": "fcu.app.distributionapp-debug-47:/drawable_logo.png.flat",
+        "source": "fcu.app.distributionapp-main-49:/drawable/logo.png"
     }
 ]

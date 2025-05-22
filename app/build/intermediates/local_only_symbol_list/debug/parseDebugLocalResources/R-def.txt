@@ -11,6 +11,7 @@ drawable circle_mask
 drawable currency_exchange
 drawable ic_launcher_background
 drawable ic_launcher_foreground
+drawable logo
 drawable menu
 drawable message_bg_other
 drawable message_bg_self
@@ -109,10 +110,7 @@ id tv_friend_mail
 id tv_friend_name
 id tv_group_name
 id tv_message
-<<<<<<< Updated upstream
-=======
 id tv_name
->>>>>>> Stashed changes
 id tv_note
 id tv_payer
 id web_view
