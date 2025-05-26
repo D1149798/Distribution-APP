@@ -10,6 +10,7 @@
         android:orientation="vertical">
 
         <!-- 群組名稱 -->
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -34,14 +35,41 @@
             android:layout_marginBottom="4dp" />
 
         <!-- 這裡會由程式動態加入 CheckBox -->
+
         <LinearLayout
             android:id="@+id/layout_member_checkboxes"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:layout_marginBottom="24dp" />
+            android:layout_marginBottom="24dp" >
+
+        </LinearLayout>
 
         <!-- 建立按鈕 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/et_add_member"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="150"
+                android:ems="10"
+                android:hint="輸入Email"
+                android:inputType="textEmailAddress"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/btn_add_member"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="#F06292"
+                android:text="新增" />
+        </LinearLayout>
+
         <Button
             android:id="@+id/btn_create_group"
             android:layout_width="match_parent"

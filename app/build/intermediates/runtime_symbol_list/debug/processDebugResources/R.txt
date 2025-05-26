@@ -3311,6 +3311,7 @@ int id btnSwitch 0x7f090075
 int id btn_add 0x7f090076
 int id btn_add_friend 0x7f090077
 int id btn_add_group 0x7f090078
+int id btn_add_member 0x7f090269
 int id btn_back 0x7f090079
 int id btn_chat 0x7f09007a
 int id btn_create_group 0x7f09007b
@@ -3417,6 +3418,7 @@ int id enterAlwaysCollapsed 0x7f0900df
 int id escape 0x7f0900e0
 int id etAmount 0x7f0900e1
 int id et_add_group_name 0x7f0900e2
+int id et_add_member 0x7f09026a
 int id et_cost 0x7f0900e3
 int id et_friend_mail 0x7f0900e4
 int id et_l_email 0x7f0900e5

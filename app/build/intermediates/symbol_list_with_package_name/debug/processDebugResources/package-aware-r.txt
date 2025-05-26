@@ -3312,6 +3312,7 @@ id btnSwitch
 id btn_add
 id btn_add_friend
 id btn_add_group
+id btn_add_member
 id btn_back
 id btn_chat
 id btn_create_group
@@ -3418,6 +3419,7 @@ id enterAlwaysCollapsed
 id escape
 id etAmount
 id et_add_group_name
+id et_add_member
 id et_cost
 id et_friend_mail
 id et_l_email

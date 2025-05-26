@@ -4,7 +4,7 @@
             "outputFile": "fcu.app.distributionapp-mergeDebugResources-45:/values-v24/values-v24.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\prism\\.gradle\\caches\\8.10.2\\transforms\\30b275bd4d976a709a811d8b35a37d34\\transformed\\material-1.12.0\\res\\values-v24\\values-v24.xml",
+                    "source": "C:\\Users\\amber\\.gradle\\caches\\8.10.2\\transforms\\30b275bd4d976a709a811d8b35a37d34\\transformed\\material-1.12.0\\res\\values-v24\\values-v24.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,9,12,15",
                         "startColumns": "4,4,4,4,4,4,4,4",
@@ -23,7 +23,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\prism\\.gradle\\caches\\8.10.2\\transforms\\1b33d5b35666ba703fc4e7e4066dacab\\transformed\\appcompat-1.7.0\\res\\values-v24\\values-v24.xml",
+                    "source": "C:\\Users\\amber\\.gradle\\caches\\8.10.2\\transforms\\1b33d5b35666ba703fc4e7e4066dacab\\transformed\\appcompat-1.7.0\\res\\values-v24\\values-v24.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",
