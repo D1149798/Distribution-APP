@@ -45,6 +45,7 @@ public class SuggestionFragment extends Fragment {
                 etSearch.setText("");
                 etSearch.setVisibility(View.GONE);
                 btnSearch.setVisibility(View.GONE);
+                webView.setVisibility(View.VISIBLE);
 
                 isApp = false;
             }
@@ -58,12 +59,31 @@ public class SuggestionFragment extends Fragment {
 
     public void goBack() {
         if (webView != null && webView.canGoBack()) {
-            webView.goBack();
-        }else if (!isApp) {
+            // 若當前網址是搜尋首頁，就回到粉紅頁面
+            webView.evaluateJavascript(
+                    "(function() { return window.location.href; })();",
+                    currentUrl -> {
+                        // currentUrl包在引號內，要移除引號
+                        currentUrl = currentUrl.replaceAll("^\"|\"$", "");
+
+                        if (currentUrl.equals(firstSearchUrl)) {
+                            // 回到粉紅頁面（隱藏 WebView）
+                            etSearch.setVisibility(View.VISIBLE);
+                            btnSearch.setVisibility(View.VISIBLE);
+                            webView.setVisibility(View.GONE);
+                            isApp = true;
+                        } else {
+                            webView.goBack();
+                        }
+                    }
+            );
+        } else if (!isApp) {
+            // WebView 已無法 goBack，但仍非 App 狀態 → 回粉紅頁面
             etSearch.setVisibility(View.VISIBLE);
             btnSearch.setVisibility(View.VISIBLE);
+            webView.setVisibility(View.GONE);
             isApp = true;
-            webView.loadUrl("about:blank"); // 清空 WebView 頁面
         }
     }
+
 }
