@@ -142,6 +142,8 @@ public class ChatFragment extends Fragment {
                         }
 
                         chatAdapter.setMessages(chatItemList);
+                        recyclerView.post(() -> recyclerView.scrollToPosition(chatAdapter.getItemCount() - 1));
+
                     }
                 });
 

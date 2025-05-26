@@ -47,7 +47,7 @@ public class TransactionHistoryFragment extends Fragment {
         recyclerView = view.findViewById(R.id.rv_transaction_list);
         settleButton = view.findViewById(R.id.btn_settle);
 
-<<<<<<< Updated upstream
+//<<<<<<< Updated upstream
 //        adapter = new TransactionAdapter(transactions, transaction -> {
 //            // 點擊某筆紀錄 → 跳到詳細頁
 //            Fragment detailFragment = TransactionDetailFragment.newInstance(transaction);
@@ -57,8 +57,8 @@ public class TransactionHistoryFragment extends Fragment {
 //                    .commit();
 //        });
 
-=======
->>>>>>> Stashed changes
+//=======
+//>>>>>>> Stashed changes
         adapter = new TransactionAdapter(transactions, transaction -> {
             // 點擊某筆紀錄 → 跳到詳細頁
             TransactionDetailFragment detailFragment = TransactionDetailFragment.newInstance(transaction.getId(), groupId);
