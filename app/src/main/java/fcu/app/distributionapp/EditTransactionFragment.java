@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -178,7 +179,7 @@ public class EditTransactionFragment extends Fragment {
         transaction.setCurrency(currency);
         transaction.setBeneficiaries(selectedBeneficiaries);
 
-        db.collection("groups").document(groupId)
+        db.collection("newGroups").document(groupId)
                 .collection("transactions")
                 .document(transaction.getId() != null ? transaction.getId() : db.collection("transactions").document().getId())
                 .set(transaction)
@@ -194,7 +195,7 @@ public class EditTransactionFragment extends Fragment {
 
     private void onDeleteButtonClick() {
         if (transaction != null && transaction.getId() != null) {
-            db.collection("groups").document(groupId)
+            db.collection("newGroups").document(groupId)
                     .collection("transactions").document(transaction.getId())
                     .delete()
                     .addOnSuccessListener(aVoid -> {
@@ -226,33 +227,46 @@ public class EditTransactionFragment extends Fragment {
     }
 
     private void loadGroupMembers(String groupId) {
-        db.collection("groups")
+        db.collection("newGroups")
                 .document(groupId)
-                .collection("members")
                 .get()
-                .addOnSuccessListener(querySnapshot -> {
-                    List<String> members = new ArrayList<>();
+                .addOnSuccessListener(documentSnapshot -> {
+                    List<String> uidList = (List<String>) documentSnapshot.get("members");
+                    if (uidList == null) uidList = new ArrayList<>();
+
+                    int finalCount = uidList.size();
+                    List<String> displayNames = new ArrayList<>();
                     memberList.clear();
 
-                    for (QueryDocumentSnapshot doc : querySnapshot) {
-                        String name = doc.getString("name");
-                        if (name != null) {
-                            members.add(name);
-                            memberList.add(new GroupMember(name));
-                        }
-                    }
+                    for (String uid : uidList) {
+                        db.collection("users").document(uid)
+                                .get()
+                                .addOnSuccessListener(userDoc -> {
+                                    String name = userDoc.getString("Name");
+                                    if (name != null) {
+                                        displayNames.add(name);
+                                        memberList.add(new GroupMember(name));
+                                    }
 
-                    ArrayAdapter<String> payerAdapter = new ArrayAdapter<>(requireContext(),
-                            android.R.layout.simple_spinner_item, members);
-                    payerAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-                    payerSpinner.setAdapter(payerAdapter);
-                    adapter.notifyDataSetChanged();
-                    if (transaction != null) {
-                        fillTransactionData(transaction);
+                                    // 檢查是否所有 UID 都處理完成
+                                    if (displayNames.size() + (finalCount - memberList.size()) == finalCount) {
+                                        // 更新 payerSpinner
+                                        ArrayAdapter<String> payerAdapter = new ArrayAdapter<>(requireContext(),
+                                                android.R.layout.simple_spinner_item, displayNames);
+                                        payerAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                                        payerSpinner.setAdapter(payerAdapter);
+
+                                        adapter.clearSelection();
+                                        adapter.notifyDataSetChanged();
+                                    }
+                                });
                     }
 
                 })
-                .addOnFailureListener(e -> Toast.makeText(getContext(), "讀取成員失敗", Toast.LENGTH_SHORT).show());
+                .addOnFailureListener(e -> {
+                    Toast.makeText(getContext(), "載入群組成員失敗：" + e.getMessage(), Toast.LENGTH_SHORT).show();
+                    Log.e("Firestore", "載入成員失敗", e);
+                });
     }
 
     private void fillTransactionData(Transaction t) {

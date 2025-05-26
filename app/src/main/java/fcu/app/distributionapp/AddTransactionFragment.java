@@ -27,6 +27,8 @@ import android.widget.Toast;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.FirebaseApp;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
@@ -175,7 +177,7 @@ public class AddTransactionFragment extends Fragment {
             transaction.put("beneficiaries", beneficiaries);
 
             // 儲存到 groupId/transactions 子集合
-            db.collection("groups")
+            db.collection("newGroups")
                     .document(groupId)
                     .collection("transactions")
                     .add(transaction)
@@ -216,11 +218,15 @@ public class AddTransactionFragment extends Fragment {
     }
 
     private void loadGroupsFromFirestore() {
-        db.collection("groups")
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        String currentUid = user.getUid();
+
+        db.collection("newGroups")
+                .whereArrayContains("members", currentUid)
                 .get()
-                .addOnSuccessListener(queryDocumentSnapshots -> {
+                .addOnSuccessListener(querySnapshot -> {
                     groupList.clear();
-                    for (var doc : queryDocumentSnapshots) {
+                    for (var doc : querySnapshot) {
                         String groupName = doc.getString("name");
                         String groupId = doc.getId();
                         groupList.add(new Group(groupId, groupName));
@@ -238,34 +244,44 @@ public class AddTransactionFragment extends Fragment {
     }
 
     private void loadGroupMembers(String groupId) {
-        db.collection("groups")
+        db.collection("newGroups")
                 .document(groupId)
-                .collection("members")
                 .get()
-                .addOnSuccessListener(querySnapshot -> {
-                    List<String> members = new ArrayList<>();
+                .addOnSuccessListener(documentSnapshot -> {
+                    List<String> uidList = (List<String>) documentSnapshot.get("members");
+                    if (uidList == null) uidList = new ArrayList<>();
+
+                    int finalCount = uidList.size();
+                    List<String> displayNames = new ArrayList<>();
                     memberList.clear();
 
-                    for (QueryDocumentSnapshot doc : querySnapshot) {
-                        String name = doc.getString("name");
-                        if (name != null) {
-                            members.add(name);
-                            memberList.add(new GroupMember(name));
-                        }
+                    for (String uid : uidList) {
+                        db.collection("users").document(uid)
+                                .get()
+                                .addOnSuccessListener(userDoc -> {
+                                    String name = userDoc.getString("Name");
+                                    if (name != null) {
+                                        displayNames.add(name);
+                                        memberList.add(new GroupMember(name));
+                                    }
+
+                                    // 檢查是否所有 UID 都處理完成
+                                    if (displayNames.size() + (finalCount - memberList.size()) == finalCount) {
+                                        // 更新 payerSpinner
+                                        ArrayAdapter<String> payerAdapter = new ArrayAdapter<>(requireContext(),
+                                                android.R.layout.simple_spinner_item, displayNames);
+                                        payerAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                                        payerSpinner.setAdapter(payerAdapter);
+
+                                        adapter.clearSelection();
+                                        adapter.notifyDataSetChanged();
+                                    }
+                                });
                     }
 
-                    // 更新 payerSpinner
-                    ArrayAdapter<String> payerAdapter = new ArrayAdapter<>(requireContext(),
-                            android.R.layout.simple_spinner_item, members);
-                    payerAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-                    payerSpinner.setAdapter(payerAdapter);
-
-                    // 清除先前已選的受益人
-                    adapter.clearSelection();
-                    adapter.notifyDataSetChanged();
                 })
                 .addOnFailureListener(e -> {
-                    Toast.makeText(getContext(), "載入成員失敗：" + e.getMessage(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getContext(), "載入群組成員失敗：" + e.getMessage(), Toast.LENGTH_SHORT).show();
                     Log.e("Firestore", "載入成員失敗", e);
                 });
     }

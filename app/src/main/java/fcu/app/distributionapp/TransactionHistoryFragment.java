@@ -28,8 +28,8 @@ public class TransactionHistoryFragment extends Fragment {
     private Button settleButton;
     private List<Transaction> transactions = new ArrayList<>();
     private TransactionAdapter adapter;
-//    private String groupId;
-    private String groupId = "jY6sXapfNGoRJttUaBjD";
+    //    private String groupId;
+    private String groupId = "C0GbAovQ5HRA14xrz9mI";
     public TransactionHistoryFragment() {
         // Required empty public constructor
     }
@@ -47,18 +47,7 @@ public class TransactionHistoryFragment extends Fragment {
         recyclerView = view.findViewById(R.id.rv_transaction_list);
         settleButton = view.findViewById(R.id.btn_settle);
 
-//<<<<<<< Updated upstream
-//        adapter = new TransactionAdapter(transactions, transaction -> {
-//            // 點擊某筆紀錄 → 跳到詳細頁
-//            Fragment detailFragment = TransactionDetailFragment.newInstance(transaction);
-//            requireActivity().getSupportFragmentManager().beginTransaction()
-//                    .replace(R.id.childFragmentContainer, detailFragment)
-//                    .addToBackStack(null)
-//                    .commit();
-//        });
 
-//=======
-//>>>>>>> Stashed changes
         adapter = new TransactionAdapter(transactions, transaction -> {
             // 點擊某筆紀錄 → 跳到詳細頁
             TransactionDetailFragment detailFragment = TransactionDetailFragment.newInstance(transaction.getId(), groupId);
@@ -86,7 +75,7 @@ public class TransactionHistoryFragment extends Fragment {
 
     private void loadTransactions() {
         FirebaseFirestore db = FirebaseFirestore.getInstance();
-        db.collection("groups")
+        db.collection("newGroups")
                 .document(groupId)
                 .collection("transactions")
                 .orderBy("date", Query.Direction.DESCENDING)

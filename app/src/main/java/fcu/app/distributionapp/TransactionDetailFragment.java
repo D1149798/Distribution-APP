@@ -96,7 +96,7 @@ public class TransactionDetailFragment extends Fragment {
 
     private void loadTransactionFromFirestore(String transactionId) {
         FirebaseFirestore db = FirebaseFirestore.getInstance();
-        db.collection("groups")
+        db.collection("newGroups")
                 .document(groupId)
                 .collection("transactions")
                 .document(transactionId)
