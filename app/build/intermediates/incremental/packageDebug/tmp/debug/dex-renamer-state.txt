@@ -1,4 +1,17 @@
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+#Mon May 26 14:00:52 CST 2025
+base.0=D\:\\GitHub\\Distribution-APP\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
+base.1=D\:\\GitHub\\Distribution-APP\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
+base.2=D\:\\GitHub\\Distribution-APP\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\12\\classes.dex
+base.3=D\:\\GitHub\\Distribution-APP\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\14\\classes.dex
+base.4=D\:\\GitHub\\Distribution-APP\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\4\\classes.dex
+base.5=D\:\\GitHub\\Distribution-APP\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes2.dex
+base.6=D\:\\GitHub\\Distribution-APP\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes3.dex
+=======
+>>>>>>> Stashed changes
 #Mon May 26 13:41:16 CST 2025
 base.0=C\:\\Users\\amber\\Documents\\GitHub\\Distribution-APP\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
 base.1=C\:\\Users\\amber\\Documents\\GitHub\\Distribution-APP\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
@@ -7,6 +20,7 @@ base.3=C\:\\Users\\amber\\Documents\\GitHub\\Distribution-APP\\app\\build\\inter
 base.4=C\:\\Users\\amber\\Documents\\GitHub\\Distribution-APP\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\4\\classes.dex
 base.5=C\:\\Users\\amber\\Documents\\GitHub\\Distribution-APP\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes2.dex
 base.6=C\:\\Users\\amber\\Documents\\GitHub\\Distribution-APP\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes3.dex
+<<<<<<< Updated upstream
 =======
 #Mon May 26 14:10:57 CST 2025
 base.0=C\:\\Users\\prism\\Documents\\GitHub\\Distribution-APP\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
@@ -16,6 +30,9 @@ base.3=C\:\\Users\\prism\\Documents\\GitHub\\Distribution-APP\\app\\build\\inter
 base.4=C\:\\Users\\prism\\Documents\\GitHub\\Distribution-APP\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\4\\classes.dex
 base.5=C\:\\Users\\prism\\Documents\\GitHub\\Distribution-APP\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes2.dex
 base.6=C\:\\Users\\prism\\Documents\\GitHub\\Distribution-APP\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes3.dex
+>>>>>>> Stashed changes
+=======
+>>>>>>> 3cbb2fe854a1de619cb89569e9d3f362fd7c199b
 >>>>>>> Stashed changes
 path.0=classes.dex
 path.1=0/classes.dex

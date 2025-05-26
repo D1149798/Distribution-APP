@@ -26,10 +26,14 @@ import com.google.firebase.firestore.Query;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 
 import fcu.app.distributionapp.adapter.ChatAdapter;
+import fcu.app.distributionapp.model.ChatItem;
 import fcu.app.distributionapp.model.Message;
 
 /**
@@ -120,13 +124,24 @@ public class ChatFragment extends Fragment {
                             return;
                         }
 
-                        List<Message> messageList = new ArrayList<>();
+                        List<ChatItem> chatItemList = new ArrayList<>();
+                        Date lastDate = null;
+
                         for (QueryDocumentSnapshot doc : value) {
                             Message msg = doc.toObject(Message.class);
-                            messageList.add(msg);
+                            Date msgDate = msg.getTimestamp().toDate();
+                            //messageList.add(msg);
+                            if (lastDate == null || !isSameDay(msgDate, lastDate)) {
+                                String dateString = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault()).format(msgDate);
+                                chatItemList.add(new ChatItem(ChatItem.Type.DATE, dateString));
+
+                                lastDate = msgDate;
+                            }
+
+                            chatItemList.add(new ChatItem(ChatItem.Type.MESSAGE, msg));
                         }
 
-                        chatAdapter.setMessages(messageList);
+                        chatAdapter.setMessages(chatItemList);
                     }
                 });
 
@@ -178,6 +193,16 @@ public class ChatFragment extends Fragment {
                     Log.w("Chat", "查詢使用者失敗", e);
                 });
     }
+
+    private boolean isSameDay(Date date1, Date date2) {
+        java.util.Calendar cal1 = java.util.Calendar.getInstance();
+        java.util.Calendar cal2 = java.util.Calendar.getInstance();
+        cal1.setTime(date1);
+        cal2.setTime(date2);
+        return cal1.get(java.util.Calendar.YEAR) == cal2.get(java.util.Calendar.YEAR) &&
+                cal1.get(java.util.Calendar.DAY_OF_YEAR) == cal2.get(java.util.Calendar.DAY_OF_YEAR);
+    }
+
 
 
 //    private void sendMessage(String text) {

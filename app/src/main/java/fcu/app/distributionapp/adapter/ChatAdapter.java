@@ -12,60 +12,73 @@ import com.google.firebase.Timestamp;
 import com.google.firebase.auth.FirebaseAuth;
 
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 
 import fcu.app.distributionapp.R;
+import fcu.app.distributionapp.model.ChatItem;
 import fcu.app.distributionapp.model.Message;
 
 public class ChatAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
-    private List<Message> messages;
+    private List<ChatItem> messageList = new ArrayList<>();
+
     private String currentUserId = FirebaseAuth.getInstance().getCurrentUser().getEmail(); // 假設目前使用者的 ID（之後可以改成從 Firebase auth 取得）
 
     private static final int VIEW_TYPE_DATE = 0;
     private static final int VIEW_TYPE_ME = 1;
     private static final int VIEW_TYPE_OTHER = 2;
 
-    public void setMessages(List<Message> messages) {
-        this.messages = messages;
+    public void setMessages(List<ChatItem> messages) {
+        this.messageList = messages;
         notifyDataSetChanged();
     }
 
     @Override
     public int getItemViewType(int position) {
-        Message msg = messages.get(position);
-        return msg.getSenderId().equals(currentUserId) ? VIEW_TYPE_ME : VIEW_TYPE_OTHER;
+        ChatItem item = messageList.get(position);
+        if (item.type == ChatItem.Type.DATE) {
+            return VIEW_TYPE_DATE;
+        } else {
+            return item.message.getSenderId().equals(currentUserId) ? VIEW_TYPE_ME : VIEW_TYPE_OTHER;
+        }
     }
+
 
     @NonNull
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        LayoutInflater inflater = LayoutInflater.from(parent.getContext());
         if (viewType == VIEW_TYPE_ME) {
-            View view = LayoutInflater.from(parent.getContext())
-                    .inflate(R.layout.item_message_self, parent, false);
+            View view = inflater.inflate(R.layout.item_message_self, parent, false);
             return new MyMessageViewHolder(view);
-        } else {
-            View view = LayoutInflater.from(parent.getContext())
-                    .inflate(R.layout.item_message, parent, false);
+        } else if (viewType == VIEW_TYPE_OTHER) {
+            View view = inflater.inflate(R.layout.item_message, parent, false);
             return new OtherMessageViewHolder(view);
+        } else {
+            View view = inflater.inflate(R.layout.item_date_header, parent, false);
+            return new DateHeaderViewHolder(view);
         }
     }
 
     @Override
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
-        Message msg = messages.get(position);
+        ChatItem item = messageList.get(position);
+
         if (holder instanceof MyMessageViewHolder) {
-            ((MyMessageViewHolder) holder).bind(msg);
+            ((MyMessageViewHolder) holder).bind(item.message);
         } else if (holder instanceof OtherMessageViewHolder) {
-            ((OtherMessageViewHolder) holder).bind(msg);
+            ((OtherMessageViewHolder) holder).bind(item.message);
+        } else if (holder instanceof DateHeaderViewHolder) {
+            ((DateHeaderViewHolder) holder).bind(item.date);
         }
     }
 
     @Override
     public int getItemCount() {
-        return messages != null ? messages.size() : 0;
+        return messageList != null ? messageList.size() : 0;
     }
 
     static class MyMessageViewHolder extends RecyclerView.ViewHolder {
@@ -119,6 +132,20 @@ public class ChatAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
             }
         }
     }
+
+    static class DateHeaderViewHolder extends RecyclerView.ViewHolder {
+        TextView dateText;
+
+        public DateHeaderViewHolder(@NonNull View itemView) {
+            super(itemView);
+            dateText = itemView.findViewById(R.id.tv_date_header); // 你要自己定義這個 id
+        }
+
+        public void bind(String date) {
+            dateText.setText(date);
+        }
+    }
+
 
 
 }
