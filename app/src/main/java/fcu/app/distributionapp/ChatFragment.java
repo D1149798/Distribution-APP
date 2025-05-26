@@ -45,6 +45,8 @@ public class ChatFragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
+    private String chatId = "C0GbAovQ5HRA14xrz9mI";
+    private static final String CHAT_ID = "chat_id";
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
@@ -70,11 +72,12 @@ public class ChatFragment extends Fragment {
      * @return A new instance of fragment ChatFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static ChatFragment newInstance(String param1, String param2) {
+    public static ChatFragment newInstance(String chatId) {
         ChatFragment fragment = new ChatFragment();
         Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
+        //args.putString(ARG_PARAM1, param1);
+        //args.putString(ARG_PARAM2, param2);
+        args.putString(CHAT_ID, chatId);
         fragment.setArguments(args);
         return fragment;
     }
@@ -83,8 +86,9 @@ public class ChatFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
+            chatId = getArguments().getString(CHAT_ID, "C0GbAovQ5HRA14xrz9mI");
+//            mParam1 = getArguments().getString(ARG_PARAM1);
+//            mParam2 = getArguments().getString(ARG_PARAM2);
         }
     }
 
@@ -110,8 +114,8 @@ public class ChatFragment extends Fragment {
         });
 
         FirebaseFirestore db = FirebaseFirestore.getInstance();
-        CollectionReference messagesRef = db.collection("chats")
-                .document("test_chat")
+        CollectionReference messagesRef = db.collection("newGroups")
+                .document(chatId)
                 .collection("messages");
 
         messagesRef.orderBy("timestamp", Query.Direction.ASCENDING)
@@ -180,8 +184,8 @@ public class ChatFragment extends Fragment {
                     );
 
                     // 寫入 Firestore：chats/test_chat/messages 子集合
-                    db.collection("chats")
-                            .document("test_chat")
+                    db.collection("newGroups")
+                            .document(chatId)
                             .collection("messages")
                             .add(message)
                             .addOnSuccessListener(documentReference -> {

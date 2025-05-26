@@ -4,7 +4,15 @@
             "outputFile": "fcu.app.distributionapp-mergeDebugResources-45:/values-h550dp-port-v13/values-h550dp-port-v13.xml",
             "map": [
                 {
+<<<<<<< Updated upstream
                     "source": "C:\\Users\\amber\\.gradle\\caches\\8.10.2\\transforms\\30b275bd4d976a709a811d8b35a37d34\\transformed\\material-1.12.0\\res\\values-h550dp-port-v13\\values-h550dp-port-v13.xml",
+=======
+<<<<<<< HEAD
+                    "source": "C:\\Users\\User\\.gradle\\caches\\8.10.2\\transforms\\30b275bd4d976a709a811d8b35a37d34\\transformed\\material-1.12.0\\res\\values-h550dp-port-v13\\values-h550dp-port-v13.xml",
+=======
+                    "source": "C:\\Users\\amber\\.gradle\\caches\\8.10.2\\transforms\\30b275bd4d976a709a811d8b35a37d34\\transformed\\material-1.12.0\\res\\values-h550dp-port-v13\\values-h550dp-port-v13.xml",
+>>>>>>> fd9c3e5b906769607db7945666cc784436379770
+>>>>>>> Stashed changes
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
