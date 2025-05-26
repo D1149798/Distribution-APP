@@ -4,15 +4,7 @@
             "outputFile": "fcu.app.distributionapp-mergeDebugResources-45:/values-v24/values-v24.xml",
             "map": [
                 {
-<<<<<<< Updated upstream
-                    "source": "C:\\Users\\amber\\.gradle\\caches\\8.10.2\\transforms\\30b275bd4d976a709a811d8b35a37d34\\transformed\\material-1.12.0\\res\\values-v24\\values-v24.xml",
-=======
-<<<<<<< HEAD
                     "source": "C:\\Users\\User\\.gradle\\caches\\8.10.2\\transforms\\30b275bd4d976a709a811d8b35a37d34\\transformed\\material-1.12.0\\res\\values-v24\\values-v24.xml",
-=======
-                    "source": "C:\\Users\\amber\\.gradle\\caches\\8.10.2\\transforms\\30b275bd4d976a709a811d8b35a37d34\\transformed\\material-1.12.0\\res\\values-v24\\values-v24.xml",
->>>>>>> fd9c3e5b906769607db7945666cc784436379770
->>>>>>> Stashed changes
                     "from": {
                         "startLines": "2,3,4,5,6,9,12,15",
                         "startColumns": "4,4,4,4,4,4,4,4",
@@ -31,15 +23,7 @@
                     }
                 },
                 {
-<<<<<<< Updated upstream
-                    "source": "C:\\Users\\amber\\.gradle\\caches\\8.10.2\\transforms\\1b33d5b35666ba703fc4e7e4066dacab\\transformed\\appcompat-1.7.0\\res\\values-v24\\values-v24.xml",
-=======
-<<<<<<< HEAD
                     "source": "C:\\Users\\User\\.gradle\\caches\\8.10.2\\transforms\\1b33d5b35666ba703fc4e7e4066dacab\\transformed\\appcompat-1.7.0\\res\\values-v24\\values-v24.xml",
-=======
-                    "source": "C:\\Users\\amber\\.gradle\\caches\\8.10.2\\transforms\\1b33d5b35666ba703fc4e7e4066dacab\\transformed\\appcompat-1.7.0\\res\\values-v24\\values-v24.xml",
->>>>>>> fd9c3e5b906769607db7945666cc784436379770
->>>>>>> Stashed changes
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",
