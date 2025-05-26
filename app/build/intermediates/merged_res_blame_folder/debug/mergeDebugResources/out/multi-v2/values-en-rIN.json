@@ -4,7 +4,28 @@
             "outputFile": "fcu.app.distributionapp-mergeDebugResources-45:/values-en-rIN/values-en-rIN.xml",
             "map": [
                 {
+<<<<<<< Updated upstream
                     "source": "C:\\Users\\amber\\.gradle\\caches\\8.10.2\\transforms\\4b3fb7c426a362c2f743144db22bedc8\\transformed\\credentials-1.2.0-rc01\\res\\values-en-rIN\\values-en-rIN.xml",
+=======
+                    "source": "C:\\Users\\prism\\.gradle\\caches\\8.10.2\\transforms\\775076b7d3f78cdb502fa8cedc92d00e\\transformed\\browser-1.4.0\\res\\values-en-rIN\\values-en-rIN.xml",
+                    "from": {
+                        "startLines": "2,3,4,5",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,153,250,359",
+                        "endColumns": "97,96,108,98",
+                        "endOffsets": "148,245,354,453"
+                    },
+                    "to": {
+                        "startLines": "38,39,40,41",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "3707,3805,3902,4011",
+                        "endColumns": "97,96,108,98",
+                        "endOffsets": "3800,3897,4006,4105"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\prism\\.gradle\\caches\\8.10.2\\transforms\\4b3fb7c426a362c2f743144db22bedc8\\transformed\\credentials-1.2.0-rc01\\res\\values-en-rIN\\values-en-rIN.xml",
+>>>>>>> Stashed changes
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",

@@ -3682,6 +3682,7 @@ int id snapMargins 0x7f0901e8
 int id south 0x7f0901e9
 int id spacer 0x7f0901ea
 int id special_effects_controller_view_tag 0x7f0901eb
+int id spinner_currency 0x7f090266
 int id spline 0x7f0901ec
 int id split_action_bar 0x7f0901ed
 int id spread 0x7f0901ee
@@ -3945,11 +3946,13 @@ int layout fragment_add_friend 0x7f0c0032
 int layout fragment_add_group 0x7f0c0033
 int layout fragment_add_transaction 0x7f0c0034
 int layout fragment_chat 0x7f0c0035
+int layout fragment_currency_select_dialog 0x7f0c0085
 int layout fragment_details 0x7f0c0036
 int layout fragment_edit_transaction 0x7f0c0037
 int layout fragment_exchange_rate 0x7f0c0038
 int layout fragment_friends 0x7f0c0039
 int layout fragment_groups 0x7f0c003a
+int layout fragment_settle_up_result 0x7f0c0086
 int layout fragment_suggestion 0x7f0c003b
 int layout fragment_transaction_detail 0x7f0c003c
 int layout fragment_transaction_history 0x7f0c003d

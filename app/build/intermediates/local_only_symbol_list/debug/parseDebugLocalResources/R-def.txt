@@ -88,6 +88,7 @@ id recycler_friends
 id recycler_groups
 id rv_beneficiaries
 id rv_transaction_list
+id spinner_currency
 id textView
 id textView2
 id textView_sender
@@ -122,11 +123,13 @@ layout fragment_add_friend
 layout fragment_add_group
 layout fragment_add_transaction
 layout fragment_chat
+layout fragment_currency_select_dialog
 layout fragment_details
 layout fragment_edit_transaction
 layout fragment_exchange_rate
 layout fragment_friends
 layout fragment_groups
+layout fragment_settle_up_result
 layout fragment_suggestion
 layout fragment_transaction_detail
 layout fragment_transaction_history
