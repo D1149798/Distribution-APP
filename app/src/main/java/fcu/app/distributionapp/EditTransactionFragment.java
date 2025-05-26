@@ -59,6 +59,9 @@ public class EditTransactionFragment extends Fragment {
 
     private Calendar selectedDate = Calendar.getInstance();
 
+    private boolean membersLoaded = false;
+    private boolean currenciesLoaded = false;
+
     public EditTransactionFragment() {}
 
     public static EditTransactionFragment newInstance(Transaction transaction, String groupId) {
@@ -168,10 +171,6 @@ public class EditTransactionFragment extends Fragment {
             }
         }
 
-        if (transaction == null) {
-            transaction = new Transaction(); // 建立新交易
-        }
-
         transaction.setAmount(amount);
         transaction.setNote(description);
         transaction.setDate(date);
@@ -221,6 +220,9 @@ public class EditTransactionFragment extends Fragment {
                     android.R.layout.simple_spinner_item, currencyCodeList);
             currencyAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
             currencySpinner.setAdapter(currencyAdapter);
+            currenciesLoaded = true;
+            tryCallFillTransaction();
+
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -256,8 +258,10 @@ public class EditTransactionFragment extends Fragment {
                                         payerAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                                         payerSpinner.setAdapter(payerAdapter);
 
+                                        membersLoaded = true;
                                         adapter.clearSelection();
                                         adapter.notifyDataSetChanged();
+                                        tryCallFillTransaction();
                                     }
                                 });
                     }
@@ -268,6 +272,12 @@ public class EditTransactionFragment extends Fragment {
                     Log.e("Firestore", "載入成員失敗", e);
                 });
     }
+    private void tryCallFillTransaction() {
+        if (transaction != null && membersLoaded && currenciesLoaded) {
+            fillTransactionData(transaction);
+        }
+    }
+
 
     private void fillTransactionData(Transaction t) {
         etNote.setText(t.getNote());
