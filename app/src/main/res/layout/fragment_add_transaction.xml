@@ -99,6 +99,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="16dp"
+            android:backgroundTint="#F06292"
             android:text="儲存" />
 
     </LinearLayout>

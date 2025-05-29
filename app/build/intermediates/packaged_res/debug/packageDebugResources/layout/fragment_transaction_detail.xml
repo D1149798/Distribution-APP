@@ -110,6 +110,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="end"
             android:layout_marginTop="24dp"
+            android:backgroundTint="#F06292"
             android:text="編輯" />
 
     </LinearLayout>

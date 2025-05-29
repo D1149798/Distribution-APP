@@ -12,6 +12,7 @@
         android:drawableLeft="@drawable/add"
         android:drawablePadding="4dp"
         android:layout_gravity="end"
+        android:backgroundTint="#F06292"
         android:layout_margin="16dp"/>
 
     <!-- 下方群組列表 RecyclerView -->

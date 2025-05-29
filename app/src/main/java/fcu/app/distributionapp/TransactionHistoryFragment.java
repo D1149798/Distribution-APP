@@ -22,7 +22,7 @@ import java.util.List;
 import fcu.app.distributionapp.adapter.TransactionAdapter;
 import fcu.app.distributionapp.model.Transaction;
 
-public class TransactionHistoryFragment extends Fragment {
+public class TransactionHistoryFragment extends Fragment implements CurrencySelectDialogFragment.CurrencySelectedListener{
 
     private RecyclerView recyclerView;
     private Button settleButton;
@@ -67,12 +67,26 @@ public class TransactionHistoryFragment extends Fragment {
             Toast.makeText(getContext(), "未提供群組 ID", Toast.LENGTH_SHORT).show();
         }
 
-        settleButton.setOnClickListener(v ->
-                Toast.makeText(getContext(), "尚未實作結算功能", Toast.LENGTH_SHORT).show());
+        settleButton.setOnClickListener(v ->{
+            CurrencySelectDialogFragment dialog = new CurrencySelectDialogFragment(this); // this 要實作 CurrencySelectedListener
+            dialog.show(getParentFragmentManager(), "currency_dialog");
+
+        });
 
         return view;
     }
 
+    @Override
+    public void onCurrencySelected(String currencyCode) {
+        // 導航至 SettleUpResultFragment，並傳遞所需資料
+        ArrayList<Transaction> transactionArrayList = new ArrayList<>(transactions);
+
+        SettleUpResultFragment fragment = SettleUpResultFragment.newInstance(transactionArrayList, currencyCode, groupId);
+        requireParentFragment().getChildFragmentManager().beginTransaction()
+                .replace(R.id.childFragmentContainer, fragment)
+                .addToBackStack(null)
+                .commit();
+    }
     private void loadTransactions() {
         FirebaseFirestore db = FirebaseFirestore.getInstance();
         db.collection("newGroups")

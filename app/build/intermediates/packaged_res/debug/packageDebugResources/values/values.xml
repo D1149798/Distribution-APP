@@ -10,6 +10,7 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <item name="fragment_main" type="id"/>
+    <string name="apilayer_api_key">rKTh2VcZ8CUXhp7AzUaOJb5ZST1mUrtS</string>
     <string name="app_name">Distribution APP</string>
     <string name="gcm_defaultSenderId" translatable="false">682409246327</string>
     <string name="google_api_key" translatable="false">AIzaSyBbOzSljxYuxpGPxcpczdHKcvpzYQGXh-o</string>

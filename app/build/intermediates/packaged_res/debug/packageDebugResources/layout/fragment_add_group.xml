@@ -74,6 +74,7 @@
             android:id="@+id/btn_create_group"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:backgroundTint="#F06292"
             android:text="建立群組" />
     </LinearLayout>
 </ScrollView>

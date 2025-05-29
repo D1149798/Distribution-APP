@@ -34,6 +34,7 @@ id btn_add_group
 id btn_add_member
 id btn_back
 id btn_chat
+id btn_confirm
 id btn_create_group
 id btn_delete
 id btn_edit
@@ -76,6 +77,7 @@ id item_back
 id item_chat
 id item_rate
 id item_transaction
+id ivTransferIcon
 id label_add
 id label_chat
 id label_rate
@@ -85,11 +87,14 @@ id logout
 id main
 id navigation_view
 id payerSpinner
+id progressBar
+id recyclerSettleResult
 id recyclerView_messages
 id recycler_friends
 id recycler_groups
 id rv_beneficiaries
 id rv_transaction_list
+id settleRoot
 id spinner_currency
 id textView
 id textView2
@@ -102,9 +107,11 @@ id text_note
 id text_payer
 id text_receiver
 id toolbar
+id tvEmpty
 id tvLastUpdate
 id tvRealTimeRate
 id tvResult
+id tv_SettleItem
 id tv_amount
 id tv_currency
 id tv_date
@@ -126,7 +133,6 @@ layout fragment_add_group
 layout fragment_add_transaction
 layout fragment_chat
 layout fragment_currency_select_dialog
-layout fragment_details
 layout fragment_edit_transaction
 layout fragment_exchange_rate
 layout fragment_friends
@@ -142,12 +148,14 @@ layout item_group
 layout item_group_member
 layout item_message
 layout item_message_self
+layout item_settle_result
 layout item_transaction
 menu drawer_menu
 menu toolbar_menu
 mipmap ic_launcher
 mipmap ic_launcher_round
 raw currencies
+string apilayer_api_key
 string app_name
 string gcm_defaultSenderId
 string google_api_key
