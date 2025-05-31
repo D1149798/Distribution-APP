@@ -18,7 +18,6 @@ drawable message_bg_self
 drawable payments
 drawable settings
 drawable swap_horiz
-id action_account
 id action_exchange
 id action_friends
 id action_groups

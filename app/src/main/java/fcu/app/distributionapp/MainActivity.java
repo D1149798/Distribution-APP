@@ -78,14 +78,7 @@ public class MainActivity extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 //判斷按下哪個按鈕
                 int id = item.getItemId();
-                if (id == R.id.action_account) {
-                    Toast.makeText(MainActivity.this, "記帳 / 分帳", Toast.LENGTH_SHORT).show();
-                    Fragment accountsFragment = AccountsFragment.newInstance("", "add");
-                    setCurrentFragment(accountsFragment);
-                    layout.closeDrawer(GravityCompat.START); // <-- 加這行關閉抽屜
-                    // 切換到記帳Fragment或Activity
-                    return true;
-                } else if (id == R.id.action_exchange) {
+                if (id == R.id.action_exchange) {
                     Toast.makeText(MainActivity.this, "匯率查詢", Toast.LENGTH_SHORT).show();
                     setCurrentFragment(exchangeFragment);
                     layout.closeDrawer(GravityCompat.START); // <-- 加這行關閉抽屜
@@ -135,6 +128,10 @@ public class MainActivity extends AppCompatActivity {
     public void switchToFriendsFragment() {
         Fragment friendsFragment = FriendsFragment.newInstance();
         setCurrentFragment(friendsFragment);
+    }
+    public void switchToGroupsFragment() {
+        Fragment groupsFragment = GroupsFragment.newInstance("", "");
+        setCurrentFragment(groupsFragment);
     }
 
     @Override

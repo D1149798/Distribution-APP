@@ -76,7 +76,7 @@ public class AccountsFragment extends Fragment {
         // 設定按鈕切換事件
         view.findViewById(R.id.btn_back).setOnClickListener(v ->{
             if (getActivity() instanceof MainActivity) {
-                ((MainActivity) getActivity()).switchToFriendsFragment();
+                ((MainActivity) getActivity()).switchToGroupsFragment();
             }
         });
 

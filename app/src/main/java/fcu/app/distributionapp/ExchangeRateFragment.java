@@ -1,6 +1,9 @@
 package fcu.app.distributionapp;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,7 +21,7 @@ import java.io.InputStreamReader;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
-import okhttp3.*;
+import fcu.app.distributionapp.util.ExchangeRateConverter;
 
 public class ExchangeRateFragment extends Fragment {
 
@@ -29,7 +32,6 @@ public class ExchangeRateFragment extends Fragment {
 
     private final List<String> displayCurrencyList = new ArrayList<>();
     private final List<String> currencyCodeList = new ArrayList<>();
-    private final OkHttpClient client = new OkHttpClient();
 
     public ExchangeRateFragment() {}
 
@@ -59,7 +61,6 @@ public class ExchangeRateFragment extends Fragment {
         autoCompleteFrom.setThreshold(1);
         autoCompleteTo.setThreshold(1);
 
-        // 預設值
         autoCompleteFrom.setText(getDisplayCurrency("USD"));
         autoCompleteTo.setText(getDisplayCurrency("TWD"));
 
@@ -79,7 +80,7 @@ public class ExchangeRateFragment extends Fragment {
                 return;
             }
 
-            fetchExchangeRate(amount, fromCode, toCode);
+            convertAmount(amount, fromCode, toCode);
         });
 
         btnSwitch.setOnClickListener(v -> {
@@ -90,6 +91,34 @@ public class ExchangeRateFragment extends Fragment {
         });
 
         return view;
+    }
+
+    private void convertAmount(double amount, String from, String to) {
+        Context context = requireContext();
+        ExchangeRateConverter.fetchExchangeRate(context, from, to, rate -> {
+            requireActivity().runOnUiThread(() -> {
+                if (rate == 0) {
+                    tvResult.setText("取得匯率失敗");
+                    return;
+                }
+
+                double result = amount * rate;
+                tvResult.setText(String.format(Locale.getDefault(), "%.2f %s = %.2f %s", amount, from, result, to));
+                tvRealTimeRate.setText(String.format(Locale.getDefault(), "即時匯率：1 %s = %.4f %s", from, rate, to));
+
+                // 顯示最後更新時間（從快取取得 timestamp）
+                SharedPreferences prefs = context.getSharedPreferences("exchange_rate_cache", Context.MODE_PRIVATE);
+                String key = from + "_" + to + "_timestamp";
+                long timestamp = prefs.getLong(key, 0);
+                if (timestamp > 0) {
+                    SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm", Locale.getDefault());
+                    String updateTime = sdf.format(new Date(timestamp));
+                    tvLastUpdate.setText("最後更新時間：" + updateTime);
+                } else {
+                    tvLastUpdate.setText("尚未更新匯率");
+                }
+            });
+        });
     }
 
     private void loadCurrencyList() {
@@ -126,52 +155,5 @@ public class ExchangeRateFragment extends Fragment {
             return display.split(" - ")[0].trim();
         }
         return null;
-    }
-
-    private void fetchExchangeRate(double amount, String base, String target) {
-        String url = "https://api.apilayer.com/exchangerates_data/convert?from=" + base + "&to=" + target + "&amount=" + amount;
-
-        Request request = new Request.Builder()
-                .url(url)
-                .addHeader("apikey", "rKTh2VcZ8CUXhp7AzUaOJb5ZST1mUrtS") // ⚠️ 請改成你自己的 API key
-                .build();
-
-        client.newCall(request).enqueue(new Callback() {
-            @Override public void onFailure(@NonNull Call call, @NonNull IOException e) {
-                requireActivity().runOnUiThread(() ->
-                        tvResult.setText("錯誤：" + e.getMessage()));
-            }
-
-            @Override public void onResponse(@NonNull Call call, @NonNull Response response) throws IOException {
-                if (response.isSuccessful()) {
-                    try {
-                        String json = response.body().string();
-                        JSONObject obj = new JSONObject(json);
-
-                        double result = obj.getDouble("result");
-                        double rate = obj.getJSONObject("info").getDouble("rate");
-                        long timestamp = obj.getJSONObject("info").getLong("timestamp");
-
-                        String formattedTime = formatTimestamp(timestamp);
-
-                        requireActivity().runOnUiThread(() -> {
-                            tvResult.setText(String.format(Locale.getDefault(), "%.2f %s = %.2f %s", amount, base, result, target));
-                            tvRealTimeRate.setText(String.format("即時匯率：1 %s = %.4f %s", base, rate, target));
-                            tvLastUpdate.setText("最後更新時間：" + formattedTime);
-                        });
-                    } catch (Exception e) {
-                        requireActivity().runOnUiThread(() -> tvResult.setText("解析錯誤"));
-                    }
-                } else {
-                    requireActivity().runOnUiThread(() -> tvResult.setText("API 呼叫失敗"));
-                }
-            }
-        });
-    }
-
-    private String formatTimestamp(long timestamp) {
-        Date date = new Date(timestamp * 1000);
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.getDefault());
-        return sdf.format(date);
     }
 }

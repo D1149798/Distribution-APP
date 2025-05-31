@@ -3243,7 +3243,6 @@ id accessibility_custom_action_9
 id actionDown
 id actionDownUp
 id actionUp
-id action_account
 id action_bar
 id action_bar_activity_content
 id action_bar_container

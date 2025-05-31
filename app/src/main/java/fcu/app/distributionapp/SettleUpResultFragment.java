@@ -82,7 +82,7 @@ public class SettleUpResultFragment extends Fragment {
         for (Transaction tx : transactions) {
             String fromCurrencyCode = tx.getCurrency().split(",")[0].trim(); // 正確只取 ISO 代碼
             ExchangeRateConverter.fetchExchangeRate(
-                    fromCurrencyCode, targetCurrency,
+                    requireContext(),fromCurrencyCode, targetCurrency,
                     rate -> {
                         double convertedAmount = tx.getAmount() * rate;
                         // ✅ 印出轉換 log
