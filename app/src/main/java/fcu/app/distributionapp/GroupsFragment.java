@@ -90,7 +90,12 @@ public class GroupsFragment extends Fragment {
                     .commit();
                     */
             Toast.makeText(getContext(), "你點選了群組：" + group.getName(), Toast.LENGTH_SHORT).show();
-
+            AccountsFragment accountsFragment = AccountsFragment.newInstance(group.getId());
+            requireActivity().getSupportFragmentManager()
+                    .beginTransaction()
+                    .replace(R.id.fragment_main, accountsFragment)
+                    .addToBackStack(null)
+                    .commit();
 
         });
 

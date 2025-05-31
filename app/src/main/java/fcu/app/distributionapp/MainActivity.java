@@ -64,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
         layout.addDrawerListener(toggle); // 設定監聽
         toggle.syncState();               // 同步狀態（讓三條線 icon 正確顯示）
 
-        Fragment accountsFragment = AccountsFragment.newInstance("", "");
+        Fragment accountsFragment = AccountsFragment.newInstance("");
         Fragment exchangeFragment = ExchangeRateFragment.newInstance();
         Fragment friendsFragment = FriendsFragment.newInstance();
         Fragment groupsFragment = GroupsFragment.newInstance("", "");

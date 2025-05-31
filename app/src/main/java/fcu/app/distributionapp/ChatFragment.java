@@ -13,6 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.google.firebase.Timestamp;
 import com.google.firebase.auth.FirebaseAuth;
@@ -45,7 +46,7 @@ public class ChatFragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private String chatId = "C0GbAovQ5HRA14xrz9mI";
+    //private String chatId = "C0GbAovQ5HRA14xrz9mI";
     private static final String CHAT_ID = "chat_id";
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
@@ -53,12 +54,14 @@ public class ChatFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
-
+    private String groupId;
     private RecyclerView recyclerView;
     private ChatAdapter chatAdapter;
     private Button sendButton;
     private EditText inputBox;
-
+    private FirebaseFirestore db;
+    private List<Message> messageList = new ArrayList<>();
+    private static final String ARG_GROUP_ID = "group_id";
     public ChatFragment() {
         // Required empty public constructor
     }
@@ -72,12 +75,12 @@ public class ChatFragment extends Fragment {
      * @return A new instance of fragment ChatFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static ChatFragment newInstance(String chatId) {
+    public static ChatFragment newInstance(String groupId) {
         ChatFragment fragment = new ChatFragment();
         Bundle args = new Bundle();
         //args.putString(ARG_PARAM1, param1);
         //args.putString(ARG_PARAM2, param2);
-        args.putString(CHAT_ID, chatId);
+        args.putString(ARG_GROUP_ID, groupId);
         fragment.setArguments(args);
         return fragment;
     }
@@ -85,11 +88,12 @@ public class ChatFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        db = FirebaseFirestore.getInstance();
+
         if (getArguments() != null) {
-            chatId = getArguments().getString(CHAT_ID, "C0GbAovQ5HRA14xrz9mI");
-//            mParam1 = getArguments().getString(ARG_PARAM1);
-//            mParam2 = getArguments().getString(ARG_PARAM2);
+            groupId = getArguments().getString(ARG_GROUP_ID);
         }
+
     }
 
     @Override
@@ -115,7 +119,7 @@ public class ChatFragment extends Fragment {
 
         FirebaseFirestore db = FirebaseFirestore.getInstance();
         CollectionReference messagesRef = db.collection("newGroups")
-                .document(chatId)
+                .document(groupId)
                 .collection("messages");
 
         messagesRef.orderBy("timestamp", Query.Direction.ASCENDING)
@@ -150,10 +154,31 @@ public class ChatFragment extends Fragment {
 
                     }
                 });
-
+        if (groupId != null) {
+            loadMessages();
+        }
         return view;
     }
 
+    private void loadMessages() {
+        db.collection("newGroups")
+                .document(groupId)
+                .collection("messages")
+                .orderBy("timestamp", Query.Direction.ASCENDING)
+                .get()
+                .addOnSuccessListener(querySnapshot -> {
+                    messageList.clear();
+                    for (var doc : querySnapshot) {
+                        Message message = doc.toObject(Message.class);
+                        messageList.add(message);
+                    }
+                    chatAdapter.notifyDataSetChanged();
+                })
+                .addOnFailureListener(e -> {
+                    Toast.makeText(getContext(), "載入訊息失敗：" + e.getMessage(), Toast.LENGTH_SHORT).show();
+                    Log.e("ChatFragment", "讀取 messages 失敗", e);
+                });
+    }
     private void sendMessage(String text) {
         FirebaseFirestore db = FirebaseFirestore.getInstance();
         FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
@@ -185,7 +210,7 @@ public class ChatFragment extends Fragment {
 
                     // 寫入 Firestore：chats/test_chat/messages 子集合
                     db.collection("newGroups")
-                            .document(chatId)
+                            .document(groupId)
                             .collection("messages")
                             .add(message)
                             .addOnSuccessListener(documentReference -> {

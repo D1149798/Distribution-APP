@@ -19,21 +19,27 @@ import java.util.List;
 
 public class AccountsFragment extends Fragment {
     private View selectedMenu = null;
-
+    private static final String ARG_GROUP_ID = "groupId";
+    private String groupId;
     public AccountsFragment() {
         // Required empty public constructor
     }
 
-    public static AccountsFragment newInstance(String param1, String param2) {
+    public static AccountsFragment newInstance(String groupId) {
         AccountsFragment fragment = new AccountsFragment();
         Bundle args = new Bundle();
+        args.putString(ARG_GROUP_ID, groupId);
         fragment.setArguments(args);
         return fragment;
     }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
+        if (getArguments() != null) {
+            groupId = getArguments().getString("groupId");
+        }
     }
     private List<TextView> allLabels = new ArrayList<>();
 
@@ -61,15 +67,19 @@ public class AccountsFragment extends Fragment {
             }
         });
 
-        view.findViewById(R.id.btn_chat).setOnClickListener(v ->{
-            loadChildFragment(new ChatFragment());
+        view.findViewById(R.id.btn_chat).setOnClickListener(v -> {
+            loadChildFragment(ChatFragment.newInstance(groupId));
             highlightSelected(view.findViewById(R.id.btn_chat), view.findViewById(R.id.label_chat));
         });
 
+
         view.findViewById(R.id.btn_transaction).setOnClickListener(v ->{
-            loadChildFragment(new TransactionHistoryFragment());
+            TransactionHistoryFragment fragment = new TransactionHistoryFragment();
+            fragment.setGroupId(groupId);
+            loadChildFragment(fragment);
             highlightSelected(view.findViewById(R.id.btn_transaction), view.findViewById(R.id.label_transaction));
         });
+
 
         view.findViewById(R.id.btn_add).setOnClickListener(v ->{
             loadChildFragment(new AddTransactionFragment());
@@ -83,11 +93,8 @@ public class AccountsFragment extends Fragment {
         });
 
         // 預設選中聊天室
-        loadChildFragment(new ChatFragment());
+        loadChildFragment(ChatFragment.newInstance(groupId));
         highlightSelected(view.findViewById(R.id.btn_chat), view.findViewById(R.id.label_chat));
-
-
-
 
         return view;
     }
@@ -107,13 +114,22 @@ public class AccountsFragment extends Fragment {
     }
     private void loadChildFragment(Fragment fragment) {
         Log.d("AccountsFragment", "Loading fragment: " + fragment.getClass().getSimpleName());
+
+        if (fragment instanceof GroupIdAware) {
+            ((GroupIdAware) fragment).setGroupId(groupId);
+        }
+
         getChildFragmentManager()
                 .beginTransaction()
                 .replace(R.id.childFragmentContainer, fragment)
                 .commit();
     }
+    public interface GroupIdAware {
+        void setGroupId(String groupId);
+    }
 
-//下面兩段程式碼可以把Toolbar隱藏起來
+
+    //下面兩段程式碼可以把Toolbar隱藏起來
     @Override
     public void onResume() {
         super.onResume();
