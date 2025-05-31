@@ -21,14 +21,19 @@ public class AccountsFragment extends Fragment {
     private View selectedMenu = null;
     private static final String ARG_GROUP_ID = "groupId";
     private String groupId;
+    //以下兩行是看從哪裡點進account的
+    private static final String ARG_DEFAULT_PAGE = "defaultPage";
+    private String defaultPage = "chat"; // 預設是聊天室
+
     public AccountsFragment() {
         // Required empty public constructor
     }
 
-    public static AccountsFragment newInstance(String groupId) {
+    public static AccountsFragment newInstance(String groupId, String defaultPage) {
         AccountsFragment fragment = new AccountsFragment();
         Bundle args = new Bundle();
         args.putString(ARG_GROUP_ID, groupId);
+        args.putString(ARG_DEFAULT_PAGE, defaultPage);
         fragment.setArguments(args);
         return fragment;
     }
@@ -39,6 +44,7 @@ public class AccountsFragment extends Fragment {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
             groupId = getArguments().getString("groupId");
+            defaultPage = getArguments().getString(ARG_DEFAULT_PAGE, "chat");
         }
     }
     private List<TextView> allLabels = new ArrayList<>();
@@ -59,6 +65,13 @@ public class AccountsFragment extends Fragment {
         allLabels.add(labelTransaction);
         allLabels.add(labelAdd);
         allLabels.add(labelRate);
+        if (groupId == null || groupId.isEmpty()) {
+            // 隱藏聊天室與交易紀錄功能
+            view.findViewById(R.id.btn_chat).setVisibility(View.GONE);
+            view.findViewById(R.id.label_chat).setVisibility(View.GONE);
+            view.findViewById(R.id.btn_transaction).setVisibility(View.GONE);
+            view.findViewById(R.id.label_transaction).setVisibility(View.GONE);
+        }
 
         // 設定按鈕切換事件
         view.findViewById(R.id.btn_back).setOnClickListener(v ->{
@@ -92,9 +105,13 @@ public class AccountsFragment extends Fragment {
             highlightSelected(view.findViewById(R.id.btn_rate), view.findViewById(R.id.label_rate));
         });
 
-        // 預設選中聊天室
-        loadChildFragment(ChatFragment.newInstance(groupId));
-        highlightSelected(view.findViewById(R.id.btn_chat), view.findViewById(R.id.label_chat));
+        if ("chat".equals(defaultPage) && groupId != null && !groupId.isEmpty()) {
+            loadChildFragment(ChatFragment.newInstance(groupId));
+            highlightSelected(view.findViewById(R.id.btn_chat), view.findViewById(R.id.label_chat));
+        } else {
+            loadChildFragment(new AddTransactionFragment());
+            highlightSelected(view.findViewById(R.id.btn_add), view.findViewById(R.id.label_add));
+        }
 
         return view;
     }

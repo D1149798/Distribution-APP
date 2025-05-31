@@ -64,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
         layout.addDrawerListener(toggle); // 設定監聽
         toggle.syncState();               // 同步狀態（讓三條線 icon 正確顯示）
 
-        Fragment accountsFragment = AccountsFragment.newInstance("");
+        //Fragment accountsFragment = AccountsFragment.newInstance("", "");
         Fragment exchangeFragment = ExchangeRateFragment.newInstance();
         Fragment friendsFragment = FriendsFragment.newInstance();
         Fragment groupsFragment = GroupsFragment.newInstance("", "");
@@ -80,6 +80,7 @@ public class MainActivity extends AppCompatActivity {
                 int id = item.getItemId();
                 if (id == R.id.action_account) {
                     Toast.makeText(MainActivity.this, "記帳 / 分帳", Toast.LENGTH_SHORT).show();
+                    Fragment accountsFragment = AccountsFragment.newInstance("", "add");
                     setCurrentFragment(accountsFragment);
                     layout.closeDrawer(GravityCompat.START); // <-- 加這行關閉抽屜
                     // 切換到記帳Fragment或Activity
@@ -91,6 +92,7 @@ public class MainActivity extends AppCompatActivity {
                     return true;
                 } else if (id == R.id.action_groups) {
                     Toast.makeText(MainActivity.this, "群組", Toast.LENGTH_SHORT).show();
+                    Fragment accountsFragment = AccountsFragment.newInstance("", "chat");
                     setCurrentFragment(groupsFragment);
                     layout.closeDrawer(GravityCompat.START); // <-- 加這行關閉抽屜
                     return true;
