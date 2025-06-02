@@ -14,6 +14,7 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import com.google.firebase.FirebaseApp;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 
@@ -113,9 +114,10 @@ public class GroupsFragment extends Fragment {
 
         return view;
     }
-
+    String currentUserId = FirebaseAuth.getInstance().getCurrentUser().getUid();
     private void loadGroupsFromFirestore() {
         db.collection("newGroups")
+                .whereArrayContains("members", currentUserId)
                 .get()
                 .addOnSuccessListener(querySnapshot -> {
                     groupList.clear();
