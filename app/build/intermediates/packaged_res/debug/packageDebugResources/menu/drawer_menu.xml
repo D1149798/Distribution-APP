@@ -17,6 +17,10 @@
         android:id="@+id/action_suggestion"
         android:title="旅遊建議"
  />
+    <item
+        android:id="@+id/action_map"
+        android:title="地圖" />
+    <item />
     <item />
     <item />
     <item />

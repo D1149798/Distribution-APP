@@ -69,6 +69,7 @@ public class MainActivity extends AppCompatActivity {
         Fragment friendsFragment = FriendsFragment.newInstance();
         Fragment groupsFragment = GroupsFragment.newInstance("", "");
         Fragment suggestionFragment = new SuggestionFragment();
+        Fragment mapFragment = MapFragment.newInstance();
 
         setCurrentFragment(groupsFragment);
 
@@ -97,6 +98,11 @@ public class MainActivity extends AppCompatActivity {
                 } else if (id == R.id.action_suggestion) {
                     Toast.makeText(MainActivity.this, "旅遊建議", Toast.LENGTH_SHORT).show();
                     setCurrentFragment(suggestionFragment);
+                    layout.closeDrawer(GravityCompat.START); // <-- 加這行關閉抽屜
+                    return true;
+                } else if (id == R.id.action_map) {
+                    Toast.makeText(MainActivity.this, "地圖", Toast.LENGTH_SHORT).show();
+                    setCurrentFragment(mapFragment);
                     layout.closeDrawer(GravityCompat.START); // <-- 加這行關閉抽屜
                     return true;
                 } else if (id == R.id.logout) {

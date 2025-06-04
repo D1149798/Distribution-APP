@@ -21,6 +21,7 @@ drawable swap_horiz
 id action_exchange
 id action_friends
 id action_groups
+id action_map
 id action_settings
 id action_suggestion
 id autoCompleteFrom
@@ -38,6 +39,7 @@ id btn_create_group
 id btn_delete
 id btn_edit
 id btn_login
+id btn_mapSearch
 id btn_rate
 id btn_register
 id btn_save
@@ -60,6 +62,7 @@ id et_cost
 id et_friend_mail
 id et_l_email
 id et_l_password
+id et_mapSearch
 id et_note
 id et_r_email
 id et_r_password
@@ -84,6 +87,7 @@ id label_transaction
 id layout_member_checkboxes
 id logout
 id main
+id mapView
 id navigation_view
 id payerSpinner
 id progressBar
@@ -136,6 +140,7 @@ layout fragment_edit_transaction
 layout fragment_exchange_rate
 layout fragment_friends
 layout fragment_groups
+layout fragment_map
 layout fragment_settle_up_result
 layout fragment_suggestion
 layout fragment_transaction_detail

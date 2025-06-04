@@ -136,6 +136,14 @@
     <string name="mtrl_timepicker_cancel">Anuluj</string>
     <string name="mtrl_timepicker_confirm">OK</string>
     <string name="password_toggle_content_description">Pokaż hasło</string>
+    <string name="places_autocomplete_clear_button">Wyczyść wyszukiwanie</string>
+    <string name="places_autocomplete_label">Wybierz miejsce</string>
+    <string name="places_autocomplete_no_results_for_query">Brak wyników dla zapytania „%1$s”</string>
+    <string name="places_autocomplete_search_hint">Szukaj miejsca</string>
+    <string name="places_cancel">Anuluj</string>
+    <string name="places_powered_by_google">Technologia Google</string>
+    <string name="places_search_error">Nie można wczytać wyników wyszukiwania.</string>
+    <string name="places_try_again">Spróbuj ponownie</string>
     <string msgid="6264217191555673260" name="search_menu_title">"Szukaj"</string>
     <string name="searchview_clear_text_content_description">Wyczyść tekst</string>
     <string name="searchview_navigation_content_description">Wstecz</string>

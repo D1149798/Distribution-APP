@@ -134,6 +134,14 @@
     <string name="mtrl_timepicker_cancel">Ακύρωση</string>
     <string name="mtrl_timepicker_confirm">ΟΚ</string>
     <string name="password_toggle_content_description">Εμφάνιση κωδικού πρόσβασης</string>
+    <string name="places_autocomplete_clear_button">Διαγραφή αναζήτησης</string>
+    <string name="places_autocomplete_label">Επιλογή μέρους</string>
+    <string name="places_autocomplete_no_results_for_query">Δεν υπάρχουν αποτελέσματα για %1$s</string>
+    <string name="places_autocomplete_search_hint">Αναζήτ. μέρους</string>
+    <string name="places_cancel">Ακύρωση</string>
+    <string name="places_powered_by_google">Με την υποστήριξη της Google</string>
+    <string name="places_search_error">Δεν είναι δυνατή η φόρτωση των αποτελεσμάτων αναζήτησης.</string>
+    <string name="places_try_again">Επανάληψη</string>
     <string msgid="6264217191555673260" name="search_menu_title">"Αναζήτηση"</string>
     <string name="searchview_clear_text_content_description">Διαγραφή κειμένου</string>
     <string name="searchview_navigation_content_description">Πίσω</string>

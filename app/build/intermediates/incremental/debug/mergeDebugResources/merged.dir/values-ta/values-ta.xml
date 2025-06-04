@@ -134,6 +134,14 @@
     <string name="mtrl_timepicker_cancel">ரத்துசெய்</string>
     <string name="mtrl_timepicker_confirm">சரி</string>
     <string name="password_toggle_content_description">கடவுச்சொல்லைக் காட்டு</string>
+    <string name="places_autocomplete_clear_button">தேடலை அழி</string>
+    <string name="places_autocomplete_label">இடத்தைத் தேர்ந்தெடுத்தல்</string>
+    <string name="places_autocomplete_no_results_for_query">%1$s தொடர்பான முடிவுகள் எதுவுமில்லை</string>
+    <string name="places_autocomplete_search_hint">இடத்தைத் தேடுக</string>
+    <string name="places_cancel">ரத்துசெய்</string>
+    <string name="places_powered_by_google">வழங்குவது Google</string>
+    <string name="places_search_error">தேடல் முடிவுகளை ஏற்ற முடியவில்லை.</string>
+    <string name="places_try_again">மீண்டும் முயல்க</string>
     <string msgid="6264217191555673260" name="search_menu_title">"தேடல்"</string>
     <string name="searchview_clear_text_content_description">வார்த்தைகளை அழிக்கும்</string>
     <string name="searchview_navigation_content_description">பின்செல்லும்</string>
