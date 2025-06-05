@@ -10,12 +10,15 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.firebase.Timestamp;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
+import java.util.Map;
 
 import fcu.app.distributionapp.R;
 import fcu.app.distributionapp.model.ChatItem;
@@ -26,6 +29,8 @@ public class ChatAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     private List<ChatItem> messageList = new ArrayList<>();
 
     private String currentUserId = FirebaseAuth.getInstance().getCurrentUser().getEmail(); // 假設目前使用者的 ID（之後可以改成從 Firebase auth 取得）
+    private Map<String, String> userNameCache = new HashMap<>();
+
 
     private static final int VIEW_TYPE_DATE = 0;
     private static final int VIEW_TYPE_ME = 1;
@@ -69,11 +74,51 @@ public class ChatAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
         if (holder instanceof MyMessageViewHolder) {
             ((MyMessageViewHolder) holder).bind(item.message);
+
         } else if (holder instanceof OtherMessageViewHolder) {
-            ((OtherMessageViewHolder) holder).bind(item.message);
+            Message message = item.message;
+            ((OtherMessageViewHolder) holder).bind(message); // 照常綁定訊息文字和時間
+
+            String senderId = message.getSenderName(); // senderName 裡其實是 ID
+            String cachedName = userNameCache.get(senderId);
+
+            if (cachedName != null) {
+                ((OtherMessageViewHolder) holder).senderNameText.setText(cachedName);
+            } else {
+                // 查詢 Firestore 拿 Name
+                com.google.firebase.firestore.FirebaseFirestore.getInstance().collection("users")
+                        .document(senderId)
+                        .get()
+                        .addOnSuccessListener(documentSnapshot -> {
+                            if (documentSnapshot.exists()) {
+                                String name = documentSnapshot.getString("Name");
+                                if (name != null) {
+                                    userNameCache.put(senderId, name);
+                                    ((OtherMessageViewHolder) holder).senderNameText.setText(name);
+                                }
+                            } else {
+                                ((OtherMessageViewHolder) holder).senderNameText.setText(senderId); // fallback
+                            }
+                        })
+                        .addOnFailureListener(e -> {
+                            ((OtherMessageViewHolder) holder).senderNameText.setText(senderId); // fallback
+                        });
+            }
+
         } else if (holder instanceof DateHeaderViewHolder) {
             ((DateHeaderViewHolder) holder).bind(item.date);
         }
+
+
+//        ChatItem item = messageList.get(position);
+//
+//        if (holder instanceof MyMessageViewHolder) {
+//            ((MyMessageViewHolder) holder).bind(item.message);
+//        } else if (holder instanceof OtherMessageViewHolder) {
+//            ((OtherMessageViewHolder) holder).bind(item.message);
+//        } else if (holder instanceof DateHeaderViewHolder) {
+//            ((DateHeaderViewHolder) holder).bind(item.date);
+//        }
     }
 
     @Override
