@@ -48,14 +48,15 @@
                 android:maxWidth="250dp"
                 android:ellipsize="none"
                 android:breakStrategy="simple"
-                android:inputType="textMultiLine"
                 android:layout_marginTop="2dp"
                 android:layout_marginBottom="8dp"
                 android:background="@drawable/message_bg_other"
                 android:padding="8dp"
                 android:text="這是一則訊息"
                 android:textIsSelectable="true"
-                android:textColor="#000000" />
+                android:textColor="#000000"
+                android:longClickable="true"
+                android:autoLink="web"/>
 
             <TextView
                 android:id="@+id/textView_time"
