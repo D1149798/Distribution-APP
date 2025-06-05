@@ -85,6 +85,7 @@ public class ChatAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
             if (cachedName != null) {
                 ((OtherMessageViewHolder) holder).senderNameText.setText(cachedName);
             } else {
+                ((OtherMessageViewHolder) holder).senderNameText.setText("");
                 // 查詢 Firestore 拿 Name
                 com.google.firebase.firestore.FirebaseFirestore.getInstance().collection("users")
                         .document(senderId)
