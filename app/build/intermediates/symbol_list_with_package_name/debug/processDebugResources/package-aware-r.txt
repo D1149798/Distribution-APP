@@ -4479,6 +4479,7 @@ layout support_simple_spinner_dropdown_item
 menu drawer_menu
 menu toolbar_menu
 mipmap ic_launcher
+mipmap ic_launcher_foreground
 mipmap ic_launcher_round
 plurals mtrl_badge_content_description
 raw currencies

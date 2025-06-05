@@ -29,7 +29,7 @@ public class TransactionHistoryFragment extends Fragment implements CurrencySele
     private List<Transaction> transactions = new ArrayList<>();
     private TransactionAdapter adapter;
     //    private String groupId;
-    private String groupId = "C0GbAovQ5HRA14xrz9mI";
+    private String groupId ;
     public TransactionHistoryFragment() {
         // Required empty public constructor
     }

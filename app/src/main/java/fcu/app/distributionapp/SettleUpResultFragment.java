@@ -139,6 +139,7 @@ public class SettleUpResultFragment extends Fragment {
         }
 
         List<String> resultList = SettleCalculator.calculateInstructions(balances, targetCurrency);
+
         progressBar.setVisibility(View.GONE);
 
         if (resultList.isEmpty()) {

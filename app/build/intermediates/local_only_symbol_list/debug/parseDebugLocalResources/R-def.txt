@@ -157,6 +157,7 @@ layout item_transaction
 menu drawer_menu
 menu toolbar_menu
 mipmap ic_launcher
+mipmap ic_launcher_foreground
 mipmap ic_launcher_round
 raw currencies
 string apilayer_api_key
