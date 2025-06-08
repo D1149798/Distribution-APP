@@ -121,7 +121,7 @@ public class AddFriendFragment extends Fragment {
                     Toast.makeText(getContext(), "已加入好友：" + friendName, Toast.LENGTH_SHORT).show();
                 })
                 .addOnFailureListener(e -> {
-                    Toast.makeText(getContext(), "加入好友失敗：" + e.getMessage(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getContext(), "加入好友失敗：", Toast.LENGTH_SHORT).show();
                 });
     }
 }

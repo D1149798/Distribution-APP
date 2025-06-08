@@ -73,7 +73,7 @@ public class LoginActivity extends AppCompatActivity {
                             startActivity(new Intent(LoginActivity.this, MainActivity.class));
                             finish();
                         }  else {
-                            Toast.makeText(LoginActivity.this, "登入失敗：" + task.getException().getMessage(), Toast.LENGTH_LONG).show();
+                            Toast.makeText(LoginActivity.this, "登入失敗", Toast.LENGTH_LONG).show();
                         }
                     }
                 });

@@ -120,7 +120,7 @@ public class AddGroupFragment extends Fragment {
                     }
 
                 } else {
-                    Toast.makeText(getContext(), "此帳號尚未註冊", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getContext(), "", Toast.LENGTH_SHORT).show();
                 }
             }).addOnFailureListener(e -> {
                 Toast.makeText(getContext(), "查詢失敗：" + e.getMessage(), Toast.LENGTH_SHORT).show();
@@ -163,11 +163,11 @@ public class AddGroupFragment extends Fragment {
 
             db.collection("newGroups").add(group)
                     .addOnSuccessListener(ref -> {
-                        Toast.makeText(getContext(), "群組建立成功！", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getContext(), "1", Toast.LENGTH_SHORT).show();
                         requireActivity().getSupportFragmentManager().popBackStack();
                     })
                     .addOnFailureListener(e ->
-                            Toast.makeText(getContext(), "群組建立失敗：" + e.getMessage(), Toast.LENGTH_SHORT).show()
+                            Toast.makeText(getContext(), "群組建立失敗", Toast.LENGTH_SHORT).show()
                     );
         });
         return view;

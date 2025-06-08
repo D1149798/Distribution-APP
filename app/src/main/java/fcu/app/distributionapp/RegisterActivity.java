@@ -96,12 +96,12 @@ public class RegisterActivity extends AppCompatActivity {
                                                     finish();
                                                 });
 
-                                        Toast.makeText(RegisterActivity.this, "註冊成功：" + user.getEmail(), Toast.LENGTH_SHORT).show();
-                                        startActivity(new Intent(RegisterActivity.this, LoginActivity.class));
-                                        finish();
+                                        //Toast.makeText(RegisterActivity.this, "註冊成功：" + user.getEmail(), Toast.LENGTH_SHORT).show();
+                                        //startActivity(new Intent(RegisterActivity.this, LoginActivity.class));
+                                        //2finish();
                                     }
                                     else{
-                                        Toast.makeText(RegisterActivity.this, "註冊失敗：" + task.getException().getMessage(), Toast.LENGTH_LONG).show();
+                                        Toast.makeText(RegisterActivity.this, "註冊失敗", Toast.LENGTH_LONG).show();
                                     }
                                 }
                             });
