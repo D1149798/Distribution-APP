@@ -15,8 +15,7 @@
         android:title="匯率查詢" />
     <item
         android:id="@+id/action_suggestion"
-        android:title="旅遊建議"
- />
+        android:title="旅遊搜尋" />
     <item
         android:id="@+id/action_map"
         android:title="地圖" />
