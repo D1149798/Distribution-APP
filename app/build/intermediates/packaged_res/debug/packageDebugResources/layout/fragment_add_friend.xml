@@ -30,6 +30,7 @@
             android:id="@+id/btn_add_friend"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:backgroundTint="#F06292"
             android:text="新增好友" />
 
     </LinearLayout>
